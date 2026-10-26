@@ -7,6 +7,8 @@
 | `shared/` | 공통 도구 (수집, 리뷰 분석, 번역, 브랜드) | 뼈대 |
 | `pdp/` | 상세페이지 제작 봇 | 뼈대 |
 
+- 전체 진행 순서: [`ROADMAP.md`](ROADMAP.md)
+
 - 공통 규칙: [`CLAUDE.md`](CLAUDE.md)
 - 상세페이지 봇 규칙: [`pdp/CLAUDE.md`](pdp/CLAUDE.md)
 - 처음 쓸 때: `.env.example` 을 복사해 `.env` 를 만들고 API 키를 넣는다.
