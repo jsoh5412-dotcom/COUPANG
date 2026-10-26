@@ -18,13 +18,14 @@
 - [ ] 클로드코드에서 `/list-agents` 입력 → 다른 세션 목록이 나오면 정상
 - [ ] 잠자기 설정: 시스템 설정 → 배터리 → 옵션 → "전원 어댑터 연결 시 디스플레이가 꺼져 있을 때 자동으로 잠자기 방지" 켜기
   - 뚜껑을 닫으면 이 설정과 무관하게 잠든다. 자율 작업 중에는 뚜껑을 열어 둘 것
-- [ ] 작업 폴더 만들기: `~/work/coupang` (당근 작업 폴더와 분리)
+- [ ] 작업 폴더 만들기: 터미널에서 `git clone https://github.com/jsoh5412-dotcom/COUPANG.git ~/coupang-agent` (당근의 `~/daangn-agent`와 같은 방식, 폴더 분리)
+- [ ] Google Drive 데스크톱 앱 설치 → 쿠팡 드라이브 폴더를 맥북에 동기화 (봇 결과물이 자동으로 드라이브에 올라가게)
 
 ## 3단계 — API 키
 
 - [ ] OpenAI 대시보드에서 쿠팡 전용 프로젝트 생성 → 전용 API 키 발급
 - [ ] 그 프로젝트에 월 사용 한도(예산) 설정
-- [ ] 키는 채팅에 붙여넣지 말고, 맥북의 `~/work/coupang/.env`에 직접 입력 (`.env.example` 참고)
+- [ ] 키는 채팅에 붙여넣지 말고, 맥북의 `~/coupang-agent/.env`에 직접 입력 (`.env.example` 참고)
 - [ ] (선택) Photoroom API 키: 투명병·유리·광택 제품 누끼 품질이 부족할 때
 - [ ] (선택) 도매꾹 OpenAPI 키: 도매꾹·도매매 수집을 API로 할 때
 
@@ -39,9 +40,9 @@
 
 ## 5단계 — PM 신설과 저장소 이사 (테스트 완주 후)
 
-- [ ] 맥북 `~/work/coupang`(저장소 루트)에서 클로드코드 새 세션 열기, 이름 `쿠팡-본부-운영팀장-PM`
+- [ ] 맥북 `~/coupang-agent`(저장소 루트)에서 클로드코드 새 세션 열기, 이름 `쿠팡-본부-운영팀장-PM`
 - [ ] 첫 지시: "`DECISIONS.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `hq/orders/`를 읽고 PM 역할을 시작해. 첫 업무는 상페 팀장 저장소를 이력째로 `pdp/`로 이사하는 것."
-- [ ] 이사 완료 후 상페 팀장 세션을 `~/work/coupang/pdp`에서 다시 열기 (이름 `쿠팡-상페-팀장` 유지)
+- [ ] 이사 완료 후 상페 팀장 세션을 `~/coupang-agent/pdp`에서 다시 열기 (이름 `쿠팡-상페-팀장` 유지)
 - [ ] 기존 상페 저장소(PDP-Converter_forCOUPANG) 보관 처리 (GitHub Settings → Archive)
 - [ ] 전략팀장(claude.ai 채팅)은 그대로 유지. 논의는 전략팀장, 실행 지시는 PM
 

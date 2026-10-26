@@ -23,3 +23,5 @@
     - `쿠팡-본부-운영팀장-PM` = 맥북 클로드코드 세션. 실행 총괄, 팀장 배분·조율·검토, `main` 병합, 보고. 테스트 상품 완주 후 신설하며 첫 업무는 상페 저장소 이사.
     - 실무 팀장(`쿠팡-○○-팀장`)은 PM의 하위 직급.
     이유: 채팅은 언제 어디서나 논의하기 좋지만 맥북 작업·팀장 지휘를 못 하고, 맥북 세션은 그 반대. 같은 Claude지만 대화를 공유하지 않으므로 둘은 저장소 문서(DECISIONS·ROADMAP·hq/orders·hq/reports)로만 잇는다.
+14. **파일 중심은 Google Drive 쿠팡 폴더** (folder id `19zRdnEsoQp-C_fAoiaq529KpBR0TYF3x`). 사람이 보는 파일(양식, 엑셀, 원본 자료, 최종 결과물)은 드라이브, 봇의 규칙·결정·코드는 GitHub, 수집 원본·중간물은 맥북 작업장. 맥북에는 Google Drive 데스크톱 앱으로 동기화해 봇이 결과물을 바로 드라이브에 저장.
+15. **맥북 쿠팡 전용 폴더는 `~/coupang-agent`.** 당근의 `~/daangn-agent`와 같은 방식(저장소 클론 + git 제외 작업 폴더 browser-profile/data/logs). 이전 문서의 `~/work/coupang`을 대체.

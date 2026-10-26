@@ -9,6 +9,12 @@
 **/raw/
 *.zip
 
+# 맥북 작업장 (당근 daangn-agent와 같은 구성)
+browser-profile/
+data/
+logs/
+dump/
+
 # Python
 __pycache__/
 *.pyc
