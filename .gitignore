@@ -1,0 +1,10 @@
+node_modules/
+__pycache__/
+.venv/
+.DS_Store
+# 상품별 이미지는 용량이 커서 제외 (분석·카피 md와 pdp.html은 버전 관리)
+projects/**/*.png
+projects/**/*.jpg
+projects/**/*.jpeg
+projects/**/*.webp
+projects/**/*.gif

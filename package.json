@@ -1,0 +1,11 @@
+{
+  "name": "pdp-converter-for-coupang",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node scripts/render.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}

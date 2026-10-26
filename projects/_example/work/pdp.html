@@ -1,0 +1,111 @@
+<!doctype html>
+<!--
+  쿠팡 상세페이지 베이스 템플릿 (가로 780px)
+  - 이 파일을 projects/<상품>/work/pdp.html 로 복사해 사용
+  - :root 디자인 토큰만 바꿔도 톤이 바뀐다 (01_reference_blueprint 의 디자인 토큰 제안 반영)
+  - 섹션은 <section> 단위. render.mjs 가 섹션 경계에서 이미지를 자른다
+  - 이미지 경로는 pdp.html 기준 상대경로 (예: nukki/sup_01_nukki.png)
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../../../templates/pdp/components.css">
+<style>
+  :root {
+    --main: #1f2a44;      /* 헤드라인·진한 배경 */
+    --point: #ff5a36;     /* 강조·CTA */
+    --soft: #f5f3ef;      /* 연한 섹션 배경 */
+    --text: #222;
+    --sub: #666;
+  }
+</style>
+</head>
+<body>
+
+<!-- S01 후킹: 문제 자각 질문 + 풀블리드 연출컷 -->
+<section class="hero" style="background-image:url('gen/hero.png')">
+  <p class="eyebrow">이런 고민, 있으셨죠?</p>
+  <h1>아직도 ___ 때문에<br><em>___</em> 하세요?</h1>
+</section>
+
+<!-- S02 공감·문제 제기: 체크리스트 -->
+<section class="soft">
+  <h2>혹시 이런 적<br>있지 않으셨나요?</h2>
+  <ul class="checklist">
+    <li>불편 상황 1 (리뷰 불만 키워드)</li>
+    <li>불편 상황 2</li>
+    <li>불편 상황 3</li>
+  </ul>
+</section>
+
+<!-- S03 해결 제시: 제품 누끼 등장 -->
+<section class="reveal">
+  <p class="eyebrow">그래서 준비했습니다</p>
+  <h2>핵심가치 한 문장</h2>
+  <img src="nukki/main.png" alt="">
+</section>
+
+<!-- S04 이유 3가지: USP TOP3 -->
+<section>
+  <h2><em>___</em> 해야 하는<br>3가지 이유</h2>
+  <div class="point">
+    <span class="num">01</span>
+    <h3>USP 1 헤드라인</h3>
+    <p>근거가 되는 짧은 설명 {F:..} {R:..}</p>
+    <img src="gen/point1.png" alt="">
+  </div>
+  <div class="point">
+    <span class="num">02</span>
+    <h3>USP 2 헤드라인</h3>
+    <p>설명</p>
+    <img src="gen/point2.png" alt="">
+  </div>
+  <div class="point">
+    <span class="num">03</span>
+    <h3>USP 3 헤드라인</h3>
+    <p>설명</p>
+    <img src="gen/point3.png" alt="">
+  </div>
+</section>
+
+<!-- S05 비교: 일반 제품 vs 우리 (비방 없이 '일반형'과 비교) -->
+<section class="soft">
+  <h2>한눈에 비교해 보세요</h2>
+  <table class="compare">
+    <tr><th></th><th>일반 제품</th><th class="ours">이 제품</th></tr>
+    <tr><td>항목 1</td><td>△</td><td class="ours">◎ 설명</td></tr>
+    <tr><td>항목 2</td><td>△</td><td class="ours">◎ 설명</td></tr>
+    <tr><td>항목 3</td><td>✕</td><td class="ours">◎ 설명</td></tr>
+  </table>
+</section>
+
+<!-- S06 상세 스펙 -->
+<section>
+  <h2>제품 정보</h2>
+  <table class="spec">
+    <tr><th>제품명</th><td></td></tr>
+    <tr><th>소재</th><td></td></tr>
+    <tr><th>크기 / 무게</th><td></td></tr>
+    <tr><th>구성품</th><td></td></tr>
+    <tr><th>원산지</th><td></td></tr>
+  </table>
+</section>
+
+<!-- S07 불안 제거 -->
+<section class="dark">
+  <h2>안심하고 구매하세요</h2>
+  <div class="badges">
+    <div><b>빠른 배송</b><span>설명</span></div>
+    <div><b>교환·반품</b><span>설명</span></div>
+    <div><b>고객 응대</b><span>설명</span></div>
+  </div>
+</section>
+
+<!-- S08 CTA -->
+<section class="cta">
+  <h2>지금 바로<br><em>___</em> 경험해 보세요</h2>
+</section>
+
+</body>
+</html>
