@@ -1,2 +1,0 @@
-rembg[cpu]>=2.0.60
-pillow>=10

@@ -1,10 +1,23 @@
-node_modules/
+# 비밀 정보
+.env
+.env.*
+!.env.example
+
+# 수집 원본과 결과물 (저장소에는 코드·규칙·분석 요약만)
+**/inputs/
+**/output/
+**/raw/
+*.zip
+
+# Python
 __pycache__/
+*.pyc
 .venv/
+venv/
+
+# Node
+node_modules/
+
+# OS
 .DS_Store
-# 상품별 이미지는 용량이 커서 제외 (분석·카피 md와 pdp.html은 버전 관리)
-projects/**/*.png
-projects/**/*.jpg
-projects/**/*.jpeg
-projects/**/*.webp
-projects/**/*.gif
+Thumbs.db
