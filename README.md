@@ -1,14 +1,18 @@
 # COUPANG
 
-쿠팡 판매 운영 모노레포. 업무별 폴더에서 각각의 Claude 봇이 작업한다.
+쿠팡 판매 운영 모노레포. 업무별 폴더에서 각각의 Claude 팀장이 작업하고, 쿠팡-본부가 조율한다.
+
+| 문서 | 내용 |
+|---|---|
+| [`ARCHITECTURE.md`](ARCHITECTURE.md) | 조직 구조, 실행 환경, 소통 방식, 승인 관문 |
+| [`ROADMAP.md`](ROADMAP.md) | 쿠팡 테크트리와 진행 상태 |
+| [`DECISIONS.md`](DECISIONS.md) | 결정 기록 (새 세션은 여기부터) |
+| [`SETUP.md`](SETUP.md) | 사용자가 직접 할 셋업 체크리스트 |
+| [`CLAUDE.md`](CLAUDE.md) | 모든 봇의 공통 규칙 |
 
 | 폴더 | 내용 | 상태 |
 |---|---|---|
 | `shared/` | 공통 도구 (수집, 리뷰 분석, 번역, 브랜드) | 뼈대 |
-| `pdp/` | 상세페이지 제작 봇 | 뼈대 |
+| `pdp/` | 상세페이지 — 쿠팡-상페-팀장 | 팀장은 별도 저장소에서 작업 중, 추후 이사 |
 
-- 전체 진행 순서: [`ROADMAP.md`](ROADMAP.md)
-
-- 공통 규칙: [`CLAUDE.md`](CLAUDE.md)
-- 상세페이지 봇 규칙: [`pdp/CLAUDE.md`](pdp/CLAUDE.md)
-- 처음 쓸 때: `.env.example` 을 복사해 `.env` 를 만들고 API 키를 넣는다.
+처음 쓸 때: `.env.example`을 복사해 `.env`를 만들고 API 키를 넣는다.
