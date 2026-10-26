@@ -38,7 +38,7 @@
 
 **작업 폴더와 파일**
 - [x] 터미널: `git clone https://github.com/jsoh5412-dotcom/COUPANG.git ~/coupang-agent` (2026-10-26 PM이 클론, `.env` 생성 — 키는 사용자 입력 대기)
-- [ ] Google Drive 데스크톱 앱 설치 → 쿠팡 드라이브 폴더 동기화 (2026-10-26 확인: 미설치)
+- [x] Google Drive 데스크톱 앱 설치 → 쿠팡 드라이브 폴더 동기화 (2026-10-26 설치 확인, `.env`의 `COUPANG_DRIVE_DIR` 설정 완료)
 
 ## 3단계 — API 키
 
