@@ -66,9 +66,12 @@
 ```
 pdp/
 ├── CLAUDE.md
+├── package.json   # Playwright 의존성 (`npm ci`)
 ├── config/        # 렌더 폭, 쿠팡 규격, 폰트 설정
-├── scripts/       # 분할, 렌더, 슬롯 추출, 합성, 규격 출력
-├── templates/     # 섹션 컴포넌트 HTML, 디자인 토큰
+├── prompts/       # 단계별 작업 지침 (01 레퍼런스, 02 공급처, 04 카피, 05 이미지 연출). 리뷰 분석 지침은 `shared/reviews/review_usp.md`
+├── scripts/       # render.mjs: HTML → 가로 780px 렌더·섹션 경계 분할
+│                  # (예정) 슬롯 좌표 추출 `slots.json`, 누끼 합성, 쿠팡 규격 출력
+├── templates/     # base.html 섹션 템플릿, components.css 디자인 토큰
 └── projects/
     └── <제품슬러그>/
         ├── inputs/    # ref/, source/, reviews/, nukki/  (커밋 안 함)
