@@ -61,10 +61,10 @@
 
 ## 5단계 — PM 신설과 저장소 이사 (테스트 완주 후)
 
-- [ ] 맥북 `~/coupang-agent`(저장소 루트)에서 클로드코드 새 세션 열기, 이름 `쿠팡-본부-운영팀장-PM`
-- [ ] 첫 지시: "`DECISIONS.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `hq/orders/`를 읽고 PM 역할을 시작해. 첫 업무는 상페 팀장 저장소를 이력째로 `pdp/`로 이사하는 것."
-- [ ] 이사 완료 후 상페 팀장 세션을 `~/coupang-agent-pdp/pdp`에서 다시 열기 (이름 `쿠팡-상페-팀장` 유지, 결정 24 워크트리)
-- [ ] 기존 상페 저장소(PDP-Converter_forCOUPANG) 보관 처리 (GitHub Settings → Archive)
+- [x] 맥북 `~/coupang-agent`(저장소 루트)에서 클로드코드 새 세션 열기, 이름 `쿠팡-본부-운영팀장-PM`
+- [x] 첫 지시: "`DECISIONS.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `hq/orders/`를 읽고 PM 역할을 시작해. 첫 업무는 상페 팀장 저장소를 이력째로 `pdp/`로 이사하는 것."
+- [x] 이사 완료 후 상페 팀장 세션을 `~/coupang-agent-pdp/pdp`에서 다시 열기 (이름 `쿠팡-상페-팀장` 유지, 결정 24 워크트리)
+- [x] 기존 상페 저장소(PDP-Converter_forCOUPANG) 보관 처리 (GitHub Settings → Archive)
 - [ ] 전략팀장(claude.ai 채팅)은 그대로 유지. 논의는 전략팀장, 실행 지시는 PM
 
 ## 6단계 — 팀장 확장
