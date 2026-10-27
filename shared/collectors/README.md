@@ -28,7 +28,11 @@ Claude는 스크립트를 실행하고, 결과(`manifest.json`)를 읽고, 막�
 
 ## PC 준비 (한 번만)
 
+패키지는 저장소 가상환경(`.venv`)에만 설치한다 (전역 설치 금지, 루트 `CLAUDE.md`).
+
 ```bash
+python3 -m venv .venv                      # 저장소 루트에서, 처음 한 번
+source .venv/bin/activate                  # 이후 수집기를 돌릴 때마다
 pip install -r shared/collectors/requirements.txt
 python3 -m playwright install chromium     # launch 모드용. cdp 모드만 쓰면 생략 가능
 ```
@@ -40,14 +44,18 @@ python3 -m playwright install chromium     # launch 모드용. cdp 모드만 쓰
 powershell -ExecutionPolicy Bypass -File shared/collectors/start_chrome.ps1   # windows
 ```
 
-- 평소 쓰는 크롬과 분리된 **전용 프로필**(`~/.coupang-collector-profile`)로, 디버깅 포트 9222를 열고 실행한다.
+- 평소 쓰는 크롬과 분리된 **쿠팡 수집 전용 프로필**(`~/.coupang-collector-profile`)로, 디버깅 포트 9222를 열고 실행한다 (결정 25).
   - 크롬 136부터는 기본 프로필에서 디버깅 포트를 막기 때문에 전용 프로필이 필요하다.
-- **처음 한 번, 이 창에서 쿠팡·1688·도매꾹에 직접 로그인해 둔다.** 이후 수집기는 그 로그인을 그대로 쓴다.
+  - 이 프로필은 쿠팡 수집에만 쓴다. 당근 등 다른 사업은 이 프로필과 포트를 쓰지 않는다.
+  - 디버깅 포트는 `127.0.0.1`에만 열린다 (같은 맥북 안에서만 접속 가능). 크롬 156에서 확인.
+- **로그인은 1688만** 사용자가 이 창에서 직접 해 둔다 (결정 21). 쿠팡 상품·리뷰는 로그인 없이 공개 페이지로 수집하고, 도매꾹·도매매는 OpenAPI로 처리한다.
+  - 봇은 비밀번호를 입력해 로그인하지 않는다. 로그인 만료를 만나면 멈추고 사용자에게 알린다.
 - 수집기는 이 창에 **새 탭을 하나 열고, 끝나면 그 탭만 닫는다.**
 
 ### 2) 실행
 
 ```bash
+source .venv/bin/activate
 S=pdp/projects/test/inputs
 python3 shared/collectors/coupang_detail.py  "<쿠팡 URL>"   $S/ref
 python3 shared/collectors/coupang_reviews.py "<쿠팡 URL>"   $S/reviews --pages 10 --sort recent
@@ -58,7 +66,7 @@ python3 shared/collectors/supplier_detail.py "<공급처 URL>" $S/source
 - **launch 모드** (`--mode launch`): cdp 연결이 안 될 때만 쓴다. 플레이라이트가 전용 프로필로 크롬을 직접 띄운다.
   - 자동화 표식이 붙어서 cdp보다 차단될 가능성이 높다.
 - **다른 크로미움 계열 브라우저**: `BROWSER_APP=<실행파일 경로> ./start_chrome.sh`
-  - 원격 디버깅 포트를 지원해야 붙을 수 있다.
+  - 원격 디버깅 포트를 지원해야 붙을 수 있다. 기본은 크롬이다 (결정 20·25).
 
 ## 테스트
 

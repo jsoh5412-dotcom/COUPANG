@@ -1,5 +1,5 @@
 # 수집 전용 크롬을 원격 디버깅 포트로 띄운다 (windows PowerShell).
-# 처음 한 번 이 창에서 쿠팡·1688·도매꾹에 직접 로그인해 둔다.
+# 로그인은 1688만 사용자가 이 창에서 직접 해 둔다 (쿠팡은 비로그인 수집, 도매꾹·도매매는 API — 결정 21).
 $Port = if ($env:COLLECTOR_PORT) { $env:COLLECTOR_PORT } else { 9222 }
 $Profile = if ($env:COLLECTOR_PROFILE) { $env:COLLECTOR_PROFILE } else { "$env:USERPROFILE\.coupang-collector-profile" }
 $App = $env:BROWSER_APP
