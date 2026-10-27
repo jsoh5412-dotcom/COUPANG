@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--
+  발각질제거기_1 상세페이지 (테스트 세트 1, 결정 38)
+  렌더: node pdp/scripts/render.mjs pdp/projects/발각질제거기-1/pdp.html <outDir>
+  제품 이미지는 공급처 실제 사진 누끼만 사용 (inputs/nukki, 커밋 안 함). AI 이미지 없음.
+-->
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../../templates/set1.css">
+<style>
+  .hero { background: linear-gradient(180deg, #F4F1EA 0%, #E6EDE7 100%); padding-top: 150px; }
+  .hero .stage { position: relative; height: 820px; margin-top: 60px; }
+  .hero .stage::before { content: ''; position: absolute; left: 50%; top: 60px; width: 620px; height: 620px; margin-left: -310px; border-radius: 50%; background: #fff; }
+  .hero img { height: 780px; }
+  .split { display: flex; justify-content: center; gap: 70px; margin-top: 30px; }
+  .split figure { text-align: center; }
+  .split img { height: 760px; }
+  .reason { text-align: left; max-width: 620px; margin: 0 auto; list-style: none; }
+  .reason li { display: flex; align-items: baseline; gap: 24px; padding: 30px 0; border-bottom: 2px solid rgba(255,255,255,.18); color: #fff; font-size: 38px; font-weight: 700; }
+  .reason li span { font-size: 30px; font-weight: 800; color: #A9D3BC; flex: 0 0 64px; }
+  .zoom { position: relative; margin-top: 30px; }
+  .zoom img { height: 860px; }
+  .faces { display: flex; gap: 22px; margin-top: 50px; }
+  .face { flex: 1; border-radius: 22px; padding: 34px 26px; background: #fff; border: 2px solid var(--line); }
+  .face b { display: block; font-size: 40px; color: var(--main); font-weight: 800; }
+  .wash { display: flex; justify-content: center; gap: 22px; margin-top: 60px; }
+  .wash div { width: 196px; height: 196px; border-radius: 50%; background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.25); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; font-size: 30px; font-weight: 700; line-height: 1.3; }
+  .wash div i { font-style: normal; font-size: 54px; font-weight: 800; color: #A9D3BC; }
+  .hang { display: flex; align-items: center; justify-content: center; gap: 40px; margin-top: 40px; text-align: left; }
+  .hang img { height: 820px; }
+  .hang ul { list-style: none; }
+  .hang li { font-size: 32px; font-weight: 700; color: var(--text); padding: 18px 0; border-bottom: 2px solid var(--line); }
+  .dust { font-size: 66px; font-weight: 800; line-height: 1.35; color: var(--main); letter-spacing: -0.03em; }
+  .dots { height: 200px; margin: 40px auto 50px; width: 520px; background: radial-gradient(circle, #CFC8B8 3px, transparent 4px) 0 0 / 34px 30px; opacity: .9; border-radius: 30px; }
+  .colors { display: flex; justify-content: center; gap: 80px; margin-top: 40px; }
+  .colors figure { text-align: center; }
+  .colors img { height: 800px; }
+  .dim { display: flex; align-items: center; justify-content: center; gap: 36px; margin: 20px auto 10px; }
+  .dim img { height: 820px; }
+  .dim .v { height: 820px; border-left: 3px solid var(--main); border-top: 3px solid var(--main); border-bottom: 3px solid var(--main); width: 30px; }
+  .dim .vl { white-space: nowrap; font-size: 36px; color: var(--main); font-weight: 800; text-align: left; line-height: 1.5; }
+  .dim .vl span { display: block; font-size: 30px; color: var(--sub); font-weight: 600; }
+  .warn { list-style: none; text-align: left; counter-reset: w; }
+  .warn li { counter-increment: w; position: relative; padding: 22px 0 22px 70px; border-bottom: 2px solid var(--line); color: var(--text); font-weight: 600; }
+  .warn li::before { content: counter(w); position: absolute; left: 0; top: 24px; width: 46px; height: 46px; border-radius: 50%; background: var(--main); color: #fff; font-size: 28px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+  .end img { height: 700px; margin-top: 70px; }
+</style>
+</head>
+<body>
+
+<!-- 01 후킹 -->
+<section class="hero">
+  <p class="eyebrow">양면 풋파일</p>
+  <h1>한 자루, 두 면으로<br><em>뒤꿈치 관리</em> 끝</h1>
+  <p class="lead">거친 면으로 정리하고, 고운 면으로 마무리</p>
+  <div class="stage"><img data-slot="hero_pair" src="inputs/nukki/pair_wb.png" alt=""></div>
+  <div class="badges"><span class="badge">거친 면 + 고운 면</span><span class="badge">스테인리스 판</span><span class="badge">걸어 두는 손잡이</span></div>
+</section>
+
+<!-- 02 공감 -->
+<section class="dark">
+  <p class="eyebrow">이럴 때 신경 쓰이죠</p>
+  <h2>거칠어진 뒤꿈치,<br>이런 순간 있으셨나요?</h2>
+  <div class="cards">
+    <div class="card"><div class="no">1</div><div><b>이불에 스칠 때</b><span>까슬한 감촉이 계속 거슬려요</span></div></div>
+    <div class="card"><div class="no">2</div><div><b>샌들 신는 날</b><span>뒤꿈치가 먼저 보이는 것 같아요</span></div></div>
+    <div class="card"><div class="no">3</div><div><b>스타킹·양말 신을 때</b><span>올이 걸릴까 조심스러워요</span></div></div>
+    <div class="card"><div class="no">4</div><div><b>맨발이 보일 때</b><span>남 앞에서 괜히 발을 숨기게 돼요</span></div></div>
+  </div>
+</section>
+
+<!-- 03 해결 제시 -->
+<section>
+  <p class="eyebrow">그래서, 양면 풋파일</p>
+  <h2>샵에 가지 않아도<br><em>집에서 2단계</em>로</h2>
+  <div class="split">
+    <figure><img data-slot="rough_fine" src="inputs/nukki/white_rough_fine.png" alt=""></figure>
+  </div>
+  <div class="faces">
+    <div class="face"><b>거친 면</b><p>두꺼운 각질을 먼저 정리</p></div>
+    <div class="face"><b>고운 면</b><p>남은 결을 부드럽게 마무리</p></div>
+  </div>
+</section>
+
+<!-- 04 차별점 요약 -->
+<section class="main">
+  <p class="eyebrow">양면 풋파일을 고르는 이유</p>
+  <h2>욕실에 하나 두면<br>좋은 이유 4가지</h2>
+  <ul class="reason">
+    <li><span>01</span>거친 면 + 고운 면, 한 자루로</li>
+    <li><span>02</span>스테인리스 판, 물로 헹궈 관리</li>
+    <li><span>03</span>손목 편한 길쭉한 곡선 손잡이</li>
+    <li><span>04</span>걸이 구멍으로 욕실에 걸어 보관</li>
+  </ul>
+</section>
+
+<!-- 05 POINT 1 양면 -->
+<section class="soft">
+  <span class="point-no">POINT 01</span>
+  <h2>거친 면으로 정리,<br><em>고운 면으로 마무리</em></h2>
+  <p>오돌토돌한 돌기가 있는 거친 면으로<br>두꺼워진 부분을 먼저 다듬고,<br>고운 면으로 결을 정돈하세요.</p>
+  <div class="zoom"><img data-slot="detail" src="inputs/nukki/detail_white.png" alt=""></div>
+  <span class="label">거친 면 확대</span>
+</section>
+
+<!-- 06 POINT 2 소재·세척 -->
+<section class="dark">
+  <span class="point-no">POINT 02</span>
+  <h2>스테인리스 판,<br><em>헹구고 말리면</em> 끝</h2>
+  <p>쓰고 나면 흐르는 물에 헹궈 주세요.<br>물기를 털어 말려 두면<br>다음에도 깔끔하게 쓸 수 있어요.</p>
+  <div class="wash">
+    <div><i>1</i>물로<br>헹구기</div>
+    <div><i>2</i>물기<br>털기</div>
+    <div><i>3</i>걸어서<br>말리기</div>
+  </div>
+</section>
+
+<!-- 07 POINT 3 손잡이 -->
+<section>
+  <span class="point-no">POINT 03</span>
+  <h2>길쭉한 손잡이로<br><em>허리 덜 숙이고</em></h2>
+  <div class="hang">
+    <img data-slot="handle" src="inputs/nukki/single_rough.png" alt="" style="height:760px">
+    <ul>
+      <li>전체 길이 약 23cm</li>
+      <li>손에 감기는 곡선형</li>
+      <li>끝에 걸이 구멍</li>
+      <li>욕실 고리에 걸어 보관</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 08 사용법 -->
+<section class="soft">
+  <p class="eyebrow">HOW TO USE</p>
+  <h2>이렇게 쓰세요</h2>
+  <div class="steps">
+    <div class="step"><p class="tag">STEP 1</p><b>발을 준비해요</b><p>물기를 닦은 마른 발,<br>또는 샤워 후 물기를 가볍게 닦은 발</p></div>
+    <div class="step"><p class="tag">STEP 2</p><b>거친 면으로 살살</b><p>힘을 빼고 한 방향으로 가볍게.<br>두꺼운 부분만 조금씩 확인하며</p></div>
+    <div class="step"><p class="tag">STEP 3</p><b>고운 면으로 마무리</b><p>결을 정돈한 뒤 발을 씻고<br>보습제를 발라 주세요</p></div>
+  </div>
+</section>
+
+<!-- 09 기대 관리 -->
+<section>
+  <p class="eyebrow">처음 쓰면 놀라실 수 있어요</p>
+  <p class="dust">하얀 가루가 나오는 건<br><em>정상이에요</em></p>
+  <div class="dots"></div>
+  <p>정리된 각질이 가루로 떨어져요.<br>욕실 바닥이나 샤워 중에 쓰면<br>물로 바로 씻어 낼 수 있어요.</p>
+  <p class="note">많이 나온다고 세게 밀지 마세요. 힘은 빼고 조금씩.</p>
+</section>
+
+<!-- 10 가족 -->
+<section class="soft">
+  <p class="eyebrow">하나로 온 가족</p>
+  <h2>내 발도, 부모님 발도<br><em>집에서 챙겨요</em></h2>
+  <ul class="checks">
+    <li>샵 예약 없이 생각날 때 바로</li>
+    <li>샤워하면서 몇 분이면 충분</li>
+    <li>부모님 댁에 하나 더, 선물로</li>
+    <li>가족마다 하나씩 두고 쓰기 좋아요</li>
+  </ul>
+</section>
+
+<!-- 11 컬러 -->
+<section>
+  <p class="eyebrow">COLOR</p>
+  <h2>욕실에 맞춰 고르세요</h2>
+  <div class="colors"><img data-slot="colors" src="inputs/nukki/pair_wb.png" alt=""></div>
+  <div class="badges"><span class="badge">화이트</span><span class="badge">블랙</span></div>
+</section>
+
+<!-- 12 이런 분께 -->
+<section class="dark">
+  <p class="eyebrow">이런 분께 추천해요</p>
+  <h2>하나라도 해당된다면</h2>
+  <ul class="checks">
+    <li>건조한 계절마다 뒤꿈치가 신경 쓰이는 분</li>
+    <li>작은 풋파일이 손에서 자꾸 미끄러졌던 분</li>
+    <li>패디케어 샵이 부담스러운 분</li>
+    <li>샌들·맨발 시즌을 미리 준비하는 분</li>
+    <li>부모님 발 관리를 챙겨 드리고 싶은 분</li>
+    <li>욕실에 걸어 두고 깔끔하게 쓰고 싶은 분</li>
+  </ul>
+</section>
+
+<!-- 13 Q&A -->
+<section>
+  <p class="eyebrow">Q&amp;A</p>
+  <h2>자주 묻는 질문</h2>
+  <dl class="qa">
+    <dt>마른 발에 써도 되나요?</dt>
+    <dd>네. 마른 발이나 샤워 후 물기를 닦은 발에 쓰세요. 어느 쪽이든 힘을 빼고 가볍게 쓰는 게 중요해요.</dd>
+    <dt>얼마나 자주 써야 하나요?</dt>
+    <dd>한 번에 많이 하기보다 피부 상태를 보며 가끔씩 나눠서 관리하세요.</dd>
+    <dt>보관은 어떻게 하나요?</dt>
+    <dd>물로 헹군 뒤 물기를 털고, 손잡이 끝 구멍으로 걸어 말려 주세요.</dd>
+    <dt>손이나 다른 부위에도 쓰나요?</dt>
+    <dd>발 각질 관리용이에요. 다른 부위에는 쓰지 마세요.</dd>
+  </dl>
+</section>
+
+<!-- 14 스펙 -->
+<section class="soft">
+  <p class="eyebrow">PRODUCT INFO</p>
+  <h2>제품 정보</h2>
+  <div class="dim">
+    <img data-slot="spec" src="inputs/nukki/single_rough.png" alt="">
+    <span class="v"></span>
+    <p class="vl">길이 약 23cm<span>판 폭 약 3.8cm</span></p>
+  </div>
+  <table class="spec">
+    <tr><th>제품명</th><td>양면 풋파일</td></tr>
+    <tr><th>색상</th><td>화이트, 블랙</td></tr>
+    <tr><th>재질</th><td>판: 스테인리스 / 손잡이: PP</td></tr>
+    <tr><th>크기</th><td>약 23 × 3.8cm</td></tr>
+    <tr><th>구성</th><td>양면 풋파일 1개</td></tr>
+    <tr><th>원산지</th><td>중국</td></tr>
+  </table>
+</section>
+
+<!-- 15 주의사항 -->
+<section>
+  <p class="eyebrow">꼭 읽어 주세요</p>
+  <h2>사용 시 주의사항</h2>
+  <ol class="warn">
+    <li>세게 문지르지 말고 힘을 빼고 쓰세요</li>
+    <li>상처나 피부에 이상이 있는 곳에는 쓰지 마세요</li>
+    <li>쓰다가 따갑거나 붉어지면 바로 멈추세요</li>
+    <li>발 각질 관리 외 용도로 쓰지 마세요</li>
+    <li>쓰고 나면 헹궈 물기를 말려 보관하세요</li>
+    <li>어린이 손이 닿지 않는 곳에 두세요</li>
+  </ol>
+</section>
+
+<!-- 16 마무리 -->
+<section class="main end">
+  <p class="eyebrow">양면 풋파일</p>
+  <h2>오늘 샤워할 때,<br><em>뒤꿈치부터</em> 챙겨요</h2>
+  <img data-slot="end_pair" src="inputs/nukki/pair_wb.png" alt="">
+</section>
+
+</body>
+</html>
