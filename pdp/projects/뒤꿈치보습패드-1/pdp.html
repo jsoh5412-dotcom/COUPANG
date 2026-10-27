@@ -3,8 +3,8 @@
 <!--
   뒤꿈치보습패드_1 상세페이지 (테스트 세트 1, 결정 38) — 실리콘 뒤꿈치 패드
   렌더: node pdp/scripts/render.mjs pdp/projects/뒤꿈치보습패드-1/pdp.html <outDir>
-  ⚠️ 공급처(도매꾹 53552816) 상세에 "당사 허락 없는 상품 이미지 사용은 불가" 공지가 있어 제품 사진을 넣지 않았다.
-     제품 자리는 data-slot 빈 칸으로 두고, 공급처 허락 또는 실물 촬영 후 채운다. AI 이미지 없음.
+  공급처 교체(2026-10-28): 도매꾹 64393814(살색)·64392878(화이트), 이미지 사용 허용. 공급처 실제 사진을 배경째 크롭해 씀. AI 이미지 없음.
+  이전 공급처(53552816)는 이미지 사용 금지라 교체됨. 공급처의 "갈라짐·까짐·물집 대처, 땀참 감소, 미끄럼 방지" 주장은 쓰지 않음.
 -->
 <head>
 <meta charset="utf-8">
@@ -28,8 +28,8 @@
   <p class="eyebrow">실리콘 뒤꿈치 패드</p>
   <h1>크림 바르고 쏙,<br><em>이불에 안 묻게</em></h1>
   <p class="lead">뒤꿈치만 감싸는 말랑한 실리콘 패드</p>
-  <div class="slot-empty" data-slot="hero">제품 사진 자리<br>(공급처 허락 또는 실물 촬영 후)</div>
-  <div class="badges"><span class="badge">뒤꿈치만 감싸는 형태</span><span class="badge">실리콘</span><span class="badge">2개 1세트</span></div>
+  <div class="photo"><img data-slot="hero" src="inputs/photos/skin_worn.jpg" alt=""></div>
+  <div class="badges"><span class="badge">뒤꿈치만 감싸는 형태</span><span class="badge">2개 1세트</span><span class="badge">작은 구멍이 뚫린 실리콘</span></div>
 </section>
 
 <section class="dark">
@@ -68,7 +68,7 @@
   <span class="point-no">POINT 01</span>
   <h2>뒤꿈치만 감싸고<br><em>발가락은 자유롭게</em></h2>
   <p>발 전체를 덮는 양말이 아니라<br>뒤꿈치 부분만 감싸는 형태예요.</p>
-  <div class="slot-empty" data-slot="wear">착용 사진 자리</div>
+  <div class="photo"><img data-slot="wear" src="inputs/photos/white_worn.jpg" alt=""></div>
 </section>
 
 <section>
@@ -87,9 +87,10 @@
   <div class="scene">
     <div><b>자기 전에</b><p>바르고 신고 바로 누워요</p></div>
     <div><b>집안일 할 때</b><p>슬리퍼와 함께</p></div>
-    <div><b>양말 속에</b><p>얇은 양말 아래 겹쳐서</p></div>
+    <div><b>신발 안에</b><p>양말 대신 뒤꿈치에만</p></div>
     <div><b>TV 볼 때</b><p>쉬는 시간에 틈틈이</p></div>
   </div>
+  <div class="photo"><img data-slot="shoe" src="inputs/photos/skin_shoe.jpg" alt=""></div>
 </section>
 
 <section class="soft">
@@ -107,8 +108,8 @@
   <p class="eyebrow">COLOR</p>
   <h2>두 가지 컬러</h2>
   <div class="grid2">
-    <figure><div class="slot-empty" data-slot="c_skin" style="height:300px;margin:0">살색 사진 자리</div><figcaption>살색</figcaption></figure>
-    <figure><div class="slot-empty" data-slot="c_white" style="height:300px;margin:0">화이트 사진 자리</div><figcaption>화이트</figcaption></figure>
+    <figure><img data-slot="c_skin" src="inputs/photos/skin_flat.jpg" alt=""><figcaption>살색</figcaption></figure>
+    <figure><img data-slot="c_white" src="inputs/photos/white_flat.jpg" alt=""><figcaption>화이트</figcaption></figure>
   </div>
 </section>
 
@@ -143,8 +144,7 @@
     <tr><th>색상</th><td>살색, 화이트</td></tr>
     <tr><th>구성</th><td>2개 (양발 1세트)</td></tr>
     <tr><th>재질</th><td>실리콘</td></tr>
-    <tr><th>사이즈</th><td>프리사이즈</td></tr>
-    <tr><th>포장</th><td>개별 OPP 포장</td></tr>
+    <tr><th>크기</th><td>약 10 × 8cm (프리사이즈)</td></tr>
   </table>
   <ol class="numlist">
     <li>상처나 피부에 이상이 있는 곳에는 쓰지 마세요</li>
@@ -157,7 +157,7 @@
 <section class="main">
   <p class="eyebrow">실리콘 뒤꿈치 패드</p>
   <h2>오늘 밤은<br><em>크림 바르고 쏙</em></h2>
-  <div class="slot-empty" data-slot="end" style="height:440px">제품 사진 자리</div>
+  <div class="photo"><img data-slot="end" src="inputs/photos/skin_flat.jpg" alt="" style="max-width:560px;margin:0 auto"></div>
 </section>
 
 </body>
