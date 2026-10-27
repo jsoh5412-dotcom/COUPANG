@@ -18,9 +18,9 @@ from browser import base_args, check_blocked, goto, open_page, run, scroll_to_bo
 
 REVIEW_SECTION = ["#sdpReview", ".sdp-review", "[id*='review' i]", "section:has-text('상품평')"]
 REVIEW_TAB = ["a[href='#sdpReview']", "li[name='review']", "a:has-text('상품평')", "button:has-text('상품평')", "a:has-text('리뷰')"]
-ARTICLE = ["article.sdp-review__article__list", ".sdp-review__article__list", "article[class*='review' i]", "[class*='review-item' i]"]
-PAGER = [".sdp-review__article__page", "[class*='review' i] [class*='pag' i]", "[class*='pagination' i]"]
-NEXT_BLOCK = [".sdp-review__article__page__next", "button[class*='next' i]", "a[class*='next' i]"]
+ARTICLE = ["#sdpReview article", "article.sdp-review__article__list", ".sdp-review__article__list", "article[class*='review' i]", "[class*='review-item' i]"]
+PAGER = ["#sdpReview [data-page]", ".sdp-review__article__page", "[class*='review' i] [class*='pag' i]", "[class*='pagination' i]"]
+NEXT_BLOCK = ["[data-page] > button:last-child", ".sdp-review__article__page__next", "button[class*='next' i]", "a[class*='next' i]"]
 SORT = {"recent": "최신순", "best": "베스트순"}
 
 JS_PARSE = r"""
@@ -30,6 +30,11 @@ JS_PARSE = r"""
   let rating = null;
   const r = q('[data-rating]');
   if (r) rating = Number(r.getAttribute('data-rating'));
+  if (rating === null) {
+    // 2026-10 개편 마크업: 별 아이콘 i.twc-bg-full-star / twc-bg-half-star 개수
+    const g = q('i[class*="full-star"], i[class*="half-star"]')?.parentElement;
+    if (g) rating = g.querySelectorAll('i[class*="full-star"]').length + 0.5 * g.querySelectorAll('i[class*="half-star"]').length;
+  }
   if (rating === null) {
     const star = q('[class*="star"][style*="width"]');
     const m = star && star.getAttribute('style').match(/width:\s*(\d+)%/);
@@ -42,14 +47,17 @@ JS_PARSE = r"""
   }
   const all = a.innerText.trim();
   const date = (all.match(/20\d{2}[.\-/]\s?\d{1,2}[.\-/]\s?\d{1,2}/) || [null])[0];
+  // 개편 마크업: 본문은 span[translate=no], 제목은 그 바로 앞의 굵은 줄
+  const bodyEl = q('.sdp-review__article__list__review__content') || q('span[translate="no"]') || q('[class*="review__content"]');
+  const head = bodyEl?.parentElement?.previousElementSibling;
   return {
     rating, date,
-    option: txt('.sdp-review__article__list__info__product-info__name') || null,
-    headline: txt('.sdp-review__article__list__headline') || null,
-    body: txt('.sdp-review__article__list__review__content') || txt('[class*="review__content"]') || null,
+    option: txt('.sdp-review__article__list__info__product-info__name') || txt('[class*="line-clamp"]') || null,
+    headline: txt('.sdp-review__article__list__headline') || (head && /font-bold/.test(head.className) ? head.innerText.trim() : null),
+    body: (bodyEl?.innerText || '').trim() || null,
     helpful: Number(q('[data-count]')?.getAttribute('data-count') || 0) || null,
     survey: txt('.sdp-review__article__list__survey') || null,
-    has_photo: !!q('[class*="attachment"] img, [class*="photo"] img'),
+    has_photo: !!q('[class*="attachment"] img, [class*="photo"] img, [class*="flex-wrap"] img'),
     raw: all,
   };
 })
