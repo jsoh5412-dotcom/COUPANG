@@ -73,7 +73,7 @@ def base_args(desc: str) -> argparse.ArgumentParser:
 
 @contextmanager
 def open_page(args):
-    """새 탭 하나를 열어 넘겨주고, 끝나면 그 탭만 닫는다."""
+    """새 탭 하나를 열어 넘겨주고, 끝나면 그 탭과 그 탭이 연 탭(링크의 target=_blank 등)만 닫는다."""
     with sync_playwright() as pw:
         if args.mode == "cdp":
             try:
@@ -87,6 +87,7 @@ def open_page(args):
             try:
                 yield page
             finally:
+                close_children(ctx, page)
                 page.close()
                 browser.close()  # cdp 연결만 끊는다. 크롬 창은 그대로 남는다
         else:
@@ -100,6 +101,21 @@ def open_page(args):
                 yield page
             finally:
                 ctx.close()
+
+
+def close_children(ctx, page: Page) -> int:
+    """page 가 연 탭만 닫는다. 사용자가 열어 둔 다른 탭(1688 로그인 탭 등)은 건드리지 않는다."""
+    closed = 0
+    for p in list(ctx.pages):
+        try:
+            if p is not page and p.opener() == page:
+                p.close()
+                closed += 1
+        except Exception:  # noqa: BLE001
+            continue
+    if closed:
+        print(f"수집 중 열린 탭 {closed}개를 닫았습니다")
+    return closed
 
 
 def goto(page: Page, url: str) -> None:
