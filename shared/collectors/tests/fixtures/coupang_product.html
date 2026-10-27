@@ -1,0 +1,36 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>테스트 상품 - 쿠팡!</title>
+<style>body{margin:0;font-family:sans-serif} .gallery img{width:80px} .product-detail-content-inside img{width:780px;display:block;min-height:400px}
+.fold{max-height:1500px;overflow:hidden} .fold.open{max-height:none} article{padding:12px;border-bottom:1px solid #ddd}</style></head>
+<body>
+<div class="gallery"><img src="img/thumb1.png"><img src="img/thumb2.png"></div>
+<h1>테스트 상품</h1><p style="height:1200px">가격 영역 등</p>
+<div id="productDetail"><div class="product-detail-content-inside fold" id="fold">
+  <p>HTML 상세 텍스트: 이 제품은 테스트용입니다.</p>
+  <img data-src="img/d1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACw="><img data-src="img/d2.png"><img data-src="img/d3.png">
+  <img data-src="img/d4.png"><img data-src="img/d5.png">
+  <img src="https://static.coupangcdn.com/icon.png" width="20">
+</div><button class="product-detail-seemore-btn" onclick="document.getElementById('fold').classList.add('open')">상품정보 더보기</button></div>
+<section id="sdpReview"><h2>상품평</h2><div id="list"></div>
+<div class="sdp-review__article__page">
+  <button class="sdp-review__article__page__num" data-page="1">1</button>
+  <button class="sdp-review__article__page__num" data-page="2">2</button>
+  <button class="sdp-review__article__page__num" data-page="3">3</button>
+</div></section>
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && e.target.dataset.src) { e.target.src = e.target.dataset.src; io.unobserve(e.target); } }), {rootMargin: '200px'});
+document.querySelectorAll('img[data-src]').forEach(i => io.observe(i));
+function render(p) {
+  let h = '';
+  for (let i = 1; i <= 5; i++) {
+    const n = (p - 1) * 5 + i, r = (n % 5) + 1;
+    h += `<article class="sdp-review__article__list"><div class="sdp-review__article__list__info__product-info__star-orange" data-rating="${r}"></div>
+      <div class="sdp-review__article__list__info__product-info__reg-date">2026.10.${String(n).padStart(2,'0')}</div>
+      <div class="sdp-review__article__list__info__product-info__name">옵션 ${n % 2 ? '블랙' : '화이트'}</div>
+      <div class="sdp-review__article__list__headline">제목 ${n}</div>
+      <div class="sdp-review__article__list__review__content">리뷰 본문 ${n}: ${r <= 2 ? '배송이 늦고 마감이 아쉬워요' : '부모님이 쓰기 편하다고 하세요'}</div></article>`;
+  }
+  setTimeout(() => document.getElementById('list').innerHTML = h, 300);
+}
+document.querySelectorAll('[data-page]').forEach(b => b.onclick = () => render(+b.dataset.page));
+render(1);
+</script></body></html>

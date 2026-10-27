@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><title>测试商品 - 阿里巴巴</title></head><body style="margin:0">
+<div class="gallery"><img src="img/thumb1.png" style="width:80px"></div>
+<div class="offer-attr">材质: 304不锈钢 / 尺寸: 20x10cm / 重量: 0.5斤</div>
+<p style="height:1400px">价格</p>
+<div class="html-description" id="host"></div>
+<script>
+const root = document.getElementById('host').attachShadow({mode: 'open'});
+root.innerHTML = ['d1','d2','d3','d4'].map(n => `<img data-src="img/${n}.png" style="width:750px;min-height:500px;display:block">`).join('');
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.src = e.target.dataset.src; io.unobserve(e.target); } }));
+root.querySelectorAll('img').forEach(i => io.observe(i));
+</script></body></html>
