@@ -31,13 +31,21 @@ SITES = {
         "min_w": 400,
     },
     "domeggook": {
+        # 상세 본문은 #lInfoView 안의 #lInfoViewItemContents 다 (2026-10 실사이트 확인).
+        # 예전 첫 후보 #lInfoBody 는 큰 이미지가 거의 없어 폴백(페이지 전체)으로 빠졌고, 추천상품 썸네일 100여 장이 섞였다.
         "detail": [
-            "#lInfoBody", "#itemDetail", ".lItemDetail", "#lDetail", "[id*='detail' i]", "[class*='detail' i]",
+            "#lInfoViewItemContents", "#lInfoView", "#lInfoBody", "#itemDetail", ".lItemDetail", "#lDetail",
         ],
         "spec": ["#lInfoNotice", "[id*='notice' i] table", "table:has-text('상품정보제공고시')", "table:has-text('원산지')"],
-        "see_more": ["button:has-text('상세정보 펼치기')", "a:has-text('상세정보 더보기')", "button:has-text('더보기')"],
+        # "더보기"는 상세 영역 안에서만 찾는다. 페이지 전체에서 찾으면 판매자 상품목록 링크(target=_blank)를 눌러 새 탭이 남았다.
+        "see_more": [
+            "#lInfoView button:has-text('상세정보 펼치기')", "#lInfoView a:has-text('상세정보 더보기')",
+            "#lInfoView button:has-text('더보기')",
+        ],
         "noise": re.compile(r"/common/|/btn_|/icon|/banner|logo|\.gif$", re.I),
         "min_w": 300,
+        # 도매꾹 상세는 긴 이미지 1장으로 된 경우가 많다 → 상세 본문에 큰 이미지가 1장만 있어도 폴백하지 않는다
+        "min_items": 1,
     },
 }
 
@@ -91,7 +99,7 @@ def main(args) -> None:
         items = collect_images(page, container)
         strategy = f"container:{container}"
         big = lambda i: max(i["w"], i["dw"]) >= cfg["min_w"]  # noqa: E731
-        if not container or sum(map(big, items)) < 2:
+        if not container or sum(map(big, items)) < cfg.get("min_items", 2):
             # 폴백: 첫 화면 아래의 큰 이미지 전부 (상단 갤러리는 위치로 거른다)
             items = [i for i in collect_images(page, None) if i["top"] > 900]
             strategy = "fallback:large-below-fold"

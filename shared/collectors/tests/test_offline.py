@@ -86,6 +86,21 @@ def main() -> None:
     check("1688: 섀도DOM 상세 4장 (컨테이너로)", rc == 0 and m["images_saved"] == 4 and m["strategy"].startswith("container"), f"rc={rc} saved={m.get('images_saved')} {m.get('strategy')}")
     check("1688: 속성 텍스트 저장", "304" in (out / "spec_text.txt").read_text())
 
+    out = tmp / "domeggook"
+    rc = run("supplier_detail.py", f"{base}/supplier_domeggook.html", out, "--site", "domeggook")
+    m = json.loads((out / "manifest.json").read_text())
+    names = [i["src"].rsplit("/", 1)[-1] for i in m["images"]]
+    check("도매꾹: 상세 본문 3장만 (추천상품·대표 썸네일 제외)", rc == 0 and names == ["d1.png", "d2.png", "d3.png"], f"rc={rc} {names}")
+    check("도매꾹: 폴백 없이 #lInfoViewItemContents", m["strategy"] == "container:#lInfoViewItemContents", m.get("strategy"))
+    check("도매꾹: 판매자 목록 '더보기'(새 탭) 안 누름", m["see_more"] is None, str(m.get("see_more")))
+    check("도매꾹: 상품정보 텍스트 저장", "원산지" in (out / "spec_text.txt").read_text())
+
+    out = tmp / "domeggook_single"
+    rc = run("supplier_detail.py", f"{base}/supplier_domeggook_single.html", out, "--site", "domeggook")
+    m = json.loads((out / "manifest.json").read_text())
+    names = [i["src"].rsplit("/", 1)[-1] for i in m["images"]]
+    check("도매꾹: 긴 상세 1장이어도 폴백하지 않음", rc == 0 and names == ["d1.png"] and m["strategy"].startswith("container"), f"{m.get('strategy')} {names}")
+
     out = tmp / "blocked"
     rc = run("coupang_detail.py", f"{base}/blocked.html", out)
     m = json.loads((out / "manifest.json").read_text())
