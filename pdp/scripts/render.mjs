@@ -1,7 +1,7 @@
 // HTML 상세페이지 → 가로 780px 이미지로 렌더링하고 세로로 분할 저장
 // 사용법: node pdp/scripts/render.mjs <pdp.html> <outDir> [--slice 3000] [--jpg] [--width 780]
 import { chromium } from 'playwright';
-import { existsSync, mkdirSync } from 'node:fs';
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
@@ -27,6 +27,15 @@ const browser = await chromium.launch(exe ? { executablePath: exe } : {});
 const page = await browser.newPage({ viewport: { width, height: 1200 }, deviceScaleFactor: 1 });
 await page.goto(pathToFileURL(resolve(htmlPath)).href, { waitUntil: 'networkidle' });
 await page.evaluate(() => document.fonts.ready);
+
+// 제품 슬롯 좌표 기록: [data-slot] 요소의 페이지 기준 좌표·크기 (누끼 교체·합성용)
+const slots = await page.evaluate(() =>
+  [...document.querySelectorAll('[data-slot]')].map((e) => {
+    const r = e.getBoundingClientRect();
+    return { name: e.dataset.slot, src: e.getAttribute('src'), x: Math.round(r.left + window.scrollX), y: Math.round(r.top + window.scrollY), w: Math.round(r.width), h: Math.round(r.height) };
+  }),
+);
+writeFileSync(join(outDir, 'slots.json'), JSON.stringify({ width, slots }, null, 2));
 
 // 섹션 경계에서 자르기: [data-slice-break] 요소 직전, 또는 sliceH 초과 시 섹션 경계로
 const total = await page.evaluate(() => document.documentElement.scrollHeight);
