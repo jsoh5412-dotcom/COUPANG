@@ -1,179 +1,338 @@
 <!DOCTYPE html>
 <html lang="ko">
 <!--
-  발각질제거기_1 상세페이지 (테스트 세트 1, 결정 38)
+  발각질제거기_1 상세페이지 v2 — 시범 재제작 (결정 42, 품질 기준 1~7)
   렌더: node pdp/scripts/render.mjs pdp/projects/발각질제거기-1/pdp.html <outDir>
-  제품 이미지는 공급처 실제 사진 누끼만 사용 (inputs/nukki, 커밋 안 함). AI 이미지 없음.
+  사진: 공급처 실사(inputs/photos/s_*), AI 장면(inputs/ai/*, 제품 없음, 원칙 4), 공급처 누끼 합성(inputs/nukki/hi_*).
+  v1(누끼+글자+카드 반복)은 git 이력과 드라이브 _v1/에 있다.
 -->
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="../../templates/set1.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap">
 <style>
-  .hero { background: linear-gradient(180deg, #F4F1EA 0%, #E6EDE7 100%); padding-top: 150px; }
-  .hero .stage { position: relative; height: 820px; margin-top: 60px; }
-  .hero .stage::before { content: ''; position: absolute; left: 50%; top: 60px; width: 620px; height: 620px; margin-left: -310px; border-radius: 50%; background: #fff; }
-  .hero img { height: 780px; }
-  .split { display: flex; justify-content: center; gap: 70px; margin-top: 30px; }
-  .split figure { text-align: center; }
-  .split img { height: 760px; }
-  .reason { text-align: left; max-width: 620px; margin: 0 auto; list-style: none; }
-  .reason li { display: flex; align-items: baseline; gap: 24px; padding: 30px 0; border-bottom: 2px solid rgba(255,255,255,.18); color: #fff; font-size: 38px; font-weight: 700; }
-  .reason li span { font-size: 30px; font-weight: 800; color: #A9D3BC; flex: 0 0 64px; }
-  .zoom { position: relative; margin-top: 30px; }
-  .zoom img { height: 860px; }
-  .faces { display: flex; gap: 22px; margin-top: 50px; }
-  .face { flex: 1; border-radius: 22px; padding: 34px 26px; background: #fff; border: 2px solid var(--line); }
-  .face b { display: block; font-size: 40px; color: var(--main); font-weight: 800; }
-  .wash { display: flex; justify-content: center; gap: 22px; margin-top: 60px; }
-  .wash div { width: 196px; height: 196px; border-radius: 50%; background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.25); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; font-size: 30px; font-weight: 700; line-height: 1.3; }
-  .wash div i { font-style: normal; font-size: 54px; font-weight: 800; color: #A9D3BC; }
-  .hang { display: flex; align-items: center; justify-content: center; gap: 40px; margin-top: 40px; text-align: left; }
-  .hang img { height: 820px; }
-  .hang ul { list-style: none; }
-  .hang li { font-size: 32px; font-weight: 700; color: var(--text); padding: 18px 0; border-bottom: 2px solid var(--line); }
-  .dust { font-size: 66px; font-weight: 800; line-height: 1.35; color: var(--main); letter-spacing: -0.03em; }
-  .dots { height: 200px; margin: 40px auto 50px; width: 520px; background: radial-gradient(circle, #CFC8B8 3px, transparent 4px) 0 0 / 34px 30px; opacity: .9; border-radius: 30px; }
-  .colors { display: flex; justify-content: center; gap: 80px; margin-top: 40px; }
-  .colors figure { text-align: center; }
-  .colors img { height: 800px; }
-  .dim { display: flex; align-items: center; justify-content: center; gap: 36px; margin: 20px auto 10px; }
+  :root {
+    --ink: #1C2621; --sub: #46514B; --sage: #2F4A3E; --sage2: #3B6E54; --mint: #CFE3D6;
+    --ivory: #F5F1E8; --cream: #FBF8F2; --dark: #17211C; --gold: #C9A96E; --hl: rgba(207,227,150,.85);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 780px; background: #fff; }
+  body { font-family: 'Pretendard', sans-serif; color: var(--ink); word-break: keep-all; -webkit-font-smoothing: antialiased; }
+  section { position: relative; overflow: hidden; }
+  img { display: block; }
+  .pad { padding: 120px 60px; text-align: center; }
+  .eyebrow { font-size: 30px; font-weight: 700; letter-spacing: .04em; color: var(--sage2); margin-bottom: 18px; }
+  .dark .eyebrow, .on-photo .eyebrow { color: #CFE3D6; }
+  h1 { font-size: 78px; line-height: 1.18; font-weight: 900; letter-spacing: -.045em; }
+  h2 { font-size: 64px; line-height: 1.22; font-weight: 900; letter-spacing: -.04em; color: var(--sage); }
+  .dark h2, .on-photo h2 { color: #fff; }
+  p, li { font-size: 32px; line-height: 1.6; color: var(--sub); }
+  .dark p, .on-photo p { color: rgba(255,255,255,.9); }
+  .hl { background: linear-gradient(transparent 58%, var(--hl) 58%); padding: 0 4px; }
+  .dark .hl { background: linear-gradient(transparent 58%, rgba(59,110,84,.85) 58%); }
+  .metal { background: linear-gradient(180deg, #FFFFFF 0%, #DDE8E0 45%, #9FBFAE 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .gold { background: linear-gradient(180deg, #F6E7C1 0%, #C9A96E 60%, #A07F45 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .pen { font-family: 'Nanum Pen Script', cursive; font-weight: 400; }
+  .full { width: 100%; height: auto; }
+  .shadow { filter: drop-shadow(0 30px 34px rgba(0,0,0,.28)); }
+  .label { display: inline-block; font-size: 30px; font-weight: 800; color: #fff; background: rgba(23,33,28,.78); padding: 10px 22px; border-radius: 8px; }
+
+  /* 01 첫 화면 */
+  .hero { height: 1640px; background: #EEEAE3; }
+  .hero .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
+  .hero .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(245,241,232,.96) 0%, rgba(245,241,232,.75) 26%, rgba(245,241,232,0) 46%); }
+  .hero .copy { position: absolute; top: 120px; left: 0; right: 0; text-align: center; }
+  .hero .copy .eyebrow { font-size: 32px; }
+  .hero h1 { color: var(--sage); }
+  .hero .sub { font-size: 34px; color: var(--sub); margin-top: 22px; font-weight: 600; }
+  .hero .prod { position: absolute; right: -40px; bottom: 170px; width: 640px; transform: rotate(-8deg); }
+  .seal { position: absolute; width: 190px; height: 190px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #fff; box-shadow: 0 14px 28px rgba(0,0,0,.25); }
+  .seal b { font-size: 46px; font-weight: 900; line-height: 1; letter-spacing: -.03em; }
+  .seal span { font-size: 26px; font-weight: 700; margin-top: 8px; line-height: 1.2; }
+  .seal.a { left: 44px; bottom: 470px; background: radial-gradient(circle at 30% 30%, #4E8A6A, #23392F); border: 5px solid rgba(255,255,255,.85); }
+  .seal.b { left: 200px; bottom: 300px; background: radial-gradient(circle at 30% 30%, #D8BE86, #A07F45); border: 5px solid rgba(255,255,255,.85); }
+  .hero .band { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; background: var(--sage); display: flex; align-items: center; justify-content: center; gap: 26px; color: #fff; font-size: 32px; font-weight: 700; }
+  .hero .band i { font-style: normal; width: 8px; height: 8px; border-radius: 50%; background: var(--mint); }
+
+  /* 02 공감 4컷 */
+  .grid4 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 50px; }
+  .grid4 figure { position: relative; }
+  .grid4 img { width: 100%; height: 330px; object-fit: cover; }
+  .grid4 figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 18px 18px; background: linear-gradient(transparent, rgba(0,0,0,.72)); color: #fff; font-size: 30px; font-weight: 800; text-align: left; }
+  .grid4 figcaption small { display: block; font-size: 30px; font-weight: 500; opacity: .9; }
+
+  /* 03 해결 */
+  .photo-head { position: relative; }
+  .photo-head .cap { position: absolute; left: 0; right: 0; top: 0; padding: 110px 60px 180px; text-align: center; background: linear-gradient(180deg, rgba(23,33,28,.86) 0%, rgba(23,33,28,.55) 60%, transparent 100%); }
+  .bignum { font-size: 190px; font-weight: 900; line-height: .9; letter-spacing: -.06em; }
+
+  /* 04 사용 장면 */
+  .scene { position: relative; }
+  .scene .tag { position: absolute; left: 40px; bottom: 60px; text-align: left; }
+  .scene .tag b { display: block; font-size: 52px; font-weight: 900; color: #fff; line-height: 1.25; text-shadow: 0 4px 18px rgba(0,0,0,.5); }
+  .arrow-note { position: absolute; display: flex; align-items: center; gap: 14px; }
+  .arrow-note svg { overflow: visible; }
+
+  /* 05 양면 확대 */
+  .faces { position: relative; height: 1180px; margin-top: 30px; }
+  .faces .stand { position: absolute; left: 50%; top: 40px; height: 900px; transform: translateX(-50%); }
+  .lens { position: absolute; width: 300px; height: 300px; border-radius: 50%; overflow: hidden; border: 8px solid #fff; box-shadow: 0 18px 40px rgba(0,0,0,.4); }
+  .lens img { width: 100%; height: 100%; object-fit: cover; }
+  .lens.l { left: 20px; top: 120px; } .lens.r { right: 20px; top: 470px; }
+  .lens-cap { position: absolute; font-size: 34px; font-weight: 900; color: #fff; text-align: left; }
+  .lens-cap small { display: block; font-size: 30px; font-weight: 500; color: rgba(255,255,255,.85); }
+
+  /* 06 2단계 흐름 */
+  .flow { display: flex; align-items: stretch; gap: 0; margin-top: 50px; }
+  .flow figure { position: relative; flex: 1; }
+  .flow img { width: 100%; height: 620px; object-fit: cover; }
+  .flow .n { position: absolute; left: 18px; top: 14px; font-size: 96px; font-weight: 900; color: #fff; line-height: 1; text-shadow: 0 6px 18px rgba(0,0,0,.45); }
+  .flow figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 50px 18px 18px; background: linear-gradient(transparent, rgba(0,0,0,.75)); color: #fff; font-size: 32px; font-weight: 800; }
+  .flow .mid { position: absolute; left: 50%; top: 255px; transform: translateX(-50%); z-index: 3; width: 110px; height: 110px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 24px rgba(0,0,0,.3); }
+
+  /* 07 세척 */
+  .wash .prod { position: absolute; width: 360px; left: 380px; top: 470px; transform: rotate(-14deg); }
+  .drops { position: absolute; inset: 0; pointer-events: none; }
+  .drops i { position: absolute; border-radius: 50% 50% 50% 50% / 58% 58% 42% 42%; background: radial-gradient(circle at 34% 30%, rgba(255,255,255,.9) 0 10%, rgba(255,255,255,.12) 30%, rgba(160,190,200,.08) 62%, rgba(40,60,70,.3) 100%); box-shadow: 0 2px 4px rgba(0,0,0,.15); }
+
+  /* 08 손잡이 */
+  .callout { position: absolute; display: flex; align-items: center; gap: 12px; font-size: 34px; font-weight: 900; color: #fff; text-shadow: 0 3px 12px rgba(0,0,0,.55); }
+  .ring { width: 120px; height: 120px; border-radius: 50%; border: 6px solid #fff; box-shadow: 0 0 0 4px rgba(59,110,84,.6); }
+
+  /* 09 사용법 */
+  .steps { margin-top: 50px; display: grid; gap: 40px; }
+  .step { position: relative; }
+  .step img { width: 100%; height: 540px; object-fit: cover; }
+  .step .n { position: absolute; left: 24px; top: 18px; font-size: 30px; font-weight: 900; letter-spacing: .1em; color: #fff; background: var(--sage2); padding: 8px 20px; border-radius: 6px; }
+  .step .t { position: absolute; left: 0; right: 0; bottom: 0; padding: 70px 30px 26px; text-align: left; background: linear-gradient(transparent, rgba(0,0,0,.78)); }
+  .step .t b { display: block; font-size: 44px; font-weight: 900; color: #fff; }
+  .step .t span { font-size: 32px; color: rgba(255,255,255,.92); }
+
+  /* 10 가루 */
+  .dust-wrap { position: relative; height: 600px; margin: 40px auto 30px; width: 660px; }
+  .dust-wrap i { position: absolute; border-radius: 42% 58% 50% 46%; background: #F4EEDF; box-shadow: 0 0 6px rgba(255,255,255,.35); }
+
+  /* 12 컬러 */
+  .colors-stage { position: relative; height: 760px; margin-top: 30px; border-radius: 0; background: radial-gradient(circle at 50% 55%, #FFFFFF 0%, #E9EFEA 55%, #D3E1D8 100%); }
+  .colors-stage img { position: absolute; left: 50%; top: 60px; width: 700px; transform: translateX(-50%); }
+  .chip { position: absolute; bottom: 50px; font-size: 34px; font-weight: 900; padding: 12px 34px; border-radius: 999px; }
+
+  /* 13 스펙 */
+  .dim { display: flex; align-items: center; justify-content: center; gap: 40px; margin-top: 40px; }
   .dim img { height: 820px; }
-  .dim .v { height: 820px; border-left: 3px solid var(--main); border-top: 3px solid var(--main); border-bottom: 3px solid var(--main); width: 30px; }
-  .dim .vl { white-space: nowrap; font-size: 36px; color: var(--main); font-weight: 800; text-align: left; line-height: 1.5; }
-  .dim .vl span { display: block; font-size: 30px; color: var(--sub); font-weight: 600; }
-  .warn { list-style: none; text-align: left; counter-reset: w; }
-  .warn li { counter-increment: w; position: relative; padding: 22px 0 22px 70px; border-bottom: 2px solid var(--line); color: var(--text); font-weight: 600; }
-  .warn li::before { content: counter(w); position: absolute; left: 0; top: 24px; width: 46px; height: 46px; border-radius: 50%; background: var(--main); color: #fff; font-size: 28px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
-  .end img { height: 700px; margin-top: 70px; }
+  .dim .bar { height: 820px; width: 34px; border: 4px solid var(--sage); border-left: 0; }
+  .dim .val { text-align: left; }
+  .dim .val b { display: block; font-size: 72px; font-weight: 900; color: var(--sage); letter-spacing: -.03em; }
+  .dim .val span { font-size: 32px; color: var(--sub); }
+  .spec { width: 100%; border-collapse: collapse; text-align: left; margin-top: 60px; }
+  .spec th, .spec td { font-size: 32px; padding: 24px 8px; border-bottom: 2px solid #E2DDD0; }
+  .spec th { width: 190px; color: var(--ink); font-weight: 800; }
+  .spec td { color: var(--sub); }
+
+  /* 14 주의 */
+  .icons { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 26px; margin-top: 40px; }
+  .icons div { text-align: center; }
+  .icons svg { width: 120px; height: 120px; }
+  .icons b { display: block; font-size: 32px; font-weight: 800; color: #fff; margin-top: 14px; line-height: 1.35; }
+
+  /* 15 마무리 */
+  .finale { height: 1500px; }
+  .finale .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .finale .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(251,248,242,.95) 0%, rgba(251,248,242,.7) 30%, rgba(251,248,242,0) 52%); }
+  .finale .copy { position: absolute; top: 130px; left: 0; right: 0; text-align: center; }
+  .finale .prod { position: absolute; left: 50%; bottom: 120px; width: 520px; transform: translateX(-50%) rotate(-6deg); }
+
+  /* 03 전환 */
+  .turn { background: var(--cream); padding: 110px 60px; text-align: center; }
+  .turn .pen { font-size: 120px; color: var(--sage2); line-height: 1; }
+  .turn .q { font-size: 44px; font-weight: 800; color: var(--ink); margin-top: 26px; line-height: 1.4; }
+  .turn .arrowdown { margin: 34px auto 0; width: 60px; }
+  /* 05 차별점 요약 */
+  .why { position: relative; height: 1080px; margin-top: 30px; }
+  .why .stand { position: absolute; left: 70px; top: 60px; height: 900px; }
+  .why ul { list-style: none; position: absolute; left: 280px; right: 0; top: 70px; }
+  .why li { position: relative; padding: 34px 0 34px 30px; border-bottom: 2px solid rgba(255,255,255,.16); color: #fff; font-size: 36px; font-weight: 800; text-align: left; line-height: 1.3; }
+  .why li small { display: block; font-size: 30px; font-weight: 500; color: rgba(255,255,255,.78); margin-top: 6px; }
+  .why li::before { content: ''; position: absolute; left: -110px; top: 54px; width: 120px; border-top: 3px dashed #CFE3D6; }
+  .why li .no { font-size: 30px; font-weight: 900; color: var(--gold); margin-right: 12px; }
+  /* 09 그립 */
+  .grip { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 50px -60px 0; }
+  .grip figure { position: relative; }
+  .grip img { width: 100%; height: 560px; object-fit: cover; }
+  .grip figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 50px 18px 18px; background: linear-gradient(transparent, rgba(0,0,0,.75)); color: #fff; font-size: 32px; font-weight: 800; text-align: left; }
+  /* 13 추천 */
+  .checks { list-style: none; text-align: left; max-width: 640px; margin: 30px auto 0; }
+  .checks li { position: relative; padding: 26px 0 26px 70px; border-bottom: 2px solid #E2DDD0; font-weight: 700; color: var(--ink); }
+  .checks li::before { content: ''; position: absolute; left: 0; top: 30px; width: 44px; height: 44px; border-radius: 50%; background: var(--sage2); }
+  .checks li::after { content: ''; position: absolute; left: 15px; top: 38px; width: 11px; height: 20px; border: solid #fff; border-width: 0 5px 5px 0; transform: rotate(45deg); }
+  /* 15 Q&A */
+  .qa { text-align: left; margin-top: 30px; }
+  .qa dt { font-size: 38px; font-weight: 900; color: var(--ink); margin-top: 50px; }
+  .qa dt::before { content: 'Q. '; color: var(--sage2); }
+  .qa dd { font-size: 32px; line-height: 1.6; color: var(--sub); margin-top: 12px; padding-left: 50px; }
 </style>
 </head>
 <body>
 
-<!-- 01 후킹 -->
+<!-- 01 -->
 <section class="hero">
-  <p class="eyebrow">양면 풋파일</p>
-  <h1>한 자루, 두 면으로<br><em>뒤꿈치 관리</em> 끝</h1>
-  <p class="lead">거친 면으로 정리하고, 고운 면으로 마무리</p>
-  <div class="stage"><img data-slot="hero_pair" src="inputs/nukki/pair_wb.png" alt=""></div>
-  <div class="badges"><span class="badge">거친 면 + 고운 면</span><span class="badge">스테인리스 판</span><span class="badge">걸어 두는 손잡이</span></div>
+  <img class="bg" src="inputs/ai/hero_heels.png" alt="">
+  <div class="veil"></div>
+  <div class="copy">
+    <p class="eyebrow">양면 풋파일</p>
+    <h1>거친 뒤꿈치,<br><span class="hl">집에서 2단계</span>로</h1>
+    <p class="sub">거친 면으로 정리하고 · 고운 면으로 마무리</p>
+  </div>
+  <img class="prod shadow" data-slot="hero" src="inputs/nukki/hi_cross_bot.png" alt="">
+  <div class="seal a"><b>2-STEP</b><span>양면</span></div>
+  <div class="seal b"><b>23<small style="font-size:30px">cm</small></b><span>긴 손잡이</span></div>
+  <div class="band">화이트 · 블랙<i></i>물로 헹구는 판<i></i>걸이 구멍</div>
 </section>
 
-<!-- 02 공감 -->
-<section class="dark">
+<!-- 02 -->
+<section class="pad dark" style="background:var(--dark);padding-bottom:0">
   <p class="eyebrow">이럴 때 신경 쓰이죠</p>
-  <h2>거칠어진 뒤꿈치,<br>이런 순간 있으셨나요?</h2>
-  <div class="cards">
-    <div class="card"><div class="no">1</div><div><b>이불에 스칠 때</b><span>까슬한 감촉이 계속 거슬려요</span></div></div>
-    <div class="card"><div class="no">2</div><div><b>샌들 신는 날</b><span>뒤꿈치가 먼저 보이는 것 같아요</span></div></div>
-    <div class="card"><div class="no">3</div><div><b>스타킹·양말 신을 때</b><span>올이 걸릴까 조심스러워요</span></div></div>
-    <div class="card"><div class="no">4</div><div><b>맨발이 보일 때</b><span>남 앞에서 괜히 발을 숨기게 돼요</span></div></div>
+  <h2>거칠어진 뒤꿈치,<br><span class="hl">이런 순간</span> 있으셨나요?</h2>
+  <div class="grid4" style="margin-left:-60px;margin-right:-60px">
+    <figure><img src="inputs/ai/empathy_blanket.png" alt=""><figcaption>이불에 스칠 때<small>까슬한 감촉이 거슬려요</small></figcaption></figure>
+    <figure><img src="inputs/ai/empathy_sandal.png" alt=""><figcaption>샌들 신는 날<small>뒤꿈치가 먼저 보여요</small></figcaption></figure>
+    <figure><img src="inputs/ai/empathy_stocking.png" alt=""><figcaption>스타킹 신을 때<small>올이 걸릴까 조심스러워요</small></figcaption></figure>
+    <figure><img src="inputs/ai/empathy_barefoot.png" alt=""><figcaption>맨발이 보일 때<small>괜히 발을 숨기게 돼요</small></figcaption></figure>
   </div>
 </section>
 
-<!-- 03 해결 제시 -->
-<section>
-  <p class="eyebrow">그래서, 양면 풋파일</p>
-  <h2>샵에 가지 않아도<br><em>집에서 2단계</em>로</h2>
-  <div class="split">
-    <figure><img data-slot="rough_fine" src="inputs/nukki/white_rough_fine.png" alt=""></figure>
-  </div>
-  <div class="faces">
-    <div class="face"><b>거친 면</b><p>두꺼운 각질을 먼저 정리</p></div>
-    <div class="face"><b>고운 면</b><p>남은 결을 부드럽게 마무리</p></div>
+<!-- 03 -->
+<section class="turn">
+  <p class="pen">하지만!</p>
+  <p class="q">밀어내기만 하면 끝일까요?<br><span class="hl">정리하고, 마무리</span>까지 해야 매끈해요</p>
+  <svg class="arrowdown" viewBox="0 0 60 90"><path d="M30 6 V78 M10 58 L30 80 L50 58" stroke="#3B6E54" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</section>
+
+<!-- 04 -->
+<section class="photo-head on-photo">
+  <img class="full" src="inputs/photos/s_towel_pair.jpg" alt="" style="height:1080px;object-fit:cover">
+  <div class="cap">
+    <p class="eyebrow">그래서, 양면 풋파일</p>
+    <div class="bignum metal">2<span style="font-size:110px">-STEP</span></div>
+    <h2 style="margin-top:16px">한 자루로 정리하고,<br>마무리까지</h2>
   </div>
 </section>
 
-<!-- 04 차별점 요약 -->
-<section class="main">
+<!-- 05 -->
+<section class="pad dark" style="background:linear-gradient(180deg,#23392F 0%,#17211C 100%)">
   <p class="eyebrow">양면 풋파일을 고르는 이유</p>
-  <h2>욕실에 하나 두면<br>좋은 이유 4가지</h2>
-  <ul class="reason">
-    <li><span>01</span>거친 면 + 고운 면, 한 자루로</li>
-    <li><span>02</span>스테인리스 판, 물로 헹궈 관리</li>
-    <li><span>03</span>손목 편한 길쭉한 곡선 손잡이</li>
-    <li><span>04</span>걸이 구멍으로 욕실에 걸어 보관</li>
-  </ul>
-</section>
-
-<!-- 05 POINT 1 양면 -->
-<section class="soft">
-  <span class="point-no">POINT 01</span>
-  <h2>거친 면으로 정리,<br><em>고운 면으로 마무리</em></h2>
-  <p>오돌토돌한 돌기가 있는 거친 면으로<br>두꺼워진 부분을 먼저 다듬고,<br>고운 면으로 결을 정돈하세요.</p>
-  <div class="zoom"><img data-slot="detail" src="inputs/nukki/detail_white.png" alt=""></div>
-  <span class="label">거친 면 확대</span>
-</section>
-
-<!-- 06 POINT 2 소재·세척 -->
-<section class="dark">
-  <span class="point-no">POINT 02</span>
-  <h2>스테인리스 판,<br><em>헹구고 말리면</em> 끝</h2>
-  <p>쓰고 나면 흐르는 물에 헹궈 주세요.<br>물기를 털어 말려 두면<br>다음에도 깔끔하게 쓸 수 있어요.</p>
-  <div class="wash">
-    <div><i>1</i>물로<br>헹구기</div>
-    <div><i>2</i>물기<br>털기</div>
-    <div><i>3</i>걸어서<br>말리기</div>
-  </div>
-</section>
-
-<!-- 07 POINT 3 손잡이 -->
-<section>
-  <span class="point-no">POINT 03</span>
-  <h2>길쭉한 손잡이로<br><em>허리 덜 숙이고</em></h2>
-  <div class="hang">
-    <img data-slot="handle" src="inputs/nukki/single_rough.png" alt="" style="height:760px">
+  <h2>욕실에 하나 두면<br>좋은 이유 <span class="gold">4</span>가지</h2>
+  <div class="why">
+    <img class="stand shadow" data-slot="why" src="inputs/nukki/hi_white_rough.png" alt="">
     <ul>
-      <li>전체 길이 약 23cm</li>
-      <li>손에 감기는 곡선형</li>
-      <li>끝에 걸이 구멍</li>
-      <li>욕실 고리에 걸어 보관</li>
+      <li><span class="no">01</span>거친 면 + 고운 면<small>한 자루로 2단계</small></li>
+      <li><span class="no">02</span>물로 헹궈 관리<small>쓰고 나서 흐르는 물에</small></li>
+      <li><span class="no">03</span>길쭉한 곡선 손잡이<small>허리 덜 숙이고 손목 편하게</small></li>
+      <li><span class="no">04</span>끝에 걸이 구멍<small>욕실 고리에 걸어 보관</small></li>
     </ul>
   </div>
 </section>
 
-<!-- 08 사용법 -->
-<section class="soft">
-  <p class="eyebrow">HOW TO USE</p>
-  <h2>이렇게 쓰세요</h2>
-  <div class="steps">
-    <div class="step"><p class="tag">STEP 1</p><b>발을 준비해요</b><p>물기를 닦은 마른 발,<br>또는 샤워 후 물기를 가볍게 닦은 발</p></div>
-    <div class="step"><p class="tag">STEP 2</p><b>거친 면으로 살살</b><p>힘을 빼고 한 방향으로 가볍게.<br>두꺼운 부분만 조금씩 확인하며</p></div>
-    <div class="step"><p class="tag">STEP 3</p><b>고운 면으로 마무리</b><p>결을 정돈한 뒤 발을 씻고<br>보습제를 발라 주세요</p></div>
+<!-- 06 -->
+<section class="pad dark" style="background:radial-gradient(circle at 50% 40%, #2E4238 0%, #17211C 70%)">
+  <p class="eyebrow">POINT 02 · 양면 구조</p>
+  <h2>앞은 <span class="metal">거친 면</span>,<br>뒤는 <span class="metal">고운 면</span></h2>
+  <div class="faces">
+    <img class="stand shadow" data-slot="stand" src="inputs/nukki/hi_white_rough.png" alt="">
+    <svg style="position:absolute;left:0;top:0" width="660" height="1180" viewBox="0 0 660 1180"><path d="M320 200 L 330 270" stroke="#CFE3D6" stroke-width="4" stroke-dasharray="4 10"/><path d="M180 270 C 240 270, 300 250, 330 250" stroke="#CFE3D6" stroke-width="4" fill="none" stroke-dasharray="4 10"/><path d="M480 620 C 420 600, 380 560, 345 520" stroke="#CFE3D6" stroke-width="4" fill="none" stroke-dasharray="4 10"/></svg>
+    <div class="lens l"><img src="inputs/photos/lens_rough.jpg" alt=""></div>
+    <div class="lens-cap" style="left:20px;top:450px">거친 면<small>원형 돌기로<br>먼저 정리</small></div>
+    <div class="lens r"><img src="inputs/photos/lens_fine.jpg" alt=""></div>
+    <div class="lens-cap" style="right:20px;top:800px;text-align:right">고운 면 (뒷면)<small>남은 결을<br>부드럽게</small></div>
   </div>
 </section>
 
-<!-- 09 기대 관리 -->
-<section>
+<!-- 07 -->
+<section class="pad" style="background:var(--ivory);padding-bottom:0">
+  <p class="eyebrow">POINT 02 · 사용 흐름</p>
+  <h2>거친 면으로<br><span class="hl">두꺼운 부분부터</span></h2>
+  <p style="margin-top:20px">오돌토돌한 돌기 면을 뒤꿈치에 대고<br>힘을 빼고 한 방향으로 살살.</p>
+  <div class="scene" style="margin:50px -60px 0">
+    <img class="full" src="inputs/photos/s_use_heel_rough2.jpg" alt="" style="height:1000px;object-fit:cover">
+    <div class="arrow-note" style="right:40px;top:120px">
+      <span class="label">거친 면 · 원형 돌기</span>
+    </div>
+    <svg style="position:absolute;right:150px;top:180px" width="200" height="220" viewBox="0 0 200 220"><path d="M180 10 C 120 60, 60 90, 40 190" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="2 16"/><path d="M22 170 L40 200 L62 176" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="tag"><b>뒤꿈치 굴곡을 따라<br>슥슥, 가볍게</b></div>
+  </div>
+</section>
+<section class="pad" style="background:#fff;padding-left:0;padding-right:0">
+  <div style="padding:0 60px">
+    <p class="eyebrow">이렇게 이어서</p>
+    <h2>정리하고, <span class="hl">마무리</span></h2>
+  </div>
+  <div class="flow" style="position:relative">
+    <figure><img src="inputs/photos/s_use_heel_rough.jpg" alt="" style="object-position:60% 50%"><span class="n">1</span><figcaption>거친 면으로 정리</figcaption></figure>
+    <div class="mid"><svg width="56" height="56" viewBox="0 0 56 56"><path d="M12 28 H44 M32 16 L44 28 L32 40" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <figure><img src="inputs/photos/s_use_heel_fine.jpg" alt="" style="object-position:50% 40%"><span class="n">2</span><figcaption>고운 면으로 마무리</figcaption></figure>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="photo-head on-photo wash">
+  <img class="full" src="inputs/ai/wash_sink.png" alt="" style="height:1080px;object-fit:cover">
+  <img class="prod shadow" data-slot="wash" src="inputs/nukki/hi_cross_bot.png" alt="">
+  <div class="drops" id="drops"></div>
+  <div class="cap" style="padding-bottom:140px">
+    <p class="eyebrow">POINT 03 · 세척</p>
+    <h2>다 쓰고 나면,<br><span class="metal">헹구고 말리면 끝</span></h2>
+    <p style="margin-top:16px">흐르는 물에 헹궈 물기를 털어 두세요</p>
+  </div>
+</section>
+
+<!-- 09 -->
+<section class="pad" style="background:var(--ivory);padding-bottom:0">
+  <p class="eyebrow">POINT 04 · 그립과 보관</p>
+  <h2>길쭉한 곡선 손잡이,<br><span class="hl">걸어서 보관</span></h2>
+  <div class="grip">
+    <figure><img src="inputs/photos/s_use_heel_rough.jpg" alt="" style="object-position:70% 50%"><figcaption>손바닥 전체로 쥐는 곡선 손잡이</figcaption></figure>
+    <figure><img src="inputs/photos/s_leaf_towel.jpg" alt="" style="object-position:30% 50%"><figcaption>손잡이 끝 걸이 구멍</figcaption></figure>
+  </div>
+  <div style="position:relative;margin:6px -60px 0">
+    <img class="full" src="inputs/photos/s_towel_bottle.jpg" alt="" style="height:900px;object-fit:cover">
+    <div class="ring" style="position:absolute;left:677px;top:547px"></div>
+    <svg style="position:absolute;left:520px;top:600px" width="160" height="120" viewBox="0 0 160 120"><path d="M10 110 C 60 100, 110 70, 145 20" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="2 14"/><path d="M122 22 L148 14 L150 42" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="callout" style="left:360px;top:720px">걸이 구멍</div>
+    <div class="callout" style="left:40px;top:770px;font-size:32px">욕실 고리에 걸어<br>물기 말리기</div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="pad dark" style="background:radial-gradient(circle at 50% 45%, #2A3630 0%, #121915 75%)">
   <p class="eyebrow">처음 쓰면 놀라실 수 있어요</p>
-  <p class="dust">하얀 가루가 나오는 건<br><em>정상이에요</em></p>
-  <div class="dots"></div>
-  <p>정리된 각질이 가루로 떨어져요.<br>욕실 바닥이나 샤워 중에 쓰면<br>물로 바로 씻어 낼 수 있어요.</p>
-  <p class="note">많이 나온다고 세게 밀지 마세요. 힘은 빼고 조금씩.</p>
+  <p class="pen" style="font-size:104px;color:#F1E3BE;line-height:1.1">하얀 가루는 정상이에요!</p>
+  <div class="dust-wrap" id="dust"><img src="inputs/nukki/hi_white_rough.png" alt="" data-slot="dust" style="position:absolute;left:123px;top:-160px;height:620px;transform:rotate(120deg);filter:drop-shadow(0 12px 20px rgba(0,0,0,.5))"></div>
+  <p>정리된 각질이 가루로 떨어져요.<br>욕실 바닥이나 샤워 중에 쓰면 바로 씻어 낼 수 있어요.</p>
+  <p style="margin-top:24px;font-weight:800;color:#fff"><span class="hl">많이 나온다고 세게 밀지 마세요</span></p>
 </section>
 
-<!-- 10 가족 -->
-<section class="soft">
-  <p class="eyebrow">하나로 온 가족</p>
-  <h2>내 발도, 부모님 발도<br><em>집에서 챙겨요</em></h2>
-  <ul class="checks">
-    <li>샵 예약 없이 생각날 때 바로</li>
-    <li>샤워하면서 몇 분이면 충분</li>
-    <li>부모님 댁에 하나 더, 선물로</li>
-    <li>가족마다 하나씩 두고 쓰기 좋아요</li>
-  </ul>
+<!-- 11 -->
+<section class="pad" style="background:#fff">
+  <p class="eyebrow">HOW TO USE</p>
+  <h2>이렇게 쓰세요</h2>
+  <div class="steps" style="margin-left:-60px;margin-right:-60px">
+    <div class="step"><img src="inputs/ai/step_dry.png" alt=""><span class="n">STEP 1</span><div class="t"><b>물기를 닦은 발에</b><span>마른 발, 또는 샤워 후 물기를 닦은 발</span></div></div>
+    <div class="step"><img src="inputs/photos/s_use_heel_rough2.jpg" alt="" style="object-position:50% 35%"><span class="n">STEP 2</span><div class="t"><b>거친 면으로 살살</b><span>힘을 빼고 한 방향으로, 조금씩 확인하며</span></div></div>
+    <div class="step"><img src="inputs/photos/s_use_heel_fine.jpg" alt="" style="object-position:50% 35%"><span class="n">STEP 3</span><div class="t"><b>고운 면으로 마무리</b><span>발을 씻고 보습제를 발라 주세요</span></div></div>
+  </div>
 </section>
 
-<!-- 11 컬러 -->
-<section>
-  <p class="eyebrow">COLOR</p>
-  <h2>욕실에 맞춰 고르세요</h2>
-  <div class="colors"><img data-slot="colors" src="inputs/nukki/pair_wb.png" alt=""></div>
-  <div class="badges"><span class="badge">화이트</span><span class="badge">블랙</span></div>
+<!-- 12 -->
+<section class="photo-head on-photo">
+  <img class="full" src="inputs/ai/family_feet.png" alt="" style="height:900px;object-fit:cover">
+  <div class="cap">
+    <p class="eyebrow">하나로 온 가족</p>
+    <h2>내 발도, 부모님 발도<br>집에서 챙겨요</h2>
+  </div>
 </section>
 
-<!-- 12 이런 분께 -->
-<section class="dark">
+<!-- 13 -->
+<section class="pad" style="background:#fff">
   <p class="eyebrow">이런 분께 추천해요</p>
   <h2>하나라도 해당된다면</h2>
   <ul class="checks">
@@ -181,66 +340,99 @@
     <li>작은 풋파일이 손에서 자꾸 미끄러졌던 분</li>
     <li>패디케어 샵이 부담스러운 분</li>
     <li>샌들·맨발 시즌을 미리 준비하는 분</li>
-    <li>부모님 발 관리를 챙겨 드리고 싶은 분</li>
-    <li>욕실에 걸어 두고 깔끔하게 쓰고 싶은 분</li>
+    <li>부모님 발까지 챙겨 드리고 싶은 분</li>
   </ul>
 </section>
 
-<!-- 13 Q&A -->
-<section>
+<!-- 14 -->
+<section class="pad" style="background:#fff;padding-bottom:0">
+  <p class="eyebrow">COLOR</p>
+  <h2>욕실에 맞춰 고르세요</h2>
+  <div class="colors-stage" style="margin:40px -60px 0">
+    <img class="shadow" data-slot="colors" src="inputs/nukki/hi_cross_bot.png" alt="">
+    <span class="chip" style="left:120px;background:#fff;color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,.12)">화이트</span>
+    <span class="chip" style="right:120px;background:#1C1C1C;color:#fff">블랙</span>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="pad" style="background:var(--cream)">
   <p class="eyebrow">Q&amp;A</p>
   <h2>자주 묻는 질문</h2>
   <dl class="qa">
-    <dt>마른 발에 써도 되나요?</dt>
-    <dd>네. 마른 발이나 샤워 후 물기를 닦은 발에 쓰세요. 어느 쪽이든 힘을 빼고 가볍게 쓰는 게 중요해요.</dd>
-    <dt>얼마나 자주 써야 하나요?</dt>
-    <dd>한 번에 많이 하기보다 피부 상태를 보며 가끔씩 나눠서 관리하세요.</dd>
-    <dt>보관은 어떻게 하나요?</dt>
-    <dd>물로 헹군 뒤 물기를 털고, 손잡이 끝 구멍으로 걸어 말려 주세요.</dd>
-    <dt>손이나 다른 부위에도 쓰나요?</dt>
-    <dd>발 각질 관리용이에요. 다른 부위에는 쓰지 마세요.</dd>
+    <dt>마른 발에 써도 되나요?</dt><dd>네. 마른 발이나 샤워 후 물기를 닦은 발에 쓰세요. 어느 쪽이든 힘을 빼고 가볍게 쓰는 게 중요해요.</dd>
+    <dt>얼마나 자주 써야 하나요?</dt><dd>한 번에 많이 하기보다 피부 상태를 보며 가끔씩 나눠서 관리하세요.</dd>
+    <dt>보관은 어떻게 하나요?</dt><dd>물로 헹군 뒤 물기를 털고, 손잡이 끝 구멍으로 걸어 말려 주세요.</dd>
+    <dt>다른 부위에도 쓰나요?</dt><dd>발 각질 관리용이에요. 다른 부위에는 쓰지 마세요.</dd>
   </dl>
 </section>
 
-<!-- 14 스펙 -->
-<section class="soft">
+<!-- 16 -->
+<section class="pad" style="background:var(--ivory)">
   <p class="eyebrow">PRODUCT INFO</p>
   <h2>제품 정보</h2>
   <div class="dim">
-    <img data-slot="spec" src="inputs/nukki/single_rough.png" alt="">
-    <span class="v"></span>
-    <p class="vl">길이 약 23cm<span>판 폭 약 3.8cm</span></p>
+    <img class="shadow" data-slot="spec" src="inputs/nukki/hi_white_rough.png" alt="">
+    <div class="bar"></div>
+    <div class="val"><b>약 23cm</b><span>전체 길이</span><b style="font-size:56px;margin-top:30px">약 3.8cm</b><span>판 폭</span></div>
   </div>
   <table class="spec">
     <tr><th>제품명</th><td>양면 풋파일</td></tr>
     <tr><th>색상</th><td>화이트, 블랙</td></tr>
-    <tr><th>재질</th><td>판: 스테인리스 / 손잡이: PP</td></tr>
-    <tr><th>크기</th><td>약 23 × 3.8cm</td></tr>
+    <tr><th>재질</th><td>실물 확인 후 기재</td></tr>
     <tr><th>구성</th><td>양면 풋파일 1개</td></tr>
     <tr><th>원산지</th><td>중국</td></tr>
   </table>
 </section>
 
-<!-- 15 주의사항 -->
-<section>
+<!-- 17 -->
+<section class="pad dark" style="background:var(--sage)">
   <p class="eyebrow">꼭 읽어 주세요</p>
-  <h2>사용 시 주의사항</h2>
-  <ol class="warn">
-    <li>세게 문지르지 말고 힘을 빼고 쓰세요</li>
-    <li>상처나 피부에 이상이 있는 곳에는 쓰지 마세요</li>
-    <li>쓰다가 따갑거나 붉어지면 바로 멈추세요</li>
-    <li>발 각질 관리 외 용도로 쓰지 마세요</li>
-    <li>쓰고 나면 헹궈 물기를 말려 보관하세요</li>
-    <li>어린이 손이 닿지 않는 곳에 두세요</li>
-  </ol>
+  <h2>안전하게 쓰는 법</h2>
+  <div class="icons">
+    <div><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="rgba(255,255,255,.12)"/><path d="M40 70 Q60 40 80 70" stroke="#CFE3D6" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M60 30 V52" stroke="#CFE3D6" stroke-width="7" stroke-linecap="round"/></svg><b>힘을 빼고<br>가볍게</b></div>
+    <div><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="rgba(255,255,255,.12)"/><path d="M38 38 L82 82 M82 38 L38 82" stroke="#CFE3D6" stroke-width="8" stroke-linecap="round"/></svg><b>상처 부위엔<br>쓰지 않기</b></div>
+    <div><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="rgba(255,255,255,.12)"/><circle cx="60" cy="60" r="22" stroke="#CFE3D6" stroke-width="7" fill="none"/><path d="M60 30 V40 M60 80 V90" stroke="#CFE3D6" stroke-width="7" stroke-linecap="round"/></svg><b>따갑거나 붉어지면<br>멈추기</b></div>
+    <div><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="rgba(255,255,255,.12)"/><path d="M40 52 Q60 30 80 52 Q80 80 60 88 Q40 80 40 52" stroke="#CFE3D6" stroke-width="7" fill="none"/></svg><b>발 각질 관리<br>용도로만</b></div>
+    <div><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="rgba(255,255,255,.12)"/><path d="M60 28 C44 52 40 62 40 72 a20 20 0 0 0 40 0 c0-10-4-20-20-44z" stroke="#CFE3D6" stroke-width="7" fill="none"/></svg><b>헹군 뒤<br>물기 말려 보관</b></div>
+    <div><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="rgba(255,255,255,.12)"/><rect x="40" y="52" width="40" height="34" rx="6" stroke="#CFE3D6" stroke-width="7" fill="none"/><path d="M48 52 V44 a12 12 0 0 1 24 0 V52" stroke="#CFE3D6" stroke-width="7" fill="none"/></svg><b>어린이 손이<br>닿지 않게</b></div>
+  </div>
 </section>
 
-<!-- 16 마무리 -->
-<section class="main end">
-  <p class="eyebrow">양면 풋파일</p>
-  <h2>오늘 샤워할 때,<br><em>뒤꿈치부터</em> 챙겨요</h2>
-  <img data-slot="end_pair" src="inputs/nukki/pair_wb.png" alt="">
+<!-- 18 -->
+<section class="finale">
+  <img class="bg" src="inputs/ai/finale_bed.png" alt="">
+  <div class="veil"></div>
+  <div class="copy">
+    <p class="eyebrow">양면 풋파일</p>
+    <h2 style="font-size:70px">오늘 샤워할 때,<br><span class="hl">뒤꿈치부터</span> 챙겨요</h2>
+  </div>
+  <img class="prod shadow" data-slot="finale" src="inputs/nukki/hi_cross_bot.png" alt="">
 </section>
 
+<script>
+  // 10번 섹션 가루 효과: 고정 시드로 점을 흩뿌린다 (렌더마다 같은 결과)
+  (function () {
+    const box = document.getElementById('dust'); let s = 7;
+    const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+    for (let i = 0; i < 260; i++) {
+      const d = document.createElement('i'); const r = 3 + rnd() * 9;
+      // 판 끝(가운데 위)에서 아래로 퍼지며 떨어지는 모양
+      const t = Math.pow(rnd(), .8), x = 430 + (rnd() - .5) * (100 + t * 420);
+      d.style.cssText = `width:${r}px;height:${r * (.7 + rnd() * .5)}px;left:${x}px;top:${330 + t * 260}px;opacity:${.5 + rnd() * .5}`;
+      box.appendChild(d);
+    }
+  })();
+  // 08번 섹션 물방울: 제품 판 위에 맺힌 물방울
+  (function () {
+    const box = document.getElementById('drops'); let s = 11;
+    const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+    for (let i = 0; i < 26; i++) {
+      const d = document.createElement('i'); const r = 10 + rnd() * 22;
+      d.style.cssText = `width:${r}px;height:${r * 1.08}px;left:${470 + rnd() * 250}px;top:${470 + rnd() * 230}px`;
+      box.appendChild(d);
+    }
+  })();
+</script>
 </body>
 </html>
