@@ -42,8 +42,10 @@ def hero(s):
 
 
 def empathy(s):
-    figs = "".join(f'<figure>{img(c["img"])}<figcaption><b>{c["t"]}</b>{c["c"]}</figcaption></figure>' for c in s["cuts"])
-    return f'<section><div class="head"><h2 style="font-size:{s.get("size", 62)}px">{s["h"]}</h2></div><div class="grid4">{figs}</div></section>'
+    st = "height:640px" if s.get("stack") else ""
+    grid = ' style="grid-template-columns:1fr"' if s.get("stack") else ""
+    figs = "".join(f'<figure>{img(c["img"], st)}<figcaption><b>{c["t"]}</b>{c["c"]}</figcaption></figure>' for c in s["cuts"])
+    return f'<section><div class="head"><h2 style="font-size:{s.get("size", 62)}px">{s["h"]}</h2></div><div class="grid4"{grid}>{figs}</div></section>'
 
 
 def turn(s):

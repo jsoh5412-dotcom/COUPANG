@@ -1,0 +1,335 @@
+{
+ "title": "수면안대-8 v2",
+ "sections": [
+  {
+   "type": "hero",
+   "img": "inputs/ai/v2/hero.png",
+   "h1": "주머니에 넣는",
+   "big": "약 5g 안대",
+   "bigsize": 120,
+   "sub": "두께 약 1mm, 귀에 바로 거는 일체형",
+   "seals": [
+    [
+     "무게",
+     "약 5g",
+     60
+    ],
+    [
+     "두께",
+     "약 1mm",
+     52
+    ]
+   ],
+   "band": [
+    "블랙 · 그레이",
+    "귀걸이 일체형",
+    "30 × 7cm"
+   ]
+  },
+  {
+   "type": "empathy",
+   "stack": true,
+   "h": "켜 둔 건 남편인데,<br><span class=\"hl\">뒤척이는 건 나</span>",
+   "cuts": [
+    {
+     "img": "inputs/ai/shared/e_phone.png",
+     "t": "밤",
+     "c": "옆에서 켠 휴대폰 불빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_sun.png",
+     "t": "아침",
+     "c": "커튼 사이로 들어오는 햇빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_cabin.png",
+     "t": "기내",
+     "c": "내 맘대로 못 끄는 불빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_ear.png",
+     "t": "귀 옆",
+     "c": "두툼한 안대가 답답한 밤"
+    }
+   ]
+  },
+  {
+   "type": "turn",
+   "h": "빛 가리려고 쓴 안대,<br><span class=\"hl\">두께가 먼저 답답했죠</span>",
+   "p": "이 안대는 두께 약 1mm예요.",
+   "size": 60,
+   "discs": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "t": "약 1mm",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "t": "귀에 걸어 쓰기",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "intro",
+   "h": "끈 없이<br><span class=\"hl\">귀에 바로</span>",
+   "size": 66,
+   "h2": 700,
+   "steps": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "t": "제품",
+     "c": "띠와 귀걸이가 한 몸",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "t": "착용",
+     "c": "양쪽 귀에 걸면 끝",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "overview",
+   "img": "inputs/nukki/fabric.png",
+   "style": "width:640px",
+   "items": [
+    [
+     "약 5g",
+     "무게 표기"
+    ],
+    [
+     "약 1mm",
+     "두께 표기"
+    ],
+    [
+     "30 × 7cm",
+     "크기"
+    ],
+    [
+     "귀걸이",
+     "일체형"
+    ]
+   ]
+  },
+  {
+   "type": "number",
+   "point": "POINT 1 · 얇음",
+   "big": "1",
+   "unit": "mm",
+   "bigsize": 280,
+   "h": "약 1mm, 접으면 손바닥 안",
+   "why": "<span class=\"hl\">두툼한 안대가 답답했다면</span> 얇은 쪽을 보세요",
+   "img": "inputs/ai/v2/hand.png",
+   "style": "height:820px;object-fit:cover;",
+   "pale": false
+  },
+  {
+   "point": "POINT 2 · 탄성",
+   "h": "당겨 봐요,<br><span class=\"hl\">이만큼 늘어나요</span>",
+   "img": "inputs/nukki/float.png",
+   "p": "잘 늘어나는 소재로 얼굴에 맞춰 걸어요.",
+   "style": "height:auto;padding:20px 40px;width:700px;margin:auto",
+   "type": "feature",
+   "pale": true
+  },
+  {
+   "point": "POINT 3 · 귀",
+   "h": "끈 없이<br><span class=\"hl\">귀에 바로</span>",
+   "img": "inputs/ai/v2/close.png",
+   "p": "귀에 거는 부분이 띠와 한 몸이에요.",
+   "type": "feature",
+   "pale": false,
+   "style": "height:820px;object-fit:cover;"
+  },
+  {
+   "type": "compare",
+   "h": "얇은 쪽을 찾으면,<br><span class=\"hl\">약 1mm</span>",
+   "cols": [
+    "두툼 통짜형",
+    "입체형",
+    "이 제품"
+   ],
+   "rows": [
+    [
+     "두께",
+     "두툼",
+     "제품별",
+     "약 1mm"
+    ],
+    [
+     "고정 방식",
+     "벨크로 등",
+     "밴드 등",
+     "귀걸이 일체형"
+    ],
+    [
+     "무게",
+     "제품별",
+     "제품별",
+     "약 5g"
+    ],
+    [
+     "눈 자리",
+     "제품별",
+     "오목",
+     "얇은 평면"
+    ]
+   ]
+  },
+  {
+   "type": "notice",
+   "h": "두꺼운 안대가 <em>아니에요</em>",
+   "p": "아주 얇은 천이에요. 빛을 얼마나 가리는지는 시험한 적이 없고, 귀에 거는 방식이라 귀가 예민하면 불편할 수 있어요. 눈 자리는 오목하지 않아요."
+  },
+  {
+   "type": "howto",
+   "h": "펴고, 눈에 대고,<br><span class=\"hl\">귀에 걸면 끝</span>",
+   "steps": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "c": "접힌 안대를 펴요"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "c": "눈 앞에 대요"
+    },
+    {
+     "img": "inputs/ai/v2/hero.png",
+     "c": "양쪽 귀에 걸어요",
+     "style": "object-position:center 62%"
+    }
+   ]
+  },
+  {
+   "type": "feature",
+   "h": "\"그만 자\" 대신<br><em>안대 하나</em>",
+   "size": 76,
+   "img": "inputs/ai/v2/partner.png",
+   "style": "height:auto",
+   "pale": true
+  },
+  {
+   "type": "checklist",
+   "h": "끈 때문에, 눌려서, 답답해서.<br>서랍에 쌓인 안대",
+   "items": [
+    "두툼한 안대가 답답했던 분",
+    "가방에 늘 넣어 두고 싶은 분",
+    "옆 사람 불빛이 신경 쓰이는 분",
+    "비행기, 기차에서 눈을 붙이는 분",
+    "귀에 거는 방식이 편한 분"
+   ]
+  },
+  {
+   "type": "colors",
+   "h": "블랙 또는<br><em>그레이</em>",
+   "items": [
+    {
+     "img": "inputs/nukki/black_flat.png",
+     "t": "블랙"
+    },
+    {
+     "img": "inputs/nukki/gray_flat.png",
+     "t": "그레이"
+    }
+   ]
+  },
+  {
+   "type": "after",
+   "h": "교대 근무 낮잠에도,<br><em>새벽 비행기에도</em>",
+   "size": 70,
+   "img": "inputs/ai/v2/after.png",
+   "img2": "inputs/ai/v2/day.png"
+  },
+  {
+   "type": "qa",
+   "h": "빛이 완전히<br>막히냐고요?",
+   "items": [
+    [
+     "빛이 완전히 막히나요?",
+     "눈앞을 덮어 빛을 가려 주지만, 완전히 막는다고 약속드리지는 않아요. 차광 시험은 하지 않았어요."
+    ],
+    [
+     "옆으로 자도 되나요?",
+     "얇아서 부피는 작지만, 귀에 거는 끈 쪽이 베개에 닿을 수 있어요."
+    ],
+    [
+     "머리가 커도 맞나요?",
+     "잘 늘어나는 소재예요. 크기는 30 × 7cm예요."
+    ],
+    [
+     "재질이 뭔가요?",
+     "공급처 표기가 없어 비워 두었어요. 확인되면 적어 드릴게요."
+    ]
+   ]
+  },
+  {
+   "type": "info",
+   "rows": [
+    [
+     "제품명",
+     "고탄성 수면안대"
+    ],
+    [
+     "색상",
+     "블랙, 그레이"
+    ],
+    [
+     "크기",
+     "30 × 7cm, 두께 약 1mm, 무게 약 5g"
+    ],
+    [
+     "구성",
+     "1개"
+    ],
+    [
+     "제조국",
+     "중국"
+    ],
+    [
+     "사진 안내",
+     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "warn",
+   "h": "불편하면,<br><em>바로 벗으세요</em>",
+   "items": [
+    [
+     "wide",
+     "너무 조이지 않게"
+    ],
+    [
+     "no",
+     "눈 주변에 상처·염증이 있으면 쓰지 않기"
+    ],
+    [
+     "stop",
+     "불편하면 바로 벗기"
+    ],
+    [
+     "no",
+     "걷거나 운전할 때 쓰지 않기"
+    ],
+    [
+     "drop",
+     "세탁은 라벨을 먼저 확인, 손세탁 후 그늘 건조 권장"
+    ],
+    [
+     "child",
+     "어린이 손이 닿지 않게"
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "img": "inputs/ai/v2/finale.png",
+   "h": "오늘 밤은,",
+   "big": "약 5g만",
+   "bigsize": 110
+  }
+ ]
+}

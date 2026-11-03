@@ -1,163 +1,293 @@
 <!DOCTYPE html>
 <html lang="ko">
-<!--
-  수면안대_2 상세페이지 (테스트 세트 1, 결정 38) — 상페 방향: 무압박 (두툼+눈 공간)
-  렌더: node pdp/scripts/render.mjs pdp/projects/수면안대-2/pdp.html <outDir>
-  이미지: 공급처(도매꾹 65907296) 실제 제품 사진 누끼만. AI 이미지 없음.
--->
+<!-- 수면안대-2 v2 (page.json에서 생성: python3 pdp/scripts/build_pdp.py projects/수면안대-2) -->
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="../../templates/set1.css">
 <style>
-  :root { --main: #2F2B28; --point: #7A5A3A; --soft: #F5F1EB; --dark: #1F1C1A; --line: #E0D8CC; --sub: #4F4943; --card: #ECE5DA; --accent-on-dark: #E5C9A6; }
-  .dark .eyebrow, .main .eyebrow, .dark em, .main em { color: #E5C9A6; }
-  .hero { background: linear-gradient(180deg, #F5F1EB 0%, #E7DDCF 100%); padding-top: 150px; }
-  .hero .stage { background: #fff; }
-  .size { margin: 50px auto 0; width: 640px; text-align: left; }
-  .size div { display: flex; justify-content: space-between; padding: 26px 6px; border-bottom: 2px solid var(--line); font-size: 34px; font-weight: 700; color: var(--text); }
-  .size div span { color: var(--point); }
+:root { --ink: #12263F; --sub: #3F5068; --blue: #0B6FD1; --sky: #BFE3FF; --pale: #EEF7FD; --line: #C9DDEC; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 780px; background: #fff; }
+  body { font-family: 'Pretendard', sans-serif; color: var(--ink); word-break: keep-all; -webkit-font-smoothing: antialiased; }
+  section { position: relative; overflow: hidden; background: #fff; }
+  section.pale { background: var(--pale); }
+  img { display: block; }
+  h1, h2 { font-weight: 900; letter-spacing: -.05em; line-height: 1.17; }
+  h2 { font-size: 66px; }
+  p { font-size: 34px; line-height: 1.55; font-weight: 500; color: var(--sub); letter-spacing: -.02em; }
+  .head { padding: 110px 30px 66px; text-align: center; }
+  .point { display: inline-block; font-size: 30px; font-weight: 800; color: #fff; background: var(--blue); padding: 8px 24px; border-radius: 40px; margin-bottom: 24px; }
+  .hl { background: linear-gradient(transparent 58%, var(--sky) 58%, var(--sky) 94%, transparent 94%); padding: 0 6px; }
+  em { font-style: normal; color: var(--blue); }
+  .full { width: 100%; height: auto; }
+  .body { padding: 56px 56px 96px; text-align: center; }
+  .big { font-weight: 900; line-height: .95; letter-spacing: -.07em; background: linear-gradient(180deg, #55B8F7 8%, var(--blue) 92%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .why { display: inline-block; margin-top: 26px; font-size: 38px; font-weight: 800; letter-spacing: -.03em; line-height: 1.34; }
+  .powder { position: absolute; inset: 0; pointer-events: none; }
+  .powder i { position: absolute; border-radius: 50%; background: #fff; }
+
+  /* 01 첫 화면 */
+  .s01 { height: 1800px; }
+  .s01 .bg { position: absolute; left: 0; bottom: 130px; width: 780px; height: 1170px; }
+  .s01 .veil { position: absolute; left: 0; right: 0; top: 496px; height: 300px; background: linear-gradient(180deg, #fff 8%, rgba(255,255,255,0)); }
+  .s01 .copy { position: absolute; top: 96px; left: 0; right: 0; text-align: center; }
+  .s01 h1 { font-size: 72px; }
+  .s01 h1 b { display: block; font-size: 158px; font-weight: 900; color: var(--blue); letter-spacing: -.06em; line-height: 1.08; margin-top: 8px; }
+  .s01 .sub { font-size: 36px; font-weight: 700; margin-top: 18px; color: var(--sub); }
+  .seal { position: absolute; width: 196px; height: 196px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 5px solid #fff; box-shadow: 0 12px 26px rgba(18,38,63,.22); background: var(--blue); color: #fff; }
+  .seal small { font-size: 30px; font-weight: 800; line-height: 1.1; }
+  .seal b { font-size: 68px; font-weight: 900; line-height: 1.04; letter-spacing: -.05em; }
+  .seal.a { left: 36px; top: 590px; }
+  .seal.b { right: 36px; top: 590px; background: #fff; color: var(--blue); border-color: var(--blue); }
+  .s01 .band { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 33px; font-weight: 800; gap: 18px; letter-spacing: -.02em; }
+
+  /* 02 공감 */
+  .grid4 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 8px; }
+  .grid4 figure { position: relative; }
+  .grid4 img { width: 100%; height: 400px; object-fit: cover; filter: brightness(1.06) saturate(.92); }
+  .grid4 figcaption { padding: 20px 14px 40px; font-size: 30px; font-weight: 700; line-height: 1.32; letter-spacing: -.03em; color: var(--sub); }
+  .grid4 figcaption b { display: block; font-size: 52px; font-weight: 900; color: var(--blue); letter-spacing: -.04em; }
+
+  /* 03 전환 */
+  .s03 { padding: 100px 50px 110px; text-align: center; }
+  .s03 p { margin: 30px auto 60px; max-width: 640px; }
+  .two { display: flex; align-items: center; justify-content: center; }
+  .two .disc { width: 280px; height: 280px; border-radius: 50%; overflow: hidden; }
+  .two .disc img { width: 100%; height: 100%; object-fit: cover; }
+  .two .disc.q { border: 7px dashed var(--blue); background: #fff; display: flex; align-items: center; justify-content: center; font-size: 150px; font-weight: 900; color: var(--blue); }
+  .two .arr { width: 110px; height: 8px; background: var(--ink); position: relative; margin: 0 6px; }
+  .two .arr::after { content: ''; position: absolute; right: -2px; top: -16px; border-left: 30px solid var(--ink); border-top: 20px solid transparent; border-bottom: 20px solid transparent; }
+  .labels { display: flex; justify-content: center; gap: 122px; margin-top: 22px; font-size: 36px; font-weight: 900; }
+  .labels span { width: 280px; }
+
+  /* 04 제품 소개 */
+  .s04 .photo { position: relative; height: 520px; overflow: hidden; }
+  .s04 .photo img { position: absolute; width: 780px; left: 0; top: 0; }
+  .step-row { display: flex; position: relative; }
+  .step-row .f { flex: 1; position: relative; }
+  .step-row .f img { width: 100%; height: 390px; object-fit: cover; }
+  .step-row .cap { padding: 26px 24px 70px; }
+  .step-row .cap b { display: block; font-size: 30px; font-weight: 900; color: var(--blue); }
+  .step-row .cap span { font-size: 36px; font-weight: 800; line-height: 1.3; letter-spacing: -.03em; }
+  .flip { position: absolute; left: 50%; top: 120px; transform: translateX(-50%); width: 150px; height: 150px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 34px; font-weight: 900; line-height: 1.12; border: 5px solid #fff; box-shadow: 0 10px 24px rgba(18,38,63,.3); }
+
+  /* 05 한눈에 */
+  .s05 { height: 1270px; }
+  .s05 .tt { position: absolute; left: 50px; top: 70px; font-size: 44px; font-weight: 900; letter-spacing: -.03em; }
+  .s05 .tt::after { content: ''; display: block; width: 76px; height: 8px; background: var(--blue); margin-top: 14px; }
+  .s05 .prod { position: absolute; left: 96px; top: 180px; height: 1020px; filter: drop-shadow(10px 14px 16px rgba(18,38,63,.32)); }
+  .callout { position: absolute; left: 372px; width: 380px; }
+  .callout b { display: block; font-size: 66px; font-weight: 900; letter-spacing: -.05em; color: var(--blue); line-height: 1.08; }
+  .callout span { font-size: 34px; font-weight: 700; color: var(--sub); letter-spacing: -.02em; }
+  .callout::before { content: ''; position: absolute; right: 100%; top: 36px; height: 3px; background: var(--blue); width: var(--w); }
+  .callout::after { content: ''; position: absolute; right: calc(100% + var(--w)); top: 29px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 2px solid #fff; }
+
+  /* 06 33 */
+  .s06 .top { padding: 96px 30px 54px; text-align: center; }
+  .s06 .big { font-size: 330px; }
+  .s06 h2 { margin-top: 18px; font-size: 62px; }
+  .s06 .surface { position: relative; height: 980px; overflow: hidden; }
+  .s06 .surface img { position: absolute; left: 0; top: -10px; width: 780px; }
+  .tag { position: absolute; background: #fff; color: var(--ink); font-size: 31px; font-weight: 800; padding: 12px 22px; border-radius: 40px; box-shadow: 0 8px 20px rgba(18,38,63,.22); letter-spacing: -.02em; }
+  .tag b { color: var(--blue); font-weight: 900; }
+  .s06 .back { display: flex; align-items: center; gap: 34px; padding: 50px 44px 90px; }
+  .s06 .back .d { flex: none; width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 6px solid var(--sky); }
+  .s06 .back .d img { width: 100%; height: 100%; object-fit: cover; }
+  .s06 .back b { display: block; font-size: 44px; font-weight: 900; color: var(--blue); letter-spacing: -.03em; }
+  .s06 .back span { font-size: 34px; font-weight: 600; line-height: 1.38; color: var(--sub); letter-spacing: -.02em; }
+
+  /* 07 힘 조절 */
+  .s07 .pair { display: flex; gap: 8px; padding: 0 8px; }
+  .s07 figure { position: relative; flex: 1; }
+  .s07 figure img { width: 100%; height: 640px; object-fit: cover; object-position: center top; }
+  .s07 figure .n { position: absolute; left: 0; top: 0; font-size: 34px; font-weight: 900; background: var(--blue); color: #fff; padding: 14px 24px; }
+  .s07 figcaption { padding-top: 18px; text-align: center; font-size: 38px; font-weight: 900; letter-spacing: -.03em; }
+
+  /* 08 0원 */
+  .s08 { height: 1620px; background: #fff; }
+  .s08 .bg { position: absolute; left: 0; bottom: 0; width: 780px; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 16%); }
+  .s08 .veil { position: absolute; left: 0; right: 0; top: 0; height: 780px; background: linear-gradient(180deg, #fff 44%, rgba(255,255,255,0)); }
+  .s08 .top { position: absolute; left: 0; right: 0; top: 76px; text-align: center; }
+  .s08 .big { font-size: 280px; }
+  .s08 .big small { font-size: 160px; font-weight: 900; }
+  .s08 .note { position: absolute; left: 30px; right: 30px; bottom: 44px; text-align: center; background: rgba(255,255,255,.9); padding: 26px 20px; }
+  .s08 .note p { color: var(--ink); font-weight: 600; font-size: 32px; }
+
+  /* 09 손잡이 */
+  .ruler { position: relative; height: 470px; background: var(--pale); }
+  .ruler .tt { position: absolute; left: 0; right: 0; top: 40px; text-align: center; font-size: 72px; font-weight: 900; letter-spacing: -.05em; }
+  .ruler .prod { position: absolute; left: 50%; top: 170px; width: 680px; transform: translateX(-50%) ; filter: drop-shadow(6px 12px 12px rgba(18,38,63,.3)); }
+  .ruler .dim { position: absolute; left: 50px; right: 50px; bottom: 50px; height: 4px; background: var(--blue); }
+  .ruler .dim::before, .ruler .dim::after { content: ''; position: absolute; top: -16px; width: 4px; height: 36px; background: var(--blue); }
+  .ruler .dim::before { left: 0; } .ruler .dim::after { right: 0; }
+  .ruler .dim b { position: absolute; left: 50%; top: -30px; transform: translateX(-50%); background: var(--pale); padding: 0 20px; font-size: 44px; font-weight: 900; letter-spacing: -.03em; color: var(--blue); }
+  .grip { position: relative; height: 1040px; overflow: hidden; background: #E9F2FB; }
+  .grip img { position: absolute; left: 0; top: -40px; width: 780px; }
+
+  /* 비교표 */
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 31px; letter-spacing: -.03em; }
+  th, td { padding: 26px 4px; text-align: center; border-bottom: 2px solid var(--line); font-weight: 600; line-height: 1.25; color: var(--sub); }
+  th { font-weight: 800; color: var(--ink); vertical-align: bottom; }
+  td:first-child { font-weight: 800; color: var(--ink); text-align: left; padding-left: 16px; }
+  col.lb { width: 168px; }
+  .us { background: var(--blue); color: #fff !important; font-weight: 900 !important; font-size: 34px; border-bottom-color: #3D8FE0; }
+  .tbn { padding: 22px 30px 96px; font-size: 30px; line-height: 1.4; color: var(--sub); text-align: center; letter-spacing: -.02em; }
+
+  /* 10 가루 */
+  .s10 .ph { position: relative; height: 720px; overflow: hidden; }
+  .s10 .ph img { position: absolute; left: 0; top: -20px; width: 880px; margin-left: -60px; }
+  .s10 .warn { display: inline-block; margin-top: 20px; font-size: 40px; font-weight: 900; color: #fff; background: var(--blue); padding: 8px 22px; letter-spacing: -.03em; }
+
+  /* 11 사용법 */
+  .step { display: flex; height: 420px; border-top: 2px solid var(--line); }
+  .step .ph { width: 400px; position: relative; overflow: hidden; }
+  .step .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .step .tx { flex: 1; padding: 0 22px 0 34px; display: flex; flex-direction: column; justify-content: center; }
+  .step .tx b { font-size: 34px; font-weight: 900; color: var(--blue); }
+  .step .tx span { font-size: 36px; font-weight: 800; letter-spacing: -.03em; line-height: 1.34; margin-top: 8px; }
+  .step .tx i { font-style: normal; font-size: 30px; color: var(--sub); font-weight: 600; line-height: 1.38; margin-top: 8px; }
+
+  /* 13 추천 */
+  .s13 { padding: 100px 50px 110px; }
+  .s13 h2 { font-size: 62px; margin-bottom: 50px; }
+  .s13 li { list-style: none; display: flex; gap: 20px; align-items: flex-start; font-size: 37px; font-weight: 800; line-height: 1.32; letter-spacing: -.03em; padding: 28px 0; border-top: 2px solid var(--line); }
+  .s13 li svg { flex: 0 0 50px; margin-top: 2px; }
+
+  /* 14 컬러 */
+  .s14 .split { display: flex; height: 860px; }
+  .s14 .col { position: relative; flex: 1; overflow: hidden; }
+  .s14 .wall { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .s14 .hang { position: absolute; height: 600px; }
+  .s14 .peg { position: absolute; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #8d9299 70%); box-shadow: 1px 2px 3px rgba(0,0,0,.5); }
+  .s14 .chip { position: absolute; left: 20px; bottom: 20px; font-size: 36px; font-weight: 900; padding: 8px 26px; background: #fff; color: var(--ink); border-radius: 40px; }
+
+  /* 쓰고 난 뒤 */
+  .after { position: relative; height: 1020px; overflow: hidden; }
+  .after img { position: absolute; left: -210px; top: 0; height: 1020px; }
+  .after .veil { position: absolute; inset: 0 0 auto 0; height: 470px; background: linear-gradient(180deg, rgba(255,255,255,.96) 40%, rgba(255,255,255,0)); }
+  .after h2 { position: absolute; left: 0; right: 0; top: 96px; text-align: center; font-size: 80px; }
+
+  /* 15 Q&A */
+  .s15 { padding: 100px 50px 100px; }
+  .s15 h2 { text-align: center; margin-bottom: 50px; }
+  .qa { border-top: 2px solid var(--line); padding: 32px 0 36px; }
+  .qa .q { font-size: 40px; font-weight: 900; letter-spacing: -.03em; }
+  .qa .q b { color: var(--blue); margin-right: 10px; }
+  .qa .a { font-size: 33px; line-height: 1.5; color: var(--sub); font-weight: 500; margin-top: 12px; letter-spacing: -.02em; }
+
+  /* 16 정보 */
+  .s16 { padding: 90px 50px; }
+  .s16 .tt { font-size: 52px; font-weight: 900; letter-spacing: -.04em; margin-bottom: 30px; }
+  .s16 .row { display: flex; font-size: 33px; padding: 24px 0; border-top: 2px solid var(--line); letter-spacing: -.02em; }
+  .s16 .row b { width: 170px; font-weight: 900; flex: none; }
+
+  /* 17 주의 */
+  .s17 { padding: 100px 44px; text-align: center; }
+  .ic6 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 46px 20px; margin-top: 60px; }
+  .ic6 div { font-size: 32px; font-weight: 700; line-height: 1.32; letter-spacing: -.03em; }
+  .ic6 svg { display: block; margin: 0 auto 14px; }
+
+  /* 18 마무리 */
+  .s18 { height: 1170px; }
+  .s18 .bg { position: absolute; inset: 0; width: 780px; }
+  .s18 .veil { position: absolute; inset: 0 0 auto 0; height: 560px; background: linear-gradient(180deg, rgba(255,255,255,.95) 46%, rgba(255,255,255,0)); }
+  .s18 .top { position: absolute; top: 90px; left: 0; right: 0; text-align: center; }
+  .s18 h2 { font-size: 70px; }
+  .s18 h2 big { display: block; font-size: 104px; margin-top: 10px; line-height: 1.14; letter-spacing: -.06em; }
+  .s18 h2 s { color: #8699AC; text-decoration-color: var(--blue); text-decoration-thickness: 8px; }
+
+  /* 수면안대_6 */
+  .spec { padding: 80px 30px 90px; }
+  .spec .tt { font-size: 44px; font-weight: 900; letter-spacing: -.03em; margin: 0 20px 26px; }
+  .spec .tt::after { content: ''; display: block; width: 76px; height: 8px; background: var(--blue); margin-top: 14px; }
+  .spec .pic { width: 720px; display: block; margin: 0 auto; filter: drop-shadow(0 16px 20px rgba(18,38,63,.16)); }
+  .spec .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 20px; margin: 40px 16px 44px; }
+  .spec .grid b { display: block; font-size: 56px; font-weight: 900; color: var(--blue); letter-spacing: -.05em; line-height: 1.1; }
+  .spec .grid span { font-size: 33px; font-weight: 700; color: var(--sub); letter-spacing: -.02em; }
+  .num .top { padding: 96px 24px 50px; text-align: center; }
+  .num .big { font-size: 300px; }
+  .num .big small { font-size: 170px; font-weight: 900; }
+  .num h2 { margin-top: 18px; font-size: 56px; }
+  .ph-full { position: relative; overflow: hidden; }
+  .ph-full img { width: 780px; display: block; }
+  .hdline { padding: 110px 24px 60px; text-align: center; }
+  .sum { padding: 50px 56px 100px; text-align: center; }
+  .scene2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 8px 70px; }
+  .scene2 img { width: 100%; height: 400px; object-fit: cover; }
+  .scene2 b { display: block; font-size: 38px; font-weight: 900; padding-top: 16px; text-align: center; letter-spacing: -.03em; }
+  .colors { display: flex; gap: 8px; padding: 0 8px 90px; }
+  .colors figure { flex: 1; text-align: center; }
+  .colors .box { background: var(--pale); min-height: 220px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .colors img { width: 100%; }
+  .colors figcaption { font-size: 36px; font-weight: 900; padding-top: 16px; }
+  .grid4 img { height: 470px; }
+  .step { height: 640px; }
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <p class="eyebrow">스펀지 입체 수면안대</p>
-  <h1>폭신하게 감싸고,<br><em>눈 앞은 비워 두고</em></h1>
-  <p class="lead">도톰한 스펀지 안에 눈 자리를 띄운 입체형</p>
-  <div class="stage"><img data-slot="hero" src="inputs/nukki/front.png" alt=""></div>
-  <div class="badges"><span class="badge">도톰한 스펀지</span><span class="badge">눈 자리 입체 공간</span><span class="badge">고무 밴드 + 벨크로</span></div>
+<section class="s01">
+  <img class="bg" src="inputs/ai/v2/hero.png" alt=""><div class="veil"></div>
+  <div class="copy"><h1 style="font-size:74px">무거운 안대에 지쳤다면</h1><h1 style="margin-top:6px"><b style="margin-top:0;font-size:150px">약 10g</b></h1>
+  <div class="sub" style="padding:0 20px">스펀지 타입 입체 안대, 고무 밴드에 찍찍</div></div>
+  <div class="seal a"><small>무게</small><b style="font-size:54px">약 10g</b></div>
+  <div class="seal b"><small>소재</small><b style="font-size:46px">스펀지</b></div>
+  <div class="band">블랙 &nbsp;/&nbsp; 고무 밴드 &nbsp;/&nbsp; 찍찍 조절</div>
 </section>
 
-<section class="soft">
-  <p class="eyebrow">안대, 이래서 불편했죠</p>
-  <h2>이런 경험<br>있으셨나요?</h2>
-  <div class="cards">
-    <div class="card"><div class="no">1</div><div><b>눈이 눌려 답답해요</b><span>얇은 천이 눈두덩에 바로 닿아요</span></div></div>
-    <div class="card"><div class="no">2</div><div><b>깜빡일 때 거슬려요</b><span>속눈썹이 천에 스치는 느낌</span></div></div>
-    <div class="card"><div class="no">3</div><div><b>얇아서 빛이 비쳐요</b><span>밝은 방에서는 천 너머로 환해요</span></div></div>
-    <div class="card"><div class="no">4</div><div><b>자다 보면 벗겨져요</b><span>뒤척이면 끈이 흘러내려요</span></div></div>
-  </div>
-</section>
+<section><div class="head"><h2 style="font-size:62px">켜 둔 건 남편인데,<br><span class="hl">뒤척이는 건 나</span></h2></div><div class="grid4" style="grid-template-columns:1fr"><figure><img src="inputs/ai/shared/e_phone.png" style="height:640px" alt=""><figcaption><b>밤</b>옆에서 켠 휴대폰 불빛</figcaption></figure><figure><img src="inputs/ai/shared/e_sun.png" style="height:640px" alt=""><figcaption><b>아침</b>커튼 사이로 들어오는 햇빛</figcaption></figure><figure><img src="inputs/ai/shared/e_cabin.png" style="height:640px" alt=""><figcaption><b>기내</b>내 맘대로 못 끄는 불빛</figcaption></figure><figure><img src="inputs/ai/shared/e_ear.png" style="height:640px" alt=""><figcaption><b>귀 뒤</b>머리에 얹어 둔 무게</figcaption></figure></div></section>
 
-<section>
-  <p class="eyebrow">안대 고를 때</p>
-  <h2>두 가지만<br>보세요</h2>
-  <div class="cond">
-    <div><i>조건 1</i><b>눈에 닿지 않는가</b><p>눈 앞에 공간이 있어야<br>깜빡여도 덜 거슬려요</p></div>
-    <div><i>조건 2</i><b>폭신하게 감싸는가</b><p>도톰해야 얼굴에 닿는 느낌이<br>부드러워요</p></div>
-  </div>
-  <p class="answer">그래서, 도톰한 스펀지에<br><em>눈 공간을 띄운 안대</em>예요</p>
-</section>
+<section class="s03 pale"><h2 style="font-size:60px">가볍게 쓰려던 안대,<br><span class="hl">머리가 먼저 무거웠죠</span></h2><p>이 안대는 스펀지 타입 약 10g이에요.</p>
+  <div class="two"><div class="disc" style="background:#fff"><img src="inputs/ai/v2/hand.png" style="object-fit:cover" alt=""></div><div class="arr"></div><div class="disc" style="background:#fff"><img src="inputs/ai/v2/close.png" style="object-fit:cover" alt=""></div></div>
+  <div class="labels"><span>스펀지 타입</span><span style="color:var(--blue)">약 10g</span></div></section>
 
-<section class="main">
-  <p class="eyebrow">스펀지 입체 안대를 고르는 이유</p>
-  <h2>편하게 쓰는<br>이유 4가지</h2>
-  <ul class="reason">
-    <li><span>01</span>안쪽으로 오목한 눈 자리</li>
-    <li><span>02</span>도톰하고 폭신한 스펀지</li>
-    <li><span>03</span>코를 따라 내려오는 모양</li>
-    <li><span>04</span>늘어나는 고무 밴드 + 벨크로</li>
-  </ul>
-</section>
+<section class="s04"><div class="head"><h2 style="font-size:66px">두툼하면 무거울까 봐?<br><span class="hl">스펀지라 약 10g</span></h2></div><div class="step-row"><div class="f"><img src="inputs/ai/v2/hand.png" style="height:700px;object-fit:cover" alt=""><div class="cap"><b>제품</b><span>스펀지 타입 입체 모양</span></div></div><div class="f"><img src="inputs/ai/v2/close.png" style="height:700px;object-fit:cover" alt=""><div class="cap"><b>착용</b><span>고무 밴드로 머리에 고정</span></div></div></div></section>
 
-<section class="soft">
-  <span class="point-no">POINT 01</span>
-  <h2>눈 앞을 비워 둔<br><em>입체 눈 공간</em></h2>
-  <p>눈이 닿는 부분이 안쪽으로 오목하게 들어가<br>눈을 누르지 않도록 여유를 뒀어요.</p>
-  <div class="stage" style="background:#fff"><img data-slot="p1" src="inputs/nukki/back.png" alt=""></div>
-  <div class="vs">
-    <div class="old"><b>얇은 천 안대</b><p>천이 눈에<br>바로 닿아요</p></div>
-    <div class="new"><b>스펀지 입체 안대</b><p>눈 앞에<br>공간이 있어요</p></div>
-  </div>
-</section>
+<section class="spec pale"><div class="tt">한눈에 보기</div><img class="pic" data-slot="spec" src="inputs/nukki/front.png" style="width:640px" alt=""><div class="grid"><div><b>약 10g</b><span>무게 표기</span></div><div><b>20 × 8.3cm</b><span>안대 크기</span></div><div><b>약 19.5cm</b><span>한쪽 끈, 늘리기 전</span></div><div><b>고무 밴드</b><span>찍찍으로 조절</span></div></div></section>
 
-<section>
-  <span class="point-no">POINT 02</span>
-  <h2>도톰한 스펀지로<br><em>폭신하게</em></h2>
-  <p>얼굴에 닿는 면이 도톰한 스펀지라<br>부드럽게 감싸 줘요.</p>
-  <div class="stage"><img data-slot="p2" src="inputs/nukki/side.png" alt="" style="width:62%"></div>
-</section>
+<section class="num"><div class="top"><div class="point">POINT 1 · 무게</div><div class="big" style="font-size:280px">10<small style="font-size:150px">g</small></div>
+  <h2>두툼하면 무거울까 봐? 스펀지라 약 10g</h2><div class="why"><span class="hl">공급처 표기 무게예요.</span></div></div><div class="ph-full"><img src="inputs/ai/v2/hand.png" style="height:820px;object-fit:cover;" alt=""></div></section>
 
-<section class="soft">
-  <span class="point-no">POINT 03</span>
-  <h2>늘어나는 밴드로<br><em>머리 크기에 맞게</em></h2>
-  <p>탄력 있는 고무 밴드에<br>벨크로로 길이를 한 번 더 맞춰요.</p>
-  <div class="size">
-    <div>본체 크기<span>약 20 × 8.3cm</span></div>
-    <div>한쪽 끈 길이<span>약 19.5cm (늘리기 전)</span></div>
-    <div>무게<span>약 10g</span></div>
-  </div>
-</section>
+<section class="pale"><div class="hdline"><div class="point">POINT 2 · 밴드</div><h2 style="font-size:66px">늘리고, 붙이면<br><span class="hl">내 머리 크기</span></h2></div><div class="ph-full"><img src="inputs/ai/v2/close.png" style="height:820px;object-fit:cover;" alt=""></div><div class="sum"><p>늘어나는 고무 밴드를 찍찍으로 맞춰요.</p></div></section>
 
-<section class="dark">
-  <p class="eyebrow">이럴 때 쓰세요</p>
-  <h2>빛이 신경 쓰이는<br>순간마다</h2>
-  <div class="scene">
-    <div><b>같이 자는 밤</b><p>옆 사람이 휴대폰·TV를 볼 때</p></div>
-    <div><b>낮잠·교대근무</b><p>환한 낮에 잠깐 눈 붙일 때</p></div>
-    <div><b>비행기·기차</b><p>기내 불빛 속 이동 시간</p></div>
-    <div><b>사무실 휴식</b><p>점심시간 짧은 휴식에</p></div>
-  </div>
-</section>
+<section><div class="hdline"><div class="point">어디서나</div><h2 style="font-size:66px">비행기에서도,<br><span class="hl">낮잠에도 같은 안대</span></h2></div><div class="ph-full"><img src="inputs/ai/v2/nap.png" style="height:820px;object-fit:cover;" alt=""></div><div class="sum"><p>가방에 넣어 두었다가 꺼내 써요.</p></div></section>
 
-<section class="soft">
-  <p class="eyebrow">구매 전에 솔직하게</p>
-  <h2>미리 알려 드려요</h2>
-  <div class="honest">
-    <div><b>도톰한 스펀지형이에요</b><p>폭신한 대신 더위를 많이 타신다면<br>한여름엔 덥게 느껴질 수 있어요.</p></div>
-    <div><b>얼굴형마다 맞는 정도가 달라요</b><p>코 옆 틈은 얼굴 굴곡에 따라<br>조금 남을 수 있어요.</p></div>
-    <div><b>색상은 블랙 한 가지예요</b><p>옵션 없이 블랙 단일 상품이에요.</p></div>
-  </div>
-</section>
+<section class="cmp"><div class="head"><h2 style="font-size:64px">스펀지라 약 10g,<br><span class="hl">밴드는 찍찍으로</span></h2></div><table><colgroup><col class="lb"><col><col><col></colgroup><tr><th></th><th>얇은 천형</th><th>두툼 통짜형</th><th class="us">이 제품</th></tr><tr><td>소재 타입</td><td>천</td><td>패딩 등</td><td class="us">스펀지</td></tr><tr><td>무게</td><td>제품별</td><td>제품별</td><td class="us">약 10g</td></tr><tr><td>눈 자리</td><td>납작</td><td>제품별</td><td class="us">입체</td></tr><tr><td>고정 방식</td><td>귀 끈 등</td><td>벨크로 등</td><td class="us">고무 밴드 + 찍찍</td></tr></table>
+  <div class="tbn">유형별 일반적인 구성이며, 제품마다 다를 수 있어요.</div></section>
 
-<section class="soft" style="background:#fff">
-  <p class="eyebrow">HOW TO WEAR</p>
-  <h2>이렇게 쓰세요</h2>
-  <div class="steps">
-    <div class="step"><p class="tag">STEP 1</p><b>코 라인에 맞춰요</b><p>가운데 파인 부분이<br>코 위에 오도록 대 주세요</p></div>
-    <div class="step"><p class="tag">STEP 2</p><b>밴드를 머리 뒤로</b><p>늘어나는 밴드를<br>머리 뒤에 둘러 주세요</p></div>
-    <div class="step"><p class="tag">STEP 3</p><b>벨크로로 맞춤</b><p>흘러내리지 않을 만큼만<br>편하게 맞춰 붙여요</p></div>
-  </div>
-</section>
+<section class="pale"><div class="hdline" style="padding-bottom:30px"><h2 style="font-size:68px">색은 <em>블랙 하나</em>예요</h2></div><div class="sum" style="padding-top:10px"><p>옵션이 없어요. 스펀지 타입이라 얇은 천 안대보다 두께가 있어요. 공급처 라벨 태그가 붙어 있을 수 있어요.</p></div></section>
 
-<section>
-  <p class="eyebrow">Q&amp;A</p>
-  <h2>자주 묻는 질문</h2>
-  <dl class="qa">
-    <dt>눈을 떠도 닿지 않나요?</dt>
-    <dd>눈 자리가 오목해서 얇은 안대보다 여유가 있어요. 다만 속눈썹 길이에 따라 느낌은 조금씩 다를 수 있어요.</dd>
-    <dt>무겁지 않나요?</dt>
-    <dd>약 10g이라 쓰고 있어도 부담이 적어요.</dd>
-    <dt>세탁은 어떻게 하나요?</dt>
-    <dd>스펀지 모양이 눌리지 않게 미지근한 물에 가볍게 손세탁하고 그늘에서 말려 주세요. 자세한 내용은 제품 라벨을 확인해 주세요.</dd>
-  </dl>
-</section>
+<section class="s11"><div class="head"><h2 style="font-size:60px">늘리고, 붙이고,<br><span class="hl">눈 자리에 맞추면 끝</span></h2></div><div class="step" ><div class="ph" style="background:var(--pale)"><img src="inputs/ai/v2/hand.png" alt=""></div><div class="tx"><b>STEP 1</b><span>눈 자리를 앞으로 해서 들어요</span></div></div><div class="step" ><div class="ph" style="background:var(--pale)"><img src="inputs/ai/v2/close.png" alt=""></div><div class="tx"><b>STEP 2</b><span>고무 밴드를 찍찍으로 맞춰요</span></div></div><div class="step" style="border-bottom:2px solid var(--line)"><div class="ph" style="background:var(--pale)"><img src="inputs/ai/v2/hero.png" style="object-position:center 62%" alt=""></div><div class="tx"><b>STEP 3</b><span>입체 자리를 눈에 맞춰요</span></div></div><div style="height:90px"></div></section>
 
-<section class="soft">
-  <p class="eyebrow">PRODUCT INFO</p>
-  <h2>제품 정보</h2>
-  <table class="spec">
-    <tr><th>제품명</th><td>스펀지 입체 수면안대</td></tr>
-    <tr><th>색상</th><td>블랙</td></tr>
-    <tr><th>크기</th><td>약 20 × 8.3cm</td></tr>
-    <tr><th>무게</th><td>약 10g</td></tr>
-    <tr><th>재질</th><td>스펀지 외</td></tr>
-    <tr><th>구성</th><td>안대 1개</td></tr>
-    <tr><th>원산지</th><td>중국</td></tr>
-  </table>
-  <ol class="numlist">
-    <li>미지근한 물에 중성세제로 가볍게 손세탁</li>
-    <li>비틀어 짜지 말고 모양을 잡아 그늘 건조</li>
-    <li>건조기·다림질·표백제는 피하기</li>
-  </ol>
-</section>
+<section class="pale"><div class="hdline"><h2 style="font-size:76px">"그만 자" 대신<br><em>안대 하나</em></h2></div><div class="ph-full"><img src="inputs/ai/v2/partner.png" style="height:auto" alt=""></div><div style="height:80px"></div></section>
 
-<section class="main">
-  <p class="eyebrow">스펀지 입체 수면안대</p>
-  <h2>오늘 밤은<br><em>폭신하게, 눈 편하게</em></h2>
-  <div class="stage" style="background:#3E3934"><img data-slot="end" src="inputs/nukki/front.png" alt=""></div>
-</section>
+<section class="s13"><h2>끈 때문에, 눌려서, 답답해서.<br>서랍에 쌓인 안대</h2><ul data-check><li >무거운 안대가 불편했던 분</li><li >옆 사람 불빛이 신경 쓰이는 분</li><li >커튼 사이 아침 빛에 먼저 깨는 분</li><li >낮잠, 교대 근무로 낮에 자는 분</li><li style="border-bottom:2px solid var(--line)">비행기, 기차에서 눈을 붙이는 분</li></ul></section>
 
+<section><div class="hdline" style="padding-bottom:50px"><h2 style="font-size:70px">교대 근무 낮잠에도,<br><em>새벽 비행기에도</em></h2></div><div class="ph-full" style="max-height:1110px"><img src="inputs/ai/v2/after.png" alt=""></div><div class="ph-full"><img src="inputs/ai/v2/day.png" alt=""></div></section>
+
+<section class="s15"><h2>빛이 완전히<br>막히냐고요?</h2><div class="qa" ><div class="q"><b>Q.</b>빛이 완전히 막히나요?</div><div class="a">눈앞을 덮어 빛을 가려 주지만, 완전히 막는다고 약속드리지는 않아요. 차광 시험은 하지 않았어요.</div></div><div class="qa" ><div class="q"><b>Q.</b>머리가 커도 맞나요?</div><div class="a">고무 밴드가 늘어나고 찍찍으로 조절돼요. 한쪽 끈은 늘리기 전 약 19.5cm예요.</div></div><div class="qa" ><div class="q"><b>Q.</b>옆으로 자도 되나요?</div><div class="a">입체 모양이라 옆으로 누우면 베개에 닿을 수 있어요.</div></div><div class="qa" style="border-bottom:2px solid var(--line)"><div class="q"><b>Q.</b>정말 10g인가요?</div><div class="a">공급처 표기 무게예요. 측정 방법에 따라 조금 다를 수 있어요.</div></div></section>
+
+<section class="s16 pale"><div class="tt">제품 정보</div><div class="row" ><b>제품명</b><span>스펀지 타입 수면안대</span></div><div class="row" ><b>색상</b><span>블랙</span></div><div class="row" ><b>크기</b><span>20 × 8.3cm, 한쪽 끈 약 19.5cm (늘리기 전)</span></div><div class="row" ><b>구성</b><span>1개</span></div><div class="row" ><b>재질</b><span>스펀지 외 (공급처 표기, 혼용률 없음)</span></div><div class="row" ><b>제조국</b><span>중국</span></div><div class="row" style="border-bottom:2px solid var(--line)"><b>사진 안내</b><span>사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요.</span></div></section>
+
+<section class="s17"><h2 style="font-size:72px">불편하면,<br><em>바로 벗으세요</em></h2><div class="ic6"><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 48h76M24 34L10 48l14 14M72 34l14 14-14 14"/></svg>너무 조이지 않게</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="48" cy="48" r="36"/><path d="M23 23l50 50"/></svg>눈 주변에 상처·염증이 있으면 쓰지 않기</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 8h32l24 24v32L64 88H32L8 64V32z"/><path d="M34 48h28"/></svg>불편하면 바로 벗기</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="48" cy="48" r="36"/><path d="M23 23l50 50"/></svg>걷거나 운전할 때 쓰지 않기</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M48 12c14 20 24 32 24 46a24 24 0 0 1-48 0c0-14 10-26 24-46z"/></svg>세탁은 라벨을 먼저 확인, 손세탁 후 그늘 건조 권장</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="48" cy="32" r="16"/><path d="M20 84c2-18 14-28 28-28s26 10 28 28"/><path d="M12 12l72 72"/></svg>어린이 손이 닿지 않게</div></div></section>
+
+<section class="s18"><img class="bg" src="inputs/ai/v2/finale.png" alt=""><div class="veil"></div><div class="top"><h2 style="font-size:70px">잠들 때 얹는<big style="font-size:120px">약 10g</big></h2></div></section>
+
+<script>
+// 고정 시드로 같은 그래픽을 재현한다
+  let seed = 33;
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  document.querySelectorAll('[data-powder]').forEach((el) => {
+    const [x, y, w, h] = el.dataset.box.split(',').map(Number);
+    for (let i = 0; i < Number(el.dataset.powder); i++) {
+      const p = document.createElement('i');
+      const s = 2 + rnd() * rnd() * 10;
+      p.style.cssText = `left:${x + rnd() * w}px;top:${y + rnd() * h}px;width:${s}px;height:${s}px;opacity:${0.5 + rnd() * 0.5}`;
+      el.appendChild(p);
+    }
+  });
+  const check = '<svg width="50" height="50" viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#0B6FD1"/><path d="M13 26l9 9 16-18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  document.querySelectorAll('[data-check] li').forEach((li) => { li.innerHTML = check + '<span>' + li.innerHTML + '</span>'; });
+</script>
 </body>
 </html>

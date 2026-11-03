@@ -210,8 +210,8 @@
   .scene2 b { display: block; font-size: 38px; font-weight: 900; padding-top: 16px; text-align: center; letter-spacing: -.03em; }
   .colors { display: flex; gap: 8px; padding: 0 8px 90px; }
   .colors figure { flex: 1; text-align: center; }
-  .colors .box { background: var(--pale); height: 300px; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+  .colors .box { background: var(--pale); min-height: 220px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
   .colors img { width: 100%; }
   .colors figcaption { font-size: 36px; font-weight: 900; padding-top: 16px; }
   .grid4 img { height: 470px; }
-  .step { height: 480px; }
+  .step { height: 640px; }

@@ -1,0 +1,344 @@
+{
+ "title": "수면안대-1 v2",
+ "sections": [
+  {
+   "type": "hero",
+   "img": "inputs/ai/v2/hero.png",
+   "h1": "눈 뜨면 천이 닿던 안대,",
+   "big": "이건 오목해요",
+   "bigsize": 104,
+   "sub": "눈 자리가 오목한 3D 입체 안대, 색상 4가지",
+   "seals": [
+    [
+     "모양",
+     "3D",
+     74
+    ],
+    [
+     "색상",
+     "4가지",
+     60
+    ]
+   ],
+   "band": [
+    "블루 · 블랙 · 그레이 · 진핑크",
+    "머리 뒤 찍찍"
+   ]
+  },
+  {
+   "type": "empathy",
+   "stack": true,
+   "h": "켜 둔 건 남편인데,<br><span class=\"hl\">뒤척이는 건 나</span>",
+   "cuts": [
+    {
+     "img": "inputs/ai/shared/e_phone.png",
+     "t": "밤",
+     "c": "옆에서 켠 휴대폰 불빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_sun.png",
+     "t": "아침",
+     "c": "커튼 사이로 들어오는 햇빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_cabin.png",
+     "t": "기내",
+     "c": "내 맘대로 못 끄는 불빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_ear.png",
+     "t": "귀 뒤",
+     "c": "헐렁해서 고쳐 쓰던 끈"
+    }
+   ]
+  },
+  {
+   "type": "turn",
+   "h": "빛 가리려고 쓴 안대,<br><span class=\"hl\">눈 위가 먼저 답답했죠</span>",
+   "p": "납작한 안대는 천이 눈 위에 닿아요. 이 안대는 눈 자리가 오목해요.",
+   "size": 60,
+   "discs": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "t": "오목한 눈 자리",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "t": "눈 위에 맞춰 쓰기",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "intro",
+   "h": "납작한 안대 말고,<br><span class=\"hl\">눈 자리가 오목한 안대</span>",
+   "size": 66,
+   "h2": 700,
+   "steps": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "t": "제품",
+     "c": "눈 자리가 오목한 입체 모양",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "t": "착용",
+     "c": "머리 뒤에서 찍찍",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "overview",
+   "img": "inputs/nukki/gray3d.png",
+   "style": "width:640px",
+   "items": [
+    [
+     "3D 입체",
+     "눈 자리 오목"
+    ],
+    [
+     "약 23cm",
+     "가로 길이"
+    ],
+    [
+     "약 8.3cm",
+     "세로 높이"
+    ],
+    [
+     "끈 약 34cm",
+     "찍찍 포함"
+    ]
+   ]
+  },
+  {
+   "type": "number",
+   "point": "POINT 1 · 눈 자리",
+   "big": "3D",
+   "bigsize": 260,
+   "h": "눈 자리가 오목하게 파여 있어요",
+   "why": "<span class=\"hl\">납작한 안대와</span> 모양이 달라요",
+   "img": "inputs/ai/v2/close.png",
+   "pale": false
+  },
+  {
+   "point": "POINT 2 · 끈",
+   "h": "약 34cm 끈,<br><span class=\"hl\">머리에 맞게 찍찍</span>",
+   "img": "inputs/ai/v2/hand.png",
+   "p": "끈을 머리 뒤에서 찍찍으로 맞춰요. 끈 길이에는 찍찍 부분 약 3.5cm가 포함돼요.",
+   "type": "feature",
+   "pale": true,
+   "style": "height:820px;object-fit:cover;"
+  },
+  {
+   "point": "어디서나",
+   "h": "비행기에서도,<br><span class=\"hl\">낮잠에도 같은 안대</span>",
+   "img": "inputs/ai/v2/nap.png",
+   "p": "가방에 넣어 두었다가 꺼내 써요.",
+   "type": "feature",
+   "pale": false,
+   "style": "height:820px;object-fit:cover;"
+  },
+  {
+   "type": "compare",
+   "h": "눈 자리가 오목한,<br><span class=\"hl\">끈 있는 안대</span>",
+   "cols": [
+    "납작형",
+    "두툼 통짜형",
+    "이 제품"
+   ],
+   "rows": [
+    [
+     "눈 자리",
+     "납작",
+     "제품별",
+     "오목"
+    ],
+    [
+     "고정 방식",
+     "고무줄 등",
+     "벨크로 등",
+     "머리 뒤 찍찍"
+    ],
+    [
+     "가로",
+     "제품별",
+     "제품별",
+     "약 23cm"
+    ],
+    [
+     "색상",
+     "제품별",
+     "제품별",
+     "4가지"
+    ]
+   ]
+  },
+  {
+   "type": "notice",
+   "h": "두툼하지는 <em>않아요</em>",
+   "p": "귀까지 덮는 안대가 아니에요. 눈 앞만 입체로 가리는 모양이라, 넓게 덮는 안대를 찾으신다면 다른 유형이 맞을 수 있어요."
+  },
+  {
+   "type": "howto",
+   "h": "머리에 대고, 찍찍,<br><span class=\"hl\">눈 자리에 맞추면 끝</span>",
+   "steps": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "c": "눈 자리를 앞으로 해서 들어요"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "c": "머리 뒤에서 찍찍으로 맞춰요"
+    },
+    {
+     "img": "inputs/ai/v2/hero.png",
+     "c": "오목한 자리를 눈 위에 맞춰요",
+     "style": "object-position:center 62%"
+    }
+   ]
+  },
+  {
+   "type": "feature",
+   "h": "\"그만 자\" 대신<br><em>안대 하나</em>",
+   "size": 76,
+   "img": "inputs/ai/v2/partner.png",
+   "style": "height:auto",
+   "pale": true
+  },
+  {
+   "type": "checklist",
+   "h": "끈 때문에, 눌려서, 답답해서.<br>서랍에 쌓인 안대",
+   "items": [
+    "눈 위가 눌려 안대를 벗어 본 분",
+    "옆 사람 불빛이 신경 쓰이는 분",
+    "커튼 사이 아침 빛에 먼저 깨는 분",
+    "낮잠, 교대 근무로 낮에 자는 분",
+    "색으로 내 안대를 고르고 싶은 분"
+   ]
+  },
+  {
+   "type": "colors",
+   "h": "내 건 블루,<br><em>남편 건 블랙</em>",
+   "items": [
+    {
+     "img": "inputs/nukki/blue.png",
+     "t": "블루"
+    },
+    {
+     "img": "inputs/nukki/black.png",
+     "t": "블랙"
+    },
+    {
+     "img": "inputs/nukki/gray.png",
+     "t": "그레이"
+    },
+    {
+     "img": "inputs/nukki/pink.png",
+     "t": "진핑크"
+    }
+   ]
+  },
+  {
+   "type": "after",
+   "h": "교대 근무 낮잠에도,<br><em>새벽 비행기에도</em>",
+   "size": 70,
+   "img": "inputs/ai/v2/after.png",
+   "img2": "inputs/ai/v2/day.png"
+  },
+  {
+   "type": "qa",
+   "h": "빛이 완전히<br>막히냐고요?",
+   "items": [
+    [
+     "빛이 완전히 막히나요?",
+     "눈앞을 덮어 빛을 가려 주지만, 완전히 막는다고 약속드리지는 않아요. 차광 시험은 하지 않았어요."
+    ],
+    [
+     "머리가 커도 맞나요?",
+     "끈 약 34cm를 머리 뒤 찍찍으로 맞춰요. 머리 둘레에 맞는지 길이를 먼저 확인해 주세요."
+    ],
+    [
+     "옆으로 자도 되나요?",
+     "입체 모양이라 옆으로 누우면 베개에 닿을 수 있어요. 자세에 따라 느낌이 달라요."
+    ],
+    [
+     "속눈썹이 닿지 않나요?",
+     "눈 자리가 오목한 모양이지만, 눈 모양에 따라 다를 수 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "info",
+   "rows": [
+    [
+     "제품명",
+     "3D 입체 수면안대"
+    ],
+    [
+     "색상",
+     "블루, 블랙, 그레이, 진핑크"
+    ],
+    [
+     "크기",
+     "약 23 × 8.3cm, 끈 약 34cm (벨크로 3.5cm 포함)"
+    ],
+    [
+     "구성",
+     "1개"
+    ],
+    [
+     "재질",
+     "폴리에스테르"
+    ],
+    [
+     "제조국",
+     "중국"
+    ],
+    [
+     "사진 안내",
+     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "warn",
+   "h": "불편하면,<br><em>바로 벗으세요</em>",
+   "items": [
+    [
+     "wide",
+     "너무 조이지 않게"
+    ],
+    [
+     "no",
+     "눈 주변에 상처·염증이 있으면 쓰지 않기"
+    ],
+    [
+     "stop",
+     "불편하면 바로 벗기"
+    ],
+    [
+     "no",
+     "걷거나 운전할 때 쓰지 않기"
+    ],
+    [
+     "drop",
+     "세탁은 라벨을 먼저 확인, 손세탁 후 그늘 건조 권장"
+    ],
+    [
+     "child",
+     "어린이 손이 닿지 않게"
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "img": "inputs/ai/v2/finale.png",
+   "h": "오늘 밤은,",
+   "big": "오목한 눈 자리로",
+   "bigsize": 84
+  }
+ ]
+}

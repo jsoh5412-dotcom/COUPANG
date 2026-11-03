@@ -1,0 +1,320 @@
+{
+ "title": "수면안대-5 v2",
+ "sections": [
+  {
+   "type": "hero",
+   "img": "inputs/ai/v2/hero.png",
+   "h1": "코 옆이 들뜨던 안대,",
+   "big": "코받침부터",
+   "bigsize": 108,
+   "sub": "코받침이 붙어 있는 3D 입체 안대",
+   "seals": [
+    [
+     "코받침",
+     "일체형",
+     50
+    ],
+    [
+     "크기",
+     "25 × 10cm",
+     38
+    ]
+   ],
+   "band": [
+    "블랙",
+    "코받침 일체형",
+    "신축 밴드"
+   ]
+  },
+  {
+   "type": "empathy",
+   "stack": true,
+   "h": "켜 둔 건 남편인데,<br><span class=\"hl\">뒤척이는 건 나</span>",
+   "cuts": [
+    {
+     "img": "inputs/ai/shared/e_phone.png",
+     "t": "밤",
+     "c": "옆에서 켠 휴대폰 불빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_sun.png",
+     "t": "아침",
+     "c": "커튼 사이로 들어오는 햇빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_cabin.png",
+     "t": "기내",
+     "c": "내 맘대로 못 끄는 불빛"
+    },
+    {
+     "img": "inputs/nukki/woman_side.png",
+     "t": "코 옆",
+     "c": "코 쪽이 들떠 고쳐 쓰던 자리"
+    }
+   ]
+  },
+  {
+   "type": "turn",
+   "h": "빛만 보다가,<br><span class=\"hl\">코 옆 들뜸을 놓쳤죠</span>",
+   "p": "이 안대는 코받침이 붙어 있어요.",
+   "size": 60,
+   "discs": [
+    {
+     "img": "inputs/nukki/woman_side.png",
+     "t": "코받침 일체형",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "t": "코에 얹어 쓰기",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "intro",
+   "h": "코에 얹고,<br><span class=\"hl\">밴드만 당기면</span>",
+   "size": 66,
+   "h2": 700,
+   "steps": [
+    {
+     "img": "inputs/nukki/woman_side.png",
+     "t": "제품",
+     "c": "코받침이 붙은 입체 모양",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "t": "착용",
+     "c": "신축 밴드로 머리에 고정",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "overview",
+   "img": "inputs/nukki/woman_side.png",
+   "style": "width:420px",
+   "items": [
+    [
+     "코받침",
+     "일체형"
+    ],
+    [
+     "25 × 10cm",
+     "길이 × 너비"
+    ],
+    [
+     "약 2cm",
+     "높이"
+    ],
+    [
+     "신축 밴드",
+     "길이 조절"
+    ]
+   ]
+  },
+  {
+   "type": "number",
+   "point": "POINT 1 · 코받침",
+   "big": "코",
+   "bigsize": 240,
+   "h": "코를 따라 내려오는 코받침",
+   "why": "<span class=\"hl\">코 자리가 안대에 붙어 있는</span> 일체형이에요",
+   "img": "inputs/ai/v2/close.png",
+   "style": "height:820px;object-fit:cover;",
+   "pale": false
+  },
+  {
+   "point": "POINT 2 · 눈 자리",
+   "h": "코는 받치고,<br><span class=\"hl\">눈 자리는 오목</span>",
+   "img": "inputs/nukki/woman_lie.png",
+   "style": "height:auto",
+   "p": "안쪽이 오목한 입체 모양이에요.",
+   "type": "feature",
+   "pale": true
+  },
+  {
+   "point": "POINT 3 · 밴드",
+   "h": "밴드는 늘리고<br><span class=\"hl\">길이는 내 머리대로</span>",
+   "img": "inputs/nukki/man_lie.png",
+   "p": "신축 밴드 길이를 조절해 써요.",
+   "style": "height:auto",
+   "type": "feature",
+   "pale": false
+  },
+  {
+   "type": "compare",
+   "h": "코받침 붙은 안대,<br><span class=\"hl\">눈 자리는 오목</span>",
+   "cols": [
+    "납작형",
+    "두툼 통짜형",
+    "이 제품"
+   ],
+   "rows": [
+    [
+     "코받침",
+     "제품별",
+     "제품별",
+     "일체형"
+    ],
+    [
+     "눈 자리",
+     "납작",
+     "제품별",
+     "오목"
+    ],
+    [
+     "고정 방식",
+     "고무줄 등",
+     "벨크로 등",
+     "신축 밴드"
+    ],
+    [
+     "크기",
+     "제품별",
+     "제품별",
+     "25 × 10cm"
+    ]
+   ]
+  },
+  {
+   "type": "notice",
+   "h": "만 13세 <em>이상</em>이 써요",
+   "p": "공급처 표기 사용 연령이에요. 코 높이와 얼굴 모양에 따라 코받침이 닿는 느낌이 다를 수 있어요."
+  },
+  {
+   "type": "howto",
+   "h": "코에 얹고, 밴드 당기고,<br><span class=\"hl\">눈 자리에 맞추면 끝</span>",
+   "steps": [
+    {
+     "img": "inputs/nukki/woman_side.png",
+     "c": "코받침을 코에 얹어요"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "c": "밴드를 머리 뒤로 넘겨요"
+    },
+    {
+     "img": "inputs/ai/v2/hero.png",
+     "c": "길이를 맞춰요",
+     "style": "object-position:center 62%"
+    }
+   ]
+  },
+  {
+   "type": "feature",
+   "h": "\"그만 자\" 대신<br><em>안대 하나</em>",
+   "size": 76,
+   "img": "inputs/ai/v2/partner.png",
+   "style": "height:auto",
+   "pale": true
+  },
+  {
+   "type": "checklist",
+   "h": "끈 때문에, 눌려서, 답답해서.<br>서랍에 쌓인 안대",
+   "items": [
+    "코 쪽이 들떠 안대를 고쳐 쓴 분",
+    "옆 사람 불빛이 신경 쓰이는 분",
+    "커튼 사이 아침 빛에 먼저 깨는 분",
+    "낮잠, 교대 근무로 낮에 자는 분",
+    "비행기, 기차에서 눈을 붙이는 분"
+   ]
+  },
+  {
+   "type": "after",
+   "h": "교대 근무 낮잠에도,<br><em>새벽 비행기에도</em>",
+   "size": 70,
+   "img": "inputs/ai/v2/after.png",
+   "img2": "inputs/ai/v2/day.png"
+  },
+  {
+   "type": "qa",
+   "h": "빛이 완전히<br>막히냐고요?",
+   "items": [
+    [
+     "빛이 완전히 막히나요?",
+     "눈앞을 덮어 빛을 가려 주지만, 완전히 막는다고 약속드리지는 않아요. 차광 시험은 하지 않았어요."
+    ],
+    [
+     "코가 낮아도 맞나요?",
+     "코 높이에 따라 닿는 느낌이 달라요."
+    ],
+    [
+     "머리가 커도 맞나요?",
+     "신축 밴드 길이를 조절해 써요. 머리 둘레를 먼저 확인해 주세요."
+    ],
+    [
+     "옆으로 자도 되나요?",
+     "입체 모양이라 옆으로 누우면 베개에 닿을 수 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "info",
+   "rows": [
+    [
+     "제품명",
+     "3D 입체 수면안대"
+    ],
+    [
+     "색상",
+     "블랙"
+    ],
+    [
+     "크기",
+     "길이 25 × 너비 10 × 높이 2cm"
+    ],
+    [
+     "구성",
+     "1개"
+    ],
+    [
+     "재질",
+     "폴리에스테르, 나일론"
+    ],
+    [
+     "사진 안내",
+     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "warn",
+   "h": "불편하면,<br><em>바로 벗으세요</em>",
+   "items": [
+    [
+     "wide",
+     "너무 조이지 않게"
+    ],
+    [
+     "no",
+     "눈 주변에 상처·염증이 있으면 쓰지 않기"
+    ],
+    [
+     "stop",
+     "불편하면 바로 벗기"
+    ],
+    [
+     "no",
+     "걷거나 운전할 때 쓰지 않기"
+    ],
+    [
+     "drop",
+     "세탁은 라벨을 먼저 확인, 손세탁 후 그늘 건조 권장"
+    ],
+    [
+     "child",
+     "어린이 손이 닿지 않게"
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "img": "inputs/ai/v2/finale.png",
+   "h": "코에 얹고,",
+   "big": "밴드만 당기면",
+   "bigsize": 88
+  }
+ ]
+}
