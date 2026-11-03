@@ -66,7 +66,7 @@
      "style": "object-fit:contain"
     },
     {
-     "img": "inputs/ai/v2/hook.png",
+     "img": "inputs/ai/v2/hook2.png",
      "t": "벨크로로 감기",
      "style": "object-fit:cover"
     }
@@ -85,7 +85,7 @@
      "style": "object-fit:cover"
     },
     {
-     "img": "inputs/ai/v2/hook.png",
+     "img": "inputs/ai/v2/hook2.png",
      "t": "착용",
      "c": "무릎 아래에 벨크로로",
      "style": "object-fit:cover"
@@ -130,7 +130,7 @@
   {
    "point": "POINT 2 · 벨크로",
    "h": "왼쪽 오른쪽 구분 없이,<br><span class=\"hl\">벨크로 한 번</span>",
-   "img": "inputs/ai/v2/hook.png",
+   "img": "inputs/ai/v2/hook2.png",
    "style": "height:820px;object-fit:cover",
    "p": "둘레 35.5cm 안에서 맞춰요.",
    "type": "feature",
@@ -206,7 +206,7 @@
      "style": "object-fit:contain"
     },
     {
-     "img": "inputs/ai/v2/hook.png",
+     "img": "inputs/ai/v2/hook2.png",
      "c": "무릎 아래에 둘러요"
     },
     {

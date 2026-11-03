@@ -81,13 +81,13 @@
      "img": "inputs/ai/v2/hand.png",
      "t": "제품",
      "c": "안쪽이 오목한 돔 모양",
-     "style": "object-fit:cover"
+     "style": "object-fit:contain;background:var(--pale)"
     },
     {
-     "img": "inputs/ai/v2/close.png",
-     "t": "착용",
-     "c": "버클로 밴드 길이 맞춤",
-     "style": "object-fit:cover"
+     "img": "inputs/photos/buckle.jpg",
+     "t": "실제 버클",
+     "c": "슬라이드 버클로 길이 맞춤",
+     "style": "object-fit:scale-down;background:var(--pale)"
     }
    ]
   },
@@ -122,7 +122,7 @@
    "bigsize": 280,
    "h": "머리 뒤 찍찍이 0개",
    "why": "<span class=\"hl\">버클만 밀면</span> 길이가 맞아요",
-   "img": "inputs/ai/v2/close.png",
+   "img": "inputs/ai/v2/buckle.png",
    "style": "height:820px;object-fit:cover;",
    "pale": false
   },
@@ -133,7 +133,7 @@
    "p": "겉은 둥글고 안쪽은 오목해요.",
    "type": "feature",
    "pale": true,
-   "style": "height:820px;object-fit:cover;"
+   "style": "height:auto"
   },
   {
    "point": "어디서나",
@@ -190,7 +190,8 @@
    "steps": [
     {
      "img": "inputs/ai/v2/hand.png",
-     "c": "돔 모양을 눈 앞에 대요"
+     "c": "돔 모양을 눈 앞에 대요",
+     "style": "object-fit:contain"
     },
     {
      "img": "inputs/ai/v2/close.png",
@@ -256,7 +257,7 @@
    "rows": [
     [
      "제품명",
-     "암막 수면안대 (공급처 제품명)"
+     "3D 돔 수면안대"
     ],
     [
      "색상",

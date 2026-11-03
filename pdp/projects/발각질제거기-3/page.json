@@ -139,7 +139,8 @@
   {
    "point": "POINT 3 · 케이스",
    "h": "쓰고 말려서<br><span class=\"hl\">케이스에</span>",
-   "img": "inputs/ai/v2/palm.png",
+   "img": "inputs/photos/case.jpg",
+   "style": "width:529px;margin:0 auto",
    "p": "투명 케이스가 함께 와요. 물기를 말린 뒤 넣어 주세요.",
    "type": "feature",
    "pale": false

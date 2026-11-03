@@ -80,7 +80,7 @@
      "img": "inputs/ai/v2/hand.png",
      "t": "제품",
      "c": "눈 자리가 오목한 입체 모양",
-     "style": "object-fit:cover"
+     "style": "object-fit:contain;background:var(--pale)"
     },
     {
      "img": "inputs/ai/v2/close.png",
@@ -130,7 +130,7 @@
    "p": "끈을 머리 뒤에서 찍찍으로 맞춰요. 끈 길이에는 찍찍 부분 약 3.5cm가 포함돼요.",
    "type": "feature",
    "pale": true,
-   "style": "height:820px;object-fit:cover;"
+   "style": "height:auto"
   },
   {
    "point": "어디서나",
@@ -187,7 +187,8 @@
    "steps": [
     {
      "img": "inputs/ai/v2/hand.png",
-     "c": "눈 자리를 앞으로 해서 들어요"
+     "c": "눈 자리를 앞으로 해서 들어요",
+     "style": "object-fit:contain"
     },
     {
      "img": "inputs/ai/v2/close.png",
@@ -221,7 +222,7 @@
   },
   {
    "type": "colors",
-   "h": "내 건 블루,<br><em>남편 건 블랙</em>",
+   "h": "색으로<br><em>내 안대 찾기</em>",
    "items": [
     {
      "img": "inputs/nukki/blue.png",

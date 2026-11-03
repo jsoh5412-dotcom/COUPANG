@@ -80,7 +80,7 @@
      "img": "inputs/ai/v2/hand.png",
      "t": "제품",
      "c": "면마다 결과 색이 달라요",
-     "style": "object-fit:cover"
+     "style": "object-fit:contain;background:var(--pale)"
     },
     {
      "img": "inputs/ai/v2/close.png",
@@ -122,7 +122,7 @@
    "h": "닿는 느낌이 면마다 달라요",
    "why": "<span class=\"hl\">망사 결 한 면, 매끈한 결 한 면.</span> 그날 고르세요",
    "img": "inputs/ai/v2/hand.png",
-   "style": "height:820px;object-fit:cover;",
+   "style": "height:auto",
    "pale": false
   },
   {
@@ -189,7 +189,8 @@
    "steps": [
     {
      "img": "inputs/ai/v2/hand.png",
-     "c": "오늘 쓸 면을 골라요"
+     "c": "오늘 쓸 면을 골라요",
+     "style": "object-fit:contain"
     },
     {
      "img": "inputs/ai/v2/close.png",

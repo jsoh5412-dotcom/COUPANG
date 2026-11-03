@@ -47,9 +47,9 @@
      "c": "내 맘대로 못 끄는 불빛"
     },
     {
-     "img": "inputs/nukki/woman_side.png",
-     "t": "코 옆",
-     "c": "코 쪽이 들떠 고쳐 쓰던 자리"
+     "img": "inputs/ai/shared/e_day.png",
+     "t": "낮",
+     "c": "낮잠 때 얼굴에 드는 빛"
     }
    ]
   },

@@ -47,9 +47,9 @@
      "c": "내 맘대로 못 끄는 불빛"
     },
     {
-     "img": "inputs/ai/shared/e_ear.png",
-     "t": "귀 옆",
-     "c": "두툼한 안대가 답답한 밤"
+     "img": "inputs/ai/shared/e_day.png",
+     "t": "낮",
+     "c": "낮잠 때 얼굴에 드는 빛"
     }
    ]
   },
@@ -81,7 +81,7 @@
      "img": "inputs/ai/v2/hand.png",
      "t": "제품",
      "c": "띠와 귀걸이가 한 몸",
-     "style": "object-fit:cover"
+     "style": "object-fit:contain;background:var(--pale)"
     },
     {
      "img": "inputs/ai/v2/close.png",
@@ -123,15 +123,15 @@
    "h": "약 1mm, 접으면 손바닥 안",
    "why": "<span class=\"hl\">두툼한 안대가 답답했다면</span> 얇은 쪽을 보세요",
    "img": "inputs/ai/v2/hand.png",
-   "style": "height:820px;object-fit:cover;",
+   "style": "height:auto",
    "pale": false
   },
   {
    "point": "POINT 2 · 탄성",
    "h": "당겨 봐요,<br><span class=\"hl\">이만큼 늘어나요</span>",
-   "img": "inputs/nukki/float.png",
-   "p": "잘 늘어나는 소재로 얼굴에 맞춰 걸어요.",
-   "style": "height:auto;padding:20px 40px;width:700px;margin:auto",
+   "img": "inputs/photos/stretch.jpg",
+   "p": "잘 늘어나는 소재로 얼굴에 맞춰 걸어요. 공급처 실제 사진이에요.",
+   "style": "height:auto",
    "type": "feature",
    "pale": true
   },
@@ -190,7 +190,8 @@
    "steps": [
     {
      "img": "inputs/ai/v2/hand.png",
-     "c": "접힌 안대를 펴요"
+     "c": "접힌 안대를 펴요",
+     "style": "object-fit:contain"
     },
     {
      "img": "inputs/ai/v2/close.png",

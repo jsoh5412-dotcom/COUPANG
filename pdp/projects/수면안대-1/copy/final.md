@@ -22,7 +22,7 @@
 - howto h: 머리에 대고, 찍찍,<br><span class="hl">눈 자리에 맞추면 끝</span>
 - feature h: "그만 자" 대신<br><em>안대 하나</em>
 - checklist h: 끈 때문에, 눌려서, 답답해서.<br>서랍에 쌓인 안대
-- colors h: 내 건 블루,<br><em>남편 건 블랙</em>
+- colors h: 색으로<br><em>내 안대 찾기</em>
 - after h: 교대 근무 낮잠에도,<br><em>새벽 비행기에도</em>
 - qa h: 빛이 완전히<br>막히냐고요?
 - warn h: 불편하면,<br><em>바로 벗으세요</em>

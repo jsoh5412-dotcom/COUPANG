@@ -13,7 +13,7 @@
 - number h: 약 1mm, 접으면 손바닥 안
 - number why: <span class="hl">두툼한 안대가 답답했다면</span> 얇은 쪽을 보세요
 - feature h: 당겨 봐요,<br><span class="hl">이만큼 늘어나요</span>
-- feature p: 잘 늘어나는 소재로 얼굴에 맞춰 걸어요.
+- feature p: 잘 늘어나는 소재로 얼굴에 맞춰 걸어요. 공급처 실제 사진이에요.
 - feature h: 끈 없이<br><span class="hl">귀에 바로</span>
 - feature p: 귀에 거는 부분이 띠와 한 몸이에요.
 - compare h: 얇은 쪽을 찾으면,<br><span class="hl">약 1mm</span>

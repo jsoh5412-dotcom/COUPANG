@@ -49,7 +49,7 @@
     {
      "img": "inputs/ai/shared/e_ear.png",
      "t": "귀 뒤",
-     "c": "머리에 얹어 둔 무게"
+     "c": "끈이 걸리던 자리"
     }
    ]
   },
@@ -81,7 +81,7 @@
      "img": "inputs/ai/v2/hand.png",
      "t": "제품",
      "c": "스펀지 타입 입체 모양",
-     "style": "object-fit:cover"
+     "style": "object-fit:contain;background:var(--pale)"
     },
     {
      "img": "inputs/ai/v2/close.png",
@@ -123,7 +123,7 @@
    "h": "두툼하면 무거울까 봐? 스펀지라 약 10g",
    "why": "<span class=\"hl\">공급처 표기 무게예요.</span>",
    "img": "inputs/ai/v2/hand.png",
-   "style": "height:820px;object-fit:cover;",
+   "style": "height:auto",
    "pale": false
   },
   {
@@ -190,7 +190,8 @@
    "steps": [
     {
      "img": "inputs/ai/v2/hand.png",
-     "c": "눈 자리를 앞으로 해서 들어요"
+     "c": "눈 자리를 앞으로 해서 들어요",
+     "style": "object-fit:contain"
     },
     {
      "img": "inputs/ai/v2/close.png",
