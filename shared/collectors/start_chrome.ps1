@@ -1,7 +1,9 @@
 # 수집 전용 크롬을 원격 디버깅 포트로 띄운다 (windows PowerShell).
 # 로그인은 1688만 사용자가 이 창에서 직접 해 둔다 (쿠팡은 비로그인 수집, 도매꾹·도매매는 API — 결정 21).
-$Port = if ($env:COLLECTOR_PORT) { $env:COLLECTOR_PORT } else { 9222 }
-$Profile = if ($env:COLLECTOR_PROFILE) { $env:COLLECTOR_PROFILE } else { "$env:USERPROFILE\.coupang-collector-profile" }
+# 팀별 프로필·포트 (결정 43): COLLECTOR_TEAM=pdp(기본, 9222, 1688 로그인) | research(9223)
+$Research = $env:COLLECTOR_TEAM -eq "research"
+$Port = if ($env:COLLECTOR_PORT) { $env:COLLECTOR_PORT } elseif ($Research) { 9223 } else { 9222 }
+$Profile = if ($env:COLLECTOR_PROFILE) { $env:COLLECTOR_PROFILE } elseif ($Research) { "$env:USERPROFILE\.coupang-collector-research" } else { "$env:USERPROFILE\.coupang-collector-profile" }
 $App = $env:BROWSER_APP
 if (-not $App) {
   $App = @("$env:ProgramFiles\Google\Chrome\Application\chrome.exe",

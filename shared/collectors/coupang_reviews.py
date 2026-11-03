@@ -14,6 +14,7 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from quota import use_quota  # noqa: E402
 from browser import base_args, check_blocked, goto, open_page, run, scroll_to_bottom, wait, write_manifest  # noqa: E402
 
 REVIEW_SECTION = ["#sdpReview", ".sdp-review", "[id*='review' i]", "section:has-text('상품평')"]
@@ -110,6 +111,7 @@ def key(r: dict) -> str:
 
 
 def main(args) -> None:
+    use_quota("detail", args.url)
     with open_page(args) as page:
         print(f"열기: {args.url}")
         goto(page, args.url)

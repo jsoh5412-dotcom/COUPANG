@@ -23,8 +23,16 @@ from urllib.parse import urlparse
 
 from playwright.sync_api import Page, sync_playwright
 
-DEFAULT_CDP = "http://127.0.0.1:9222"
-DEFAULT_PROFILE = Path.home() / ".coupang-collector-profile"
+from quota import fcntl, mark_stopped, state_dir
+
+# 팀별 수집 전용 프로필과 포트 (결정 43). COLLECTOR_TEAM 으로 고른다. 1688 로그인은 pdp 프로필에만 있다
+TEAMS = {
+    "pdp": ("http://127.0.0.1:9222", Path.home() / ".coupang-collector-profile"),
+    "research": ("http://127.0.0.1:9223", Path.home() / ".coupang-collector-research"),
+}
+MAIN_TEAM = "pdp"
+# 프로필 하나는 한 번에 한 프로세스만 쓴다. 프로세스가 죽으면 잠금은 저절로 풀린다
+LOCK_WAIT_SECONDS = 1800
 
 # 사람 속도 대기 (초). 페이지 이동 > 다운로드 > 스크롤 순으로 길게.
 PACE = {
@@ -55,9 +63,43 @@ class Blocked(Exception):
 _SPEED = 0.02 if os.environ.get("COLLECTOR_FAST") == "1" else 1.0
 
 
+_held_lock: Path | None = None
+
+
+def other_team_collecting() -> bool:
+    """다른 프로필의 잠금이 잡혀 있으면 다른 팀이 수집 중이다."""
+    if fcntl is None or _held_lock is None:
+        return False
+    for path in _held_lock.parent.glob("*.lock"):
+        if path == _held_lock:
+            continue
+        with path.open("a+") as f:
+            try:
+                fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except BlockingIOError:
+                return True
+    return False
+
+
 def wait(kind: str) -> None:
     lo, hi = PACE[kind]
-    time.sleep(random.uniform(lo, hi) * _SPEED)
+    # 차단은 IP 단위라, 두 팀이 동시에 수집하면 페이지 사이 대기를 두 배로 늘린다 (결정 43)
+    factor = 2 if kind == "page" and other_team_collecting() else 1
+    time.sleep(random.uniform(lo, hi) * factor * _SPEED)
+
+
+def team_target() -> tuple[str, Path]:
+    team = os.environ.get("COLLECTOR_TEAM", MAIN_TEAM)
+    if team not in TEAMS:
+        sys.exit(f"[팀 오류] COLLECTOR_TEAM={team} 는 없는 팀입니다. 가능: {' '.join(TEAMS)}")
+    return TEAMS[team]
+
+
+def require_main_profile(args) -> None:
+    """1688은 로그인된 기존 프로필에서만 수집한다 (결정 43)."""
+    cdp, profile = TEAMS[MAIN_TEAM]
+    if (args.mode == "cdp" and args.cdp != cdp) or (args.mode == "launch" and args.profile != profile):
+        sys.exit(f"[프로필 오류] 1688은 {MAIN_TEAM} 프로필에서만 수집합니다. 상페 팀과 순서를 맞춘 뒤 COLLECTOR_TEAM={MAIN_TEAM} 으로 돌리세요.")
 
 
 def base_args(desc: str) -> argparse.ArgumentParser:
@@ -65,16 +107,56 @@ def base_args(desc: str) -> argparse.ArgumentParser:
     p.add_argument("url")
     p.add_argument("outdir", type=Path)
     p.add_argument("--mode", choices=["cdp", "launch"], default="cdp")
-    p.add_argument("--cdp", default=os.environ.get("COLLECTOR_CDP", DEFAULT_CDP))
-    p.add_argument("--profile", type=Path, default=DEFAULT_PROFILE, help="launch 모드 전용 프로필 폴더")
+    cdp, profile = team_target()
+    p.add_argument("--cdp", default=os.environ.get("COLLECTOR_CDP", cdp))
+    p.add_argument("--profile", type=Path, default=profile, help="launch 모드 전용 프로필 폴더")
     p.add_argument("--headless", action="store_true", help="테스트용. 실사이트에서는 쓰지 않는다")
     return p
 
 
 @contextmanager
+def profile_lock(name: str):
+    """다른 세션이 같은 프로필을 쓰는 중이면 끝날 때까지 기다린다. 30분을 넘기면 멈춘다."""
+    global _held_lock
+    if fcntl is None:
+        yield
+        return
+    lock_file = state_dir() / f"{name}.lock"
+    lock_file.parent.mkdir(parents=True, exist_ok=True)
+    with lock_file.open("a+") as f:
+        started = time.monotonic()
+        noticed = False
+        while True:
+            try:
+                fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                break
+            except BlockingIOError:
+                if time.monotonic() - started > LOCK_WAIT_SECONDS:
+                    sys.exit(f"[잠금 대기 초과] 수집 전용 프로필({name})을 {LOCK_WAIT_SECONDS // 60}분 넘게 다른 세션이 쓰고 있습니다. 멈추고 PM에게 알리세요.")
+                if not noticed:
+                    f.seek(0)
+                    print(f"수집 전용 프로필 사용 중 ({f.read().strip() or '정보 없음'}). 끝나면 시작합니다", flush=True)
+                    noticed = True
+                time.sleep(5)
+        f.seek(0)
+        f.truncate()
+        f.write(f"{Path.cwd()} · pid {os.getpid()}")
+        f.flush()
+        _held_lock = lock_file
+        try:
+            yield
+        finally:
+            _held_lock = None
+            f.seek(0)
+            f.truncate()
+            f.flush()
+
+
+@contextmanager
 def open_page(args):
     """새 탭 하나를 열어 넘겨주고, 끝나면 그 탭과 그 탭이 연 탭(링크의 target=_blank 등)만 닫는다."""
-    with sync_playwright() as pw:
+    lock_name = f"port{urlparse(args.cdp).port}" if args.mode == "cdp" else args.profile.name
+    with profile_lock(lock_name), sync_playwright() as pw:
         if args.mode == "cdp":
             try:
                 browser = pw.chromium.connect_over_cdp(args.cdp)
@@ -288,6 +370,7 @@ def run(main_fn, args) -> None:
     try:
         main_fn(args)
     except Blocked as b:
+        mark_stopped(b.reason, b.url)
         write_manifest(args.outdir, {"source_url": args.url, "status": "blocked", "reason": b.reason, "blocked_url": b.url})
         print(
             f"\n[막힘] {b.reason} — {b.url}\n"

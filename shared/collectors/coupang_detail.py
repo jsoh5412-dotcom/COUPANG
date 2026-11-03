@@ -12,6 +12,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from quota import use_quota  # noqa: E402
 from browser import (  # noqa: E402
     base_args, check_blocked, collect_images, dedupe, download_all, goto, open_page, run,
     scroll_into_view_all, scroll_to_bottom, wait, write_manifest,
@@ -42,6 +43,7 @@ def upgrade(url: str) -> str:
 
 
 def main(args) -> None:
+    use_quota("detail", args.url)
     with open_page(args) as page:
         print(f"열기: {args.url}")
         goto(page, args.url)
