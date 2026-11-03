@@ -19,9 +19,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 NO_PRODUCT = (" No foot file, no tools, no products of any kind, no packaging, no text, no letters, no logos, no watermarks."
               " Photorealistic commercial photography, natural skin, anatomically correct feet and hands with five toes each.")
-# gpt-image-1 단가 (USD / 1M 토큰): 텍스트 입력 5, 이미지 출력 40
-PRICE = {"input": 5 / 1e6, "output": 40 / 1e6}
-KRW = 1400
+# gpt-image-2 공식 Standard 단가 (USD / 1M 토큰, OpenAI Pricing 페이지 2026-11-03 확인): 텍스트 입력 5, 이미지 입력 8, 이미지 출력 30
+PRICE = {"text": 5 / 1e6, "image": 8 / 1e6, "output": 30 / 1e6}
+KRW = 1400  # 환율 가정
 
 
 def key() -> str:
@@ -52,7 +52,8 @@ def main() -> None:
     a.out.parent.mkdir(parents=True, exist_ok=True)
     a.out.write_bytes(base64.b64decode(res["data"][0]["b64_json"]))
     u = res.get("usage", {})
-    usd = u.get("input_tokens", 0) * PRICE["input"] + u.get("output_tokens", 0) * PRICE["output"]
+    d = u.get("input_tokens_details", {})
+    usd = d.get("text_tokens", u.get("input_tokens", 0)) * PRICE["text"] + d.get("image_tokens", 0) * PRICE["image"] + u.get("output_tokens", 0) * PRICE["output"]
     rec = {"file": str(a.out), "model": a.model, "size": a.size, "quality": a.quality, "usage": u,
            "usd": round(usd, 4), "krw": round(usd * KRW), "sec": round(time.time() - t, 1)}
     a.log.parent.mkdir(parents=True, exist_ok=True)
