@@ -51,12 +51,22 @@ def _services():
 
 
 def create(title: str, folder_id: str | None = None) -> str:
-    """새 시트를 만들고 ID를 돌려준다. folder_id는 서비스 계정에 편집 권한이 공유된 폴더여야 한다."""
+    """새 시트를 만들고 ID를 돌려준다. 공유 드라이브 폴더에서만 된다.
+
+    서비스 계정은 저장 공간이 없어 개인 드라이브에는 파일을 만들 수 없다 (README 참고).
+    """
+    from googleapiclient.errors import HttpError
+
     _, drive = _services()
     body = {"name": title, "mimeType": SHEET_MIME}
     if folder_id:
         body["parents"] = [folder_id]
-    return drive.files().create(body=body, fields="id", supportsAllDrives=True).execute()["id"]
+    try:
+        return drive.files().create(body=body, fields="id", supportsAllDrives=True).execute()["id"]
+    except HttpError as e:
+        if "storage quota" in str(e):
+            sys.exit("[만들기 불가] 서비스 계정은 개인 드라이브에 파일을 만들 수 없습니다. 사용자 계정 소유 시트를 공유 폴더에 먼저 만들고 ID로 쓰세요.")
+        raise
 
 
 def read(sheet_id: str, range_: str) -> list[list[str]]:
