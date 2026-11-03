@@ -5,8 +5,14 @@
 # - 디버깅 포트는 127.0.0.1 에만 열려야 한다. 다른 주소로 열리면 크롬을 닫고 멈춘다.
 # - 다른 크로미움 계열 브라우저를 쓰려면 BROWSER_APP 에 실행 파일 경로를 넣는다.
 set -euo pipefail
-PORT="${COLLECTOR_PORT:-9222}"
-PROFILE="${COLLECTOR_PROFILE:-$HOME/.coupang-collector-profile}"
+# - 팀별 프로필·포트 (결정 43): COLLECTOR_TEAM=pdp(기본, 9222, 1688 로그인) | research(9223)
+case "${COLLECTOR_TEAM:-pdp}" in
+  pdp)      DEFAULT_PORT=9222; DEFAULT_PROFILE="$HOME/.coupang-collector-profile" ;;
+  research) DEFAULT_PORT=9223; DEFAULT_PROFILE="$HOME/.coupang-collector-research" ;;
+  *) echo "없는 팀입니다: $COLLECTOR_TEAM (가능: pdp research)" >&2; exit 1 ;;
+esac
+PORT="${COLLECTOR_PORT:-$DEFAULT_PORT}"
+PROFILE="${COLLECTOR_PROFILE:-$DEFAULT_PROFILE}"
 if [ -z "${BROWSER_APP:-}" ]; then
   for c in "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
            "$(command -v google-chrome || true)" "$(command -v google-chrome-stable || true)" "$(command -v chromium || true)"; do
