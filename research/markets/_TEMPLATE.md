@@ -8,6 +8,7 @@ keywords: []                # 쿠팡 검색 키워드
 season:                     # 트랙 B만
   peak_months: []           # 예: [11, 12]
   alert_month: null         # 정점 약 3개월 전 (예: 8)
+  season_strength: null  # 주기별 (정점 ÷ 중앙값)의 평균
 metrics:                    # 가장 최근 측정값
   measured_at: null         # YYYY-MM-DD
   est_daily_sales_top: null # 1페이지 상위 상품 추정 일판매 (리뷰 증가 속도 기준)
