@@ -1,13 +1,13 @@
 {
- "title": "슬개골보호대-1 v2",
+ "title": "슬개골보호대-1 v3",
  "sections": [
   {
    "type": "hero",
-   "img": "inputs/ai/v2/hero.png",
-   "h1": "주머니에 들어가는",
-   "big": "무릎 스트랩",
-   "bigsize": 120,
-   "sub": "폭 6cm, 벨크로로 감는 스트랩 밴드. 의료기기가 아니에요",
+   "img": "inputs/ai/v3/bench.png",
+   "h1": "운동화 안 벗고",
+   "big": "차는 무릎 밴드",
+   "bigsize": 112,
+   "sub": "무릎 아래에 벨크로로 감는 폭 6cm 스트랩",
    "seals": [
     [
      "폭",
@@ -15,172 +15,147 @@
      66
     ],
     [
-     "구분",
-     "좌우 없음",
-     42
+     "둘레",
+     "조절",
+     60
     ]
    ],
    "band": [
-    "블랙",
-    "둘레 35.5cm 조절",
-    "1개"
+    "좌우 구분 없음",
+    "블랙 민무늬 1개"
    ]
   },
   {
    "type": "empathy",
-   "stack": true,
-   "size": 62,
-   "h": "등산 가방에 하나<br><span class=\"hl\">넣어 두는 밴드</span>",
+   "h": "보호대 하나 신으려고<br><span class=\"hl\">운동화 끈을 다 풀었어요</span>",
+   "size": 54,
    "cuts": [
     {
-     "img": "inputs/ai/v2/hike.png",
-     "t": "산행",
-     "c": "오래 걷는 날 챙겨 두는 스트랩"
+     "img": "inputs/ai/v3/e_lace.png",
+     "t": "라커룸",
+     "c": "끈부터 다 풀어야 해요"
     },
     {
-     "img": "inputs/ai/v2/run.png",
-     "t": "러닝",
-     "c": "밖에서 뛰는 날 감는 스트랩"
+     "img": "inputs/ai/v3/e_bag.png",
+     "t": "운동 가방",
+     "c": "보호대가 가방 절반"
     },
     {
-     "img": "inputs/ai/v2/gym.png",
-     "t": "운동",
-     "c": "헬스장 가방에 넣어 다니는 스트랩"
+     "img": "inputs/ai/v3/e_pack.png",
+     "t": "산 위",
+     "c": "배낭에서 꺼내지도 않은 날"
     },
     {
-     "img": "inputs/ai/v2/pocket.png",
-     "t": "가방",
-     "c": "주머니에 들어가는 크기"
+     "img": "inputs/ai/v3/e_drawer.png",
+     "t": "서랍",
+     "c": "결국 넣어 둔 긴 보호대"
     }
-   ]
+   ],
+   "stack": true
   },
   {
-   "type": "turn",
-   "h": "긴 보호대가 답답했다면,<br><span class=\"hl\">폭 6cm</span>",
-   "p": "무릎 전체를 덮지 않는 스트랩이에요. 몸에 대한 효능을 약속하지 않아요.",
-   "size": 58,
-   "discs": [
-    {
-     "img": "inputs/nukki/band.png",
-     "t": "폭 6cm 밴드",
-     "style": "object-fit:contain"
-    },
-    {
-     "img": "inputs/ai/v2/hook2.png",
-     "t": "벨크로로 감기",
-     "style": "object-fit:cover"
-    }
-   ]
-  },
-  {
-   "type": "intro",
-   "h": "왼쪽 오른쪽 구분 없이,<br><span class=\"hl\">벨크로 한 번</span>",
-   "size": 60,
-   "h2": 700,
-   "steps": [
-    {
-     "img": "inputs/photos/pedestal.jpg",
-     "t": "제품",
-     "c": "검정 스트랩 밴드",
-     "style": "object-fit:cover"
-    },
-    {
-     "img": "inputs/ai/v2/hook2.png",
-     "t": "착용",
-     "c": "무릎 아래에 벨크로로",
-     "style": "object-fit:cover"
-    }
-   ]
+   "type": "feature",
+   "h": "운동화 끈은 그대로,<br><span class=\"hl\">무릎 아래만 찍</span>",
+   "size": 64,
+   "img": "inputs/photos/v3/two_legs.jpg",
+   "style": "height:auto",
+   "p": "다리에 끼워 신지 않고 뒤에서 감아요. 사진은 양쪽에 찬 모습이고, 구성은 1개예요.",
+   "pale": true
   },
   {
    "type": "overview",
    "img": "inputs/nukki/band_flat.png",
-   "style": "width:600px",
+   "style": "width:603px",
    "items": [
     [
      "폭 6cm",
-     "공급처 표기"
+     "스트랩 폭"
     ],
     [
-     "둘레 35.5cm",
-     "조절 가능"
+     "35.5cm",
+     "둘레, 조절 가능"
     ],
     [
-     "좌우 없음",
-     "1개"
+     "좌우 공용",
+     "구분 없음"
     ],
     [
-     "벨크로",
-     "고정"
+     "1개",
+     "구성"
     ]
    ]
   },
   {
-   "type": "number",
-   "point": "POINT 1 · 폭",
-   "big": "6",
-   "unit": "cm",
-   "bigsize": 280,
-   "h": "긴 보호대가 답답했다면, 폭 6cm",
-   "why": "<span class=\"hl\">무릎 전체를 덮지 않는</span> 스트랩이에요",
+   "type": "feature",
+   "point": "POINT 1",
+   "h": "무릎은 내놓고,<br><span class=\"hl\">아래 6cm만 감아요</span>",
+   "size": 66,
    "img": "inputs/photos/worn_leg.jpg",
    "style": "height:auto",
-   "pale": false
+   "p": "무릎 전체를 덮지 않는 스트랩이에요."
   },
   {
-   "point": "POINT 2 · 벨크로",
-   "h": "왼쪽 오른쪽 구분 없이,<br><span class=\"hl\">벨크로 한 번</span>",
-   "img": "inputs/ai/v2/hook2.png",
-   "style": "height:820px;object-fit:cover",
-   "p": "둘레 35.5cm 안에서 맞춰요.",
    "type": "feature",
+   "point": "POINT 2",
+   "h": "세트 사이에 풀고,<br><span class=\"hl\">다음 세트 전에 찍</span>",
+   "size": 64,
+   "img": "inputs/photos/v3/velcro2.jpg",
+   "style": "height:auto",
+   "p": "둘레 35.5cm 안에서 벨크로로 맞춰요. 너무 조이지 마세요.",
    "pale": true
   },
   {
-   "point": "POINT 3 · 휴대",
-   "h": "등산 가방에 하나<br><span class=\"hl\">넣어 두는 밴드</span>",
+   "type": "feature",
+   "point": "POINT 3",
+   "h": "청바지 앞주머니에도<br><span class=\"hl\">쏙</span>",
+   "size": 70,
    "img": "inputs/photos/pocket.jpg",
    "style": "height:auto",
-   "p": "주머니에 들어가는 크기예요.",
-   "type": "feature",
-   "pale": false
+   "p": "주머니에 들어가는 크기예요."
   },
   {
-   "point": "어디서나",
-   "h": "산행, 러닝,<br><span class=\"hl\">운동 가방에</span>",
-   "img": "inputs/ai/v2/run.png",
-   "style": "height:820px;object-fit:cover",
-   "p": "운동복 위나 아래에 감아 써요. 너무 조이지 마세요.",
    "type": "feature",
+   "h": "차 키랑 같이<br><span class=\"hl\">주머니에 넣어요</span>",
+   "size": 66,
+   "img": "inputs/ai/v3/jeans.png",
+   "style": "height:1170px;object-fit:cover",
    "pale": true
+  },
+  {
+   "type": "feature",
+   "h": "여름 반바지 아래<br><span class=\"hl\">검은 한 줄만 보여요</span>",
+   "size": 62,
+   "img": "inputs/ai/v3/shorts.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false
   },
   {
    "type": "compare",
-   "h": "무릎 전체 말고,<br><span class=\"hl\">폭 6cm 스트랩</span>",
-   "size": 60,
+   "h": "끼우는 보호대와<br><span class=\"hl\">감는 스트랩의 차이</span>",
+   "size": 58,
    "cols": [
-    "긴 슬리브형",
-    "경첩 보호대형",
+    "슬리브",
+    "무릎 전체형",
     "이 제품"
    ],
    "rows": [
     [
-     "덮는 범위",
-     "무릎 전체",
-     "무릎 전체",
-     "폭 6cm"
+     "차는 법",
+     "다리에 끼우기",
+     "제품별",
+     "뒤에서 감기"
     ],
     [
-     "입는 방법",
-     "신어 올림",
-     "벨크로 등",
-     "벨크로 감기"
+     "덮는 곳",
+     "무릎 전체",
+     "무릎 전체",
+     "무릎 아래 폭 6cm"
     ],
     [
-     "좌우",
+     "조절",
      "제품별",
      "제품별",
-     "구분 없음"
+     "벨크로"
     ],
     [
      "휴대",
@@ -191,75 +166,86 @@
    ]
   },
   {
-   "type": "notice",
-   "h": "의료기기가 <em>아니에요</em>",
-   "p": "공산품이에요. 몸에 대한 효능을 약속하지 않아요. 아프면 병원 상담이 먼저예요. 라텍스가 들어 있어 민감한 분은 쓰지 마세요.",
-   "size": 62
-  },
-  {
    "type": "howto",
-   "h": "무릎 아래 두르고,<br><span class=\"hl\">벨크로로 맞추면 끝</span>",
+   "h": "무릎 아래 대고,<br><span class=\"hl\">당겨서 찍</span>",
+   "size": 64,
    "steps": [
     {
-     "img": "inputs/nukki/band.png",
-     "c": "밴드를 펴요",
-     "style": "object-fit:contain"
+     "n": 1,
+     "c": "무릎 바로 아래에 대요"
     },
     {
-     "img": "inputs/ai/v2/hook2.png",
-     "c": "무릎 아래에 둘러요"
+     "n": 2,
+     "c": "끝을 버클에 끼워 당겨요"
     },
     {
-     "img": "inputs/photos/worn_leg.jpg",
-     "c": "벨크로로 너무 조이지 않게 맞춰요"
+     "n": 3,
+     "c": "벨크로로 붙이면 끝, 너무 조이지 않게"
     }
    ]
   },
   {
+   "type": "feature",
+   "h": "세트 사이,<br><span class=\"hl\">벤치에 앉아 찍</span>",
+   "size": 66,
+   "img": "inputs/ai/v2/gym.png",
+   "style": "height:auto",
+   "pale": true
+  },
+  {
    "type": "checklist",
-   "h": "긴 보호대가 답답했던 분께",
+   "h": "운동화 끈 다시 묶기<br>싫은 분께",
    "items": [
-    "긴 슬리브가 답답했던 분",
-    "운동 가방에 넣어 다닐 스트랩을 찾는 분",
-    "산행, 러닝, 운동 때 챙기고 싶은 분",
-    "좌우 구분 없는 게 편한 분",
-    "벨크로로 맞추고 싶은 분"
+    "긴 보호대를 서랍에 넣어 둔 분",
+    "가방 없이 달리는 분",
+    "산행 짐을 하나라도 줄이는 분",
+    "세트 사이에 풀고 싶은 분",
+    "여름 반바지에 어울리는 걸 찾는 분"
    ]
   },
   {
-   "type": "after",
-   "h": "다음 산행 가방에,<br><em>스트랩 하나</em>",
-   "size": 70,
-   "img": "inputs/ai/v2/after.png",
-   "img2": "inputs/ai/v2/hike.png"
+   "type": "feature",
+   "h": "퇴근길 한강,<br><span class=\"hl\">가방 없이 뛰는 날</span>",
+   "size": 66,
+   "img": "inputs/ai/v2/run.png",
+   "style": "height:auto",
+   "pale": true
+  },
+  {
+   "type": "feature",
+   "h": "토요일 산행,<br><span class=\"hl\">배낭 옆주머니에 하나</span>",
+   "size": 66,
+   "img": "inputs/ai/v2/hike.png",
+   "style": "height:auto",
+   "pale": false
+  },
+  {
+   "type": "feature",
+   "h": "내리막 시작 전<br><span class=\"hl\">주머니에서 꺼내요</span>",
+   "size": 62,
+   "img": "inputs/ai/v3/trail.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false
   },
   {
    "type": "qa",
-   "h": "사기 전에<br>묻는 것들",
+   "h": "자주 묻는 질문",
    "items": [
     [
-     "무릎이 아플 때 써도 되나요?",
-     "몸에 대한 효능을 약속하지 않아요. 아프면 병원 상담이 먼저예요."
+     "의료기기인가요?",
+     "아니요, 공산품이에요. 몸에 대한 효능을 약속하지 않아요. 아프면 병원 상담이 먼저예요."
     ],
     [
-     "왼쪽, 오른쪽이 있나요?",
-     "좌우 구분이 없어요."
+     "어디에 차나요?",
+     "무릎 바로 아래에 둘러요. 왼쪽 오른쪽 구분이 없어요."
     ],
     [
-     "라텍스가 있나요?",
-     "공급처 표기에 라텍스 실크가 있어요. 민감한 분은 쓰지 마세요."
+     "오래 차도 되나요?",
+     "너무 오래 차지 말고, 잘 때는 풀어 주세요. 답답하거나 저리면 바로 풀어 주세요."
     ],
     [
-     "잘 때 차도 되나요?",
-     "오래 차고 자는 것은 권하지 않아요."
-    ],
-    [
-     "어디에 감나요?",
-     "무릎 아래에 감아요. 벨크로로 맞추되, 너무 조이지 마세요."
-    ],
-    [
-     "운동복 위에 해도 되나요?",
-     "위나 아래 모두 가능해요. 편한 쪽으로 쓰세요."
+     "라텍스가 들어 있나요?",
+     "공급처 표기에 라텍스가 있어요. 민감한 분은 쓰지 마세요."
     ]
    ]
   },
@@ -292,33 +278,33 @@
     ],
     [
      "사진 안내",
-     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+     "사용 장면은 연출 이미지로, 모양과 색 등이 실제 제품과 다를 수 있어요."
     ]
    ]
   },
   {
    "type": "warn",
-   "h": "아프거나 저리면,<br><em>바로 푸세요</em>",
+   "h": "주의사항",
    "items": [
     [
-     "soft",
-     "너무 세게 조이지 않기"
+     "wide",
+     "너무 조이지 않기"
+    ],
+    [
+     "stop",
+     "아프거나 저리면 바로 풀기"
     ],
     [
      "no",
-     "상처가 있는 부위에는 쓰지 않기"
+     "잘 때 차지 않기"
     ],
     [
-     "stop",
-     "저리거나 아프면 바로 풀기"
+     "no",
+     "라텍스 민감자 쓰지 않기"
     ],
     [
-     "stop",
-     "라텍스에 민감하면 쓰지 않기"
-    ],
-    [
-     "foot",
-     "잠잘 때 오래 차지 않기"
+     "drop",
+     "세탁은 손세탁 후 그늘 건조 권장"
     ],
     [
      "child",
@@ -328,10 +314,10 @@
   },
   {
    "type": "finale",
-   "img": "inputs/ai/v2/hero.png",
-   "h": "다음 산행 가방에,",
-   "big": "스트랩 하나",
-   "bigsize": 104
+   "img": "inputs/ai/v3/finale.png",
+   "h": "차 키, 휴대폰,",
+   "big": "그리고 스트랩",
+   "bigsize": 110
   }
  ]
 }
