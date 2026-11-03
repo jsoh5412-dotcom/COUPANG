@@ -1,153 +1,292 @@
 <!DOCTYPE html>
 <html lang="ko">
-<!--
-  발각질제거기_2 상세페이지 (테스트 세트 1, 결정 38·41) — 상페 방향: 위생으로 소구-녹 안 슨다
-  렌더: node pdp/scripts/render.mjs pdp/projects/발각질제거기-2/pdp.html <outDir>
-  이미지: 공급처(도매꾹 8763451) 실제 사진 배경째 크롭. AI 이미지 없음.
-  공급처의 "영구적 사용·부드럽고 안전하게·아기같이 부드러운 발"과 비포·애프터 사진은 쓰지 않음.
--->
+<!-- 발각질제거기-2 v2 (page.json에서 생성: python3 pdp/scripts/build_pdp.py projects/발각질제거기-2) -->
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="../../templates/set1.css">
 <style>
-  :root { --main: #1F4A5A; --point: #2C6A7D; --soft: #EEF5F6; --dark: #143340; --line: #D3E3E7; --sub: #43555B; --card: #DCEBEF; --accent-on-dark: #A8D8E3; }
-  .dark .eyebrow, .main .eyebrow, .dark em, .main em { color: #A8D8E3; }
-  .hero { background: linear-gradient(180deg, #EEF5F6 0%, #D4E7EC 100%); padding-top: 150px; }
-  .glass { --card: linear-gradient(160deg, #2C6A7D 0%, #1F4A5A 100%); }
-  .glass img { filter: drop-shadow(0 20px 26px rgba(0,0,0,.35)); }
-  .trio { display: flex; justify-content: center; align-items: flex-end; gap: 26px; margin-top: 50px; padding: 50px 20px 40px; border-radius: 36px; background: linear-gradient(160deg, #2C6A7D 0%, #1F4A5A 100%); }
-  .trio figure { flex: 1; text-align: center; }
-  .trio img { width: 100%; max-height: 360px; object-fit: contain; filter: drop-shadow(0 18px 22px rgba(0,0,0,.35)); }
-  .trio figcaption { color: #fff; font-size: 32px; font-weight: 800; margin-top: 18px; }
-  .trio small { display: block; color: #CFE8EE; font-size: 30px; font-weight: 600; }
+:root { --ink: #12263F; --sub: #3F5068; --blue: #0B6FD1; --sky: #BFE3FF; --pale: #EEF7FD; --line: #C9DDEC; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 780px; background: #fff; }
+  body { font-family: 'Pretendard', sans-serif; color: var(--ink); word-break: keep-all; -webkit-font-smoothing: antialiased; }
+  section { position: relative; overflow: hidden; background: #fff; }
+  section.pale { background: var(--pale); }
+  img { display: block; }
+  h1, h2 { font-weight: 900; letter-spacing: -.05em; line-height: 1.17; }
+  h2 { font-size: 66px; }
+  p { font-size: 34px; line-height: 1.55; font-weight: 500; color: var(--sub); letter-spacing: -.02em; }
+  .head { padding: 110px 30px 66px; text-align: center; }
+  .point { display: inline-block; font-size: 30px; font-weight: 800; color: #fff; background: var(--blue); padding: 8px 24px; border-radius: 40px; margin-bottom: 24px; }
+  .hl { background: linear-gradient(transparent 58%, var(--sky) 58%, var(--sky) 94%, transparent 94%); padding: 0 6px; }
+  em { font-style: normal; color: var(--blue); }
+  .full { width: 100%; height: auto; }
+  .body { padding: 56px 56px 96px; text-align: center; }
+  .big { font-weight: 900; line-height: .95; letter-spacing: -.07em; background: linear-gradient(180deg, #55B8F7 8%, var(--blue) 92%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .why { display: inline-block; margin-top: 26px; font-size: 38px; font-weight: 800; letter-spacing: -.03em; line-height: 1.34; }
+  .powder { position: absolute; inset: 0; pointer-events: none; }
+  .powder i { position: absolute; border-radius: 50%; background: #fff; }
+
+  /* 01 첫 화면 */
+  .s01 { height: 1800px; }
+  .s01 .bg { position: absolute; left: 0; bottom: 130px; width: 780px; height: 1170px; }
+  .s01 .veil { position: absolute; left: 0; right: 0; top: 496px; height: 300px; background: linear-gradient(180deg, #fff 8%, rgba(255,255,255,0)); }
+  .s01 .copy { position: absolute; top: 96px; left: 0; right: 0; text-align: center; }
+  .s01 h1 { font-size: 72px; }
+  .s01 h1 b { display: block; font-size: 158px; font-weight: 900; color: var(--blue); letter-spacing: -.06em; line-height: 1.08; margin-top: 8px; }
+  .s01 .sub { font-size: 36px; font-weight: 700; margin-top: 18px; color: var(--sub); }
+  .seal { position: absolute; width: 196px; height: 196px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 5px solid #fff; box-shadow: 0 12px 26px rgba(18,38,63,.22); background: var(--blue); color: #fff; }
+  .seal small { font-size: 30px; font-weight: 800; line-height: 1.1; }
+  .seal b { font-size: 68px; font-weight: 900; line-height: 1.04; letter-spacing: -.05em; }
+  .seal.a { left: 36px; top: 590px; }
+  .seal.b { right: 36px; top: 590px; background: #fff; color: var(--blue); border-color: var(--blue); }
+  .s01 .band { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 33px; font-weight: 800; gap: 18px; letter-spacing: -.02em; }
+
+  /* 02 공감 */
+  .grid4 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 8px; }
+  .grid4 figure { position: relative; }
+  .grid4 img { width: 100%; height: 400px; object-fit: cover; filter: brightness(1.06) saturate(.92); }
+  .grid4 figcaption { padding: 20px 14px 40px; font-size: 30px; font-weight: 700; line-height: 1.32; letter-spacing: -.03em; color: var(--sub); }
+  .grid4 figcaption b { display: block; font-size: 52px; font-weight: 900; color: var(--blue); letter-spacing: -.04em; }
+
+  /* 03 전환 */
+  .s03 { padding: 100px 50px 110px; text-align: center; }
+  .s03 p { margin: 30px auto 60px; max-width: 640px; }
+  .two { display: flex; align-items: center; justify-content: center; }
+  .two .disc { width: 280px; height: 280px; border-radius: 50%; overflow: hidden; }
+  .two .disc img { width: 100%; height: 100%; object-fit: cover; }
+  .two .disc.q { border: 7px dashed var(--blue); background: #fff; display: flex; align-items: center; justify-content: center; font-size: 150px; font-weight: 900; color: var(--blue); }
+  .two .arr { width: 110px; height: 8px; background: var(--ink); position: relative; margin: 0 6px; }
+  .two .arr::after { content: ''; position: absolute; right: -2px; top: -16px; border-left: 30px solid var(--ink); border-top: 20px solid transparent; border-bottom: 20px solid transparent; }
+  .labels { display: flex; justify-content: center; gap: 122px; margin-top: 22px; font-size: 36px; font-weight: 900; }
+  .labels span { width: 280px; }
+
+  /* 04 제품 소개 */
+  .s04 .photo { position: relative; height: 520px; overflow: hidden; }
+  .s04 .photo img { position: absolute; width: 780px; left: 0; top: 0; }
+  .step-row { display: flex; position: relative; }
+  .step-row .f { flex: 1; position: relative; }
+  .step-row .f img { width: 100%; height: 390px; object-fit: cover; }
+  .step-row .cap { padding: 26px 24px 70px; }
+  .step-row .cap b { display: block; font-size: 30px; font-weight: 900; color: var(--blue); }
+  .step-row .cap span { font-size: 36px; font-weight: 800; line-height: 1.3; letter-spacing: -.03em; }
+  .flip { position: absolute; left: 50%; top: 120px; transform: translateX(-50%); width: 150px; height: 150px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 34px; font-weight: 900; line-height: 1.12; border: 5px solid #fff; box-shadow: 0 10px 24px rgba(18,38,63,.3); }
+
+  /* 05 한눈에 */
+  .s05 { height: 1270px; }
+  .s05 .tt { position: absolute; left: 50px; top: 70px; font-size: 44px; font-weight: 900; letter-spacing: -.03em; }
+  .s05 .tt::after { content: ''; display: block; width: 76px; height: 8px; background: var(--blue); margin-top: 14px; }
+  .s05 .prod { position: absolute; left: 96px; top: 180px; height: 1020px; filter: drop-shadow(10px 14px 16px rgba(18,38,63,.32)); }
+  .callout { position: absolute; left: 372px; width: 380px; }
+  .callout b { display: block; font-size: 66px; font-weight: 900; letter-spacing: -.05em; color: var(--blue); line-height: 1.08; }
+  .callout span { font-size: 34px; font-weight: 700; color: var(--sub); letter-spacing: -.02em; }
+  .callout::before { content: ''; position: absolute; right: 100%; top: 36px; height: 3px; background: var(--blue); width: var(--w); }
+  .callout::after { content: ''; position: absolute; right: calc(100% + var(--w)); top: 29px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 2px solid #fff; }
+
+  /* 06 33 */
+  .s06 .top { padding: 96px 30px 54px; text-align: center; }
+  .s06 .big { font-size: 330px; }
+  .s06 h2 { margin-top: 18px; font-size: 62px; }
+  .s06 .surface { position: relative; height: 980px; overflow: hidden; }
+  .s06 .surface img { position: absolute; left: 0; top: -10px; width: 780px; }
+  .tag { position: absolute; background: #fff; color: var(--ink); font-size: 31px; font-weight: 800; padding: 12px 22px; border-radius: 40px; box-shadow: 0 8px 20px rgba(18,38,63,.22); letter-spacing: -.02em; }
+  .tag b { color: var(--blue); font-weight: 900; }
+  .s06 .back { display: flex; align-items: center; gap: 34px; padding: 50px 44px 90px; }
+  .s06 .back .d { flex: none; width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 6px solid var(--sky); }
+  .s06 .back .d img { width: 100%; height: 100%; object-fit: cover; }
+  .s06 .back b { display: block; font-size: 44px; font-weight: 900; color: var(--blue); letter-spacing: -.03em; }
+  .s06 .back span { font-size: 34px; font-weight: 600; line-height: 1.38; color: var(--sub); letter-spacing: -.02em; }
+
+  /* 07 힘 조절 */
+  .s07 .pair { display: flex; gap: 8px; padding: 0 8px; }
+  .s07 figure { position: relative; flex: 1; }
+  .s07 figure img { width: 100%; height: 640px; object-fit: cover; object-position: center top; }
+  .s07 figure .n { position: absolute; left: 0; top: 0; font-size: 34px; font-weight: 900; background: var(--blue); color: #fff; padding: 14px 24px; }
+  .s07 figcaption { padding-top: 18px; text-align: center; font-size: 38px; font-weight: 900; letter-spacing: -.03em; }
+
+  /* 08 0원 */
+  .s08 { height: 1620px; background: #fff; }
+  .s08 .bg { position: absolute; left: 0; bottom: 0; width: 780px; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 16%); }
+  .s08 .veil { position: absolute; left: 0; right: 0; top: 0; height: 780px; background: linear-gradient(180deg, #fff 44%, rgba(255,255,255,0)); }
+  .s08 .top { position: absolute; left: 0; right: 0; top: 76px; text-align: center; }
+  .s08 .big { font-size: 280px; }
+  .s08 .big small { font-size: 160px; font-weight: 900; }
+  .s08 .note { position: absolute; left: 30px; right: 30px; bottom: 44px; text-align: center; background: rgba(255,255,255,.9); padding: 26px 20px; }
+  .s08 .note p { color: var(--ink); font-weight: 600; font-size: 32px; }
+
+  /* 09 손잡이 */
+  .ruler { position: relative; height: 470px; background: var(--pale); }
+  .ruler .tt { position: absolute; left: 0; right: 0; top: 40px; text-align: center; font-size: 72px; font-weight: 900; letter-spacing: -.05em; }
+  .ruler .prod { position: absolute; left: 50%; top: 170px; width: 680px; transform: translateX(-50%) ; filter: drop-shadow(6px 12px 12px rgba(18,38,63,.3)); }
+  .ruler .dim { position: absolute; left: 50px; right: 50px; bottom: 50px; height: 4px; background: var(--blue); }
+  .ruler .dim::before, .ruler .dim::after { content: ''; position: absolute; top: -16px; width: 4px; height: 36px; background: var(--blue); }
+  .ruler .dim::before { left: 0; } .ruler .dim::after { right: 0; }
+  .ruler .dim b { position: absolute; left: 50%; top: -30px; transform: translateX(-50%); background: var(--pale); padding: 0 20px; font-size: 44px; font-weight: 900; letter-spacing: -.03em; color: var(--blue); }
+  .grip { position: relative; height: 1040px; overflow: hidden; background: #E9F2FB; }
+  .grip img { position: absolute; left: 0; top: -40px; width: 780px; }
+
+  /* 비교표 */
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 31px; letter-spacing: -.03em; }
+  th, td { padding: 26px 4px; text-align: center; border-bottom: 2px solid var(--line); font-weight: 600; line-height: 1.25; color: var(--sub); }
+  th { font-weight: 800; color: var(--ink); vertical-align: bottom; }
+  td:first-child { font-weight: 800; color: var(--ink); text-align: left; padding-left: 16px; }
+  col.lb { width: 168px; }
+  .us { background: var(--blue); color: #fff !important; font-weight: 900 !important; font-size: 34px; border-bottom-color: #3D8FE0; }
+  .tbn { padding: 22px 30px 96px; font-size: 30px; line-height: 1.4; color: var(--sub); text-align: center; letter-spacing: -.02em; }
+
+  /* 10 가루 */
+  .s10 .ph { position: relative; height: 720px; overflow: hidden; }
+  .s10 .ph img { position: absolute; left: 0; top: -20px; width: 880px; margin-left: -60px; }
+  .s10 .warn { display: inline-block; margin-top: 20px; font-size: 40px; font-weight: 900; color: #fff; background: var(--blue); padding: 8px 22px; letter-spacing: -.03em; }
+
+  /* 11 사용법 */
+  .step { display: flex; height: 420px; border-top: 2px solid var(--line); }
+  .step .ph { width: 400px; position: relative; overflow: hidden; }
+  .step .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .step .tx { flex: 1; padding: 0 22px 0 34px; display: flex; flex-direction: column; justify-content: center; }
+  .step .tx b { font-size: 34px; font-weight: 900; color: var(--blue); }
+  .step .tx span { font-size: 36px; font-weight: 800; letter-spacing: -.03em; line-height: 1.34; margin-top: 8px; }
+  .step .tx i { font-style: normal; font-size: 30px; color: var(--sub); font-weight: 600; line-height: 1.38; margin-top: 8px; }
+
+  /* 13 추천 */
+  .s13 { padding: 100px 50px 110px; }
+  .s13 h2 { font-size: 62px; margin-bottom: 50px; }
+  .s13 li { list-style: none; display: flex; gap: 20px; align-items: flex-start; font-size: 37px; font-weight: 800; line-height: 1.32; letter-spacing: -.03em; padding: 28px 0; border-top: 2px solid var(--line); }
+  .s13 li svg { flex: 0 0 50px; margin-top: 2px; }
+
+  /* 14 컬러 */
+  .s14 .split { display: flex; height: 860px; }
+  .s14 .col { position: relative; flex: 1; overflow: hidden; }
+  .s14 .wall { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .s14 .hang { position: absolute; height: 600px; }
+  .s14 .peg { position: absolute; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #8d9299 70%); box-shadow: 1px 2px 3px rgba(0,0,0,.5); }
+  .s14 .chip { position: absolute; left: 20px; bottom: 20px; font-size: 36px; font-weight: 900; padding: 8px 26px; background: #fff; color: var(--ink); border-radius: 40px; }
+
+  /* 쓰고 난 뒤 */
+  .after { position: relative; height: 1020px; overflow: hidden; }
+  .after img { position: absolute; left: -210px; top: 0; height: 1020px; }
+  .after .veil { position: absolute; inset: 0 0 auto 0; height: 470px; background: linear-gradient(180deg, rgba(255,255,255,.96) 40%, rgba(255,255,255,0)); }
+  .after h2 { position: absolute; left: 0; right: 0; top: 96px; text-align: center; font-size: 80px; }
+
+  /* 15 Q&A */
+  .s15 { padding: 100px 50px 100px; }
+  .s15 h2 { text-align: center; margin-bottom: 50px; }
+  .qa { border-top: 2px solid var(--line); padding: 32px 0 36px; }
+  .qa .q { font-size: 40px; font-weight: 900; letter-spacing: -.03em; }
+  .qa .q b { color: var(--blue); margin-right: 10px; }
+  .qa .a { font-size: 33px; line-height: 1.5; color: var(--sub); font-weight: 500; margin-top: 12px; letter-spacing: -.02em; }
+
+  /* 16 정보 */
+  .s16 { padding: 90px 50px; }
+  .s16 .tt { font-size: 52px; font-weight: 900; letter-spacing: -.04em; margin-bottom: 30px; }
+  .s16 .row { display: flex; font-size: 33px; padding: 24px 0; border-top: 2px solid var(--line); letter-spacing: -.02em; }
+  .s16 .row b { width: 170px; font-weight: 900; flex: none; }
+
+  /* 17 주의 */
+  .s17 { padding: 100px 44px; text-align: center; }
+  .ic6 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 46px 20px; margin-top: 60px; }
+  .ic6 div { font-size: 32px; font-weight: 700; line-height: 1.32; letter-spacing: -.03em; }
+  .ic6 svg { display: block; margin: 0 auto 14px; }
+
+  /* 18 마무리 */
+  .s18 { height: 1170px; }
+  .s18 .bg { position: absolute; inset: 0; width: 780px; }
+  .s18 .veil { position: absolute; inset: 0 0 auto 0; height: 560px; background: linear-gradient(180deg, rgba(255,255,255,.95) 46%, rgba(255,255,255,0)); }
+  .s18 .top { position: absolute; top: 90px; left: 0; right: 0; text-align: center; }
+  .s18 h2 { font-size: 70px; }
+  .s18 h2 big { display: block; font-size: 104px; margin-top: 10px; line-height: 1.14; letter-spacing: -.06em; }
+  .s18 h2 s { color: #8699AC; text-decoration-color: var(--blue); text-decoration-thickness: 8px; }
+
+  /* 수면안대_6 */
+  .spec { padding: 80px 30px 90px; }
+  .spec .tt { font-size: 44px; font-weight: 900; letter-spacing: -.03em; margin: 0 20px 26px; }
+  .spec .tt::after { content: ''; display: block; width: 76px; height: 8px; background: var(--blue); margin-top: 14px; }
+  .spec .pic { width: 720px; display: block; margin: 0 auto; filter: drop-shadow(0 16px 20px rgba(18,38,63,.16)); }
+  .spec .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 20px; margin: 40px 16px 44px; }
+  .spec .grid b { display: block; font-size: 56px; font-weight: 900; color: var(--blue); letter-spacing: -.05em; line-height: 1.1; }
+  .spec .grid span { font-size: 33px; font-weight: 700; color: var(--sub); letter-spacing: -.02em; }
+  .num .top { padding: 96px 24px 50px; text-align: center; }
+  .num .big { font-size: 300px; }
+  .num .big small { font-size: 170px; font-weight: 900; }
+  .num h2 { margin-top: 18px; font-size: 56px; }
+  .ph-full { position: relative; overflow: hidden; }
+  .ph-full img { width: 780px; display: block; }
+  .hdline { padding: 110px 24px 60px; text-align: center; }
+  .sum { padding: 50px 56px 100px; text-align: center; }
+  .scene2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 8px 70px; }
+  .scene2 img { width: 100%; height: 400px; object-fit: cover; }
+  .scene2 b { display: block; font-size: 38px; font-weight: 900; padding-top: 16px; text-align: center; letter-spacing: -.03em; }
+  .colors { display: flex; gap: 8px; padding: 0 8px 90px; }
+  .colors figure { flex: 1; text-align: center; }
+  .colors .box { background: var(--pale); min-height: 220px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .colors img { width: 100%; }
+  .colors figcaption { font-size: 36px; font-weight: 900; padding-top: 16px; }
+  .grid4 img { height: 470px; }
+  .step { height: 640px; }
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <p class="eyebrow">유리 발각질제거기</p>
-  <h1>녹 걱정 없는 유리로<br><em>깨끗하게, 매끈하게</em></h1>
-  <p class="lead">물로 헹구면 끝, 손바닥만 한 유리 풋파일</p>
-  <div class="photo"><img data-slot="hero" src="inputs/photos/dark1.jpg" alt=""></div>
-  <p class="note">사진에는 두 장이 함께 보이지만 구성은 1개예요.</p>
-  <div class="badges"><span class="badge">유리 소재</span><span class="badge">약 10 × 5cm</span><span class="badge">가볍게 한 장</span></div>
+<section class="s01">
+  <img class="bg" src="inputs/ai/v2/hero.png" alt=""><div class="veil"></div>
+  <div class="copy"><h1 style="font-size:74px">지갑보다 작은</h1><h1 style="margin-top:6px"><b style="margin-top:0;font-size:112px">유리 풋파일</b></h1>
+  <div class="sub" style="padding:0 20px">손잡이 없이 손바닥에 올려 쓰는 타원형 유리</div></div>
+  <div class="seal a"><small>크기</small><b style="font-size:58px">10×5</b></div>
+  <div class="seal b"><small>소재</small><b style="font-size:66px">유리</b></div>
+  <div class="band">타원형 한 장 &nbsp;/&nbsp; 손잡이 없음 &nbsp;/&nbsp; 물로 헹구기</div>
 </section>
 
-<section class="dark">
-  <p class="eyebrow">이래서 바꾸고 싶었죠</p>
-  <h2>쓰던 풋파일,<br>이런 적 있으셨나요?</h2>
-  <div class="cards">
-    <div class="card"><div class="no">1</div><div><b>금속이 녹슬었어요</b><span>욕실에 두다 보니 얼룩이 생겼어요</span></div></div>
-    <div class="card"><div class="no">2</div><div><b>돌·스펀지는 찜찜해요</b><span>물에 젖은 채로 두기가 신경 쓰여요</span></div></div>
-    <div class="card"><div class="no">3</div><div><b>각질이 끼어요</b><span>틈새에 낀 가루가 잘 안 빠져요</span></div></div>
-    <div class="card"><div class="no">4</div><div><b>손잡이가 커서 거추장스러워요</b><span>작게 쥐고 쓰는 게 편할 때가 있어요</span></div></div>
-  </div>
-</section>
+<section><div class="head"><h2 style="font-size:58px">양말에 턱, 스타킹은 올이 쭉.<br><span class="hl">아침부터 밤까지</span> 걸리는 뒤꿈치</h2></div><div class="grid4" style="grid-template-columns:1fr"><figure><img src="inputs/ai/shared/e1.png" style="height:640px" alt=""><figcaption><b>아침</b>신발 신다 손에 닿는 까끌함</figcaption></figure><figure><img src="inputs/ai/shared/e2.png" style="height:640px" alt=""><figcaption><b>낮</b>실내화 벗기 망설여질 때</figcaption></figure><figure><img src="inputs/ai/shared/e3.png" style="height:640px" alt=""><figcaption><b>저녁</b>맨발로 앉으면 손이 먼저 가요</figcaption></figure><figure><img src="inputs/ai/shared/e4.png" style="height:640px" alt=""><figcaption><b>밤</b>잠들기 전 발끝이 거칠거칠</figcaption></figure></div></section>
 
-<section>
-  <p class="eyebrow">그래서, 유리</p>
-  <h2>유리라서<br><em>위생적으로</em></h2>
-  <div class="cond">
-    <div><i>녹</i><b>다듬는 면이 유리라 녹슬 일이 없어요</b><p>물이 닿는 욕실에서도<br>녹 걱정 없이 쓸 수 있어요</p></div>
-    <div><i>세척</i><b>물로 헹구면 끝</b><p>매끈한 유리 표면이라<br>흐르는 물에 가루가 씻겨 나가요</p></div>
-  </div>
-</section>
+<section class="s03 pale"><h2 style="font-size:58px">금속 풋파일 쓰다가,<br><span class="hl">유리를 찾으셨다면</span></h2><p>이 제품은 다듬는 면이 유리예요.</p>
+  <div class="two"><div class="disc" style="background:#fff"><img src="inputs/ai/v2/macro.png" style="object-fit:cover" alt=""></div><div class="arr"></div><div class="disc" style="background:#fff"><img src="inputs/ai/v2/palm.png" style="object-fit:cover" alt=""></div></div>
+  <div class="labels"><span>유리 면</span><span style="color:var(--blue)">손바닥 크기</span></div></section>
 
-<section class="main">
-  <p class="eyebrow">유리 풋파일을 고르는 이유</p>
-  <h2>욕실에 두기 좋은<br>이유 4가지</h2>
-  <ul class="reason">
-    <li><span>01</span>녹 걱정 없는 유리 소재</li>
-    <li><span>02</span>흐르는 물에 헹구면 끝</li>
-    <li><span>03</span>손바닥에 쏙, 약 10 × 5cm</li>
-    <li><span>04</span>군더더기 없는 한 장 구조</li>
-  </ul>
-</section>
+<section class="s04"><div class="head"><h2 style="font-size:62px">쥐는 대신<br><span class="hl">손바닥에 올려요</span></h2></div><div class="step-row"><div class="f"><img src="inputs/ai/v2/palm.png" style="height:700px;object-fit:cover" alt=""><div class="cap"><b>제품</b><span>타원형 유리 한 장</span></div></div><div class="f"><img src="inputs/ai/v2/use.png" style="height:700px;object-fit:cover" alt=""><div class="cap"><b>사용</b><span>손바닥으로 잡고 밀어요</span></div></div></div></section>
 
-<section class="soft">
-  <span class="point-no">POINT 01</span>
-  <h2>미세한 돌기 패턴으로<br><em>살살 다듬어요</em></h2>
-  <p>유리 표면에 촘촘한 돌기 패턴이 있어<br>힘을 빼고 가볍게 문질러 쓰세요.</p>
-  <div class="photo"><img data-slot="p1" src="inputs/photos/dark2.jpg" alt=""></div>
-</section>
+<section class="spec pale"><div class="tt">한눈에 보기</div><img class="pic" data-slot="spec" src="inputs/photos/dark1.jpg" style="width:600px" alt=""><div class="grid"><div><b>10 × 5cm</b><span>도면 치수</span></div><div><b>타원형</b><span>유리 한 장</span></div><div><b>손잡이 없음</b><span>손바닥으로 잡아요</span></div><div><b>케이스 없음</b><span>공급처 표기 기준</span></div></div></section>
 
-<section>
-  <span class="point-no">POINT 02</span>
-  <h2>쓰고 나면<br><em>물로 헹구고 끝</em></h2>
-  <p>매끈한 유리 면이라<br>흐르는 물에 가루를 씻어 내기 쉬워요.<br>물기를 닦아 안전한 곳에 두세요.</p>
-  <div class="cards" style="margin-top:50px">
-    <div class="card" style="background:var(--soft)"><div class="no">1</div><div><b>흐르는 물에 헹구기</b><span>가루를 씻어 내요</span></div></div>
-    <div class="card" style="background:var(--soft)"><div class="no">2</div><div><b>물기 닦기</b><span>부드러운 천으로 톡톡</span></div></div>
-    <div class="card" style="background:var(--soft)"><div class="no">3</div><div><b>떨어지지 않는 곳에 보관</b><span>마른 수건 위나 서랍에</span></div></div>
-  </div>
-</section>
+<section><div class="hdline"><div class="point">POINT 1 · 크기</div><h2 style="font-size:66px">쥐는 대신<br><span class="hl">손바닥에 올려요</span></h2></div><div class="ph-full"><img src="inputs/ai/v2/palm.png" alt=""></div><div class="sum"><p>10 × 5cm 타원형이에요. 긴 손잡이는 없어요.</p></div></section>
 
-<section class="dark">
-  <span class="point-no">POINT 03</span>
-  <h2>손바닥에 쏙,<br><em>가볍게 한 장</em></h2>
-  <p>약 10 × 5cm 타원형 유리 한 장이라<br>엄지와 손가락으로 쥐고 구석구석 쓰기 좋아요.</p>
-  <div class="photo"><img data-slot="p3" src="inputs/photos/dark1.jpg" alt=""></div>
-</section>
+<section class="pale"><div class="hdline"><div class="point">POINT 2 · 유리</div><h2 style="font-size:66px">유리 면이라<br><span class="hl">물로 헹구면 끝</span></h2></div><div class="ph-full"><img src="inputs/ai/v2/macro.png" alt=""></div><div class="sum"><p>다듬는 면이 유리예요. 쓰고 나면 물로 헹궈요.</p></div></section>
 
-<section>
-  <p class="eyebrow">HOW TO USE</p>
-  <h2>이렇게 쓰세요</h2>
-  <div class="steps">
-    <div class="step"><p class="tag">STEP 1</p><b>발을 준비해요</b><p>물기를 닦은 마른 발,<br>또는 샤워 후 물기를 닦은 발</p></div>
-    <div class="step"><p class="tag">STEP 2</p><b>힘을 빼고 살살</b><p>한 방향으로 가볍게.<br>두꺼운 부분만 조금씩 확인하며</p></div>
-    <div class="step"><p class="tag">STEP 3</p><b>헹구고 말려요</b><p>물로 헹궈 물기를 닦고<br>떨어지지 않는 곳에 두세요</p></div>
-  </div>
-</section>
+<section><div class="hdline"><div class="point">POINT 3 · 보관</div><h2 style="font-size:66px">욕실 선반에 올려 두는<br><span class="hl">유리 한 장</span></h2></div><div class="ph-full"><img src="inputs/ai/v2/shelf.png" alt=""></div><div class="sum"><p>물기를 말려 안전한 곳에 두세요. 떨어지지 않게 조심해 주세요.</p></div></section>
 
-<section class="dark">
-  <p class="eyebrow">구매 전에 솔직하게</p>
-  <h2>미리 알려 드려요</h2>
-  <div class="honest">
-    <div><b>유리라서 떨어뜨리면 깨질 수 있어요</b><p>젖은 손으로 쓸 땐 꼭 쥐고,<br>쓰고 나면 떨어지지 않는 곳에 두세요.<br>금이 가거나 깨진 제품은 바로 쓰지 마세요.</p></div>
-    <div><b>하얀 가루가 나오는 건 정상이에요</b><p>정리된 각질이 가루로 떨어져요.<br>많이 나온다고 세게 밀지 마세요.</p></div>
-  </div>
-</section>
+<section class="cmp"><div class="head"><h2 style="font-size:58px">다시 살 패드도,<br><span class="hl">꽂을 충전기도 없는 유리</span></h2></div><table><colgroup><col class="lb"><col><col><col><col></colgroup><tr><th></th><th>패드 교체형</th><th>전동형</th><th>금속 풋파일</th><th class="us">이 제품</th></tr><tr><td>교체<br>소모품</td><td>패드</td><td>롤러 등</td><td>제품별</td><td class="us">없음</td></tr><tr><td>충전·<br>배터리</td><td>없음</td><td>필요</td><td>없음</td><td class="us">없음</td></tr><tr><td>다듬는 면</td><td>패드</td><td>롤러</td><td>금속</td><td class="us">유리</td></tr><tr><td>크기</td><td>제품별</td><td>제품별</td><td>제품별</td><td class="us">10 × 5cm</td></tr></table>
+  <div class="tbn">유형별 일반적인 구성이며, 제품마다 다를 수 있어요.</div></section>
 
-<section>
-  <p class="eyebrow">Q&amp;A</p>
-  <h2>자주 묻는 질문</h2>
-  <dl class="qa">
-    <dt>손잡이가 없는데 쓰기 괜찮나요?</dt>
-    <dd>손바닥만 한 크기라 엄지와 손가락으로 쥐고 쓰기 좋아요. 젖은 손으로 쓸 땐 꼭 쥐어 주세요.</dd>
-    <dt>마른 발에 써도 되나요?</dt>
-    <dd>네. 마른 발이나 샤워 후 물기를 닦은 발에 쓰세요. 어느 쪽이든 힘을 빼고 가볍게 쓰는 게 중요해요.</dd>
-    <dt>보관은 어떻게 하나요?</dt>
-    <dd>물로 헹군 뒤 물기를 닦고, 떨어지지 않는 곳에 두세요. 다른 물건과 부딪히지 않게 보관해 주세요.</dd>
-  </dl>
-</section>
+<section class="pale"><div class="hdline" style="padding-bottom:30px"><h2 style="font-size:60px">유리예요.<br><em>떨어뜨리면 깨질 수 있어요</em></h2></div><div class="sum" style="padding-top:10px"><p>금이 간 제품은 쓰지 마세요. 욕실 바닥에 떨어지지 않게 조심하고, 쓰고 나면 물기를 닦아 안전한 곳에 두세요.</p></div></section>
 
-<section class="soft">
-  <p class="eyebrow">PRODUCT INFO</p>
-  <h2>제품 정보</h2>
-  <table class="spec">
-    <tr><th>제품명</th><td>유리 발각질제거기</td></tr>
-    <tr><th>크기</th><td>약 10 × 5cm</td></tr>
-    <tr><th>색상</th><td>투명</td></tr>
-    <tr><th>재질</th><td>유리</td></tr>
-    <tr><th>구성</th><td>본품 1개 (사진은 2개 연출)</td></tr>
-    <tr><th>원산지</th><td>중국</td></tr>
-  </table>
-  <ol class="numlist">
-    <li>세게 문지르지 말고 힘을 빼고 쓰세요</li>
-    <li>상처나 피부에 이상이 있는 곳에는 쓰지 마세요</li>
-    <li>쓰다가 따갑거나 붉어지면 바로 멈추세요</li>
-    <li>유리 제품이니 떨어뜨리지 않게 주의하세요</li>
-    <li>발 각질 관리 외 용도로 쓰지 마세요</li>
-    <li>어린이 손이 닿지 않는 곳에 두세요</li>
-  </ol>
-</section>
+<section class="s11"><div class="head"><h2 style="font-size:60px">물기 닦고, 한 방향으로만.<br><span class="hl">왕복으로 문지르지 마세요</span></h2></div><div class="step" ><div class="ph" style="background:var(--pale)"><img src="inputs/ai/shared/e3.png" alt=""></div><div class="tx"><b>STEP 1</b><span>물기를 닦은 발에</span><i>(또는 마른 발에)</i></div></div><div class="step" ><div class="ph" style="background:var(--pale)"><img src="inputs/ai/v2/use.png" style="object-position:center 40%" alt=""></div><div class="tx"><b>STEP 2</b><span>한 방향으로 가볍게</span><i>(왕복으로 문지르지 않기)</i></div></div><div class="step" style="border-bottom:2px solid var(--line)"><div class="ph" style="background:var(--pale)"><img src="inputs/ai/v2/rinse.png" style="object-position:center 40%" alt=""></div><div class="tx"><b>STEP 3</b><span>샤워기 물로 헹궈 말리기</span></div></div><div style="height:90px"></div></section>
 
-<section class="main">
-  <p class="eyebrow">유리 발각질제거기</p>
-  <h2>욕실에 두고<br><em>깨끗하게 관리해요</em></h2>
-  <div class="photo"><img data-slot="end" src="inputs/photos/dark1.jpg" alt=""></div>
-</section>
+<section class="pale"><div class="hdline"><div class="point">POINT · 관리</div><h2 style="font-size:70px">유리 면은<br><em>샤워기로 슥</em></h2></div><div class="ph-full"><img src="inputs/ai/v2/rinse.png" style="height:auto" alt=""></div><div class="sum"><p>쓰고 나면 샤워기 물로 헹궈요. 충전도, 배터리도 없어요.</p></div></section>
 
+<section class="s13"><h2>패드 갈고 버리다<br>지쳤다면</h2><ul data-check><li >패드 갈고 버리는 풋파일에 지친 분</li><li >작은 풋파일을 찾는 분</li><li >손바닥으로 잡는 쪽이 편한 분</li><li >욕실에 큰 도구를 두기 싫은 분</li><li style="border-bottom:2px solid var(--line)">여행 가방에 넣어 가고 싶은 분</li></ul></section>
+
+<section><div class="hdline" style="padding-bottom:50px"><h2 style="font-size:74px">양말을 벗어도<br><em>괜찮은 날</em></h2></div><div class="ph-full" style="max-height:1110px"><img src="inputs/ai/v2/after.png" alt=""></div><div class="ph-full"><img src="inputs/ai/v2/shelf.png" alt=""></div></section>
+
+<section class="s15"><h2>사기 전에<br>묻는 것들</h2><div class="qa" ><div class="q"><b>Q.</b>아프진 않나요?</div><div class="a">힘을 빼고 한 방향으로 가볍게 쓰세요. 따끔하거나 붉어지면 바로 멈추세요.</div></div><div class="qa" ><div class="q"><b>Q.</b>얼마나 자주 쓰나요?</div><div class="a">한 번에 많이 하기보다 피부 상태를 보면서 나눠 쓰세요.</div></div><div class="qa" ><div class="q"><b>Q.</b>깨지지는 않나요?</div><div class="a">유리라서 떨어뜨리면 깨질 수 있어요. 금이 갔다면 쓰지 마세요.</div></div><div class="qa" style="border-bottom:2px solid var(--line)"><div class="q"><b>Q.</b>몇 개가 들어 있나요?</div><div class="a">1개예요. 공급처 사진에 2장이 함께 나오지만 구성은 1개로 안내해요.</div></div></section>
+
+<section class="s16 pale"><div class="tt">제품 정보</div><div class="row" ><b>제품명</b><span>유리 발 각질 제거기</span></div><div class="row" ><b>크기</b><span>10 × 5cm</span></div><div class="row" ><b>구성</b><span>1개</span></div><div class="row" ><b>재질</b><span>유리</span></div><div class="row" style="border-bottom:2px solid var(--line)"><b>사진 안내</b><span>사용 장면은 연출 이미지로, 표면 무늬와 모양 등이 실제 제품과 다를 수 있어요.</span></div></section>
+
+<section class="s17"><h2 style="font-size:72px">따끔하면,<br><em>바로 멈추세요</em></h2><div class="ic6"><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 66c14 8 54 8 68 0"/><path d="M48 14v34M36 38l12 12 12-12"/></svg>힘을 빼고 가볍게</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="48" cy="48" r="36"/><path d="M23 23l50 50"/></svg>상처·염증 부위에는 쓰지 않기</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 8h32l24 24v32L64 88H32L8 64V32z"/><path d="M34 48h28"/></svg>따갑거나 붉어지면 멈추기</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M38 10v44c0 8 6 12 14 14l20 6c8 2 8 14-2 14H36c-10 0-16-8-16-18V10z"/></svg>발 각질 관리 용도로만</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M48 12c14 20 24 32 24 46a24 24 0 0 1-48 0c0-14 10-26 24-46z"/></svg>금이 간 제품은 쓰지 않기</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="48" cy="32" r="16"/><path d="M20 84c2-18 14-28 28-28s26 10 28 28"/><path d="M12 12l72 72"/></svg>어린이 손이 닿지 않게</div></div></section>
+
+<section class="s18"><img class="bg" src="inputs/ai/v2/hero.png" alt=""><div class="veil"></div><div class="top"><h2 style="font-size:70px">오늘 밤은,<big style="font-size:88px">유리 한 장으로</big></h2></div></section>
+
+<script>
+// 고정 시드로 같은 그래픽을 재현한다
+  let seed = 33;
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  document.querySelectorAll('[data-powder]').forEach((el) => {
+    const [x, y, w, h] = el.dataset.box.split(',').map(Number);
+    for (let i = 0; i < Number(el.dataset.powder); i++) {
+      const p = document.createElement('i');
+      const s = 2 + rnd() * rnd() * 10;
+      p.style.cssText = `left:${x + rnd() * w}px;top:${y + rnd() * h}px;width:${s}px;height:${s}px;opacity:${0.5 + rnd() * 0.5}`;
+      el.appendChild(p);
+    }
+  });
+  const check = '<svg width="50" height="50" viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#0B6FD1"/><path d="M13 26l9 9 16-18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  document.querySelectorAll('[data-check] li').forEach((li) => { li.innerHTML = check + '<span>' + li.innerHTML + '</span>'; });
+</script>
 </body>
 </html>
