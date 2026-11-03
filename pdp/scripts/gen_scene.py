@@ -37,7 +37,7 @@ def main() -> None:
     p.add_argument("prompt")
     p.add_argument("--size", default="1024x1536")
     p.add_argument("--quality", default="medium")
-    p.add_argument("--model", default="gpt-image-1")
+    p.add_argument("--model", default="gpt-image-2")
     p.add_argument("--log", type=Path, required=True)
     a = p.parse_args()
     body = json.dumps({"model": a.model, "prompt": a.prompt + NO_PRODUCT, "size": a.size, "quality": a.quality, "n": 1}).encode()
