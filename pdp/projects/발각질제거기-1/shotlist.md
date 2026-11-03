@@ -30,3 +30,19 @@
 | C23 | 18 | 침대 위 편안한 맨발 | 합성 가능 | 세로, 위 여백 | 마무리 | ③ AI `ai/finale_bed.png` | 1024×1536 |
 
 - 경쟁사 리뷰 사진: 사용 0 (원칙 2).
+
+## v3 컷 (2026-11-03, 카피 `copy/final.md` 기준)
+위 v2 표에서 공급처 사진과 누끼는 그대로 쓰고, 겨울 장면을 새로 만들었다. 새 AI 장면은 모두 제품 없음 (원칙 4), 파일은 `inputs/ai/v3/`.
+
+| 섹션 | 장면 | 제품 | 출처 |
+|---|---|---|---|
+| 01 | 겨울 이불 위 맨발 | 누끼 합성 | `hero_duvet` + `hi_cross_bot` |
+| 02 | 아침·낮·저녁·밤 4컷 | 없음 | `emp_morning`, `emp_day`, `emp_evening`, 기존 `empathy_blanket` |
+| 08 | 물줄기·물방울 | 누끼 합성 | `water` + `hi_white_rough` |
+| 09 | 허리 숙여 발 붙잡는 자세 | 없음 | `posture` |
+| 10 | 가루 | 공급처 사진 | `s_use_heel_fine` + 그래픽 가루 (`powder`는 손이 들어가 안 씀) |
+| 12 | 이불 밖 부부 맨발 | 없음 | `couple` |
+| 14 | 흰·짙은 타일 고리 | 누끼 합성 | `tile_white`, `tile_dark` + `hi_white_rough_up`, `black_single_up` |
+| 18 | 겨울 침대 맨발 | 누끼 합성 | `finale_winter` + `hi_cross_top` |
+
+- 이미지 비용(스크립트 추정값): 시범 누적 4,906원, 예산 1만 원 안.

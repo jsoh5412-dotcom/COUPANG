@@ -11,6 +11,7 @@ from urllib.parse import quote
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "shared" / "collectors"))
 from browser import base_args, check_blocked, download_all, goto, open_page, run, scroll_to_bottom, wait, write_manifest  # noqa: E402
 from coupang_detail import upgrade  # noqa: E402
+from quota import use_quota  # noqa: E402
 
 JS = """
 (n) => {
@@ -33,6 +34,7 @@ JS = """
 
 def main(args) -> None:
     url = f"https://www.coupang.com/np/search?q={quote(args.url)}"
+    use_quota("keyword", url)
     with open_page(args) as page:
         print(f"열기: {url}")
         goto(page, url)
