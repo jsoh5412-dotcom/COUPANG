@@ -1,0 +1,20 @@
+date,api,calls,status,note
+2026-11-03,getItemList,1,200,supply 초콜릿 포장 so=se
+2026-11-03,getItemList,1,200,supply 발렌타인 포장 so=se
+2026-11-03,getItemList,1,200,supply 학사모 so=se
+2026-11-03,getItemList,1,200,supply 네임스티커 so=se
+2026-11-03,getItemList,1,200,supply 세뱃돈 봉투 so=se
+2026-11-03,getItemList,1,200,supply 용돈봉투 so=se
+2026-11-03,getItemList,1,200,supply 윷놀이 so=se
+2026-11-03,getCategoryList,1,200,카테고리 목록
+2026-11-03,getItemList,1,200,supply 12_03_00_00_00 so=ha
+2026-11-03,getItemList,1,200,supply 12_04_00_00_00 so=ha
+2026-11-03,getItemList,1,200,supply 12_05_00_00_00 so=ha
+2026-11-03,getItemList,1,200,supply 12_06_00_00_00 so=ha
+2026-11-03,getItemList,1,200,supply 12_07_00_00_00 so=ha
+2026-11-03,getItemList,1,200,supply 12_08_00_00_00 so=ha
+2026-11-03,getItemList,1,200,supply 12_09_00_00_00 so=ha
+2026-11-03,getItemList,1,200,supply 07_06_00_00_00 so=ha
+2026-11-03,getItemList,1,200,supply 13_04_00_00_00 so=ha
+2026-11-03,getItemList,1,200,supply 11_16_00_00_00 so=ha
+2026-11-03,getItemList,1,200,supply 01_14_00_00_00 so=ha
