@@ -16,6 +16,7 @@ from urllib.parse import urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from browser import (  # noqa: E402
     base_args, check_blocked, collect_images, dedupe, download_all, goto, open_page, run,
+    require_main_profile,
     scroll_into_view_all, scroll_to_bottom, wait, write_manifest,
 )
 
@@ -69,6 +70,8 @@ def upgrade(url: str) -> str:
 def main(args) -> None:
     site = args.site or detect_site(args.url)
     cfg = SITES[site]
+    if "1688.com" in urlparse(args.url).netloc:
+        require_main_profile(args)
     with open_page(args) as page:
         print(f"열기({site}): {args.url}")
         goto(page, args.url)
