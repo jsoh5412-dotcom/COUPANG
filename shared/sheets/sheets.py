@@ -4,7 +4,7 @@
 사용법:
   .venv/bin/python shared/sheets/sheets.py email                     서비스 계정 이메일 보기
   .venv/bin/python shared/sheets/sheets.py test --folder <폴더ID>     시험 시트를 만들어 읽기·쓰기 확인
-  .venv/bin/python shared/sheets/sheets.py test --sheet <시트ID>      이미 있는 빈 시트로 읽기·쓰기 확인
+  .venv/bin/python shared/sheets/sheets.py test --sheet <시트ID>      시험 전용 시트로 읽기·쓰기 확인 (첫 칸부터 덮어쓰니 실제 시트에 쓰지 않는다)
 
 코드에서는:
   from sheets import create, read, write, append, upsert
@@ -155,7 +155,7 @@ def self_test(folder_id: str | None, sheet_id: str | None = None) -> None:
         protected=["메모"],
     )
     after = read(sheet_id, f"'{tab}'")
-    assert counts == {"updated": 1, "added": 1}, counts
+    assert counts["updated"] + counts["added"] == 2, counts  # 같은 시트로 다시 돌리면 추가 대신 갱신이 된다
     assert after[1] == ["손난로", "추천", "사용자 메모"], after
     assert after[2][:2] == ["윷놀이", "신규"], after
     print("갱신·추가 성공, 사용자 열 보호 확인")
