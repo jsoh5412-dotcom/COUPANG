@@ -19,6 +19,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 NO_PRODUCT = (" No foot file, no tools, no products of any kind, no packaging, no text, no letters, no logos, no watermarks."
               " Photorealistic commercial photography, natural skin, anatomically correct feet and hands with five toes each.")
+EMPTY = (" Nobody in the frame: no people, no body parts, no hands, no feet. No text, no letters, no logos, no watermarks."
+         " Photorealistic commercial photography.")
 # gpt-image-2 공식 Standard 단가 (USD / 1M 토큰, OpenAI Pricing 페이지 2026-11-03 확인): 텍스트 입력 5, 이미지 입력 8, 이미지 출력 30
 PRICE = {"text": 5 / 1e6, "image": 8 / 1e6, "output": 30 / 1e6}
 KRW = 1400  # 환율 가정
@@ -37,10 +39,11 @@ def main() -> None:
     p.add_argument("prompt")
     p.add_argument("--size", default="1024x1536")
     p.add_argument("--quality", default="medium")
+    p.add_argument("--empty", action="store_true", help="사람이 없는 장면")
     p.add_argument("--model", default="gpt-image-2")
     p.add_argument("--log", type=Path, required=True)
     a = p.parse_args()
-    body = json.dumps({"model": a.model, "prompt": a.prompt + NO_PRODUCT, "size": a.size, "quality": a.quality, "n": 1}).encode()
+    body = json.dumps({"model": a.model, "prompt": a.prompt + (EMPTY if a.empty else NO_PRODUCT), "size": a.size, "quality": a.quality, "n": 1}).encode()
     req = urllib.request.Request("https://api.openai.com/v1/images/generations", data=body,
                                  headers={"Authorization": f"Bearer {key()}", "Content-Type": "application/json"})
     t = time.time()

@@ -1,107 +1,73 @@
 {
- "title": "수면안대-3 v2",
+ "title": "수면안대-3 v3",
  "sections": [
   {
    "type": "hero",
-   "img": "inputs/ai/v2/hero.png",
-   "h1": "뒤집으면",
-   "big": "다른 안대",
-   "bigsize": 130,
-   "sub": "망사 결 한 면, 매끈한 결 한 면. 귀끈 길이 조절",
+   "img": "inputs/ai/v3/hero.png",
+   "h1": "네이비에 핑크,",
+   "big": "뒤집으면<br>또 다른 안대",
+   "bigsize": 100,
+   "sub": "앞뒤 색과 결이 다른 양면 수면안대",
    "seals": [
     [
-     "양면",
-     "2가지 결",
-     48
+     "면",
+     "2개",
+     74
     ],
     [
      "색상",
      "4가지",
-     60
+     56
     ]
    ],
    "band": [
     "네이비핑크 · 그레이핑크 · 차콜 · 블랙",
-    "귀끈 스토퍼"
+    "귀에 거는 끈"
    ]
   },
   {
    "type": "empathy",
    "stack": true,
-   "h": "켜 둔 건 남편인데,<br><span class=\"hl\">뒤척이는 건 나</span>",
+   "h": "잠옷은 예쁜데<br><span class=\"hl\">안대가 칙칙해요</span>",
+   "size": 56,
    "cuts": [
     {
-     "img": "inputs/ai/shared/e_phone.png",
-     "t": "밤",
-     "c": "옆에서 켠 휴대폰 불빛"
+     "img": "inputs/ai/v3/e_pj.png",
+     "t": "잠옷",
+     "c": "고르고 골라 산 잠옷"
     },
     {
-     "img": "inputs/ai/shared/e_sun.png",
-     "t": "아침",
-     "c": "커튼 사이로 들어오는 햇빛"
+     "img": "inputs/ai/v3/e_drawer.png",
+     "t": "서랍",
+     "c": "어두운 색만 가득"
     },
     {
-     "img": "inputs/ai/shared/e_cabin.png",
+     "img": "inputs/ai/v3/e_cabin.png",
      "t": "기내",
-     "c": "내 맘대로 못 끄는 불빛"
+     "c": "꺼내기 망설여질 때"
     },
     {
-     "img": "inputs/ai/shared/e_ear.png",
-     "t": "귀 뒤",
-     "c": "헐렁해서 고쳐 쓰던 끈"
+     "img": "inputs/ai/v3/e_gift.png",
+     "t": "선물",
+     "c": "안대도 예쁘면 좋잖아요"
     }
    ]
   },
   {
-   "type": "turn",
-   "h": "안대는 늘 같은 면으로만<br><span class=\"hl\">쓰셨죠</span>",
-   "p": "이 안대는 결이 다른 두 면이 있어요.",
-   "size": 60,
-   "discs": [
-    {
-     "img": "inputs/ai/v2/hand.png",
-     "t": "면이 두 개",
-     "style": "object-fit:cover"
-    },
-    {
-     "img": "inputs/ai/v2/close.png",
-     "t": "귀에 걸어 쓰기",
-     "style": "object-fit:cover"
-    }
-   ]
-  },
-  {
-   "type": "intro",
-   "h": "망사 결, 매끈한 결.<br><span class=\"hl\">뒤집어 고르세요</span>",
-   "size": 66,
-   "h2": 700,
-   "steps": [
-    {
-     "img": "inputs/ai/v2/hand.png",
-     "t": "제품",
-     "c": "면마다 결과 색이 달라요",
-     "style": "object-fit:contain;background:var(--pale)"
-    },
-    {
-     "img": "inputs/ai/v2/close.png",
-     "t": "착용",
-     "c": "귀에 걸어 스토퍼로 맞춰요",
-     "style": "object-fit:cover"
-    }
-   ]
+   "type": "feature",
+   "h": "핑크가 안쪽에<br><span class=\"hl\">숨어 있어요</span>",
+   "size": 64,
+   "img": "inputs/photos/navypink.jpg",
+   "style": "width:366px;display:block;margin:0 auto",
+   "pale": true,
+   "p": "사진 한 장에 같은 안대의 앞뒤를 함께 놓았어요."
   },
   {
    "type": "overview",
-   "img": "inputs/nukki/gray_float.png",
-   "style": "width:640px",
    "items": [
     [
-     "양면",
-     "망사 결, 매끈한 결"
-    ],
-    [
      "22 × 10cm",
-     "안대 크기"
+     "크기"
     ],
     [
      "약 1.5cm",
@@ -109,43 +75,74 @@
     ],
     [
      "약 19g",
-     "무게 표기"
+     "무게"
+    ],
+    [
+     "귀끈",
+     "스토퍼로 조절"
     ]
+   ],
+   "img": "inputs/nukki/gray_float.png",
+   "style": "width:680px"
+  },
+  {
+   "type": "feature",
+   "h": "이쪽은 오돌토돌,<br><span class=\"hl\">이쪽은 매끈</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/gray.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false,
+   "p": "한쪽은 망사 결, 한쪽은 매끈한 면이에요.",
+   "point": "POINT 1"
+  },
+  {
+   "type": "feature",
+   "h": "여행 사진에 찍혀도<br><span class=\"hl\">예쁜 색</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/hotel.png",
+   "style": "height:auto",
+   "pale": true,
+   "p": "4가지 색 중에 골라요.",
+   "point": "POINT 2"
+  },
+  {
+   "type": "feature",
+   "h": "기내에서 머리 망치기 싫어서<br><span class=\"hl\">귀걸이형</span>",
+   "size": 54,
+   "img": "inputs/ai/v3/loop.png",
+   "style": "height:auto",
+   "pale": false,
+   "p": "귀에 걸고 스토퍼로 끈 길이를 맞춰요.",
+   "point": "POINT 3"
+  },
+  {
+   "type": "pair",
+   "h": "차콜과 블랙도<br><span class=\"hl\">앞뒤로 보세요</span>",
+   "size": 62,
+   "cellh": 400,
+   "pale": true,
+   "cuts": [
+    {
+     "img": "inputs/photos/charcoal.jpg",
+     "t": "차콜"
+    },
+    {
+     "img": "inputs/photos/black.jpg",
+     "t": "블랙"
+    }
    ]
   },
   {
-   "type": "number",
-   "point": "POINT 1 · 두 면",
-   "big": "2",
-   "unit": "면",
-   "bigsize": 280,
-   "h": "닿는 느낌이 면마다 달라요",
-   "why": "<span class=\"hl\">망사 결 한 면, 매끈한 결 한 면.</span> 그날 고르세요",
-   "img": "inputs/ai/v2/hand.png",
-   "style": "height:auto",
-   "pale": false
-  },
-  {
-   "point": "POINT 2 · 귀끈",
-   "h": "귀끈 길이는<br><span class=\"hl\">스토퍼로 맞춰요</span>",
-   "img": "inputs/ai/v2/close.png",
-   "p": "끈을 당겨 스토퍼로 멈춰요.",
    "type": "feature",
-   "pale": true,
-   "style": "height:820px;object-fit:cover;"
-  },
-  {
-   "point": "어디서나",
-   "h": "비행기에서도,<br><span class=\"hl\">낮잠에도 같은 안대</span>",
-   "img": "inputs/ai/v2/nap.png",
-   "p": "가방에 넣어 두었다가 꺼내 써요.",
-   "type": "feature",
-   "pale": false,
-   "style": "height:820px;object-fit:cover;"
+   "h": "오늘은 매끈한 쪽,<br><span class=\"hl\">내일은 오돌토돌한 쪽</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/smooth.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": true
   },
   {
    "type": "compare",
-   "h": "한 장에 두 면,<br><span class=\"hl\">귀끈은 스토퍼로</span>",
+   "h": "뒤집어 쓸 수 있는<br><span class=\"hl\">안대는 따로 있어요</span>",
    "cols": [
     "일반 귀걸이형",
     "두툼 통짜형",
@@ -176,84 +173,67 @@
      "제품별",
      "투톤 4가지"
     ]
-   ]
-  },
-  {
-   "type": "notice",
-   "h": "시원한 안대는 <em>아니에요</em>",
-   "p": "망사 결은 표면의 모양이에요. 시원하거나 공기가 잘 통한다고 확인된 것은 아니에요. 귀에 거는 끈이 있어서, 귀가 예민하면 끈이 신경 쓰일 수 있어요."
+   ],
+   "size": 58
   },
   {
    "type": "howto",
-   "h": "면 고르고, 귀에 걸고,<br><span class=\"hl\">스토퍼로 맞추면 끝</span>",
+   "h": "뒤집고, 걸고,<br><span class=\"hl\">스토퍼로 맞춰요</span>",
+   "size": 62,
    "steps": [
     {
-     "img": "inputs/ai/v2/hand.png",
-     "c": "오늘 쓸 면을 골라요",
-     "style": "object-fit:contain"
+     "n": 1,
+     "c": "오늘 쓸 면을 정해요"
     },
     {
-     "img": "inputs/ai/v2/close.png",
-     "c": "양쪽 귀에 걸어요"
+     "n": 2,
+     "c": "끈을 귀에 걸어요"
     },
     {
-     "img": "inputs/ai/v2/hero.png",
-     "c": "스토퍼로 길이를 맞춰요",
-     "style": "object-position:center 62%"
+     "n": 3,
+     "c": "스토퍼로 끈 길이를 맞춰요"
     }
    ]
   },
   {
    "type": "feature",
-   "h": "\"그만 자\" 대신<br><em>안대 하나</em>",
-   "size": 76,
-   "img": "inputs/ai/v2/partner.png",
-   "style": "height:auto",
-   "pale": true
+   "h": "호텔 흰 침구 위에<br><span class=\"hl\">네이비핑크</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/gift.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": true,
+   "p": "선물 상자에 담아도 어울려요. 상자는 연출이에요."
+  },
+  {
+   "type": "feature",
+   "h": "겉은 차분,<br><span class=\"hl\">뒤집으면 포인트</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/char.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false
   },
   {
    "type": "checklist",
-   "h": "끈 때문에, 눌려서, 답답해서.<br>서랍에 쌓인 안대",
+   "h": "까만 안대에<br>질린 분께",
    "items": [
-    "닿는 면을 그날 고르고 싶은 분",
-    "옆 사람 불빛이 신경 쓰이는 분",
-    "커튼 사이 아침 빛에 먼저 깨는 분",
-    "헐렁한 귀끈을 고쳐 쓰기 귀찮았던 분",
-    "색 다른 안대를 찾는 분"
+    "매일 쓰는 소품도 예쁜 걸 고르는 분",
+    "머리 망가지는 게 싫은 분",
+    "안대 선물을 고민하는 분",
+    "그날그날 고르는 걸 좋아하는 분",
+    "귀에 거는 안대를 찾는 분"
    ]
   },
   {
-   "type": "colors",
-   "h": "뒤집을 때마다<br><em>색도 달라요</em>",
-   "items": [
-    {
-     "img": "inputs/photos/navypink.jpg",
-     "t": "네이비핑크"
-    },
-    {
-     "img": "inputs/photos/graypink.jpg",
-     "t": "그레이핑크"
-    },
-    {
-     "img": "inputs/photos/charcoal.jpg",
-     "t": "차콜"
-    },
-    {
-     "img": "inputs/photos/black.jpg",
-     "t": "블랙"
-    }
-   ]
-  },
-  {
-   "type": "after",
-   "h": "교대 근무 낮잠에도,<br><em>새벽 비행기에도</em>",
-   "size": 70,
-   "img": "inputs/ai/v2/after.png",
-   "img2": "inputs/ai/v2/day.png"
+   "type": "feature",
+   "h": "뒤집으면 색이 바뀌니<br><span class=\"hl\">4가지가 8가지처럼</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/blackm.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": true
   },
   {
    "type": "qa",
-   "h": "빛이 완전히<br>막히냐고요?",
+   "h": "자주 묻는 질문",
    "items": [
     [
      "빛이 완전히 막히나요?",
@@ -302,13 +282,13 @@
     ],
     [
      "사진 안내",
-     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+     "사용 장면은 연출 이미지로, 모양과 색 등이 실제 제품과 다를 수 있어요."
     ]
    ]
   },
   {
    "type": "warn",
-   "h": "불편하면,<br><em>바로 벗으세요</em>",
+   "h": "주의사항",
    "items": [
     [
      "wide",
@@ -338,10 +318,10 @@
   },
   {
    "type": "finale",
-   "img": "inputs/ai/v2/finale.png",
-   "h": "오늘 밤은",
-   "big": "뒤집어 고르기",
-   "bigsize": 92
+   "img": "inputs/ai/v3/finale.png",
+   "h": "까만색 말고",
+   "big": "오늘은 네이비핑크",
+   "bigsize": 76
   }
  ]
 }

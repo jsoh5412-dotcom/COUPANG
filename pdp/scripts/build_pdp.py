@@ -32,13 +32,22 @@ def hero(s):
     a, b = s["seals"]
     band = " &nbsp;/&nbsp; ".join(s["band"])
     return f'''<section class="s01">
-  <img class="bg" src="{s['img']}" alt=""><div class="veil"></div>
+  <img class="bg" src="{s['img']}" style="object-fit:cover;{s.get('imgstyle', '')}" alt=""><div class="veil"></div>
   <div class="copy"><h1 style="font-size:{s.get('size', 74)}px">{s['h1']}</h1><h1 style="margin-top:6px"><b style="margin-top:0;font-size:{s.get('bigsize', 130)}px">{s['big']}</b></h1>
   <div class="sub" style="padding:0 20px">{s['sub']}</div></div>
   <div class="seal a"><small>{a[0]}</small><b style="font-size:{a[2] if len(a) > 2 else 62}px">{a[1]}</b></div>
   <div class="seal b"><small>{b[0]}</small><b style="font-size:{b[2] if len(b) > 2 else 62}px">{b[1]}</b></div>
   <div class="band">{band}</div>
 </section>'''
+
+
+def pair(s):
+    h = s.get("cellh", 400)
+    figs = "".join(f'<figure>{img(c["img"], f"height:{h}px;filter:none;" + c.get("style", ""))}<figcaption>' + (f'<b style="font-size:40px">{c["t"]}</b>' if c.get("t") else "") + f'{c.get("c", "")}</figcaption></figure>' for c in s["cuts"])
+    cls = ' class="pale"' if s.get("pale") else ""
+    pt = f'<div class="point">{s["point"]}</div>' if s.get("point") else ""
+    p = f'<div class="sum" style="padding-top:10px"><p>{s["p"]}</p></div>' if s.get("p") else ""
+    return f'<section{cls}><div class="hdline">{pt}<h2 style="font-size:{s.get("size", 66)}px">{s["h"]}</h2></div><div class="grid4">{figs}</div>{p}</section>'
 
 
 def empathy(s):
@@ -64,7 +73,8 @@ def intro(s):
 def overview(s):
     g = "".join(f'<div><b>{i[0]}</b><span>{i[1]}</span></div>' for i in s["items"])
     extra = s.get("svg", "")
-    return f'<section class="spec pale"><div class="tt">한눈에 보기</div><img class="pic" data-slot="spec" src="{s["img"]}" style="{s.get("style", "")}" alt=""><div class="grid">{g}</div>{extra}</section>'
+    pic = f'<img class="pic" data-slot="spec" src="{s["img"]}" style="{s.get("style", "")}" alt="">' if s.get("img") else ""
+    return f'<section class="spec pale"><div class="tt">한눈에 보기</div>{pic}{s.get("graphic", "")}<div class="grid">{g}</div>{extra}</section>'
 
 
 def number(s):
@@ -101,7 +111,10 @@ def howto(s):
     out = []
     for i, c in enumerate(s["steps"]):
         st = CHECK_END if i == n - 1 else ""
-        out.append(f'<div class="step" {st}><div class="ph" style="background:var(--pale)">{img(c["img"], c.get("style", ""))}</div><div class="tx"><b>STEP {i + 1}</b><span>{c["c"]}</span>{"<i>" + c["i"] + "</i>" if c.get("i") else ""}</div></div>')
+        pic = img(c["img"], c.get("style", "")) if c.get("img") else f'<div style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:120px;font-weight:900;color:var(--blue)">{c["n"]}</div>'
+        small = "" if c.get("img") else ' style="height:300px"' if not st else ' style="height:300px;border-bottom:2px solid var(--line)"'
+        st = small or st
+        out.append(f'<div class="step" {st}><div class="ph" style="background:var(--pale)">{pic}</div><div class="tx"><b>STEP {i + 1}</b><span>{c["c"]}</span>{"<i>" + c["i"] + "</i>" if c.get("i") else ""}</div></div>')
     return f'<section class="s11"><div class="head"><h2 style="font-size:{s.get("size", 60)}px">{s["h"]}</h2></div>{"".join(out)}<div style="height:90px"></div></section>'
 
 
@@ -112,8 +125,9 @@ def checklist(s):
 
 
 def colors(s):
+    two = ' style="grid-template-columns:1fr 1fr"' if s.get("two") else ""
     figs = "".join(f'<figure><div class="box" style="background:#fff">{img(c["img"])}</div><figcaption>{c["t"]}</figcaption></figure>' for c in s["items"])
-    return f'<section class="pale"><div class="head"><h2 style="font-size:{s.get("size", 64)}px">{s["h"]}</h2></div><div class="colors">{figs}</div></section>'
+    return f'<section class="pale"><div class="head"><h2 style="font-size:{s.get("size", 64)}px">{s["h"]}</h2></div><div class="colors"{two}>{figs}</div></section>'
 
 
 def after(s):

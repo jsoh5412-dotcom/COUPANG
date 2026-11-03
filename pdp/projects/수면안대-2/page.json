@@ -1,152 +1,139 @@
 {
- "title": "수면안대-2 v2",
+ "title": "수면안대-2 v3",
  "sections": [
   {
    "type": "hero",
-   "img": "inputs/ai/v2/hero.png",
-   "h1": "무거운 안대에 지쳤다면",
-   "big": "약 10g",
-   "bigsize": 150,
-   "sub": "스펀지 타입 입체 안대, 고무 밴드에 찍찍",
+   "img": "inputs/ai/v3/hero.png",
+   "h1": "100원 동전 두 개쯤,",
+   "big": "약 10g 안대",
+   "bigsize": 118,
+   "sub": "도톰한 스펀지로 만든 3D 입체 수면안대",
    "seals": [
     [
      "무게",
      "약 10g",
-     54
+     50
     ],
     [
-     "소재",
-     "스펀지",
-     46
+     "모양",
+     "3D",
+     74
     ]
    ],
    "band": [
-    "블랙",
-    "고무 밴드",
-    "찍찍 조절"
+    "블랙 1개",
+    "고무 밴드 + 찍찍"
    ]
   },
   {
    "type": "empathy",
    "stack": true,
-   "h": "켜 둔 건 남편인데,<br><span class=\"hl\">뒤척이는 건 나</span>",
+   "h": "빛 때문에 쓰는데<br><span class=\"hl\">무게 때문에 벗어요</span>",
+   "size": 56,
    "cuts": [
     {
-     "img": "inputs/ai/shared/e_phone.png",
+     "img": "inputs/ai/v3/e_lamp.png",
      "t": "밤",
-     "c": "옆에서 켠 휴대폰 불빛"
+     "c": "켜 둔 스탠드 불빛"
     },
     {
-     "img": "inputs/ai/shared/e_sun.png",
+     "img": "inputs/ai/v3/e_curtain.png",
      "t": "아침",
-     "c": "커튼 사이로 들어오는 햇빛"
+     "c": "커튼 틈 햇살"
     },
     {
-     "img": "inputs/ai/shared/e_cabin.png",
-     "t": "기내",
-     "c": "내 맘대로 못 끄는 불빛"
+     "img": "inputs/ai/v3/e_sofa.png",
+     "t": "낮",
+     "c": "너무 환한 거실"
     },
     {
-     "img": "inputs/ai/shared/e_ear.png",
-     "t": "귀 뒤",
-     "c": "끈이 걸리던 자리"
+     "img": "inputs/ai/v3/e_bus.png",
+     "t": "이동 중",
+     "c": "눈부신 창가 자리"
     }
    ]
   },
   {
-   "type": "turn",
-   "h": "가볍게 쓰려던 안대,<br><span class=\"hl\">머리가 먼저 무거웠죠</span>",
-   "p": "이 안대는 스펀지 타입 약 10g이에요.",
-   "size": 60,
-   "discs": [
-    {
-     "img": "inputs/ai/v2/hand.png",
-     "t": "스펀지 타입",
-     "style": "object-fit:cover"
-    },
-    {
-     "img": "inputs/ai/v2/close.png",
-     "t": "약 10g",
-     "style": "object-fit:cover"
-    }
-   ]
-  },
-  {
-   "type": "intro",
-   "h": "두툼하면 무거울까 봐?<br><span class=\"hl\">스펀지라 약 10g</span>",
-   "size": 66,
-   "h2": 700,
-   "steps": [
-    {
-     "img": "inputs/ai/v2/hand.png",
-     "t": "제품",
-     "c": "스펀지 타입 입체 모양",
-     "style": "object-fit:contain;background:var(--pale)"
-    },
-    {
-     "img": "inputs/ai/v2/close.png",
-     "t": "착용",
-     "c": "고무 밴드로 머리에 고정",
-     "style": "object-fit:cover"
-    }
-   ]
+   "type": "feature",
+   "h": "8시간 얹어 두는 물건,<br><span class=\"hl\">가벼워야죠</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/light.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": true,
+   "p": "도톰한 스펀지 안대인데 무게는 약 10g이에요."
   },
   {
    "type": "overview",
-   "img": "inputs/nukki/front.png",
-   "style": "width:640px",
    "items": [
     [
      "약 10g",
-     "무게 표기"
+     "무게"
     ],
     [
      "20 × 8.3cm",
-     "안대 크기"
+     "크기"
     ],
     [
      "약 19.5cm",
      "한쪽 끈, 늘리기 전"
     ],
     [
-     "고무 밴드",
-     "찍찍으로 조절"
+     "3D",
+     "눈 자리 오목"
     ]
-   ]
+   ],
+   "img": "inputs/nukki/front.png",
+   "style": "width:600px"
   },
   {
-   "type": "number",
-   "point": "POINT 1 · 무게",
-   "big": "10",
-   "unit": "g",
-   "bigsize": 280,
-   "h": "두툼하면 무거울까 봐? 스펀지라 약 10g",
-   "why": "<span class=\"hl\">공급처 표기 무게예요.</span>",
-   "img": "inputs/ai/v2/hand.png",
+   "type": "feature",
+   "h": "동전 두 개 얹은<br><span class=\"hl\">무게예요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/close.png",
    "style": "height:auto",
+   "pale": false,
+   "p": "100원 동전 두 개쯤 되는 무게예요. 무게는 공급처 표기예요.",
+   "point": "POINT 1"
+  },
+  {
+   "type": "feature",
+   "h": "눈에 닿지 않게<br><span class=\"hl\">안쪽이 오목해요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/inner.png",
+   "style": "height:auto",
+   "pale": true,
+   "p": "안쪽 눈 자리가 오목해요.",
+   "point": "POINT 2"
+  },
+  {
+   "type": "feature",
+   "h": "머리 묶은 날,<br><span class=\"hl\">푼 날 다르게 맞춰요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/strap.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false,
+   "p": "고무 밴드가 늘어나고, 찍찍으로 길이를 맞춰요.",
+   "point": "POINT 3"
+  },
+  {
+   "type": "feature",
+   "h": "눈 위가 묵직했던 이유,<br><span class=\"hl\">안대 무게였어요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/shelf.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": true
+  },
+  {
+   "type": "feature",
+   "h": "귀 뒤가 아프던<br><span class=\"hl\">끈 대신 밴드</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/pillow.png",
+   "style": "height:1170px;object-fit:cover",
    "pale": false
   },
   {
-   "point": "POINT 2 · 밴드",
-   "h": "늘리고, 붙이면<br><span class=\"hl\">내 머리 크기</span>",
-   "img": "inputs/ai/v2/close.png",
-   "p": "늘어나는 고무 밴드를 찍찍으로 맞춰요.",
-   "type": "feature",
-   "pale": true,
-   "style": "height:820px;object-fit:cover;"
-  },
-  {
-   "point": "어디서나",
-   "h": "비행기에서도,<br><span class=\"hl\">낮잠에도 같은 안대</span>",
-   "img": "inputs/ai/v2/nap.png",
-   "p": "가방에 넣어 두었다가 꺼내 써요.",
-   "type": "feature",
-   "pale": false,
-   "style": "height:820px;object-fit:cover;"
-  },
-  {
    "type": "compare",
-   "h": "스펀지라 약 10g,<br><span class=\"hl\">밴드는 찍찍으로</span>",
+   "h": "내 안대는<br><span class=\"hl\">몇 g이었을까요</span>",
    "cols": [
     "얇은 천형",
     "두툼 통짜형",
@@ -177,62 +164,67 @@
      "벨크로 등",
      "고무 밴드 + 찍찍"
     ]
-   ]
-  },
-  {
-   "type": "notice",
-   "h": "색은 <em>블랙 하나</em>예요",
-   "p": "옵션이 없어요. 스펀지 타입이라 얇은 천 안대보다 두께가 있어요. 공급처 라벨 태그가 붙어 있을 수 있어요."
+   ],
+   "size": 58
   },
   {
    "type": "howto",
-   "h": "늘리고, 붙이고,<br><span class=\"hl\">눈 자리에 맞추면 끝</span>",
+   "h": "밴드만 늘려 두르면<br><span class=\"hl\">쓰는 건 끝</span>",
+   "size": 62,
    "steps": [
     {
-     "img": "inputs/ai/v2/hand.png",
-     "c": "눈 자리를 앞으로 해서 들어요",
-     "style": "object-fit:contain"
+     "n": 1,
+     "c": "오목한 쪽을 눈에 대요"
     },
     {
-     "img": "inputs/ai/v2/close.png",
-     "c": "고무 밴드를 찍찍으로 맞춰요"
+     "n": 2,
+     "c": "밴드를 머리 뒤로 늘려 둘러요"
     },
     {
-     "img": "inputs/ai/v2/hero.png",
-     "c": "입체 자리를 눈에 맞춰요",
-     "style": "object-position:center 62%"
+     "n": 3,
+     "c": "찍찍으로 길이를 맞춰요"
     }
    ]
   },
   {
    "type": "feature",
-   "h": "\"그만 자\" 대신<br><em>안대 하나</em>",
-   "size": 76,
-   "img": "inputs/ai/v2/partner.png",
-   "style": "height:auto",
+   "h": "호텔 조명 스위치를<br><span class=\"hl\">못 찾은 밤</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/bag.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false,
+   "p": "여행 가방에 넣어 두고 꺼내 써요."
+  },
+  {
+   "type": "feature",
+   "h": "쓰다 만 안대가<br><span class=\"hl\">서랍에 또 하나</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/drawer.png",
+   "style": "height:1170px;object-fit:cover",
    "pale": true
   },
   {
    "type": "checklist",
-   "h": "끈 때문에, 눌려서, 답답해서.<br>서랍에 쌓인 안대",
+   "h": "안대를 세 개 이상<br><span class=\"hl\">사 보신 분께</span>",
    "items": [
-    "무거운 안대가 불편했던 분",
-    "옆 사람 불빛이 신경 쓰이는 분",
-    "커튼 사이 아침 빛에 먼저 깨는 분",
+    "자다가 안대를 벗어 본 분",
+    "묵직한 안대가 싫었던 분",
+    "귀 뒤가 아파 안대를 그만둔 분",
     "낮잠, 교대 근무로 낮에 자는 분",
-    "비행기, 기차에서 눈을 붙이는 분"
+    "여행 짐을 줄이고 싶은 분"
    ]
   },
   {
-   "type": "after",
-   "h": "교대 근무 낮잠에도,<br><em>새벽 비행기에도</em>",
-   "size": 70,
-   "img": "inputs/ai/v2/after.png",
-   "img2": "inputs/ai/v2/day.png"
+   "type": "feature",
+   "h": "자다 벗어 던지던 안대,<br><span class=\"hl\">이번엔 약 10g</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/morning.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": true
   },
   {
    "type": "qa",
-   "h": "빛이 완전히<br>막히냐고요?",
+   "h": "자주 묻는 질문",
    "items": [
     [
      "빛이 완전히 막히나요?",
@@ -281,13 +273,13 @@
     ],
     [
      "사진 안내",
-     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+     "사용 장면은 연출 이미지로, 모양과 색 등이 실제 제품과 다를 수 있어요."
     ]
    ]
   },
   {
    "type": "warn",
-   "h": "불편하면,<br><em>바로 벗으세요</em>",
+   "h": "주의사항",
    "items": [
     [
      "wide",
@@ -317,10 +309,10 @@
   },
   {
    "type": "finale",
-   "img": "inputs/ai/v2/finale.png",
-   "h": "잠들 때 얹는",
-   "big": "약 10g",
-   "bigsize": 120
+   "img": "inputs/ai/v3/finale.png",
+   "h": "오늘 밤 올리는 건",
+   "big": "동전 두 개 무게",
+   "bigsize": 82
   }
  ]
 }
