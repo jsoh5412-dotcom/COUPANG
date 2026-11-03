@@ -1,0 +1,217 @@
+:root { --ink: #12263F; --sub: #3F5068; --blue: #0B6FD1; --sky: #BFE3FF; --pale: #EEF7FD; --line: #C9DDEC; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 780px; background: #fff; }
+  body { font-family: 'Pretendard', sans-serif; color: var(--ink); word-break: keep-all; -webkit-font-smoothing: antialiased; }
+  section { position: relative; overflow: hidden; background: #fff; }
+  section.pale { background: var(--pale); }
+  img { display: block; }
+  h1, h2 { font-weight: 900; letter-spacing: -.05em; line-height: 1.17; }
+  h2 { font-size: 66px; }
+  p { font-size: 34px; line-height: 1.55; font-weight: 500; color: var(--sub); letter-spacing: -.02em; }
+  .head { padding: 110px 30px 66px; text-align: center; }
+  .point { display: inline-block; font-size: 30px; font-weight: 800; color: #fff; background: var(--blue); padding: 8px 24px; border-radius: 40px; margin-bottom: 24px; }
+  .hl { background: linear-gradient(transparent 58%, var(--sky) 58%, var(--sky) 94%, transparent 94%); padding: 0 6px; }
+  em { font-style: normal; color: var(--blue); }
+  .full { width: 100%; height: auto; }
+  .body { padding: 56px 56px 96px; text-align: center; }
+  .big { font-weight: 900; line-height: .95; letter-spacing: -.07em; background: linear-gradient(180deg, #55B8F7 8%, var(--blue) 92%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .why { display: inline-block; margin-top: 26px; font-size: 38px; font-weight: 800; letter-spacing: -.03em; line-height: 1.34; }
+  .powder { position: absolute; inset: 0; pointer-events: none; }
+  .powder i { position: absolute; border-radius: 50%; background: #fff; }
+
+  /* 01 첫 화면 */
+  .s01 { height: 1800px; }
+  .s01 .bg { position: absolute; left: 0; bottom: 130px; width: 780px; height: 1170px; }
+  .s01 .veil { position: absolute; left: 0; right: 0; top: 496px; height: 300px; background: linear-gradient(180deg, #fff 8%, rgba(255,255,255,0)); }
+  .s01 .copy { position: absolute; top: 96px; left: 0; right: 0; text-align: center; }
+  .s01 h1 { font-size: 72px; }
+  .s01 h1 b { display: block; font-size: 158px; font-weight: 900; color: var(--blue); letter-spacing: -.06em; line-height: 1.08; margin-top: 8px; }
+  .s01 .sub { font-size: 36px; font-weight: 700; margin-top: 18px; color: var(--sub); }
+  .seal { position: absolute; width: 196px; height: 196px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 5px solid #fff; box-shadow: 0 12px 26px rgba(18,38,63,.22); background: var(--blue); color: #fff; }
+  .seal small { font-size: 30px; font-weight: 800; line-height: 1.1; }
+  .seal b { font-size: 68px; font-weight: 900; line-height: 1.04; letter-spacing: -.05em; }
+  .seal.a { left: 36px; top: 590px; }
+  .seal.b { right: 36px; top: 590px; background: #fff; color: var(--blue); border-color: var(--blue); }
+  .s01 .band { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 33px; font-weight: 800; gap: 18px; letter-spacing: -.02em; }
+
+  /* 02 공감 */
+  .grid4 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 8px; }
+  .grid4 figure { position: relative; }
+  .grid4 img { width: 100%; height: 400px; object-fit: cover; filter: brightness(1.06) saturate(.92); }
+  .grid4 figcaption { padding: 20px 14px 40px; font-size: 30px; font-weight: 700; line-height: 1.32; letter-spacing: -.03em; color: var(--sub); }
+  .grid4 figcaption b { display: block; font-size: 52px; font-weight: 900; color: var(--blue); letter-spacing: -.04em; }
+
+  /* 03 전환 */
+  .s03 { padding: 100px 50px 110px; text-align: center; }
+  .s03 p { margin: 30px auto 60px; max-width: 640px; }
+  .two { display: flex; align-items: center; justify-content: center; }
+  .two .disc { width: 280px; height: 280px; border-radius: 50%; overflow: hidden; }
+  .two .disc img { width: 100%; height: 100%; object-fit: cover; }
+  .two .disc.q { border: 7px dashed var(--blue); background: #fff; display: flex; align-items: center; justify-content: center; font-size: 150px; font-weight: 900; color: var(--blue); }
+  .two .arr { width: 110px; height: 8px; background: var(--ink); position: relative; margin: 0 6px; }
+  .two .arr::after { content: ''; position: absolute; right: -2px; top: -16px; border-left: 30px solid var(--ink); border-top: 20px solid transparent; border-bottom: 20px solid transparent; }
+  .labels { display: flex; justify-content: center; gap: 122px; margin-top: 22px; font-size: 36px; font-weight: 900; }
+  .labels span { width: 280px; }
+
+  /* 04 제품 소개 */
+  .s04 .photo { position: relative; height: 520px; overflow: hidden; }
+  .s04 .photo img { position: absolute; width: 780px; left: 0; top: 0; }
+  .step-row { display: flex; position: relative; }
+  .step-row .f { flex: 1; position: relative; }
+  .step-row .f img { width: 100%; height: 390px; object-fit: cover; }
+  .step-row .cap { padding: 26px 24px 70px; }
+  .step-row .cap b { display: block; font-size: 30px; font-weight: 900; color: var(--blue); }
+  .step-row .cap span { font-size: 36px; font-weight: 800; line-height: 1.3; letter-spacing: -.03em; }
+  .flip { position: absolute; left: 50%; top: 120px; transform: translateX(-50%); width: 150px; height: 150px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 34px; font-weight: 900; line-height: 1.12; border: 5px solid #fff; box-shadow: 0 10px 24px rgba(18,38,63,.3); }
+
+  /* 05 한눈에 */
+  .s05 { height: 1270px; }
+  .s05 .tt { position: absolute; left: 50px; top: 70px; font-size: 44px; font-weight: 900; letter-spacing: -.03em; }
+  .s05 .tt::after { content: ''; display: block; width: 76px; height: 8px; background: var(--blue); margin-top: 14px; }
+  .s05 .prod { position: absolute; left: 96px; top: 180px; height: 1020px; filter: drop-shadow(10px 14px 16px rgba(18,38,63,.32)); }
+  .callout { position: absolute; left: 372px; width: 380px; }
+  .callout b { display: block; font-size: 66px; font-weight: 900; letter-spacing: -.05em; color: var(--blue); line-height: 1.08; }
+  .callout span { font-size: 34px; font-weight: 700; color: var(--sub); letter-spacing: -.02em; }
+  .callout::before { content: ''; position: absolute; right: 100%; top: 36px; height: 3px; background: var(--blue); width: var(--w); }
+  .callout::after { content: ''; position: absolute; right: calc(100% + var(--w)); top: 29px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 2px solid #fff; }
+
+  /* 06 33 */
+  .s06 .top { padding: 96px 30px 54px; text-align: center; }
+  .s06 .big { font-size: 330px; }
+  .s06 h2 { margin-top: 18px; font-size: 62px; }
+  .s06 .surface { position: relative; height: 980px; overflow: hidden; }
+  .s06 .surface img { position: absolute; left: 0; top: -10px; width: 780px; }
+  .tag { position: absolute; background: #fff; color: var(--ink); font-size: 31px; font-weight: 800; padding: 12px 22px; border-radius: 40px; box-shadow: 0 8px 20px rgba(18,38,63,.22); letter-spacing: -.02em; }
+  .tag b { color: var(--blue); font-weight: 900; }
+  .s06 .back { display: flex; align-items: center; gap: 34px; padding: 50px 44px 90px; }
+  .s06 .back .d { flex: none; width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 6px solid var(--sky); }
+  .s06 .back .d img { width: 100%; height: 100%; object-fit: cover; }
+  .s06 .back b { display: block; font-size: 44px; font-weight: 900; color: var(--blue); letter-spacing: -.03em; }
+  .s06 .back span { font-size: 34px; font-weight: 600; line-height: 1.38; color: var(--sub); letter-spacing: -.02em; }
+
+  /* 07 힘 조절 */
+  .s07 .pair { display: flex; gap: 8px; padding: 0 8px; }
+  .s07 figure { position: relative; flex: 1; }
+  .s07 figure img { width: 100%; height: 640px; object-fit: cover; object-position: center top; }
+  .s07 figure .n { position: absolute; left: 0; top: 0; font-size: 34px; font-weight: 900; background: var(--blue); color: #fff; padding: 14px 24px; }
+  .s07 figcaption { padding-top: 18px; text-align: center; font-size: 38px; font-weight: 900; letter-spacing: -.03em; }
+
+  /* 08 0원 */
+  .s08 { height: 1620px; background: #fff; }
+  .s08 .bg { position: absolute; left: 0; bottom: 0; width: 780px; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 16%); }
+  .s08 .veil { position: absolute; left: 0; right: 0; top: 0; height: 780px; background: linear-gradient(180deg, #fff 44%, rgba(255,255,255,0)); }
+  .s08 .top { position: absolute; left: 0; right: 0; top: 76px; text-align: center; }
+  .s08 .big { font-size: 280px; }
+  .s08 .big small { font-size: 160px; font-weight: 900; }
+  .s08 .note { position: absolute; left: 30px; right: 30px; bottom: 44px; text-align: center; background: rgba(255,255,255,.9); padding: 26px 20px; }
+  .s08 .note p { color: var(--ink); font-weight: 600; font-size: 32px; }
+
+  /* 09 손잡이 */
+  .ruler { position: relative; height: 470px; background: var(--pale); }
+  .ruler .tt { position: absolute; left: 0; right: 0; top: 40px; text-align: center; font-size: 72px; font-weight: 900; letter-spacing: -.05em; }
+  .ruler .prod { position: absolute; left: 50%; top: 170px; width: 680px; transform: translateX(-50%) ; filter: drop-shadow(6px 12px 12px rgba(18,38,63,.3)); }
+  .ruler .dim { position: absolute; left: 50px; right: 50px; bottom: 50px; height: 4px; background: var(--blue); }
+  .ruler .dim::before, .ruler .dim::after { content: ''; position: absolute; top: -16px; width: 4px; height: 36px; background: var(--blue); }
+  .ruler .dim::before { left: 0; } .ruler .dim::after { right: 0; }
+  .ruler .dim b { position: absolute; left: 50%; top: -30px; transform: translateX(-50%); background: var(--pale); padding: 0 20px; font-size: 44px; font-weight: 900; letter-spacing: -.03em; color: var(--blue); }
+  .grip { position: relative; height: 1040px; overflow: hidden; background: #E9F2FB; }
+  .grip img { position: absolute; left: 0; top: -40px; width: 780px; }
+
+  /* 비교표 */
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 31px; letter-spacing: -.03em; }
+  th, td { padding: 26px 4px; text-align: center; border-bottom: 2px solid var(--line); font-weight: 600; line-height: 1.25; color: var(--sub); }
+  th { font-weight: 800; color: var(--ink); vertical-align: bottom; }
+  td:first-child { font-weight: 800; color: var(--ink); text-align: left; padding-left: 16px; }
+  col.lb { width: 168px; }
+  .us { background: var(--blue); color: #fff !important; font-weight: 900 !important; font-size: 34px; border-bottom-color: #3D8FE0; }
+  .tbn { padding: 22px 30px 96px; font-size: 30px; line-height: 1.4; color: var(--sub); text-align: center; letter-spacing: -.02em; }
+
+  /* 10 가루 */
+  .s10 .ph { position: relative; height: 720px; overflow: hidden; }
+  .s10 .ph img { position: absolute; left: 0; top: -20px; width: 880px; margin-left: -60px; }
+  .s10 .warn { display: inline-block; margin-top: 20px; font-size: 40px; font-weight: 900; color: #fff; background: var(--blue); padding: 8px 22px; letter-spacing: -.03em; }
+
+  /* 11 사용법 */
+  .step { display: flex; height: 420px; border-top: 2px solid var(--line); }
+  .step .ph { width: 400px; position: relative; overflow: hidden; }
+  .step .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .step .tx { flex: 1; padding: 0 22px 0 34px; display: flex; flex-direction: column; justify-content: center; }
+  .step .tx b { font-size: 34px; font-weight: 900; color: var(--blue); }
+  .step .tx span { font-size: 36px; font-weight: 800; letter-spacing: -.03em; line-height: 1.34; margin-top: 8px; }
+  .step .tx i { font-style: normal; font-size: 30px; color: var(--sub); font-weight: 600; line-height: 1.38; margin-top: 8px; }
+
+  /* 13 추천 */
+  .s13 { padding: 100px 50px 110px; }
+  .s13 h2 { font-size: 62px; margin-bottom: 50px; }
+  .s13 li { list-style: none; display: flex; gap: 20px; align-items: flex-start; font-size: 37px; font-weight: 800; line-height: 1.32; letter-spacing: -.03em; padding: 28px 0; border-top: 2px solid var(--line); }
+  .s13 li svg { flex: 0 0 50px; margin-top: 2px; }
+
+  /* 14 컬러 */
+  .s14 .split { display: flex; height: 860px; }
+  .s14 .col { position: relative; flex: 1; overflow: hidden; }
+  .s14 .wall { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .s14 .hang { position: absolute; height: 600px; }
+  .s14 .peg { position: absolute; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #8d9299 70%); box-shadow: 1px 2px 3px rgba(0,0,0,.5); }
+  .s14 .chip { position: absolute; left: 20px; bottom: 20px; font-size: 36px; font-weight: 900; padding: 8px 26px; background: #fff; color: var(--ink); border-radius: 40px; }
+
+  /* 쓰고 난 뒤 */
+  .after { position: relative; height: 1020px; overflow: hidden; }
+  .after img { position: absolute; left: -210px; top: 0; height: 1020px; }
+  .after .veil { position: absolute; inset: 0 0 auto 0; height: 470px; background: linear-gradient(180deg, rgba(255,255,255,.96) 40%, rgba(255,255,255,0)); }
+  .after h2 { position: absolute; left: 0; right: 0; top: 96px; text-align: center; font-size: 80px; }
+
+  /* 15 Q&A */
+  .s15 { padding: 100px 50px 100px; }
+  .s15 h2 { text-align: center; margin-bottom: 50px; }
+  .qa { border-top: 2px solid var(--line); padding: 32px 0 36px; }
+  .qa .q { font-size: 40px; font-weight: 900; letter-spacing: -.03em; }
+  .qa .q b { color: var(--blue); margin-right: 10px; }
+  .qa .a { font-size: 33px; line-height: 1.5; color: var(--sub); font-weight: 500; margin-top: 12px; letter-spacing: -.02em; }
+
+  /* 16 정보 */
+  .s16 { padding: 90px 50px; }
+  .s16 .tt { font-size: 52px; font-weight: 900; letter-spacing: -.04em; margin-bottom: 30px; }
+  .s16 .row { display: flex; font-size: 33px; padding: 24px 0; border-top: 2px solid var(--line); letter-spacing: -.02em; }
+  .s16 .row b { width: 170px; font-weight: 900; flex: none; }
+
+  /* 17 주의 */
+  .s17 { padding: 100px 44px; text-align: center; }
+  .ic6 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 46px 20px; margin-top: 60px; }
+  .ic6 div { font-size: 32px; font-weight: 700; line-height: 1.32; letter-spacing: -.03em; }
+  .ic6 svg { display: block; margin: 0 auto 14px; }
+
+  /* 18 마무리 */
+  .s18 { height: 1170px; }
+  .s18 .bg { position: absolute; inset: 0; width: 780px; }
+  .s18 .veil { position: absolute; inset: 0 0 auto 0; height: 560px; background: linear-gradient(180deg, rgba(255,255,255,.95) 46%, rgba(255,255,255,0)); }
+  .s18 .top { position: absolute; top: 90px; left: 0; right: 0; text-align: center; }
+  .s18 h2 { font-size: 70px; }
+  .s18 h2 big { display: block; font-size: 104px; margin-top: 10px; line-height: 1.14; letter-spacing: -.06em; }
+  .s18 h2 s { color: #8699AC; text-decoration-color: var(--blue); text-decoration-thickness: 8px; }
+
+  /* 수면안대_6 */
+  .spec { padding: 80px 30px 90px; }
+  .spec .tt { font-size: 44px; font-weight: 900; letter-spacing: -.03em; margin: 0 20px 26px; }
+  .spec .tt::after { content: ''; display: block; width: 76px; height: 8px; background: var(--blue); margin-top: 14px; }
+  .spec .pic { width: 720px; display: block; margin: 0 auto; filter: drop-shadow(0 16px 20px rgba(18,38,63,.16)); }
+  .spec .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 20px; margin: 40px 16px 44px; }
+  .spec .grid b { display: block; font-size: 56px; font-weight: 900; color: var(--blue); letter-spacing: -.05em; line-height: 1.1; }
+  .spec .grid span { font-size: 33px; font-weight: 700; color: var(--sub); letter-spacing: -.02em; }
+  .num .top { padding: 96px 24px 50px; text-align: center; }
+  .num .big { font-size: 300px; }
+  .num .big small { font-size: 170px; font-weight: 900; }
+  .num h2 { margin-top: 18px; font-size: 56px; }
+  .ph-full { position: relative; overflow: hidden; }
+  .ph-full img { width: 780px; display: block; }
+  .hdline { padding: 110px 24px 60px; text-align: center; }
+  .sum { padding: 50px 56px 100px; text-align: center; }
+  .scene2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 8px 70px; }
+  .scene2 img { width: 100%; height: 400px; object-fit: cover; }
+  .scene2 b { display: block; font-size: 38px; font-weight: 900; padding-top: 16px; text-align: center; letter-spacing: -.03em; }
+  .colors { display: flex; gap: 8px; padding: 0 8px 90px; }
+  .colors figure { flex: 1; text-align: center; }
+  .colors .box { background: var(--pale); height: 300px; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+  .colors img { width: 100%; }
+  .colors figcaption { font-size: 36px; font-weight: 900; padding-top: 16px; }
+  .grid4 img { height: 470px; }
+  .step { height: 480px; }
