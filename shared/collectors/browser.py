@@ -23,8 +23,16 @@ from urllib.parse import urlparse
 
 from playwright.sync_api import Page, sync_playwright
 
+try:
+    import fcntl
+except ImportError:  # 윈도우에는 없다. 잠금 없이 README의 순서 규칙만 따른다
+    fcntl = None
+
 DEFAULT_CDP = "http://127.0.0.1:9222"
 DEFAULT_PROFILE = Path.home() / ".coupang-collector-profile"
+# 수집 전용 프로필은 한 번에 한 세션만 쓴다. 프로세스가 죽으면 잠금은 저절로 풀린다
+LOCK_FILE = Path.home() / ".cache" / "coupang-collector" / "profile.lock"
+LOCK_WAIT_SECONDS = 1800
 
 # 사람 속도 대기 (초). 페이지 이동 > 다운로드 > 스크롤 순으로 길게.
 PACE = {
@@ -72,9 +80,43 @@ def base_args(desc: str) -> argparse.ArgumentParser:
 
 
 @contextmanager
+def profile_lock():
+    """다른 세션이 수집 전용 프로필을 쓰는 중이면 끝날 때까지 기다린다. 30분을 넘기면 멈춘다."""
+    if fcntl is None:
+        yield
+        return
+    LOCK_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with LOCK_FILE.open("a+") as f:
+        started = time.monotonic()
+        noticed = False
+        while True:
+            try:
+                fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                break
+            except BlockingIOError:
+                if time.monotonic() - started > LOCK_WAIT_SECONDS:
+                    sys.exit(f"[잠금 대기 초과] 수집 전용 프로필을 {LOCK_WAIT_SECONDS // 60}분 넘게 다른 세션이 쓰고 있습니다. 멈추고 PM에게 알리세요.")
+                if not noticed:
+                    f.seek(0)
+                    print(f"수집 전용 프로필 사용 중 ({f.read().strip() or '정보 없음'}). 끝나면 시작합니다", flush=True)
+                    noticed = True
+                time.sleep(5)
+        f.seek(0)
+        f.truncate()
+        f.write(f"{Path.cwd()} · pid {os.getpid()}")
+        f.flush()
+        try:
+            yield
+        finally:
+            f.seek(0)
+            f.truncate()
+            f.flush()
+
+
+@contextmanager
 def open_page(args):
     """새 탭 하나를 열어 넘겨주고, 끝나면 그 탭과 그 탭이 연 탭(링크의 target=_blank 등)만 닫는다."""
-    with sync_playwright() as pw:
+    with profile_lock(), sync_playwright() as pw:
         if args.mode == "cdp":
             try:
                 browser = pw.chromium.connect_over_cdp(args.cdp)
