@@ -1,13 +1,13 @@
 {
- "title": "수면안대-8 v2",
+ "title": "수면안대-8 v3",
  "sections": [
   {
    "type": "hero",
-   "img": "inputs/ai/v2/hero.png",
-   "h1": "주머니에 넣는",
+   "img": "inputs/ai/v3/hero.png",
+   "h1": "100원 동전 하나쯤,",
    "big": "약 5g 안대",
-   "bigsize": 120,
-   "sub": "두께 약 1mm, 귀에 바로 거는 일체형",
+   "bigsize": 118,
+   "sub": "두께 약 1mm, 귀에 거는 얇은 수면안대",
    "seals": [
     [
      "무게",
@@ -17,92 +17,61 @@
     [
      "두께",
      "약 1mm",
-     52
+     48
     ]
    ],
    "band": [
     "블랙 · 그레이",
-    "귀걸이 일체형",
-    "30 × 7cm"
+    "귀걸이 일체형"
    ]
   },
   {
    "type": "empathy",
    "stack": true,
-   "h": "켜 둔 건 남편인데,<br><span class=\"hl\">뒤척이는 건 나</span>",
+   "h": "사무실 낮잠,<br><span class=\"hl\">안대 꺼내기 민망해요</span>",
+   "size": 56,
    "cuts": [
     {
-     "img": "inputs/ai/shared/e_phone.png",
-     "t": "밤",
-     "c": "옆에서 켠 휴대폰 불빛"
+     "img": "inputs/ai/v3/e_desk.png",
+     "t": "점심시간",
+     "c": "환한 사무실 조명"
     },
     {
-     "img": "inputs/ai/shared/e_sun.png",
-     "t": "아침",
-     "c": "커튼 사이로 들어오는 햇빛"
+     "img": "inputs/ai/v3/e_train.png",
+     "t": "기차",
+     "c": "창가 자리 햇빛"
     },
     {
-     "img": "inputs/ai/shared/e_cabin.png",
-     "t": "기내",
-     "c": "내 맘대로 못 끄는 불빛"
+     "img": "inputs/ai/v3/e_hotel.png",
+     "t": "호텔",
+     "c": "문틈으로 드는 복도 불빛"
     },
     {
-     "img": "inputs/ai/shared/e_day.png",
-     "t": "낮",
-     "c": "낮잠 때 얼굴에 드는 빛"
+     "img": "inputs/ai/v3/e_bag.png",
+     "t": "짐",
+     "c": "안대 하나에 불룩한 파우치"
     }
    ]
   },
   {
-   "type": "turn",
-   "h": "빛 가리려고 쓴 안대,<br><span class=\"hl\">두께가 먼저 답답했죠</span>",
-   "p": "이 안대는 두께 약 1mm예요.",
-   "size": 60,
-   "discs": [
-    {
-     "img": "inputs/ai/v2/hand.png",
-     "t": "약 1mm",
-     "style": "object-fit:cover"
-    },
-    {
-     "img": "inputs/ai/v2/close.png",
-     "t": "귀에 걸어 쓰기",
-     "style": "object-fit:cover"
-    }
-   ]
-  },
-  {
-   "type": "intro",
-   "h": "끈 없이<br><span class=\"hl\">귀에 바로</span>",
-   "size": 66,
-   "h2": 700,
-   "steps": [
-    {
-     "img": "inputs/ai/v2/hand.png",
-     "t": "제품",
-     "c": "띠와 귀걸이가 한 몸",
-     "style": "object-fit:contain;background:var(--pale)"
-    },
-    {
-     "img": "inputs/ai/v2/close.png",
-     "t": "착용",
-     "c": "양쪽 귀에 걸면 끝",
-     "style": "object-fit:cover"
-    }
-   ]
+   "type": "feature",
+   "h": "빛 가리는 데<br><span class=\"hl\">두께가 다 필요할까요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/thin.png",
+   "style": "height:auto",
+   "pale": true,
+   "p": "끈까지 이어진 얇은 한 장이에요."
   },
   {
    "type": "overview",
-   "img": "inputs/nukki/fabric.png",
-   "style": "width:640px",
    "items": [
     [
      "약 5g",
-     "무게 표기"
+     "무게"
     ],
     [
      "약 1mm",
-     "두께 표기"
+     "두께"
     ],
     [
      "30 × 7cm",
@@ -112,41 +81,60 @@
      "귀걸이",
      "일체형"
     ]
-   ]
+   ],
+   "img": "inputs/nukki/dark.png",
+   "style": "width:680px"
   },
   {
-   "type": "number",
-   "point": "POINT 1 · 얇음",
-   "big": "1",
-   "unit": "mm",
-   "bigsize": 280,
-   "h": "약 1mm, 접으면 손바닥 안",
-   "why": "<span class=\"hl\">두툼한 안대가 답답했다면</span> 얇은 쪽을 보세요",
-   "img": "inputs/ai/v2/hand.png",
-   "style": "height:auto",
-   "pale": false
-  },
-  {
-   "point": "POINT 2 · 탄성",
-   "h": "당겨 봐요,<br><span class=\"hl\">이만큼 늘어나요</span>",
-   "img": "inputs/photos/stretch.jpg",
-   "p": "잘 늘어나는 소재로 얼굴에 맞춰 걸어요. 공급처 실제 사진이에요.",
-   "style": "height:auto",
    "type": "feature",
+   "h": "셔츠 주머니에도<br><span class=\"hl\">들어가요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/pocket.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false,
+   "p": "접어서 주머니에 넣어요.",
+   "point": "POINT 1"
+  },
+  {
+   "type": "feature",
+   "h": "고데기한 머리,<br><span class=\"hl\">그대로 두세요</span>",
+   "size": 64,
+   "img": "inputs/nukki/fabric.png",
+   "style": "width:680px;display:block;margin:0 auto;background:#fff",
+   "pale": true,
+   "p": "귀에 거는 일체형이라 머리 뒤로 넘기지 않아요.",
+   "point": "POINT 2"
+  },
+  {
+   "type": "feature",
+   "h": "블랙은 차분하게,<br><span class=\"hl\">그레이는 부드럽게</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/gray.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false,
+   "p": "두 가지 색 중에 골라요.",
+   "point": "POINT 3"
+  },
+  {
+   "type": "feature",
+   "h": "손으로 늘려<br><span class=\"hl\">귀에 걸어요</span>",
+   "size": 64,
+   "img": "inputs/photos/stretch.jpg",
+   "style": "height:auto",
+   "pale": true,
+   "p": "손으로 늘려 보면 이만큼 늘어나요."
+  },
+  {
+   "type": "feature",
+   "h": "두께 1mm,<br><span class=\"hl\">옆으로 누워도 그대로</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/side.png",
+   "style": "height:1170px;object-fit:cover",
    "pale": true
   },
   {
-   "point": "POINT 3 · 귀",
-   "h": "끈 없이<br><span class=\"hl\">귀에 바로</span>",
-   "img": "inputs/ai/v2/close.png",
-   "p": "귀에 거는 부분이 띠와 한 몸이에요.",
-   "type": "feature",
-   "pale": false,
-   "style": "height:820px;object-fit:cover;"
-  },
-  {
    "type": "compare",
-   "h": "얇은 쪽을 찾으면,<br><span class=\"hl\">약 1mm</span>",
+   "h": "옆으로 누워도 부담 없는<br><span class=\"hl\">안대 두께</span>",
    "cols": [
     "두툼 통짜형",
     "입체형",
@@ -177,76 +165,67 @@
      "오목",
      "얇은 평면"
     ]
-   ]
-  },
-  {
-   "type": "notice",
-   "h": "두꺼운 안대가 <em>아니에요</em>",
-   "p": "아주 얇은 천이에요. 빛을 얼마나 가리는지는 시험한 적이 없고, 귀에 거는 방식이라 귀가 예민하면 불편할 수 있어요. 눈 자리는 오목하지 않아요."
+   ],
+   "size": 58
   },
   {
    "type": "howto",
-   "h": "펴고, 눈에 대고,<br><span class=\"hl\">귀에 걸면 끝</span>",
+   "h": "펴고, 늘리고,<br><span class=\"hl\">귀에</span>",
+   "size": 62,
    "steps": [
     {
-     "img": "inputs/ai/v2/hand.png",
-     "c": "접힌 안대를 펴요",
-     "style": "object-fit:contain"
+     "n": 1,
+     "c": "접힌 안대를 펴요"
     },
     {
-     "img": "inputs/ai/v2/close.png",
-     "c": "눈 앞에 대요"
+     "n": 2,
+     "c": "손으로 늘려요"
     },
     {
-     "img": "inputs/ai/v2/hero.png",
-     "c": "양쪽 귀에 걸어요",
-     "style": "object-position:center 62%"
+     "n": 3,
+     "c": "귀 구멍을 귀에 걸어요"
     }
    ]
   },
   {
    "type": "feature",
-   "h": "\"그만 자\" 대신<br><em>안대 하나</em>",
-   "size": 76,
-   "img": "inputs/ai/v2/partner.png",
+   "h": "점심시간 15분,<br><span class=\"hl\">책상 위에서</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/desk.png",
    "style": "height:auto",
-   "pale": true
+   "pale": false,
+   "p": "서랍이나 가방에 넣어 두고 꺼내 써요."
+  },
+  {
+   "type": "feature",
+   "h": "내일 출장 가방에,<br><span class=\"hl\">약 5g</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/case.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false
   },
   {
    "type": "checklist",
-   "h": "끈 때문에, 눌려서, 답답해서.<br>서랍에 쌓인 안대",
+   "h": "점심시간에<br>눈 감는 분께",
    "items": [
-    "두툼한 안대가 답답했던 분",
-    "가방에 늘 넣어 두고 싶은 분",
-    "옆 사람 불빛이 신경 쓰이는 분",
-    "비행기, 기차에서 눈을 붙이는 분",
-    "귀에 거는 방식이 편한 분"
+    "옆으로 자는 분",
+    "여행 가방을 줄이는 분",
+    "찍찍이에 머리카락이 엉켜 본 분",
+    "두꺼운 안대가 부담스러운 분",
+    "출장이 잦은 분"
    ]
   },
   {
-   "type": "colors",
-   "h": "블랙 또는<br><em>그레이</em>",
-   "items": [
-    {
-     "img": "inputs/nukki/black_flat.png",
-     "t": "블랙"
-    },
-    {
-     "img": "inputs/nukki/gray_flat.png",
-     "t": "그레이"
-    }
-   ]
-  },
-  {
-   "type": "after",
-   "h": "교대 근무 낮잠에도,<br><em>새벽 비행기에도</em>",
-   "size": 70,
-   "img": "inputs/ai/v2/after.png",
-   "img2": "inputs/ai/v2/day.png"
+   "type": "feature",
+   "h": "옆으로 자는 분을 위한<br><span class=\"hl\">약 1mm 안대</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/stack.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": true
   },
   {
    "type": "qa",
-   "h": "빛이 완전히<br>막히냐고요?",
+   "h": "자주 묻는 질문",
    "items": [
     [
      "빛이 완전히 막히나요?",
@@ -291,13 +270,13 @@
     ],
     [
      "사진 안내",
-     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+     "사용 장면은 연출 이미지로, 모양과 색 등이 실제 제품과 다를 수 있어요."
     ]
    ]
   },
   {
    "type": "warn",
-   "h": "불편하면,<br><em>바로 벗으세요</em>",
+   "h": "주의사항",
    "items": [
     [
      "wide",
@@ -327,10 +306,10 @@
   },
   {
    "type": "finale",
-   "img": "inputs/ai/v2/finale.png",
-   "h": "오늘 밤은,",
-   "big": "약 5g만",
-   "bigsize": 110
+   "img": "inputs/ai/v3/finale.png",
+   "h": "옆잠 자는 분,",
+   "big": "오늘은 그대로 주무세요",
+   "bigsize": 60
   }
  ]
 }

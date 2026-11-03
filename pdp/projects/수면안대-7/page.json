@@ -1,152 +1,140 @@
 {
- "title": "수면안대-7 v2",
+ "title": "수면안대-7 v3",
  "sections": [
   {
    "type": "hero",
-   "img": "inputs/ai/v2/hero.png",
-   "h1": "머리카락 붙던 찍찍이,",
-   "big": "이건 버클",
-   "bigsize": 120,
-   "sub": "슬라이드 버클과 고무 밴드, 돔 모양 3D 안대",
+   "img": "inputs/ai/v3/hero.png",
+   "h1": "긴 머리는",
+   "big": "찍찍이가<br>제일 싫잖아요",
+   "bigsize": 100,
+   "sub": "벨크로 대신 슬라이드 버클로 맞추는 3D 돔 안대",
    "seals": [
     [
-     "고정",
+     "조절",
      "버클",
-     68
+     66
     ],
     [
-     "찍찍이",
-     "0개",
-     68
+     "벨크로",
+     "없음",
+     60
     ]
    ],
    "band": [
     "블랙",
-    "슬라이드 버클",
-    "24 × 10cm"
+    "가로 24 × 세로 10cm"
    ]
   },
   {
    "type": "empathy",
    "stack": true,
-   "h": "켜 둔 건 남편인데,<br><span class=\"hl\">뒤척이는 건 나</span>",
+   "h": "찍찍이에 붙은<br><span class=\"hl\">머리카락 떼는 아침</span>",
+   "size": 56,
    "cuts": [
     {
-     "img": "inputs/ai/shared/e_phone.png",
-     "t": "밤",
-     "c": "옆에서 켠 휴대폰 불빛"
+     "img": "inputs/ai/v3/e_velcro.png",
+     "t": "찍찍이",
+     "c": "머리카락이 엉켜요"
     },
     {
-     "img": "inputs/ai/shared/e_sun.png",
+     "img": "inputs/ai/v3/e_brush.png",
      "t": "아침",
-     "c": "커튼 사이로 들어오는 햇빛"
+     "c": "머리부터 다시 빗어요"
     },
     {
-     "img": "inputs/ai/shared/e_cabin.png",
-     "t": "기내",
-     "c": "내 맘대로 못 끄는 불빛"
+     "img": "inputs/ai/v3/e_knit.png",
+     "t": "니트",
+     "c": "잠옷에도 달라붙어요"
     },
     {
-     "img": "inputs/ai/shared/e_ear.png",
-     "t": "머리 뒤",
-     "c": "찍찍이에 걸리던 머리카락"
+     "img": "inputs/ai/v3/e_pillow.png",
+     "t": "새벽",
+     "c": "찍 소리에 깨는 옆 사람"
     }
    ]
   },
   {
-   "type": "turn",
-   "h": "눈은 가렸는데,<br><span class=\"hl\">머리 뒤가 먼저 걸렸죠</span>",
-   "p": "찍찍이에 머리카락이 걸리면 신경 쓰여요. 이 안대는 버클이에요.",
-   "size": 60,
-   "discs": [
-    {
-     "img": "inputs/ai/v2/hand.png",
-     "t": "돔 모양",
-     "style": "object-fit:cover"
-    },
-    {
-     "img": "inputs/ai/v2/close.png",
-     "t": "슬라이드 버클",
-     "style": "object-fit:cover"
-    }
-   ]
-  },
-  {
-   "type": "intro",
-   "h": "찍찍이 대신<br><span class=\"hl\">슬라이드 버클</span>",
-   "size": 66,
-   "h2": 700,
-   "steps": [
-    {
-     "img": "inputs/ai/v2/hand.png",
-     "t": "제품",
-     "c": "안쪽이 오목한 돔 모양",
-     "style": "object-fit:contain;background:var(--pale)"
-    },
-    {
-     "img": "inputs/photos/buckle.jpg",
-     "t": "실제 버클",
-     "c": "슬라이드 버클로 길이 맞춤",
-     "style": "object-fit:scale-down;background:var(--pale)"
-    }
-   ]
+   "type": "feature",
+   "h": "문제는 안대가 아니라<br><span class=\"hl\">찍찍이였어요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/band.png",
+   "style": "height:auto",
+   "pale": true,
+   "p": "밴드를 버클로 밀어 길이를 맞춰요."
   },
   {
    "type": "overview",
-   "img": "inputs/nukki/front.png",
-   "style": "width:640px",
    "items": [
     [
-     "찍찍이 0개",
-     "슬라이드 버클"
+     "24cm",
+     "가로"
     ],
     [
-     "24 × 10cm",
-     "가로 × 세로"
+     "10cm",
+     "세로"
     ],
     [
-     "돔 모양",
-     "안쪽 오목"
-    ],
-    [
-     "고무 밴드",
+     "버클",
      "길이 조절"
+    ],
+    [
+     "돔",
+     "눈 자리 오목"
     ]
-   ]
+   ],
+   "img": "inputs/nukki/front.png",
+   "style": "width:680px"
   },
   {
-   "type": "number",
-   "point": "POINT 1 · 버클",
-   "big": "0",
-   "unit": "개",
-   "bigsize": 280,
-   "h": "머리 뒤 찍찍이 0개",
-   "why": "<span class=\"hl\">버클만 밀면</span> 길이가 맞아요",
-   "img": "inputs/ai/v2/buckle.png",
-   "style": "height:820px;object-fit:cover;",
+   "type": "feature",
+   "h": "머리카락이 안 물리는<br><span class=\"hl\">버클</span>",
+   "size": 64,
+   "img": "inputs/nukki/woman_lie.png",
+   "style": "height:auto",
+   "pale": false,
+   "p": "벨크로가 없는 밴드예요.",
+   "point": "POINT 1"
+  },
+  {
+   "type": "feature",
+   "h": "눈이 닿지 않게<br><span class=\"hl\">안쪽을 파 뒀어요</span>",
+   "size": 64,
+   "img": "inputs/nukki/inner.png",
+   "style": "width:680px;display:block;margin:0 auto;background:#fff",
+   "pale": true,
+   "p": "안쪽이 오목한 입체 모양이에요.",
+   "point": "POINT 2"
+  },
+  {
+   "type": "feature",
+   "h": "귀걸이형이 아파서<br><span class=\"hl\">찾았다면</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/wide.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false,
+   "p": "귀에 걸지 않고 머리 뒤로 둘러요.",
+   "point": "POINT 3"
+  },
+  {
+   "type": "feature",
+   "h": "아침 알람 전<br><span class=\"hl\">조용히 벗어요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/inner.png",
+   "style": "height:auto",
+   "pale": true,
+   "p": "찍 소리 없이 버클로 조절해요."
+  },
+  {
+   "type": "feature",
+   "h": "찍찍이만 없으면<br><span class=\"hl\">되잖아요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/hook.png",
+   "style": "height:1170px;object-fit:cover",
    "pale": false
   },
   {
-   "point": "POINT 2 · 돔",
-   "h": "납작한 안대 말고,<br><span class=\"hl\">돔처럼 둥근 안대</span>",
-   "img": "inputs/ai/v2/hand.png",
-   "p": "겉은 둥글고 안쪽은 오목해요.",
-   "type": "feature",
-   "pale": true,
-   "style": "height:auto"
-  },
-  {
-   "point": "어디서나",
-   "h": "비행기에서도,<br><span class=\"hl\">낮잠에도 같은 안대</span>",
-   "img": "inputs/ai/v2/nap.png",
-   "p": "가방에 넣어 두었다가 꺼내 써요.",
-   "type": "feature",
-   "pale": false,
-   "style": "height:820px;object-fit:cover;"
-  },
-  {
    "type": "compare",
-   "h": "찍찍이 없이,<br><span class=\"hl\">버클로 맞추는 안대</span>",
+   "h": "찍찍이 뜯는 소리가<br><span class=\"hl\">없는 안대</span>",
    "cols": [
     "벨크로형",
     "귀걸이형",
@@ -177,62 +165,67 @@
      "제품별",
      "24 × 10cm"
     ]
-   ]
-  },
-  {
-   "type": "notice",
-   "h": "버클이 머리 뒤에 <em>닿아요</em>",
-   "p": "찍찍이 대신 작은 버클이 있어요. 누운 자세와 머리 모양에 따라 버클이 느껴질 수 있으니, 자리를 옮겨 맞춰 보세요."
+   ],
+   "size": 58
   },
   {
    "type": "howto",
-   "h": "머리에 두르고, 버클 밀고,<br><span class=\"hl\">눈 자리에 맞추면 끝</span>",
+   "h": "머리에 쓰고,<br><span class=\"hl\">버클만 밀면 끝</span>",
+   "size": 62,
    "steps": [
     {
-     "img": "inputs/ai/v2/hand.png",
-     "c": "돔 모양을 눈 앞에 대요",
-     "style": "object-fit:contain"
+     "n": 1,
+     "c": "눈 자리를 눈에 맞춰요"
     },
     {
-     "img": "inputs/ai/v2/close.png",
-     "c": "밴드를 머리 뒤로 넘겨요"
+     "n": 2,
+     "c": "밴드를 머리 뒤로 둘러요"
     },
     {
-     "img": "inputs/ai/v2/hero.png",
-     "c": "버클을 밀어 길이를 맞춰요",
-     "style": "object-position:center 62%"
+     "n": 3,
+     "c": "버클을 밀어 길이를 맞춰요"
     }
    ]
   },
   {
    "type": "feature",
-   "h": "\"그만 자\" 대신<br><em>안대 하나</em>",
-   "size": 76,
-   "img": "inputs/ai/v2/partner.png",
+   "h": "머리 묶은 날에도<br><span class=\"hl\">그대로 써요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/travel.png",
    "style": "height:auto",
+   "pale": false,
+   "p": "여행 가방에도 넣어 다녀요."
+  },
+  {
+   "type": "feature",
+   "h": "옆 사람 안 깨우고<br><span class=\"hl\">벗어요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/quiet.png",
+   "style": "height:1170px;object-fit:cover",
    "pale": true
   },
   {
    "type": "checklist",
-   "h": "끈 때문에, 눌려서, 답답해서.<br>서랍에 쌓인 안대",
+   "h": "찍찍이에 머리카락<br>뜯겨 본 분께",
    "items": [
-    "찍찍이에 머리카락이 걸렸던 분",
-    "찍찍 소리가 거슬렸던 분",
-    "옆 사람 불빛이 신경 쓰이는 분",
-    "낮잠, 교대 근무로 낮에 자는 분",
-    "비행기, 기차에서 눈을 붙이는 분"
+    "찍 소리로 옆 사람을 깨운 적 있는 분",
+    "머리가 긴 분",
+    "니트 잠옷을 즐겨 입는 분",
+    "귀걸이형이 아팠던 분",
+    "낮에 자는 교대 근무자"
    ]
   },
   {
-   "type": "after",
-   "h": "교대 근무 낮잠에도,<br><em>새벽 비행기에도</em>",
-   "size": 70,
-   "img": "inputs/ai/v2/after.png",
-   "img2": "inputs/ai/v2/day.png"
+   "type": "feature",
+   "h": "긴 머리도<br><span class=\"hl\">그대로 두고 쓰세요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/long.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false
   },
   {
    "type": "qa",
-   "h": "빛이 완전히<br>막히냐고요?",
+   "h": "자주 묻는 질문",
    "items": [
     [
      "빛이 완전히 막히나요?",
@@ -277,13 +270,13 @@
     ],
     [
      "사진 안내",
-     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+     "사용 장면은 연출 이미지로, 모양과 색 등이 실제 제품과 다를 수 있어요."
     ]
    ]
   },
   {
    "type": "warn",
-   "h": "불편하면,<br><em>바로 벗으세요</em>",
+   "h": "주의사항",
    "items": [
     [
      "wide",
@@ -313,10 +306,10 @@
   },
   {
    "type": "finale",
-   "img": "inputs/ai/v2/finale.png",
-   "h": "오늘 밤은,",
-   "big": "찍찍 소리 없이",
-   "bigsize": 92
+   "img": "inputs/ai/v3/finale.png",
+   "h": "찍찍이 안대는",
+   "big": "서랍으로",
+   "bigsize": 110
   }
  ]
 }

@@ -50,6 +50,9 @@ def main() -> None:
                 print(f"{slug}: 제목 반복 {n}번: {t}")
                 problems += 1
         for f, n in Counter(images(secs)).items():
+            if not (ROOT / slug / f).exists():
+                print(f"{slug}: 사진 없음: {f}")
+                problems += 1
             if n > 1:
                 print(f"{slug}: 사진 반복 {n}번: {f}")
                 problems += 1

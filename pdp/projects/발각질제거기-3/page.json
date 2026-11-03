@@ -1,153 +1,138 @@
 {
- "title": "발각질제거기-3 v2",
+ "title": "발각질제거기-3 v3",
  "sections": [
   {
    "type": "hero",
-   "img": "inputs/ai/v2/hero.png",
-   "h1": "내 손에 맞는 모양,",
-   "big": "셋 중에 고르세요",
-   "bigsize": 84,
-   "sub": "타원, 망고, 8자. 투명 케이스 포함 유리 풋파일",
+   "img": "inputs/ai/v3/hero.png",
+   "h1": "타원, 망고, 8자.",
+   "big": "내 손은<br>어느 쪽일까요",
+   "bigsize": 98,
+   "sub": "모양을 고르는 유리 각질 제거기, 투명 케이스 포함",
    "seals": [
     [
      "모양",
      "3가지",
-     60
+     54
     ],
     [
-     "구성",
      "케이스",
-     52
+     "포함",
+     60
     ]
    ],
    "band": [
-    "타원형 · 망고형 · 8자형",
-    "미세 돌기",
-    "투명 케이스"
+    "타원 · 망고 · 8자",
+    "1개 + 투명 케이스"
    ]
   },
   {
    "type": "empathy",
    "stack": true,
-   "size": 58,
-   "h": "양말에 턱, 스타킹은 올이 쭉.<br><span class=\"hl\">아침부터 밤까지</span> 걸리는 뒤꿈치",
+   "h": "찜질방 가방에<br><span class=\"hl\">그냥 넣기 찝찝해요</span>",
+   "size": 56,
    "cuts": [
     {
-     "img": "inputs/ai/shared/e1.png",
-     "t": "아침",
-     "c": "신발 신다 손에 닿는 까끌함"
+     "img": "inputs/ai/v3/e_bag.png",
+     "t": "찜질방",
+     "c": "가방에 그냥 넣기엔"
     },
     {
-     "img": "inputs/ai/shared/e2.png",
-     "t": "낮",
-     "c": "실내화 벗기 망설여질 때"
+     "img": "inputs/ai/v3/e_towel.png",
+     "t": "욕실",
+     "c": "쓰고 나서 둘 곳이 없어요"
     },
     {
-     "img": "inputs/ai/shared/e3.png",
-     "t": "저녁",
-     "c": "맨발로 앉으면 손이 먼저 가요"
+     "img": "inputs/ai/v3/e_sock.png",
+     "t": "스타킹",
+     "c": "뒤꿈치가 먼저 걸려요"
     },
     {
-     "img": "inputs/ai/shared/e4.png",
-     "t": "밤",
-     "c": "잠들기 전 발끝이 거칠거칠"
+     "img": "inputs/ai/v3/e_gift.png",
+     "t": "선물",
+     "c": "엄마 욕실에 하나 놓고 싶을 때"
     }
    ]
   },
   {
-   "type": "turn",
-   "h": "금속 풋파일 쓰다가,<br><span class=\"hl\">유리를 찾으셨다면</span>",
-   "p": "이 제품은 다듬는 면이 유리이고, 모양을 고를 수 있어요.",
-   "size": 58,
-   "discs": [
-    {
-     "img": "inputs/ai/v2/macro.png",
-     "t": "돌기 유리 면",
-     "style": "object-fit:cover"
-    },
-    {
-     "img": "inputs/ai/v2/palm.png",
-     "t": "손에 쥐기",
-     "style": "object-fit:cover"
-    }
-   ]
-  },
-  {
-   "type": "intro",
-   "h": "손이 작으면 망고,<br><span class=\"hl\">길게 쥐면 8자</span>",
-   "size": 62,
-   "h2": 700,
-   "steps": [
-    {
-     "img": "inputs/ai/v2/palm.png",
-     "t": "제품",
-     "c": "모양 3가지 중 선택",
-     "style": "object-fit:cover"
-    },
-    {
-     "img": "inputs/ai/v2/use.png",
-     "t": "사용",
-     "c": "손에 쥐고 한 방향으로",
-     "style": "object-fit:cover"
-    }
-   ]
+   "type": "feature",
+   "h": "유리 면은 같고,<br><span class=\"hl\">쥐는 모양만 달라요</span>",
+   "size": 64,
+   "img": "inputs/nukki/trio.png",
+   "style": "width:780px;display:block;background:#fff",
+   "pale": true,
+   "p": "타원, 망고, 8자 중에서 하나를 골라요."
   },
   {
    "type": "overview",
-   "img": "inputs/nukki/trio.png",
-   "style": "width:680px",
    "items": [
     [
-     "타원형",
-     "약 5 × 10cm"
+     "5 × 10cm",
+     "타원"
     ],
     [
-     "망고형",
-     "약 5.5 × 9.5cm"
+     "5.5 × 9.5cm",
+     "망고"
     ],
     [
-     "8자형",
-     "약 5 × 12.5cm"
+     "5 × 12.5cm",
+     "8자"
     ],
     [
-     "투명 케이스",
-     "포함"
+     "케이스",
+     "모양별 포함"
     ]
    ]
   },
   {
-   "type": "number",
-   "point": "POINT 1 · 모양",
-   "big": "3",
-   "unit": "가지",
-   "bigsize": 280,
-   "h": "손이 작으면 망고, 길게 쥐면 8자",
-   "why": "<span class=\"hl\">쥐는 습관에 맞춰</span> 고르세요",
-   "img": "inputs/ai/v2/palm.png",
-   "style": "height:900px;object-fit:cover",
-   "pale": false
+   "type": "feature",
+   "h": "망고는<br><span class=\"hl\">손바닥에 감겨요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/mango.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false,
+   "p": "옵션에서 타원, 망고, 8자 중에 골라요.",
+   "point": "POINT 1"
   },
   {
-   "point": "POINT 2 · 돌기",
-   "h": "확대해 보면<br><span class=\"hl\">돌기가 촘촘</span>",
-   "img": "inputs/nukki/b.png",
-   "style": "width:600px;margin:0 auto",
-   "p": "유리 면에 작은 돌기 패턴이 있어요.",
    "type": "feature",
+   "h": "찜질방 가방에<br><span class=\"hl\">그대로 넣어요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/case.png",
+   "style": "height:auto",
+   "pale": true,
+   "p": "물기를 말린 뒤 투명 케이스에 넣어요.",
+   "point": "POINT 2"
+  },
+  {
+   "type": "feature",
+   "h": "확대해 보면<br><span class=\"hl\">돌기가 촘촘해요</span>",
+   "size": 64,
+   "img": "inputs/nukki/b.png",
+   "style": "width:286px;display:block;margin:0 auto;background:#fff",
+   "pale": false,
+   "p": "유리 면의 돌기 모양을 공급처 사진으로 보여 드려요.",
+   "point": "POINT 3"
+  },
+  {
+   "type": "feature",
+   "h": "8자는<br><span class=\"hl\">가운데를 잡아요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/eight.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": true,
+   "p": "8자형 연결부 재질은 공급처 표기가 없어요."
+  },
+  {
+   "type": "feature",
+   "h": "단순한 걸 좋아하면<br><span class=\"hl\">타원을 보세요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/oval.png",
+   "style": "height:1170px;object-fit:cover",
    "pale": true
   },
   {
-   "point": "POINT 3 · 케이스",
-   "h": "쓰고 말려서<br><span class=\"hl\">케이스에</span>",
-   "img": "inputs/photos/case.jpg",
-   "style": "width:529px;margin:0 auto",
-   "p": "투명 케이스가 함께 와요. 물기를 말린 뒤 넣어 주세요.",
-   "type": "feature",
-   "pale": false
-  },
-  {
    "type": "compare",
-   "h": "다시 살 패드도,<br><span class=\"hl\">꽂을 충전기도 없는 유리</span>",
+   "h": "충전형, 패드형,<br><span class=\"hl\">그리고 모양 고르는 유리</span>",
    "size": 58,
    "cols": [
     "패드 교체형",
@@ -187,82 +172,63 @@
    ]
   },
   {
-   "type": "notice",
-   "h": "유리예요.<br><em>떨어뜨리면 깨질 수 있어요</em>",
-   "size": 60,
-   "p": "금이 간 제품은 쓰지 마세요. 욕실 바닥에 떨어지지 않게 조심하고, 쓰고 나면 물기를 닦아 안전한 곳에 두세요."
-  },
-  {
    "type": "howto",
-   "h": "물기 닦고, 한 방향으로만.<br><span class=\"hl\">왕복으로 문지르지 마세요</span>",
+   "h": "마른 발에, 한 방향,<br><span class=\"hl\">그리고 물</span>",
+   "size": 58,
    "steps": [
     {
-     "img": "inputs/ai/shared/e3.png",
-     "c": "물기를 닦은 발에",
-     "i": "(또는 마른 발에)"
+     "n": 1,
+     "c": "마른 발에 써요"
     },
     {
-     "img": "inputs/ai/v2/use.png",
-     "c": "한 방향으로 가볍게",
-     "i": "(왕복으로 문지르지 않기)",
-     "style": "object-position:center 40%"
+     "n": 2,
+     "c": "한 방향으로 살살 밀어요"
     },
     {
-     "img": "inputs/ai/v2/rinse.png",
-     "c": "샤워기 물로 헹궈 말리기",
-     "style": "object-position:center 40%"
+     "n": 3,
+     "c": "물로 헹궈 말린 뒤 케이스에 넣어요"
     }
    ]
   },
   {
    "type": "feature",
-   "point": "POINT · 관리",
-   "h": "유리 면은<br><em>샤워기로 슥</em>",
-   "size": 70,
-   "img": "inputs/ai/v2/rinse.png",
+   "h": "찜질방 가방에도<br><span class=\"hl\">케이스째 넣어요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/pouch.png",
    "style": "height:auto",
-   "p": "쓰고 나면 샤워기 물로 헹궈요. 충전도, 배터리도 없어요.",
-   "pale": true
+   "pale": false,
+   "p": "케이스째 가방에 넣어요."
+  },
+  {
+   "type": "feature",
+   "h": "풋파일에<br><span class=\"hl\">케이스가 왜 없었을까요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/casef.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false
   },
   {
    "type": "checklist",
-   "h": "패드 갈고 버리다<br>지쳤다면",
+   "h": "손에 안 맞는 풋파일을<br>써 본 분께",
    "items": [
-    "패드 갈고 버리는 풋파일에 지친 분",
-    "손에 맞는 모양을 고르고 싶은 분",
-    "케이스에 보관하고 싶은 분",
-    "긴 손잡이가 불편했던 분",
-    "여행 가방에 넣어 가고 싶은 분"
+    "둘 곳이 없어 안 쓰던 분",
+    "찜질방, 여행이 잦은 분",
+    "엄마 선물을 고민하는 분",
+    "리필 패드가 귀찮은 분",
+    "손이 작거나 긴 분"
    ]
   },
   {
-   "type": "colors",
-   "h": "망고? 타원? 8자?<br><em>오늘 고르세요</em>",
-   "items": [
-    {
-     "img": "inputs/nukki/a.png",
-     "t": "타원형"
-    },
-    {
-     "img": "inputs/nukki/b.png",
-     "t": "망고형"
-    },
-    {
-     "img": "inputs/nukki/c.png",
-     "t": "8자형"
-    }
-   ]
-  },
-  {
-   "type": "after",
-   "h": "양말을 벗어도<br><em>괜찮은 날</em>",
-   "size": 74,
-   "img": "inputs/ai/v2/after.png",
-   "img2": "inputs/ai/v2/shelf.png"
+   "type": "feature",
+   "h": "셋 중 하나는<br><span class=\"hl\">내 손에 맞아요</span>",
+   "size": 64,
+   "img": "inputs/ai/v3/trio2.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": true
   },
   {
    "type": "qa",
-   "h": "사기 전에<br>묻는 것들",
+   "h": "자주 묻는 질문",
    "items": [
     [
      "아프진 않나요?",
@@ -307,13 +273,13 @@
     ],
     [
      "사진 안내",
-     "사용 장면은 연출 이미지로, 표면 무늬와 모양 등이 실제 제품과 다를 수 있어요."
+     "사용 장면은 연출 이미지로, 모양과 색 등이 실제 제품과 다를 수 있어요."
     ]
    ]
   },
   {
    "type": "warn",
-   "h": "따끔하면,<br><em>바로 멈추세요</em>",
+   "h": "주의사항",
    "items": [
     [
      "soft",
@@ -343,10 +309,10 @@
   },
   {
    "type": "finale",
-   "img": "inputs/ai/v2/hero.png",
-   "h": "오늘 밤은,",
-   "big": "내 손에 맞는 모양으로",
-   "bigsize": 68
+   "img": "inputs/ai/v3/finale.png",
+   "h": "엄마 건 망고로,",
+   "big": "내 건 8자로",
+   "bigsize": 112
   }
  ]
 }
