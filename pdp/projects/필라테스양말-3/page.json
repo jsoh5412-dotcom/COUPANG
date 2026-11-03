@@ -1,0 +1,340 @@
+{
+ "title": "필라테스양말-3 v2",
+ "sections": [
+  {
+   "type": "hero",
+   "img": "inputs/ai/v2/hero.png",
+   "h1": "겨울 스튜디오엔",
+   "big": "중목 발가락 양말",
+   "bigsize": 88,
+   "sub": "발목 높이 15cm, 발가락 양말, 바닥 논슬립",
+   "seals": [
+    [
+     "발목",
+     "15cm",
+     62
+    ],
+    [
+     "발 길이",
+     "22~26",
+     50
+    ]
+   ],
+   "band": [
+    "화이트 · 멜란지 그레이 · 블랙 · 퍼플",
+    "프리사이즈"
+   ]
+  },
+  {
+   "type": "empathy",
+   "stack": true,
+   "size": 62,
+   "h": "맨발은 민망하고,<br><span class=\"hl\">양말은 미끄럽고</span>",
+   "cuts": [
+    {
+     "img": "inputs/ai/v2/on.png",
+     "t": "입장 전",
+     "c": "스튜디오 앞에서 양말을 고쳐 신을 때"
+    },
+    {
+     "img": "inputs/ai/v2/mat.png",
+     "t": "매트 위",
+     "c": "발바닥을 대면 신경 쓰이는 순간"
+    },
+    {
+     "img": "inputs/ai/v2/reformer.png",
+     "t": "리포머 위",
+     "c": "발을 올릴 때 미끄러질까 걱정될 때"
+    },
+    {
+     "img": "inputs/ai/v2/bag.png",
+     "t": "수업 전날",
+     "c": "양말이 없다는 게 생각날 때"
+    }
+   ]
+  },
+  {
+   "type": "turn",
+   "h": "신는 곳은 같아도,<br><span class=\"hl\">바닥과 발가락이 달라요</span>",
+   "p": "이 양말은 발목 높이가 15cm예요.",
+   "size": 58,
+   "discs": [
+    {
+     "img": "inputs/ai/v2/sole.png",
+     "t": "바닥 무늬",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/mat.png",
+     "t": "발가락",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "intro",
+   "h": "복숭아뼈 위로,<br><span class=\"hl\">15cm</span>",
+   "size": 60,
+   "h2": 700,
+   "steps": [
+    {
+     "img": "inputs/ai/v2/sole.png",
+     "t": "바닥",
+     "c": "논슬립 무늬가 있어요",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/on.png",
+     "t": "착용",
+     "c": "발가락을 나눠 신어요",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "overview",
+   "img": "inputs/photos/hero_white.jpg",
+   "style": "width:600px",
+   "items": [
+    [
+     "15cm",
+     "발목 높이"
+    ],
+    [
+     "22~26cm",
+     "발 길이"
+    ],
+    [
+     "발가락형",
+     "중목"
+    ],
+    [
+     "논슬립",
+     "바닥 패드"
+    ]
+   ]
+  },
+  {
+   "type": "number",
+   "point": "POINT 1 · 발목",
+   "big": "15",
+   "unit": "cm",
+   "bigsize": 280,
+   "h": "낮은 양말이 시렸다면, 15cm",
+   "why": "<span class=\"hl\">복숭아뼈 위까지</span> 올라와요",
+   "img": "inputs/ai/v2/mat.png",
+   "style": "height:820px;object-fit:cover",
+   "pale": false
+  },
+  {
+   "point": "POINT 2 · 사이즈",
+   "h": "발 길이 22~26cm면<br><span class=\"hl\">프리사이즈</span>",
+   "img": "inputs/ai/v2/on.png",
+   "p": "여성용 프리사이즈예요.",
+   "type": "feature",
+   "pale": true
+  },
+  {
+   "point": "POINT 3 · 수업",
+   "h": "처음 가는 필라테스,<br><span class=\"hl\">양말부터 준비하세요</span>",
+   "img": "inputs/ai/v2/reformer.png",
+   "p": "바닥 패드가 미끄러짐을 줄여 줘요. 그래도 바닥을 조심하세요.",
+   "style": "height:820px;object-fit:cover",
+   "type": "feature",
+   "pale": false
+  },
+  {
+   "point": "준비물",
+   "h": "가방에 넣고,<br><span class=\"hl\">수업 가기</span>",
+   "img": "inputs/ai/v2/bag.png",
+   "style": "height:820px;object-fit:cover",
+   "p": "수업 전날 가방에 먼저 넣어 두세요.",
+   "type": "feature",
+   "pale": true
+  },
+  {
+   "type": "compare",
+   "h": "신는 곳은 같아도,<br><span class=\"hl\">바닥과 발가락이 달라요</span>",
+   "size": 60,
+   "cols": [
+    "일반 양말",
+    "낮은 발가락형",
+    "이 제품"
+   ],
+   "rows": [
+    [
+     "높이",
+     "제품별",
+     "낮음",
+     "15cm"
+    ],
+    [
+     "발가락",
+     "통",
+     "나뉨",
+     "나뉨"
+    ],
+    [
+     "바닥 무늬",
+     "제품별",
+     "있음",
+     "패드"
+    ],
+    [
+     "사이즈",
+     "제품별",
+     "제품별",
+     "발 22~26cm"
+    ]
+   ]
+  },
+  {
+   "type": "notice",
+   "h": "세탁은 <em>30도 이하</em>",
+   "p": "울세탁 30도 이하, 표백 금지, 그늘 건조, 다림질 금지예요. 두께가 있어 신발에 따라 맞는 느낌이 달라요.",
+   "size": 62
+  },
+  {
+   "type": "howto",
+   "h": "발가락 맞추고,<br><span class=\"hl\">발뒤꿈치까지 올리면 끝</span>",
+   "steps": [
+    {
+     "img": "inputs/ai/v2/on.png",
+     "c": "발가락을 하나씩 맞춰요"
+    },
+    {
+     "img": "inputs/ai/v2/mat.png",
+     "c": "뒤꿈치까지 올려 신어요"
+    },
+    {
+     "img": "inputs/ai/v2/reformer.png",
+     "c": "바닥 상태를 보고 시작해요"
+    }
+   ]
+  },
+  {
+   "type": "checklist",
+   "h": "레슨 예약은 했는데,<br>양말이 없다면",
+   "items": [
+    "겨울에 발목이 시렸던 분",
+    "중목 양말을 찾는 분",
+    "처음 필라테스를 시작하는 분",
+    "미끄러질까 걱정되는 분",
+    "발 길이 22~26cm인 분"
+   ]
+  },
+  {
+   "type": "colors",
+   "h": "색상",
+   "items": [
+    {
+     "img": "inputs/photos/flat_white.jpg",
+     "t": "화이트"
+    },
+    {
+     "img": "inputs/photos/flat_gray.jpg",
+     "t": "그레이"
+    },
+    {
+     "img": "inputs/photos/flat_black.jpg",
+     "t": "블랙"
+    }
+   ]
+  },
+  {
+   "type": "after",
+   "h": "맨발 고민은,<br><em>수업 전에 끝</em>",
+   "size": 70,
+   "img": "inputs/ai/v2/after.png",
+   "img2": "inputs/ai/v2/reformer.png"
+  },
+  {
+   "type": "qa",
+   "h": "사기 전에<br>묻는 것들",
+   "items": [
+    [
+     "미끄러지지 않나요?",
+     "바닥 패드가 미끄러짐을 줄여 주지만, 바닥에 따라 미끄러질 수 있어요."
+    ],
+    [
+     "퍼플 사진은 왜 없나요?",
+     "공급처 사진에 없어 아직 준비 중이에요."
+    ],
+    [
+     "사이즈는요?",
+     "여성용 프리사이즈, 발 길이 22~26cm예요."
+    ],
+    [
+     "세탁은요?",
+     "30도 이하 울세탁, 표백 금지, 그늘 건조, 다림질 금지예요."
+    ]
+   ]
+  },
+  {
+   "type": "info",
+   "rows": [
+    [
+     "제품명",
+     "여성 중목 발가락 양말"
+    ],
+    [
+     "색상",
+     "블랙, 멜란지 그레이, 화이트, 퍼플"
+    ],
+    [
+     "사이즈",
+     "프리사이즈 (여성용, 발 길이 22~26cm, 발목 높이 15cm)"
+    ],
+    [
+     "구성",
+     "1켤레"
+    ],
+    [
+     "재질",
+     "면, 폴리에스테르, 스판덱스"
+    ],
+    [
+     "사진 안내",
+     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "warn",
+   "h": "미끄러질 수 있어요,<br><em>바닥을 조심하세요</em>",
+   "items": [
+    [
+     "soft",
+     "수업 전 바닥 상태를 먼저 확인"
+    ],
+    [
+     "no",
+     "상처가 있는 발에는 쓰지 않기"
+    ],
+    [
+     "stop",
+     "불편하면 바로 벗기"
+    ],
+    [
+     "foot",
+     "미끄러질 수 있으니 바닥을 조심하기"
+    ],
+    [
+     "drop",
+     "세탁은 라벨을 먼저 확인"
+    ],
+    [
+     "child",
+     "어린이 손이 닿지 않게"
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "img": "inputs/ai/v2/hero.png",
+   "h": "맨발 고민은,",
+   "big": "수업 전에 끝",
+   "bigsize": 100
+  }
+ ]
+}

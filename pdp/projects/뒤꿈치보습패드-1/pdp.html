@@ -1,164 +1,294 @@
 <!DOCTYPE html>
 <html lang="ko">
-<!--
-  뒤꿈치보습패드_1 상세페이지 (테스트 세트 1, 결정 38) — 실리콘 뒤꿈치 패드
-  렌더: node pdp/scripts/render.mjs pdp/projects/뒤꿈치보습패드-1/pdp.html <outDir>
-  공급처 교체(2026-10-28): 도매꾹 64393814(살색)·64392878(화이트), 이미지 사용 허용. 공급처 실제 사진을 배경째 크롭해 씀. AI 이미지 없음.
-  이전 공급처(53552816)는 이미지 사용 금지라 교체됨. 공급처의 "갈라짐·까짐·물집 대처, 땀참 감소, 미끄럼 방지" 주장은 쓰지 않음.
--->
+<!-- 뒤꿈치보습패드-1 v2 (page.json에서 생성: python3 pdp/scripts/build_pdp.py projects/뒤꿈치보습패드-1) -->
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="../../templates/set1.css">
 <style>
-  :root { --main: #5A3A33; --point: #9A4A38; --soft: #FBF3EF; --dark: #3A2622; --line: #EAD9D1; --sub: #54473F; --card: #F4E3DB; --accent-on-dark: #F2C4B3; }
-  .dark .eyebrow, .main .eyebrow, .dark em, .main em { color: #F2C4B3; }
-  .hero { background: linear-gradient(180deg, #FBF3EF 0%, #F2DDD3 100%); padding-top: 150px; }
-  .slot-empty { display: flex; align-items: center; justify-content: center; margin: 50px auto 0; height: 560px; border-radius: 36px; border: 4px dashed #C9A99B; background: rgba(255,255,255,.6); color: #8A6A5E; font-size: 32px; font-weight: 700; line-height: 1.5; }
-  .dark .slot-empty, .main .slot-empty { background: rgba(255,255,255,.06); color: #E8CFC4; border-color: #8A6A5E; }
-  .routine { display: grid; gap: 22px; margin-top: 50px; text-align: left; }
-  .routine > div { display: flex; gap: 26px; align-items: center; background: #fff; border-radius: 24px; padding: 34px 36px; border: 2px solid var(--line); }
-  .routine i { font-style: normal; flex: 0 0 86px; height: 86px; border-radius: 50%; background: var(--point); color: #fff; font-size: 38px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
-  .routine b { display: block; font-size: 40px; font-weight: 800; color: var(--text); }
+:root { --ink: #12263F; --sub: #3F5068; --blue: #0B6FD1; --sky: #BFE3FF; --pale: #EEF7FD; --line: #C9DDEC; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 780px; background: #fff; }
+  body { font-family: 'Pretendard', sans-serif; color: var(--ink); word-break: keep-all; -webkit-font-smoothing: antialiased; }
+  section { position: relative; overflow: hidden; background: #fff; }
+  section.pale { background: var(--pale); }
+  img { display: block; }
+  h1, h2 { font-weight: 900; letter-spacing: -.05em; line-height: 1.17; }
+  h2 { font-size: 66px; }
+  p { font-size: 34px; line-height: 1.55; font-weight: 500; color: var(--sub); letter-spacing: -.02em; }
+  .head { padding: 110px 30px 66px; text-align: center; }
+  .point { display: inline-block; font-size: 30px; font-weight: 800; color: #fff; background: var(--blue); padding: 8px 24px; border-radius: 40px; margin-bottom: 24px; }
+  .hl { background: linear-gradient(transparent 58%, var(--sky) 58%, var(--sky) 94%, transparent 94%); padding: 0 6px; }
+  em { font-style: normal; color: var(--blue); }
+  .full { width: 100%; height: auto; }
+  .body { padding: 56px 56px 96px; text-align: center; }
+  .big { font-weight: 900; line-height: .95; letter-spacing: -.07em; background: linear-gradient(180deg, #55B8F7 8%, var(--blue) 92%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .why { display: inline-block; margin-top: 26px; font-size: 38px; font-weight: 800; letter-spacing: -.03em; line-height: 1.34; }
+  .powder { position: absolute; inset: 0; pointer-events: none; }
+  .powder i { position: absolute; border-radius: 50%; background: #fff; }
+
+  /* 01 첫 화면 */
+  .s01 { height: 1800px; }
+  .s01 .bg { position: absolute; left: 0; bottom: 130px; width: 780px; height: 1170px; }
+  .s01 .veil { position: absolute; left: 0; right: 0; top: 496px; height: 300px; background: linear-gradient(180deg, #fff 8%, rgba(255,255,255,0)); }
+  .s01 .copy { position: absolute; top: 96px; left: 0; right: 0; text-align: center; }
+  .s01 h1 { font-size: 72px; }
+  .s01 h1 b { display: block; font-size: 158px; font-weight: 900; color: var(--blue); letter-spacing: -.06em; line-height: 1.08; margin-top: 8px; }
+  .s01 .sub { font-size: 36px; font-weight: 700; margin-top: 18px; color: var(--sub); }
+  .seal { position: absolute; width: 196px; height: 196px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 5px solid #fff; box-shadow: 0 12px 26px rgba(18,38,63,.22); background: var(--blue); color: #fff; }
+  .seal small { font-size: 30px; font-weight: 800; line-height: 1.1; }
+  .seal b { font-size: 68px; font-weight: 900; line-height: 1.04; letter-spacing: -.05em; }
+  .seal.a { left: 36px; top: 590px; }
+  .seal.b { right: 36px; top: 590px; background: #fff; color: var(--blue); border-color: var(--blue); }
+  .s01 .band { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 33px; font-weight: 800; gap: 18px; letter-spacing: -.02em; }
+
+  /* 02 공감 */
+  .grid4 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 8px; }
+  .grid4 figure { position: relative; }
+  .grid4 img { width: 100%; height: 400px; object-fit: cover; filter: brightness(1.06) saturate(.92); }
+  .grid4 figcaption { padding: 20px 14px 40px; font-size: 30px; font-weight: 700; line-height: 1.32; letter-spacing: -.03em; color: var(--sub); }
+  .grid4 figcaption b { display: block; font-size: 52px; font-weight: 900; color: var(--blue); letter-spacing: -.04em; }
+
+  /* 03 전환 */
+  .s03 { padding: 100px 50px 110px; text-align: center; }
+  .s03 p { margin: 30px auto 60px; max-width: 640px; }
+  .two { display: flex; align-items: center; justify-content: center; }
+  .two .disc { width: 280px; height: 280px; border-radius: 50%; overflow: hidden; }
+  .two .disc img { width: 100%; height: 100%; object-fit: cover; }
+  .two .disc.q { border: 7px dashed var(--blue); background: #fff; display: flex; align-items: center; justify-content: center; font-size: 150px; font-weight: 900; color: var(--blue); }
+  .two .arr { width: 110px; height: 8px; background: var(--ink); position: relative; margin: 0 6px; }
+  .two .arr::after { content: ''; position: absolute; right: -2px; top: -16px; border-left: 30px solid var(--ink); border-top: 20px solid transparent; border-bottom: 20px solid transparent; }
+  .labels { display: flex; justify-content: center; gap: 122px; margin-top: 22px; font-size: 36px; font-weight: 900; }
+  .labels span { width: 280px; }
+
+  /* 04 제품 소개 */
+  .s04 .photo { position: relative; height: 520px; overflow: hidden; }
+  .s04 .photo img { position: absolute; width: 780px; left: 0; top: 0; }
+  .step-row { display: flex; position: relative; }
+  .step-row .f { flex: 1; position: relative; }
+  .step-row .f img { width: 100%; height: 390px; object-fit: cover; }
+  .step-row .cap { padding: 26px 24px 70px; }
+  .step-row .cap b { display: block; font-size: 30px; font-weight: 900; color: var(--blue); }
+  .step-row .cap span { font-size: 36px; font-weight: 800; line-height: 1.3; letter-spacing: -.03em; }
+  .flip { position: absolute; left: 50%; top: 120px; transform: translateX(-50%); width: 150px; height: 150px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 34px; font-weight: 900; line-height: 1.12; border: 5px solid #fff; box-shadow: 0 10px 24px rgba(18,38,63,.3); }
+
+  /* 05 한눈에 */
+  .s05 { height: 1270px; }
+  .s05 .tt { position: absolute; left: 50px; top: 70px; font-size: 44px; font-weight: 900; letter-spacing: -.03em; }
+  .s05 .tt::after { content: ''; display: block; width: 76px; height: 8px; background: var(--blue); margin-top: 14px; }
+  .s05 .prod { position: absolute; left: 96px; top: 180px; height: 1020px; filter: drop-shadow(10px 14px 16px rgba(18,38,63,.32)); }
+  .callout { position: absolute; left: 372px; width: 380px; }
+  .callout b { display: block; font-size: 66px; font-weight: 900; letter-spacing: -.05em; color: var(--blue); line-height: 1.08; }
+  .callout span { font-size: 34px; font-weight: 700; color: var(--sub); letter-spacing: -.02em; }
+  .callout::before { content: ''; position: absolute; right: 100%; top: 36px; height: 3px; background: var(--blue); width: var(--w); }
+  .callout::after { content: ''; position: absolute; right: calc(100% + var(--w)); top: 29px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 2px solid #fff; }
+
+  /* 06 33 */
+  .s06 .top { padding: 96px 30px 54px; text-align: center; }
+  .s06 .big { font-size: 330px; }
+  .s06 h2 { margin-top: 18px; font-size: 62px; }
+  .s06 .surface { position: relative; height: 980px; overflow: hidden; }
+  .s06 .surface img { position: absolute; left: 0; top: -10px; width: 780px; }
+  .tag { position: absolute; background: #fff; color: var(--ink); font-size: 31px; font-weight: 800; padding: 12px 22px; border-radius: 40px; box-shadow: 0 8px 20px rgba(18,38,63,.22); letter-spacing: -.02em; }
+  .tag b { color: var(--blue); font-weight: 900; }
+  .s06 .back { display: flex; align-items: center; gap: 34px; padding: 50px 44px 90px; }
+  .s06 .back .d { flex: none; width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 6px solid var(--sky); }
+  .s06 .back .d img { width: 100%; height: 100%; object-fit: cover; }
+  .s06 .back b { display: block; font-size: 44px; font-weight: 900; color: var(--blue); letter-spacing: -.03em; }
+  .s06 .back span { font-size: 34px; font-weight: 600; line-height: 1.38; color: var(--sub); letter-spacing: -.02em; }
+
+  /* 07 힘 조절 */
+  .s07 .pair { display: flex; gap: 8px; padding: 0 8px; }
+  .s07 figure { position: relative; flex: 1; }
+  .s07 figure img { width: 100%; height: 640px; object-fit: cover; object-position: center top; }
+  .s07 figure .n { position: absolute; left: 0; top: 0; font-size: 34px; font-weight: 900; background: var(--blue); color: #fff; padding: 14px 24px; }
+  .s07 figcaption { padding-top: 18px; text-align: center; font-size: 38px; font-weight: 900; letter-spacing: -.03em; }
+
+  /* 08 0원 */
+  .s08 { height: 1620px; background: #fff; }
+  .s08 .bg { position: absolute; left: 0; bottom: 0; width: 780px; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 16%); }
+  .s08 .veil { position: absolute; left: 0; right: 0; top: 0; height: 780px; background: linear-gradient(180deg, #fff 44%, rgba(255,255,255,0)); }
+  .s08 .top { position: absolute; left: 0; right: 0; top: 76px; text-align: center; }
+  .s08 .big { font-size: 280px; }
+  .s08 .big small { font-size: 160px; font-weight: 900; }
+  .s08 .note { position: absolute; left: 30px; right: 30px; bottom: 44px; text-align: center; background: rgba(255,255,255,.9); padding: 26px 20px; }
+  .s08 .note p { color: var(--ink); font-weight: 600; font-size: 32px; }
+
+  /* 09 손잡이 */
+  .ruler { position: relative; height: 470px; background: var(--pale); }
+  .ruler .tt { position: absolute; left: 0; right: 0; top: 40px; text-align: center; font-size: 72px; font-weight: 900; letter-spacing: -.05em; }
+  .ruler .prod { position: absolute; left: 50%; top: 170px; width: 680px; transform: translateX(-50%) ; filter: drop-shadow(6px 12px 12px rgba(18,38,63,.3)); }
+  .ruler .dim { position: absolute; left: 50px; right: 50px; bottom: 50px; height: 4px; background: var(--blue); }
+  .ruler .dim::before, .ruler .dim::after { content: ''; position: absolute; top: -16px; width: 4px; height: 36px; background: var(--blue); }
+  .ruler .dim::before { left: 0; } .ruler .dim::after { right: 0; }
+  .ruler .dim b { position: absolute; left: 50%; top: -30px; transform: translateX(-50%); background: var(--pale); padding: 0 20px; font-size: 44px; font-weight: 900; letter-spacing: -.03em; color: var(--blue); }
+  .grip { position: relative; height: 1040px; overflow: hidden; background: #E9F2FB; }
+  .grip img { position: absolute; left: 0; top: -40px; width: 780px; }
+
+  /* 비교표 */
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 31px; letter-spacing: -.03em; }
+  th, td { padding: 26px 4px; text-align: center; border-bottom: 2px solid var(--line); font-weight: 600; line-height: 1.25; color: var(--sub); }
+  th { font-weight: 800; color: var(--ink); vertical-align: bottom; }
+  td:first-child { font-weight: 800; color: var(--ink); text-align: left; padding-left: 16px; }
+  col.lb { width: 168px; }
+  .us { background: var(--blue); color: #fff !important; font-weight: 900 !important; font-size: 34px; border-bottom-color: #3D8FE0; }
+  .tbn { padding: 22px 30px 96px; font-size: 30px; line-height: 1.4; color: var(--sub); text-align: center; letter-spacing: -.02em; }
+
+  /* 10 가루 */
+  .s10 .ph { position: relative; height: 720px; overflow: hidden; }
+  .s10 .ph img { position: absolute; left: 0; top: -20px; width: 880px; margin-left: -60px; }
+  .s10 .warn { display: inline-block; margin-top: 20px; font-size: 40px; font-weight: 900; color: #fff; background: var(--blue); padding: 8px 22px; letter-spacing: -.03em; }
+
+  /* 11 사용법 */
+  .step { display: flex; height: 420px; border-top: 2px solid var(--line); }
+  .step .ph { width: 400px; position: relative; overflow: hidden; }
+  .step .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .step .tx { flex: 1; padding: 0 22px 0 34px; display: flex; flex-direction: column; justify-content: center; }
+  .step .tx b { font-size: 34px; font-weight: 900; color: var(--blue); }
+  .step .tx span { font-size: 36px; font-weight: 800; letter-spacing: -.03em; line-height: 1.34; margin-top: 8px; }
+  .step .tx i { font-style: normal; font-size: 30px; color: var(--sub); font-weight: 600; line-height: 1.38; margin-top: 8px; }
+
+  /* 13 추천 */
+  .s13 { padding: 100px 50px 110px; }
+  .s13 h2 { font-size: 62px; margin-bottom: 50px; }
+  .s13 li { list-style: none; display: flex; gap: 20px; align-items: flex-start; font-size: 37px; font-weight: 800; line-height: 1.32; letter-spacing: -.03em; padding: 28px 0; border-top: 2px solid var(--line); }
+  .s13 li svg { flex: 0 0 50px; margin-top: 2px; }
+
+  /* 14 컬러 */
+  .s14 .split { display: flex; height: 860px; }
+  .s14 .col { position: relative; flex: 1; overflow: hidden; }
+  .s14 .wall { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .s14 .hang { position: absolute; height: 600px; }
+  .s14 .peg { position: absolute; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, #8d9299 70%); box-shadow: 1px 2px 3px rgba(0,0,0,.5); }
+  .s14 .chip { position: absolute; left: 20px; bottom: 20px; font-size: 36px; font-weight: 900; padding: 8px 26px; background: #fff; color: var(--ink); border-radius: 40px; }
+
+  /* 쓰고 난 뒤 */
+  .after { position: relative; height: 1020px; overflow: hidden; }
+  .after img { position: absolute; left: -210px; top: 0; height: 1020px; }
+  .after .veil { position: absolute; inset: 0 0 auto 0; height: 470px; background: linear-gradient(180deg, rgba(255,255,255,.96) 40%, rgba(255,255,255,0)); }
+  .after h2 { position: absolute; left: 0; right: 0; top: 96px; text-align: center; font-size: 80px; }
+
+  /* 15 Q&A */
+  .s15 { padding: 100px 50px 100px; }
+  .s15 h2 { text-align: center; margin-bottom: 50px; }
+  .qa { border-top: 2px solid var(--line); padding: 32px 0 36px; }
+  .qa .q { font-size: 40px; font-weight: 900; letter-spacing: -.03em; }
+  .qa .q b { color: var(--blue); margin-right: 10px; }
+  .qa .a { font-size: 33px; line-height: 1.5; color: var(--sub); font-weight: 500; margin-top: 12px; letter-spacing: -.02em; }
+
+  /* 16 정보 */
+  .s16 { padding: 90px 50px; }
+  .s16 .tt { font-size: 52px; font-weight: 900; letter-spacing: -.04em; margin-bottom: 30px; }
+  .s16 .row { display: flex; font-size: 33px; padding: 24px 0; border-top: 2px solid var(--line); letter-spacing: -.02em; }
+  .s16 .row b { width: 170px; font-weight: 900; flex: none; }
+
+  /* 17 주의 */
+  .s17 { padding: 100px 44px; text-align: center; }
+  .ic6 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 46px 20px; margin-top: 60px; }
+  .ic6 div { font-size: 32px; font-weight: 700; line-height: 1.32; letter-spacing: -.03em; }
+  .ic6 svg { display: block; margin: 0 auto 14px; }
+
+  /* 18 마무리 */
+  .s18 { height: 1170px; }
+  .s18 .bg { position: absolute; inset: 0; width: 780px; }
+  .s18 .veil { position: absolute; inset: 0 0 auto 0; height: 560px; background: linear-gradient(180deg, rgba(255,255,255,.95) 46%, rgba(255,255,255,0)); }
+  .s18 .top { position: absolute; top: 90px; left: 0; right: 0; text-align: center; }
+  .s18 h2 { font-size: 70px; }
+  .s18 h2 big { display: block; font-size: 104px; margin-top: 10px; line-height: 1.14; letter-spacing: -.06em; }
+  .s18 h2 s { color: #8699AC; text-decoration-color: var(--blue); text-decoration-thickness: 8px; }
+
+  /* 수면안대_6 */
+  .spec { padding: 80px 30px 90px; }
+  .spec .tt { font-size: 44px; font-weight: 900; letter-spacing: -.03em; margin: 0 20px 26px; }
+  .spec .tt::after { content: ''; display: block; width: 76px; height: 8px; background: var(--blue); margin-top: 14px; }
+  .spec .pic { width: 720px; display: block; margin: 0 auto; filter: drop-shadow(0 16px 20px rgba(18,38,63,.16)); }
+  .spec .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 20px; margin: 40px 16px 44px; }
+  .spec .grid b { display: block; font-size: 56px; font-weight: 900; color: var(--blue); letter-spacing: -.05em; line-height: 1.1; }
+  .spec .grid span { font-size: 33px; font-weight: 700; color: var(--sub); letter-spacing: -.02em; }
+  .num .top { padding: 96px 24px 50px; text-align: center; }
+  .num .big { font-size: 300px; }
+  .num .big small { font-size: 170px; font-weight: 900; }
+  .num h2 { margin-top: 18px; font-size: 56px; }
+  .ph-full { position: relative; overflow: hidden; }
+  .ph-full img { width: 780px; display: block; }
+  .hdline { padding: 110px 24px 60px; text-align: center; }
+  .sum { padding: 50px 56px 100px; text-align: center; }
+  .scene2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 8px 70px; }
+  .scene2 img { width: 100%; height: 400px; object-fit: cover; }
+  .scene2 b { display: block; font-size: 38px; font-weight: 900; padding-top: 16px; text-align: center; letter-spacing: -.03em; }
+  .colors { display: flex; gap: 8px; padding: 0 8px 90px; }
+  .colors figure { flex: 1; text-align: center; }
+  .colors .box { background: var(--pale); min-height: 220px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .colors img { width: 100%; }
+  .colors figcaption { font-size: 36px; font-weight: 900; padding-top: 16px; }
+  .grid4 img { height: 470px; }
+  .step { height: 640px; }
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <p class="eyebrow">실리콘 뒤꿈치 패드</p>
-  <h1>크림 바르고 쏙,<br><em>이불에 안 묻게</em></h1>
-  <p class="lead">뒤꿈치만 감싸는 말랑한 실리콘 패드</p>
-  <div class="photo"><img data-slot="hero" src="inputs/photos/skin_worn.jpg" alt=""></div>
-  <div class="badges"><span class="badge">뒤꿈치만 감싸는 형태</span><span class="badge">2개 1세트</span><span class="badge">작은 구멍이 뚫린 실리콘</span></div>
+<section class="s01">
+  <img class="bg" src="inputs/ai/v2/hero.png" alt=""><div class="veil"></div>
+  <div class="copy"><h1 style="font-size:74px">양말 안에 쏙,</h1><h1 style="margin-top:6px"><b style="margin-top:0;font-size:92px">실리콘 패드 2개</b></h1>
+  <div class="sub" style="padding:0 20px">양쪽 뒤꿈치에 끼우는 말랑한 실리콘, 2개 1세트</div></div>
+  <div class="seal a"><small>구성</small><b style="font-size:66px">2개</b></div>
+  <div class="seal b"><small>소재</small><b style="font-size:52px">실리콘</b></div>
+  <div class="band">살색 · 화이트 &nbsp;/&nbsp; 약 10 × 8cm &nbsp;/&nbsp; 작은 구멍</div>
 </section>
 
-<section class="dark">
-  <p class="eyebrow">이래서 불편했죠</p>
-  <h2>뒤꿈치 크림,<br>이런 적 있으셨나요?</h2>
-  <div class="cards">
-    <div class="card"><div class="no">1</div><div><b>이불에 다 묻어요</b><span>바르고 누우면 침구가 끈적해요</span></div></div>
-    <div class="card"><div class="no">2</div><div><b>바닥이 미끄러워요</b><span>바르고 걸으면 발자국이 남아요</span></div></div>
-    <div class="card"><div class="no">3</div><div><b>금방 닦여 나가요</b><span>양말에 다 묻어 버려요</span></div></div>
-    <div class="card"><div class="no">4</div><div><b>양말은 답답해요</b><span>발 전체를 덮는 수면양말이 불편해요</span></div></div>
-  </div>
-</section>
+<section><div class="head"><h2 style="font-size:62px">양말에 턱,<br><span class="hl">스타킹은 올이 쭉</span></h2></div><div class="grid4" style="grid-template-columns:1fr"><figure><img src="inputs/ai/shared/e1.png" style="height:640px" alt=""><figcaption><b>아침</b>신발 신다 손에 닿는 까끌함</figcaption></figure><figure><img src="inputs/ai/shared/e2.png" style="height:640px" alt=""><figcaption><b>낮</b>실내화 벗기 망설여질 때</figcaption></figure><figure><img src="inputs/ai/shared/e3.png" style="height:640px" alt=""><figcaption><b>저녁</b>맨발로 앉으면 손이 먼저 가요</figcaption></figure><figure><img src="inputs/ai/shared/e4.png" style="height:640px" alt=""><figcaption><b>밤</b>잠들기 전 발끝이 거칠거칠</figcaption></figure></div></section>
 
-<section>
-  <p class="eyebrow">그래서, 뒤꿈치 패드</p>
-  <h2>바른 크림 위에<br><em>쏙 덮어 두세요</em></h2>
-  <div class="routine">
-    <div><i>1</i><div><b>발을 씻고 말려요</b><p>물기를 닦아 주세요</p></div></div>
-    <div><i>2</i><div><b>뒤꿈치에 크림을 발라요</b><p>평소 쓰는 풋크림·바셀린 그대로</p></div></div>
-    <div><i>3</i><div><b>패드를 신어요</b><p>뒤꿈치에 맞춰 쏙</p></div></div>
-  </div>
-</section>
+<section class="s03 pale"><h2 style="font-size:58px">뒤꿈치를 덮어 두고 싶을 때,<br><span class="hl">실리콘 한 겹</span></h2><p>뒤꿈치에 끼우는 실리콘 패드예요. 몸에 대한 효능을 약속하지 않아요.</p>
+  <div class="two"><div class="disc" style="background:#fff"><img src="inputs/ai/v2/hand.png" style="object-fit:cover" alt=""></div><div class="arr"></div><div class="disc" style="background:#fff"><img src="inputs/ai/v2/hero.png" style="object-fit:cover" alt=""></div></div>
+  <div class="labels"><span>제품 모양</span><span style="color:var(--blue)">뒤꿈치에</span></div></section>
 
-<section class="main">
-  <p class="eyebrow">뒤꿈치 패드를 고르는 이유</p>
-  <h2>크림 바른 뒤가<br>편해지는 이유 4가지</h2>
-  <ul class="reason">
-    <li><span>01</span>뒤꿈치만 감싸고 발가락은 자유롭게</li>
-    <li><span>02</span>바른 크림이 이불·바닥에 덜 묻게</li>
-    <li><span>03</span>양말 속에 겹쳐 신기</li>
-    <li><span>04</span>물로 씻어 다시 쓰는 실리콘</li>
-  </ul>
-</section>
+<section class="s04"><div class="head"><h2 style="font-size:60px">양쪽 뒤꿈치에 끼우는<br><span class="hl">실리콘 2개</span></h2></div><div class="step-row"><div class="f"><img src="inputs/ai/v2/hand.png" style="height:700px;object-fit:cover" alt=""><div class="cap"><b>제품</b><span>말랑한 실리콘 패드</span></div></div><div class="f"><img src="inputs/ai/v2/on.png" style="height:700px;object-fit:cover" alt=""><div class="cap"><b>착용</b><span>뒤꿈치에 끼워요</span></div></div></div></section>
 
-<section class="soft">
-  <span class="point-no">POINT 01</span>
-  <h2>뒤꿈치만 감싸고<br><em>발가락은 자유롭게</em></h2>
-  <p>발 전체를 덮는 양말이 아니라<br>뒤꿈치 부분만 감싸는 형태예요.</p>
-  <div class="photo"><img data-slot="wear" src="inputs/photos/white_worn.jpg" alt=""></div>
-</section>
+<section class="spec pale"><div class="tt">한눈에 보기</div><img class="pic" data-slot="spec" src="inputs/photos/skin_flat.jpg" style="width:600px" alt=""><div class="grid"><div><b>2개 1세트</b><span>양쪽</span></div><div><b>약 10 × 8cm</b><span>도면 치수</span></div><div><b>실리콘</b><span>공급처 표기</span></div><div><b>작은 구멍</b><span>모양</span></div></div></section>
 
-<section>
-  <span class="point-no">POINT 02</span>
-  <h2>바르고 바로<br><em>움직여도 돼요</em></h2>
-  <p>크림을 바른 뒤 패드로 덮어 두면<br>이불이나 바닥에 묻을 걱정을 덜 수 있어요.</p>
-  <div class="vs">
-    <div class="old"><b>크림만 바르면</b><p>이불·바닥에 묻고<br>양말에 닦여 나가요</p></div>
-    <div class="new"><b>패드로 덮으면</b><p>바른 그대로<br>뒤꿈치를 감싸 둬요</p></div>
-  </div>
-</section>
+<section><div class="hdline"><div class="point">POINT 1 · 소재</div><h2 style="font-size:66px">로션 바른 뒤꿈치에,<br><span class="hl">실리콘 한 겹</span></h2></div><div class="ph-full"><img src="inputs/ai/v2/hero.png" style="height:900px;object-fit:cover" alt=""></div><div class="sum"><p>말랑한 실리콘이에요.</p></div></section>
 
-<section class="dark">
-  <span class="point-no">POINT 03</span>
-  <h2>집에서도, 양말 속에도<br><em>편하게</em></h2>
-  <div class="scene">
-    <div><b>자기 전에</b><p>바르고 신고 바로 누워요</p></div>
-    <div><b>집안일 할 때</b><p>슬리퍼와 함께</p></div>
-    <div><b>신발 안에</b><p>양말 대신 뒤꿈치에만</p></div>
-    <div><b>TV 볼 때</b><p>쉬는 시간에 틈틈이</p></div>
-  </div>
-  <div class="photo"><img data-slot="shoe" src="inputs/photos/skin_shoe.jpg" alt=""></div>
-</section>
+<section class="pale"><div class="hdline"><div class="point">POINT 2 · 모양</div><h2 style="font-size:66px">작은 구멍이<br><span class="hl">뚫린 말랑한 실리콘</span></h2></div><div class="ph-full"><img src="inputs/ai/v2/hand.png" style="height:820px;object-fit:cover" alt=""></div><div class="sum"><p>구멍은 모양이에요. 땀이 덜 찬다고 약속하지 않아요.</p></div></section>
 
-<section class="soft">
-  <span class="point-no">POINT 04</span>
-  <h2>물로 씻어<br><em>다시 써요</em></h2>
-  <p>쓰고 나면 미지근한 물에 씻어<br>그늘에서 말려 두세요.</p>
-  <ol class="numlist">
-    <li>미지근한 물과 순한 비누로 씻기</li>
-    <li>물기를 털고 그늘에서 말리기</li>
-    <li>직사광선·뜨거운 곳은 피하기 (변형 주의)</li>
-  </ol>
-</section>
+<section><div class="hdline"><div class="point">POINT 3 · 양말</div><h2 style="font-size:66px">양말 안에도<br><span class="hl">쏙 들어가요</span></h2></div><div class="ph-full"><img src="inputs/ai/v2/sock.png" style="height:820px;object-fit:cover" alt=""></div><div class="sum"><p>신발과 양말에 따라 맞는 느낌이 달라요.</p></div></section>
 
-<section>
-  <p class="eyebrow">COLOR</p>
-  <h2>두 가지 컬러</h2>
-  <div class="grid2">
-    <figure><img data-slot="c_skin" src="inputs/photos/skin_flat.jpg" alt=""><figcaption>살색</figcaption></figure>
-    <figure><img data-slot="c_white" src="inputs/photos/white_flat.jpg" alt=""><figcaption>화이트</figcaption></figure>
-  </div>
-</section>
+<section class="pale"><div class="hdline"><div class="point">관리</div><h2 style="font-size:66px">쓰고 나면<br><span class="hl">물로 가볍게</span></h2></div><div class="ph-full"><img src="inputs/ai/v2/rinse.png" style="height:900px;object-fit:cover" alt=""></div><div class="sum"><p>공급처 안내가 없어 일반 안내만 드려요. 물로 가볍게 헹군 뒤 말려 주세요.</p></div></section>
 
-<section class="soft">
-  <p class="eyebrow">구매 전에 솔직하게</p>
-  <h2>미리 알려 드려요</h2>
-  <div class="honest">
-    <div><b>실리콘이라 오래 신으면 땀이 찰 수 있어요</b><p>하루 종일보다는 크림 바른 뒤<br>몇 시간, 자기 전 위주로 쓰세요.</p></div>
-    <div><b>맨발로 걸으면 미끄러울 수 있어요</b><p>실내에서 걸을 땐 양말을 겹쳐 신거나<br>천천히 걸어 주세요.</p></div>
-    <div><b>패드만으로 각질이 없어지진 않아요</b><p>크림을 덮어 두는 용도예요.<br>각질 정리는 풋파일로 따로 해 주세요.</p></div>
-  </div>
-</section>
+<section class="cmp"><div class="head"><h2 style="font-size:60px">바르는 대신,<br><span class="hl">끼우는 실리콘</span></h2></div><table><colgroup><col class="lb"><col><col><col></colgroup><tr><th></th><th>크림·로션</th><th>일반 양말</th><th class="us">이 제품</th></tr><tr><td>쓰는 방법</td><td>바름</td><td>신음</td><td class="us">뒤꿈치에 끼움</td></tr><tr><td>덮는 곳</td><td>바른 곳</td><td>발 전체</td><td class="us">뒤꿈치</td></tr><tr><td>소재</td><td>제품별</td><td>제품별</td><td class="us">실리콘</td></tr><tr><td>구성</td><td>제품별</td><td>제품별</td><td class="us">2개 1세트</td></tr></table>
+  <div class="tbn">유형별 일반적인 구성이며, 제품마다 다를 수 있어요.</div></section>
 
-<section>
-  <p class="eyebrow">Q&amp;A</p>
-  <h2>자주 묻는 질문</h2>
-  <dl class="qa">
-    <dt>사이즈는 어떻게 되나요?</dt>
-    <dd>잘 늘어나는 실리콘 프리사이즈예요. 발 크기에 따라 맞는 정도는 조금씩 다를 수 있어요.</dd>
-    <dt>크림 없이 신어도 되나요?</dt>
-    <dd>네. 다만 크림을 바른 뒤 덮어 두는 용도로 쓰시는 분이 많아요.</dd>
-    <dt>피부가 민감한데 괜찮을까요?</dt>
-    <dd>쓰다가 가렵거나 붉어지면 바로 벗고 쓰지 마세요. 상처가 있는 곳에는 쓰지 마세요.</dd>
-  </dl>
-</section>
+<section class="pale"><div class="hdline" style="padding-bottom:30px"><h2 style="font-size:62px">미끄러울 수 <em>있어요</em></h2></div><div class="sum" style="padding-top:10px"><p>실리콘이라 신발 안이나 바닥에서 미끄러울 수 있어요. 몸에 대한 효능을 약속하지 않아요.</p></div></section>
 
-<section class="soft">
-  <p class="eyebrow">PRODUCT INFO</p>
-  <h2>제품 정보</h2>
-  <table class="spec">
-    <tr><th>제품명</th><td>실리콘 뒤꿈치 패드</td></tr>
-    <tr><th>색상</th><td>살색, 화이트</td></tr>
-    <tr><th>구성</th><td>2개 (양발 1세트)</td></tr>
-    <tr><th>재질</th><td>실리콘</td></tr>
-    <tr><th>크기</th><td>약 10 × 8cm (프리사이즈)</td></tr>
-  </table>
-  <ol class="numlist">
-    <li>상처나 피부에 이상이 있는 곳에는 쓰지 마세요</li>
-    <li>가렵거나 붉어지면 바로 사용을 멈추세요</li>
-    <li>직사광선이나 뜨거운 곳에 두면 변형될 수 있어요</li>
-    <li>어린이 손이 닿지 않는 곳에 두세요</li>
-  </ol>
-</section>
+<section class="s11"><div class="head"><h2 style="font-size:60px">씻고, 말리고,<br><span class="hl">뒤꿈치에 끼우면 끝</span></h2></div><div class="step" ><div class="ph" style="background:var(--pale)"><img src="inputs/ai/shared/e3.png" alt=""></div><div class="tx"><b>STEP 1</b><span>발을 씻고 물기를 닦아요</span></div></div><div class="step" ><div class="ph" style="background:var(--pale)"><img src="inputs/ai/v2/on.png" alt=""></div><div class="tx"><b>STEP 2</b><span>뒤꿈치에 맞춰 끼워요</span></div></div><div class="step" style="border-bottom:2px solid var(--line)"><div class="ph" style="background:var(--pale)"><img src="inputs/ai/v2/sock.png" alt=""></div><div class="tx"><b>STEP 3</b><span>그 위에 양말을 신어도 돼요</span></div></div><div style="height:90px"></div></section>
 
-<section class="main">
-  <p class="eyebrow">실리콘 뒤꿈치 패드</p>
-  <h2>오늘 밤은<br><em>크림 바르고 쏙</em></h2>
-  <div class="photo"><img data-slot="end" src="inputs/photos/skin_flat.jpg" alt="" style="max-width:560px;margin:0 auto"></div>
-</section>
+<section class="s13"><h2>로션 바르고,<br>그 위에 신으세요</h2><ul data-check><li >자기 전 뒤꿈치를 덮어 두고 싶은 분</li><li >로션 뒤 양말이 신경 쓰이는 분</li><li >실리콘 패드를 찾는 분</li><li >2개 1세트로 쓰고 싶은 분</li><li style="border-bottom:2px solid var(--line)">색을 양말에 맞추고 싶은 분</li></ul></section>
 
+<section class="pale"><div class="head"><h2 style="font-size:64px">살색, 화이트.<br><em>양말 색에 맞춰요</em></h2></div><div class="colors"><figure><div class="box" style="background:#fff"><img src="inputs/photos/skin_flat.jpg" alt=""></div><figcaption>살색</figcaption></figure><figure><div class="box" style="background:#fff"><img src="inputs/photos/white_flat.jpg" alt=""></div><figcaption>화이트</figcaption></figure></div></section>
+
+<section><div class="hdline" style="padding-bottom:50px"><h2 style="font-size:70px">오늘 밤 양말 전에,<br><em>패드 먼저</em></h2></div><div class="ph-full" style="max-height:1110px"><img src="inputs/ai/v2/after.png" alt=""></div><div class="ph-full"><img src="inputs/ai/v2/after.png" alt=""></div></section>
+
+<section class="s15"><h2>사기 전에<br>묻는 것들</h2><div class="qa" ><div class="q"><b>Q.</b>보습이 되나요?</div><div class="a">보습 효과는 확인되지 않았어요. 실리콘으로 덮는 제품이에요.</div></div><div class="qa" ><div class="q"><b>Q.</b>갈라진 뒤꿈치에 써도 되나요?</div><div class="a">상처나 염증이 있으면 쓰지 말고 전문가와 상담하세요.</div></div><div class="qa" ><div class="q"><b>Q.</b>미끄럽지 않나요?</div><div class="a">실리콘이라 미끄러울 수 있어요. 걸을 때 조심해 주세요.</div></div><div class="qa" style="border-bottom:2px solid var(--line)"><div class="q"><b>Q.</b>씻어 쓸 수 있나요?</div><div class="a">공급처 안내가 없어요. 물로 가볍게 헹군 뒤 말리는 것을 권해요.</div></div></section>
+
+<section class="s16 pale"><div class="tt">제품 정보</div><div class="row" ><b>제품명</b><span>실리콘 발 뒷꿈치 패드</span></div><div class="row" ><b>색상</b><span>살색, 화이트</span></div><div class="row" ><b>크기</b><span>약 10 × 8cm</span></div><div class="row" ><b>구성</b><span>2개 1세트</span></div><div class="row" ><b>재질</b><span>실리콘</span></div><div class="row" ><b>제조국</b><span>중국</span></div><div class="row" style="border-bottom:2px solid var(--line)"><b>사진 안내</b><span>사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요.</span></div></section>
+
+<section class="s17"><h2 style="font-size:72px">따가우면,<br><em>바로 벗으세요</em></h2><div class="ic6"><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 66c14 8 54 8 68 0"/><path d="M48 14v34M36 38l12 12 12-12"/></svg>너무 오래 신지 않기</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="48" cy="48" r="36"/><path d="M23 23l50 50"/></svg>상처·염증이 있는 부위에는 쓰지 않기</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 8h32l24 24v32L64 88H32L8 64V32z"/><path d="M34 48h28"/></svg>따갑거나 붉어지면 벗기</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M38 10v44c0 8 6 12 14 14l20 6c8 2 8 14-2 14H36c-10 0-16-8-16-18V10z"/></svg>의료용 제품이 아니에요</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M48 12c14 20 24 32 24 46a24 24 0 0 1-48 0c0-14 10-26 24-46z"/></svg>사용 후 깨끗이 관리</div><div><svg width="96" height="96" viewBox="0 0 96 96" fill="none" stroke="#0B6FD1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="48" cy="32" r="16"/><path d="M20 84c2-18 14-28 28-28s26 10 28 28"/><path d="M12 12l72 72"/></svg>어린이 손이 닿지 않게</div></div></section>
+
+<section class="s18"><img class="bg" src="inputs/ai/v2/hero.png" alt=""><div class="veil"></div><div class="top"><h2 style="font-size:70px">오늘 밤 양말 전에,<big style="font-size:110px">패드 먼저</big></h2></div></section>
+
+<script>
+// 고정 시드로 같은 그래픽을 재현한다
+  let seed = 33;
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  document.querySelectorAll('[data-powder]').forEach((el) => {
+    const [x, y, w, h] = el.dataset.box.split(',').map(Number);
+    for (let i = 0; i < Number(el.dataset.powder); i++) {
+      const p = document.createElement('i');
+      const s = 2 + rnd() * rnd() * 10;
+      p.style.cssText = `left:${x + rnd() * w}px;top:${y + rnd() * h}px;width:${s}px;height:${s}px;opacity:${0.5 + rnd() * 0.5}`;
+      el.appendChild(p);
+    }
+  });
+  const check = '<svg width="50" height="50" viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#0B6FD1"/><path d="M13 26l9 9 16-18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  document.querySelectorAll('[data-check] li').forEach((li) => { li.innerHTML = check + '<span>' + li.innerHTML + '</span>'; });
+</script>
 </body>
 </html>
