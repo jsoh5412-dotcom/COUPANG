@@ -1,0 +1,322 @@
+{
+ "title": "수면안대-7 v2",
+ "sections": [
+  {
+   "type": "hero",
+   "img": "inputs/ai/v2/hero.png",
+   "h1": "머리카락 붙던 찍찍이,",
+   "big": "이건 버클",
+   "bigsize": 120,
+   "sub": "슬라이드 버클과 고무 밴드, 돔 모양 3D 안대",
+   "seals": [
+    [
+     "고정",
+     "버클",
+     68
+    ],
+    [
+     "찍찍이",
+     "0개",
+     68
+    ]
+   ],
+   "band": [
+    "블랙",
+    "슬라이드 버클",
+    "24 × 10cm"
+   ]
+  },
+  {
+   "type": "empathy",
+   "stack": true,
+   "h": "켜 둔 건 남편인데,<br><span class=\"hl\">뒤척이는 건 나</span>",
+   "cuts": [
+    {
+     "img": "inputs/ai/shared/e_phone.png",
+     "t": "밤",
+     "c": "옆에서 켠 휴대폰 불빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_sun.png",
+     "t": "아침",
+     "c": "커튼 사이로 들어오는 햇빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_cabin.png",
+     "t": "기내",
+     "c": "내 맘대로 못 끄는 불빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_ear.png",
+     "t": "머리 뒤",
+     "c": "찍찍이에 걸리던 머리카락"
+    }
+   ]
+  },
+  {
+   "type": "turn",
+   "h": "눈은 가렸는데,<br><span class=\"hl\">머리 뒤가 먼저 걸렸죠</span>",
+   "p": "찍찍이에 머리카락이 걸리면 신경 쓰여요. 이 안대는 버클이에요.",
+   "size": 60,
+   "discs": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "t": "돔 모양",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "t": "슬라이드 버클",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "intro",
+   "h": "찍찍이 대신<br><span class=\"hl\">슬라이드 버클</span>",
+   "size": 66,
+   "h2": 700,
+   "steps": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "t": "제품",
+     "c": "안쪽이 오목한 돔 모양",
+     "style": "object-fit:contain;background:var(--pale)"
+    },
+    {
+     "img": "inputs/photos/buckle.jpg",
+     "t": "실제 버클",
+     "c": "슬라이드 버클로 길이 맞춤",
+     "style": "object-fit:scale-down;background:var(--pale)"
+    }
+   ]
+  },
+  {
+   "type": "overview",
+   "img": "inputs/nukki/front.png",
+   "style": "width:640px",
+   "items": [
+    [
+     "찍찍이 0개",
+     "슬라이드 버클"
+    ],
+    [
+     "24 × 10cm",
+     "가로 × 세로"
+    ],
+    [
+     "돔 모양",
+     "안쪽 오목"
+    ],
+    [
+     "고무 밴드",
+     "길이 조절"
+    ]
+   ]
+  },
+  {
+   "type": "number",
+   "point": "POINT 1 · 버클",
+   "big": "0",
+   "unit": "개",
+   "bigsize": 280,
+   "h": "머리 뒤 찍찍이 0개",
+   "why": "<span class=\"hl\">버클만 밀면</span> 길이가 맞아요",
+   "img": "inputs/ai/v2/buckle.png",
+   "style": "height:820px;object-fit:cover;",
+   "pale": false
+  },
+  {
+   "point": "POINT 2 · 돔",
+   "h": "납작한 안대 말고,<br><span class=\"hl\">돔처럼 둥근 안대</span>",
+   "img": "inputs/ai/v2/hand.png",
+   "p": "겉은 둥글고 안쪽은 오목해요.",
+   "type": "feature",
+   "pale": true,
+   "style": "height:auto"
+  },
+  {
+   "point": "어디서나",
+   "h": "비행기에서도,<br><span class=\"hl\">낮잠에도 같은 안대</span>",
+   "img": "inputs/ai/v2/nap.png",
+   "p": "가방에 넣어 두었다가 꺼내 써요.",
+   "type": "feature",
+   "pale": false,
+   "style": "height:820px;object-fit:cover;"
+  },
+  {
+   "type": "compare",
+   "h": "찍찍이 없이,<br><span class=\"hl\">버클로 맞추는 안대</span>",
+   "cols": [
+    "벨크로형",
+    "귀걸이형",
+    "이 제품"
+   ],
+   "rows": [
+    [
+     "찍찍이",
+     "있음",
+     "없음",
+     "없음"
+    ],
+    [
+     "고정 방식",
+     "벨크로",
+     "귀 끈",
+     "슬라이드 버클"
+    ],
+    [
+     "눈 자리",
+     "제품별",
+     "제품별",
+     "돔, 안쪽 오목"
+    ],
+    [
+     "크기",
+     "제품별",
+     "제품별",
+     "24 × 10cm"
+    ]
+   ]
+  },
+  {
+   "type": "notice",
+   "h": "버클이 머리 뒤에 <em>닿아요</em>",
+   "p": "찍찍이 대신 작은 버클이 있어요. 누운 자세와 머리 모양에 따라 버클이 느껴질 수 있으니, 자리를 옮겨 맞춰 보세요."
+  },
+  {
+   "type": "howto",
+   "h": "머리에 두르고, 버클 밀고,<br><span class=\"hl\">눈 자리에 맞추면 끝</span>",
+   "steps": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "c": "돔 모양을 눈 앞에 대요",
+     "style": "object-fit:contain"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "c": "밴드를 머리 뒤로 넘겨요"
+    },
+    {
+     "img": "inputs/ai/v2/hero.png",
+     "c": "버클을 밀어 길이를 맞춰요",
+     "style": "object-position:center 62%"
+    }
+   ]
+  },
+  {
+   "type": "feature",
+   "h": "\"그만 자\" 대신<br><em>안대 하나</em>",
+   "size": 76,
+   "img": "inputs/ai/v2/partner.png",
+   "style": "height:auto",
+   "pale": true
+  },
+  {
+   "type": "checklist",
+   "h": "끈 때문에, 눌려서, 답답해서.<br>서랍에 쌓인 안대",
+   "items": [
+    "찍찍이에 머리카락이 걸렸던 분",
+    "찍찍 소리가 거슬렸던 분",
+    "옆 사람 불빛이 신경 쓰이는 분",
+    "낮잠, 교대 근무로 낮에 자는 분",
+    "비행기, 기차에서 눈을 붙이는 분"
+   ]
+  },
+  {
+   "type": "after",
+   "h": "교대 근무 낮잠에도,<br><em>새벽 비행기에도</em>",
+   "size": 70,
+   "img": "inputs/ai/v2/after.png",
+   "img2": "inputs/ai/v2/day.png"
+  },
+  {
+   "type": "qa",
+   "h": "빛이 완전히<br>막히냐고요?",
+   "items": [
+    [
+     "빛이 완전히 막히나요?",
+     "눈앞을 덮어 빛을 가려 주지만, 완전히 막는다고 약속드리지는 않아요. 차광 시험은 하지 않았어요."
+    ],
+    [
+     "버클이 불편하지 않나요?",
+     "작은 버클이 있어요. 자세에 따라 느껴질 수 있어요."
+    ],
+    [
+     "머리가 커도 맞나요?",
+     "고무 밴드 길이를 버클로 맞춰요. 머리 둘레를 먼저 확인해 주세요."
+    ],
+    [
+     "재질이 뭔가요?",
+     "공급처 표기가 없어 비워 두었어요. 확인되면 적어 드릴게요."
+    ]
+   ]
+  },
+  {
+   "type": "info",
+   "rows": [
+    [
+     "제품명",
+     "3D 돔 수면안대"
+    ],
+    [
+     "색상",
+     "블랙"
+    ],
+    [
+     "크기",
+     "가로 24 × 세로 10cm"
+    ],
+    [
+     "구성",
+     "1개"
+    ],
+    [
+     "제조국",
+     "중국 OEM"
+    ],
+    [
+     "사진 안내",
+     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "warn",
+   "h": "불편하면,<br><em>바로 벗으세요</em>",
+   "items": [
+    [
+     "wide",
+     "너무 조이지 않게"
+    ],
+    [
+     "no",
+     "눈 주변에 상처·염증이 있으면 쓰지 않기"
+    ],
+    [
+     "stop",
+     "불편하면 바로 벗기"
+    ],
+    [
+     "no",
+     "걷거나 운전할 때 쓰지 않기"
+    ],
+    [
+     "drop",
+     "세탁은 라벨을 먼저 확인, 손세탁 후 그늘 건조 권장"
+    ],
+    [
+     "child",
+     "어린이 손이 닿지 않게"
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "img": "inputs/ai/v2/finale.png",
+   "h": "오늘 밤은,",
+   "big": "찍찍 소리 없이",
+   "bigsize": 92
+  }
+ ]
+}

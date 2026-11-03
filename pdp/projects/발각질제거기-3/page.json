@@ -1,0 +1,352 @@
+{
+ "title": "발각질제거기-3 v2",
+ "sections": [
+  {
+   "type": "hero",
+   "img": "inputs/ai/v2/hero.png",
+   "h1": "내 손에 맞는 모양,",
+   "big": "셋 중에 고르세요",
+   "bigsize": 84,
+   "sub": "타원, 망고, 8자. 투명 케이스 포함 유리 풋파일",
+   "seals": [
+    [
+     "모양",
+     "3가지",
+     60
+    ],
+    [
+     "구성",
+     "케이스",
+     52
+    ]
+   ],
+   "band": [
+    "타원형 · 망고형 · 8자형",
+    "미세 돌기",
+    "투명 케이스"
+   ]
+  },
+  {
+   "type": "empathy",
+   "stack": true,
+   "size": 58,
+   "h": "양말에 턱, 스타킹은 올이 쭉.<br><span class=\"hl\">아침부터 밤까지</span> 걸리는 뒤꿈치",
+   "cuts": [
+    {
+     "img": "inputs/ai/shared/e1.png",
+     "t": "아침",
+     "c": "신발 신다 손에 닿는 까끌함"
+    },
+    {
+     "img": "inputs/ai/shared/e2.png",
+     "t": "낮",
+     "c": "실내화 벗기 망설여질 때"
+    },
+    {
+     "img": "inputs/ai/shared/e3.png",
+     "t": "저녁",
+     "c": "맨발로 앉으면 손이 먼저 가요"
+    },
+    {
+     "img": "inputs/ai/shared/e4.png",
+     "t": "밤",
+     "c": "잠들기 전 발끝이 거칠거칠"
+    }
+   ]
+  },
+  {
+   "type": "turn",
+   "h": "금속 풋파일 쓰다가,<br><span class=\"hl\">유리를 찾으셨다면</span>",
+   "p": "이 제품은 다듬는 면이 유리이고, 모양을 고를 수 있어요.",
+   "size": 58,
+   "discs": [
+    {
+     "img": "inputs/ai/v2/macro.png",
+     "t": "돌기 유리 면",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/palm.png",
+     "t": "손에 쥐기",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "intro",
+   "h": "손이 작으면 망고,<br><span class=\"hl\">길게 쥐면 8자</span>",
+   "size": 62,
+   "h2": 700,
+   "steps": [
+    {
+     "img": "inputs/ai/v2/palm.png",
+     "t": "제품",
+     "c": "모양 3가지 중 선택",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/use.png",
+     "t": "사용",
+     "c": "손에 쥐고 한 방향으로",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "overview",
+   "img": "inputs/nukki/trio.png",
+   "style": "width:680px",
+   "items": [
+    [
+     "타원형",
+     "약 5 × 10cm"
+    ],
+    [
+     "망고형",
+     "약 5.5 × 9.5cm"
+    ],
+    [
+     "8자형",
+     "약 5 × 12.5cm"
+    ],
+    [
+     "투명 케이스",
+     "포함"
+    ]
+   ]
+  },
+  {
+   "type": "number",
+   "point": "POINT 1 · 모양",
+   "big": "3",
+   "unit": "가지",
+   "bigsize": 280,
+   "h": "손이 작으면 망고, 길게 쥐면 8자",
+   "why": "<span class=\"hl\">쥐는 습관에 맞춰</span> 고르세요",
+   "img": "inputs/ai/v2/palm.png",
+   "style": "height:900px;object-fit:cover",
+   "pale": false
+  },
+  {
+   "point": "POINT 2 · 돌기",
+   "h": "확대해 보면<br><span class=\"hl\">돌기가 촘촘</span>",
+   "img": "inputs/nukki/b.png",
+   "style": "width:600px;margin:0 auto",
+   "p": "유리 면에 작은 돌기 패턴이 있어요.",
+   "type": "feature",
+   "pale": true
+  },
+  {
+   "point": "POINT 3 · 케이스",
+   "h": "쓰고 말려서<br><span class=\"hl\">케이스에</span>",
+   "img": "inputs/photos/case.jpg",
+   "style": "width:529px;margin:0 auto",
+   "p": "투명 케이스가 함께 와요. 물기를 말린 뒤 넣어 주세요.",
+   "type": "feature",
+   "pale": false
+  },
+  {
+   "type": "compare",
+   "h": "다시 살 패드도,<br><span class=\"hl\">꽂을 충전기도 없는 유리</span>",
+   "size": 58,
+   "cols": [
+    "패드 교체형",
+    "전동형",
+    "금속 풋파일",
+    "이 제품"
+   ],
+   "rows": [
+    [
+     "교체<br>소모품",
+     "패드",
+     "롤러 등",
+     "제품별",
+     "없음"
+    ],
+    [
+     "충전·<br>배터리",
+     "없음",
+     "필요",
+     "없음",
+     "없음"
+    ],
+    [
+     "다듬는 면",
+     "패드",
+     "롤러",
+     "금속",
+     "유리"
+    ],
+    [
+     "모양",
+     "제품별",
+     "제품별",
+     "제품별",
+     "3가지 중 선택"
+    ]
+   ]
+  },
+  {
+   "type": "notice",
+   "h": "유리예요.<br><em>떨어뜨리면 깨질 수 있어요</em>",
+   "size": 60,
+   "p": "금이 간 제품은 쓰지 마세요. 욕실 바닥에 떨어지지 않게 조심하고, 쓰고 나면 물기를 닦아 안전한 곳에 두세요."
+  },
+  {
+   "type": "howto",
+   "h": "물기 닦고, 한 방향으로만.<br><span class=\"hl\">왕복으로 문지르지 마세요</span>",
+   "steps": [
+    {
+     "img": "inputs/ai/shared/e3.png",
+     "c": "물기를 닦은 발에",
+     "i": "(또는 마른 발에)"
+    },
+    {
+     "img": "inputs/ai/v2/use.png",
+     "c": "한 방향으로 가볍게",
+     "i": "(왕복으로 문지르지 않기)",
+     "style": "object-position:center 40%"
+    },
+    {
+     "img": "inputs/ai/v2/rinse.png",
+     "c": "샤워기 물로 헹궈 말리기",
+     "style": "object-position:center 40%"
+    }
+   ]
+  },
+  {
+   "type": "feature",
+   "point": "POINT · 관리",
+   "h": "유리 면은<br><em>샤워기로 슥</em>",
+   "size": 70,
+   "img": "inputs/ai/v2/rinse.png",
+   "style": "height:auto",
+   "p": "쓰고 나면 샤워기 물로 헹궈요. 충전도, 배터리도 없어요.",
+   "pale": true
+  },
+  {
+   "type": "checklist",
+   "h": "패드 갈고 버리다<br>지쳤다면",
+   "items": [
+    "패드 갈고 버리는 풋파일에 지친 분",
+    "손에 맞는 모양을 고르고 싶은 분",
+    "케이스에 보관하고 싶은 분",
+    "긴 손잡이가 불편했던 분",
+    "여행 가방에 넣어 가고 싶은 분"
+   ]
+  },
+  {
+   "type": "colors",
+   "h": "망고? 타원? 8자?<br><em>오늘 고르세요</em>",
+   "items": [
+    {
+     "img": "inputs/nukki/a.png",
+     "t": "타원형"
+    },
+    {
+     "img": "inputs/nukki/b.png",
+     "t": "망고형"
+    },
+    {
+     "img": "inputs/nukki/c.png",
+     "t": "8자형"
+    }
+   ]
+  },
+  {
+   "type": "after",
+   "h": "양말을 벗어도<br><em>괜찮은 날</em>",
+   "size": 74,
+   "img": "inputs/ai/v2/after.png",
+   "img2": "inputs/ai/v2/shelf.png"
+  },
+  {
+   "type": "qa",
+   "h": "사기 전에<br>묻는 것들",
+   "items": [
+    [
+     "아프진 않나요?",
+     "힘을 빼고 한 방향으로 가볍게 쓰세요. 따끔하거나 붉어지면 바로 멈추세요."
+    ],
+    [
+     "얼마나 자주 쓰나요?",
+     "한 번에 많이 하기보다 피부 상태를 보면서 나눠 쓰세요."
+    ],
+    [
+     "깨지지는 않나요?",
+     "유리라서 떨어뜨리면 깨질 수 있어요. 금이 갔다면 쓰지 마세요."
+    ],
+    [
+     "어떤 모양이 좋을까요?",
+     "손이 작으면 망고형, 길게 쥐는 쪽이 편하면 8자형을 보세요. 사이즈는 재는 위치에 따라 조금 다를 수 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "info",
+   "rows": [
+    [
+     "제품명",
+     "유리 각질제거기"
+    ],
+    [
+     "크기",
+     "타원 5 × 10cm, 망고 5.5 × 9.5cm, 8자 5 × 12.5cm"
+    ],
+    [
+     "구성",
+     "제품 1개, 투명 케이스"
+    ],
+    [
+     "재질",
+     "강화유리 (공급처 표기, 8자형 연결부 재질 미상)"
+    ],
+    [
+     "제조국",
+     "중국"
+    ],
+    [
+     "사진 안내",
+     "사용 장면은 연출 이미지로, 표면 무늬와 모양 등이 실제 제품과 다를 수 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "warn",
+   "h": "따끔하면,<br><em>바로 멈추세요</em>",
+   "items": [
+    [
+     "soft",
+     "힘을 빼고 가볍게"
+    ],
+    [
+     "no",
+     "상처·염증 부위에는 쓰지 않기"
+    ],
+    [
+     "stop",
+     "따갑거나 붉어지면 멈추기"
+    ],
+    [
+     "foot",
+     "발 각질 관리 용도로만"
+    ],
+    [
+     "drop",
+     "금이 간 제품은 쓰지 않기"
+    ],
+    [
+     "child",
+     "어린이 손이 닿지 않게"
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "img": "inputs/ai/v2/hero.png",
+   "h": "오늘 밤은,",
+   "big": "내 손에 맞는 모양으로",
+   "bigsize": 68
+  }
+ ]
+}

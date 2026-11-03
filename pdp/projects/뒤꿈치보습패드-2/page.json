@@ -1,0 +1,328 @@
+{
+ "title": "뒤꿈치보습패드-2 v2",
+ "sections": [
+  {
+   "type": "hero",
+   "img": "inputs/ai/v2/hero.png",
+   "h1": "뒤꿈치만 신는",
+   "big": "반쪽 양말",
+   "bigsize": 128,
+   "sub": "앞은 열린 오픈형 커버, 안쪽은 실리콘 패드",
+   "seals": [
+    [
+     "형태",
+     "오픈형",
+     54
+    ],
+    [
+     "안쪽",
+     "실리콘",
+     52
+    ]
+   ],
+   "band": [
+    "스킨 · 블랙",
+    "약 8 × 13cm",
+    "free"
+   ]
+  },
+  {
+   "type": "empathy",
+   "stack": true,
+   "size": 62,
+   "h": "양말에 턱,<br><span class=\"hl\">스타킹은 올이 쭉</span>",
+   "cuts": [
+    {
+     "img": "inputs/ai/shared/e1.png",
+     "t": "아침",
+     "c": "신발 신다 손에 닿는 까끌함"
+    },
+    {
+     "img": "inputs/ai/shared/e2.png",
+     "t": "낮",
+     "c": "실내화 벗기 망설여질 때"
+    },
+    {
+     "img": "inputs/ai/shared/e3.png",
+     "t": "저녁",
+     "c": "맨발로 앉으면 손이 먼저 가요"
+    },
+    {
+     "img": "inputs/ai/shared/e4.png",
+     "t": "밤",
+     "c": "잠들기 전 발끝이 거칠거칠"
+    }
+   ]
+  },
+  {
+   "type": "turn",
+   "h": "양말 전체는 답답할 때,<br><span class=\"hl\">뒤꿈치만</span>",
+   "p": "앞이 열린 뒤꿈치 커버예요. 몸에 대한 효능을 약속하지 않아요.",
+   "size": 58,
+   "discs": [
+    {
+     "img": "inputs/photos/opt_skin.jpg",
+     "t": "제품 모양",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/hero.png",
+     "t": "뒤꿈치에",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "intro",
+   "h": "발끝은 열고,<br><span class=\"hl\">뒤꿈치만 덮어요</span>",
+   "size": 60,
+   "h2": 700,
+   "steps": [
+    {
+     "img": "inputs/photos/opt_skin.jpg",
+     "t": "제품",
+     "c": "안쪽에 실리콘 패드",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/on.png",
+     "t": "착용",
+     "c": "양말처럼 올려 신어요",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "overview",
+   "img": "inputs/photos/opt_skin.jpg",
+   "style": "width:600px",
+   "items": [
+    [
+     "오픈형",
+     "앞이 열림"
+    ],
+    [
+     "약 8 × 13cm",
+     "free"
+    ],
+    [
+     "실리콘",
+     "안쪽 패드"
+    ],
+    [
+     "2가지 색",
+     "스킨, 블랙"
+    ]
+   ]
+  },
+  {
+   "type": "number",
+   "point": "POINT 1 · 형태",
+   "big": "반쪽",
+   "bigsize": 200,
+   "h": "발끝은 열고, 뒤꿈치만 덮어요",
+   "why": "<span class=\"hl\">양말처럼 신는</span> 오픈형이에요",
+   "img": "inputs/ai/v2/hero.png",
+   "style": "height:900px;object-fit:cover",
+   "pale": false
+  },
+  {
+   "point": "POINT 2 · 안쪽",
+   "h": "겉은 쭉쭉 늘어나고,<br><span class=\"hl\">안쪽은 실리콘</span>",
+   "img": "inputs/photos/opt_skin.jpg",
+   "style": "height:820px;object-fit:cover",
+   "p": "신축 원단 안쪽에 실리콘 패드가 있어요.",
+   "type": "feature",
+   "pale": true
+  },
+  {
+   "point": "POINT 3 · 저녁",
+   "h": "자기 전에 끼우는<br><span class=\"hl\">뒤꿈치 양말</span>",
+   "img": "inputs/ai/v2/night.png",
+   "style": "height:auto",
+   "p": "잠잘 때 쓰는 느낌은 사람마다 달라요.",
+   "type": "feature",
+   "pale": false
+  },
+  {
+   "type": "compare",
+   "h": "양말 전체 대신,<br><span class=\"hl\">뒤꿈치만</span>",
+   "size": 60,
+   "cols": [
+    "크림·로션",
+    "일반 양말",
+    "이 제품"
+   ],
+   "rows": [
+    [
+     "쓰는 방법",
+     "바름",
+     "신음",
+     "뒤꿈치에 끼움"
+    ],
+    [
+     "덮는 곳",
+     "바른 곳",
+     "발 전체",
+     "뒤꿈치"
+    ],
+    [
+     "앞쪽",
+     "해당 없음",
+     "막힘",
+     "열림"
+    ],
+    [
+     "안쪽",
+     "해당 없음",
+     "제품별",
+     "실리콘 패드"
+    ]
+   ]
+  },
+  {
+   "type": "notice",
+   "h": "의료용 제품이 <em>아니에요</em>",
+   "p": "일반 생활용품이에요. 몸에 대한 효능을 약속하지 않아요.",
+   "size": 62
+  },
+  {
+   "type": "howto",
+   "h": "씻고, 말리고,<br><span class=\"hl\">뒤꿈치에 끼우면 끝</span>",
+   "steps": [
+    {
+     "img": "inputs/ai/shared/e3.png",
+     "c": "발을 씻고 물기를 닦아요"
+    },
+    {
+     "img": "inputs/ai/v2/on.png",
+     "c": "뒤꿈치에 맞춰 끼워요"
+    },
+    {
+     "img": "inputs/ai/v2/sock.png",
+     "c": "그 위에 양말을 신어도 돼요"
+    }
+   ]
+  },
+  {
+   "type": "checklist",
+   "h": "로션 바르고,<br>그 위에 신으세요",
+   "items": [
+    "양말 전체가 답답한 분",
+    "자기 전 뒤꿈치를 덮어 두고 싶은 분",
+    "로션 뒤 양말이 신경 쓰이는 분",
+    "오픈형 커버를 찾는 분",
+    "색을 고르고 싶은 분"
+   ]
+  },
+  {
+   "type": "colors",
+   "h": "스킨은 양말 속에,<br><em>블랙은 레깅스 아래</em>",
+   "items": [
+    {
+     "img": "inputs/photos/opt_skin.jpg",
+     "t": "스킨"
+    },
+    {
+     "img": "inputs/photos/opt_black.jpg",
+     "t": "블랙"
+    }
+   ]
+  },
+  {
+   "type": "after",
+   "h": "오늘 밤 양말 전에,<br><em>패드 먼저</em>",
+   "size": 70,
+   "img": "inputs/ai/v2/night.png",
+   "img2": "inputs/ai/v2/after.png"
+  },
+  {
+   "type": "qa",
+   "h": "사기 전에<br>묻는 것들",
+   "items": [
+    [
+     "보습이 되나요?",
+     "보습 효과는 확인되지 않았어요. 뒤꿈치를 덮는 제품이에요."
+    ],
+    [
+     "갈라진 뒤꿈치에 써도 되나요?",
+     "상처나 염증이 있으면 쓰지 말고 전문가와 상담하세요."
+    ],
+    [
+     "사이즈는요?",
+     "약 8 × 13cm, free예요."
+    ],
+    [
+     "세탁은요?",
+     "공급처 안내가 없어요. 라벨을 먼저 확인해 주세요."
+    ]
+   ]
+  },
+  {
+   "type": "info",
+   "rows": [
+    [
+     "제품명",
+     "뒤꿈치 커버"
+    ],
+    [
+     "색상",
+     "스킨, 블랙"
+    ],
+    [
+     "크기",
+     "약 8 × 13cm, free"
+    ],
+    [
+     "구성",
+     "공급처 옵션 기준"
+    ],
+    [
+     "재질",
+     "고탄력 스판 원단, 안쪽 실리콘 (공급처 표기)"
+    ],
+    [
+     "사진 안내",
+     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "warn",
+   "h": "따가우면,<br><em>바로 벗으세요</em>",
+   "items": [
+    [
+     "soft",
+     "너무 오래 신지 않기"
+    ],
+    [
+     "no",
+     "상처·염증이 있는 부위에는 쓰지 않기"
+    ],
+    [
+     "stop",
+     "따갑거나 붉어지면 벗기"
+    ],
+    [
+     "foot",
+     "의료용 제품이 아니에요"
+    ],
+    [
+     "drop",
+     "사용 후 깨끗이 관리"
+    ],
+    [
+     "child",
+     "어린이 손이 닿지 않게"
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "img": "inputs/ai/v2/hero.png",
+   "h": "오늘 밤 양말 전에,",
+   "big": "패드 먼저",
+   "bigsize": 110
+  }
+ ]
+}

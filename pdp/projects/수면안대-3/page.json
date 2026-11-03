@@ -1,0 +1,347 @@
+{
+ "title": "수면안대-3 v2",
+ "sections": [
+  {
+   "type": "hero",
+   "img": "inputs/ai/v2/hero.png",
+   "h1": "뒤집으면",
+   "big": "다른 안대",
+   "bigsize": 130,
+   "sub": "망사 결 한 면, 매끈한 결 한 면. 귀끈 길이 조절",
+   "seals": [
+    [
+     "양면",
+     "2가지 결",
+     48
+    ],
+    [
+     "색상",
+     "4가지",
+     60
+    ]
+   ],
+   "band": [
+    "네이비핑크 · 그레이핑크 · 차콜 · 블랙",
+    "귀끈 스토퍼"
+   ]
+  },
+  {
+   "type": "empathy",
+   "stack": true,
+   "h": "켜 둔 건 남편인데,<br><span class=\"hl\">뒤척이는 건 나</span>",
+   "cuts": [
+    {
+     "img": "inputs/ai/shared/e_phone.png",
+     "t": "밤",
+     "c": "옆에서 켠 휴대폰 불빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_sun.png",
+     "t": "아침",
+     "c": "커튼 사이로 들어오는 햇빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_cabin.png",
+     "t": "기내",
+     "c": "내 맘대로 못 끄는 불빛"
+    },
+    {
+     "img": "inputs/ai/shared/e_ear.png",
+     "t": "귀 뒤",
+     "c": "헐렁해서 고쳐 쓰던 끈"
+    }
+   ]
+  },
+  {
+   "type": "turn",
+   "h": "안대는 늘 같은 면으로만<br><span class=\"hl\">쓰셨죠</span>",
+   "p": "이 안대는 결이 다른 두 면이 있어요.",
+   "size": 60,
+   "discs": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "t": "면이 두 개",
+     "style": "object-fit:cover"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "t": "귀에 걸어 쓰기",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "intro",
+   "h": "망사 결, 매끈한 결.<br><span class=\"hl\">뒤집어 고르세요</span>",
+   "size": 66,
+   "h2": 700,
+   "steps": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "t": "제품",
+     "c": "면마다 결과 색이 달라요",
+     "style": "object-fit:contain;background:var(--pale)"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "t": "착용",
+     "c": "귀에 걸어 스토퍼로 맞춰요",
+     "style": "object-fit:cover"
+    }
+   ]
+  },
+  {
+   "type": "overview",
+   "img": "inputs/nukki/gray_float.png",
+   "style": "width:640px",
+   "items": [
+    [
+     "양면",
+     "망사 결, 매끈한 결"
+    ],
+    [
+     "22 × 10cm",
+     "안대 크기"
+    ],
+    [
+     "약 1.5cm",
+     "두께"
+    ],
+    [
+     "약 19g",
+     "무게 표기"
+    ]
+   ]
+  },
+  {
+   "type": "number",
+   "point": "POINT 1 · 두 면",
+   "big": "2",
+   "unit": "면",
+   "bigsize": 280,
+   "h": "닿는 느낌이 면마다 달라요",
+   "why": "<span class=\"hl\">망사 결 한 면, 매끈한 결 한 면.</span> 그날 고르세요",
+   "img": "inputs/ai/v2/hand.png",
+   "style": "height:auto",
+   "pale": false
+  },
+  {
+   "point": "POINT 2 · 귀끈",
+   "h": "귀끈 길이는<br><span class=\"hl\">스토퍼로 맞춰요</span>",
+   "img": "inputs/ai/v2/close.png",
+   "p": "끈을 당겨 스토퍼로 멈춰요.",
+   "type": "feature",
+   "pale": true,
+   "style": "height:820px;object-fit:cover;"
+  },
+  {
+   "point": "어디서나",
+   "h": "비행기에서도,<br><span class=\"hl\">낮잠에도 같은 안대</span>",
+   "img": "inputs/ai/v2/nap.png",
+   "p": "가방에 넣어 두었다가 꺼내 써요.",
+   "type": "feature",
+   "pale": false,
+   "style": "height:820px;object-fit:cover;"
+  },
+  {
+   "type": "compare",
+   "h": "한 장에 두 면,<br><span class=\"hl\">귀끈은 스토퍼로</span>",
+   "cols": [
+    "일반 귀걸이형",
+    "두툼 통짜형",
+    "이 제품"
+   ],
+   "rows": [
+    [
+     "면 구성",
+     "한 면",
+     "제품별",
+     "양면"
+    ],
+    [
+     "고정 방식",
+     "귀 끈",
+     "벨크로 등",
+     "귀끈 + 스토퍼"
+    ],
+    [
+     "크기",
+     "제품별",
+     "제품별",
+     "22 × 10cm"
+    ],
+    [
+     "색상",
+     "제품별",
+     "제품별",
+     "투톤 4가지"
+    ]
+   ]
+  },
+  {
+   "type": "notice",
+   "h": "시원한 안대는 <em>아니에요</em>",
+   "p": "망사 결은 표면의 모양이에요. 시원하거나 공기가 잘 통한다고 확인된 것은 아니에요. 귀에 거는 끈이 있어서, 귀가 예민하면 끈이 신경 쓰일 수 있어요."
+  },
+  {
+   "type": "howto",
+   "h": "면 고르고, 귀에 걸고,<br><span class=\"hl\">스토퍼로 맞추면 끝</span>",
+   "steps": [
+    {
+     "img": "inputs/ai/v2/hand.png",
+     "c": "오늘 쓸 면을 골라요",
+     "style": "object-fit:contain"
+    },
+    {
+     "img": "inputs/ai/v2/close.png",
+     "c": "양쪽 귀에 걸어요"
+    },
+    {
+     "img": "inputs/ai/v2/hero.png",
+     "c": "스토퍼로 길이를 맞춰요",
+     "style": "object-position:center 62%"
+    }
+   ]
+  },
+  {
+   "type": "feature",
+   "h": "\"그만 자\" 대신<br><em>안대 하나</em>",
+   "size": 76,
+   "img": "inputs/ai/v2/partner.png",
+   "style": "height:auto",
+   "pale": true
+  },
+  {
+   "type": "checklist",
+   "h": "끈 때문에, 눌려서, 답답해서.<br>서랍에 쌓인 안대",
+   "items": [
+    "닿는 면을 그날 고르고 싶은 분",
+    "옆 사람 불빛이 신경 쓰이는 분",
+    "커튼 사이 아침 빛에 먼저 깨는 분",
+    "헐렁한 귀끈을 고쳐 쓰기 귀찮았던 분",
+    "색 다른 안대를 찾는 분"
+   ]
+  },
+  {
+   "type": "colors",
+   "h": "뒤집을 때마다<br><em>색도 달라요</em>",
+   "items": [
+    {
+     "img": "inputs/photos/navypink.jpg",
+     "t": "네이비핑크"
+    },
+    {
+     "img": "inputs/photos/graypink.jpg",
+     "t": "그레이핑크"
+    },
+    {
+     "img": "inputs/photos/charcoal.jpg",
+     "t": "차콜"
+    },
+    {
+     "img": "inputs/photos/black.jpg",
+     "t": "블랙"
+    }
+   ]
+  },
+  {
+   "type": "after",
+   "h": "교대 근무 낮잠에도,<br><em>새벽 비행기에도</em>",
+   "size": 70,
+   "img": "inputs/ai/v2/after.png",
+   "img2": "inputs/ai/v2/day.png"
+  },
+  {
+   "type": "qa",
+   "h": "빛이 완전히<br>막히냐고요?",
+   "items": [
+    [
+     "빛이 완전히 막히나요?",
+     "눈앞을 덮어 빛을 가려 주지만, 완전히 막는다고 약속드리지는 않아요. 차광 시험은 하지 않았어요."
+    ],
+    [
+     "어느 면이 더 시원한가요?",
+     "시원함은 확인되지 않았어요. 결이 다른 두 면이라 닿는 느낌이 달라요."
+    ],
+    [
+     "귀가 아프지 않나요?",
+     "귀에 거는 끈이 있어요. 스토퍼로 길이를 맞춰 쓰세요."
+    ],
+    [
+     "색은 어떻게 다른가요?",
+     "네이비핑크, 그레이핑크처럼 면마다 색이 달라요. 차콜과 블랙도 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "info",
+   "rows": [
+    [
+     "제품명",
+     "양면 수면안대"
+    ],
+    [
+     "색상",
+     "네이비핑크, 그레이핑크, 차콜, 블랙"
+    ],
+    [
+     "크기",
+     "22 × 10 × 1.5cm"
+    ],
+    [
+     "구성",
+     "1개"
+    ],
+    [
+     "재질",
+     "폴리에스테르"
+    ],
+    [
+     "제조국",
+     "중국"
+    ],
+    [
+     "사진 안내",
+     "사용 장면은 연출 이미지로, 모양과 크기 등이 실제 제품과 다를 수 있어요."
+    ]
+   ]
+  },
+  {
+   "type": "warn",
+   "h": "불편하면,<br><em>바로 벗으세요</em>",
+   "items": [
+    [
+     "wide",
+     "너무 조이지 않게"
+    ],
+    [
+     "no",
+     "눈 주변에 상처·염증이 있으면 쓰지 않기"
+    ],
+    [
+     "stop",
+     "불편하면 바로 벗기"
+    ],
+    [
+     "no",
+     "걷거나 운전할 때 쓰지 않기"
+    ],
+    [
+     "drop",
+     "세탁은 라벨을 먼저 확인, 손세탁 후 그늘 건조 권장"
+    ],
+    [
+     "child",
+     "어린이 손이 닿지 않게"
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "img": "inputs/ai/v2/finale.png",
+   "h": "오늘 밤은",
+   "big": "뒤집어 고르기",
+   "bigsize": 92
+  }
+ ]
+}
