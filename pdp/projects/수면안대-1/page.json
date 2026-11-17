@@ -16,12 +16,12 @@
     ],
     [
      "색상",
-     "4가지",
+     "2가지",
      60
     ]
    ],
    "band": [
-    "블루 · 블랙 · 그레이 · 진핑크",
+    "블랙 · 그레이",
     "머리 뒤 찍찍"
    ]
   },
@@ -115,17 +115,9 @@
   },
   {
    "type": "colors",
-   "h": "여행 가방 속에서<br><span class=\"hl\">바로 찾는 진핑크</span>",
+   "h": "남편은 블랙,<br><span class=\"hl\">나는 그레이</span>",
    "size": 62,
    "items": [
-    {
-     "img": "inputs/nukki/pink.png",
-     "t": "진핑크"
-    },
-    {
-     "img": "inputs/nukki/blue.png",
-     "t": "블루"
-    },
     {
      "img": "inputs/nukki/gray.png",
      "t": "그레이"
@@ -139,12 +131,12 @@
   },
   {
    "type": "feature",
-   "h": "자는 얼굴도<br><span class=\"hl\">예쁘면 좋잖아요</span>",
+   "h": "베개 두 개,<br><span class=\"hl\">안대 두 색</span>",
    "size": 64,
-   "img": "inputs/ai/v3/pink.png",
+   "img": "inputs/ai/v3/pair.png",
    "style": "height:1170px;object-fit:cover",
    "pale": true,
-   "p": "진핑크, 블루, 그레이, 블랙 중에 골라요."
+   "p": "블랙과 그레이, 두 가지 색 중에 골라요."
   },
   {
    "type": "feature",
@@ -185,7 +177,7 @@
      "색상",
      "제품별",
      "제품별",
-     "4가지"
+     "2가지"
     ]
    ]
   },
@@ -237,9 +229,9 @@
   },
   {
    "type": "feature",
-   "h": "까만 안대는<br><span class=\"hl\">어두운 방에서 안 보이잖아요</span>",
+   "h": "새벽에 더듬어도<br><span class=\"hl\">찾기 쉬운 그레이</span>",
    "size": 66,
-   "img": "inputs/ai/v3/blue.png",
+   "img": "inputs/ai/v3/graynight.png",
    "style": "height:1170px;object-fit:cover",
    "pale": false
   },
@@ -282,7 +274,7 @@
     ],
     [
      "색상",
-     "블루, 블랙, 그레이, 진핑크"
+     "블랙, 그레이"
     ],
     [
      "크기",
