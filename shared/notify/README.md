@@ -16,7 +16,7 @@ python3 shared/notify/discord.py <팀> <종류> "<메시지>" [--file 썸네일.
 
 예)
 ```bash
-python3 shared/notify/discord.py 상페 완료 "발각질제거기-1 상페 완성 · 드라이브 상세페이지/테스트세트1/s1-01_1_발각질제거기_1_손잡이+양면/" --file thumb.png
+python3 shared/notify/discord.py 상페 완료 "발각질제거기-1 상페 완성 · 드라이브 상세페이지/테스트세트1/s1-01_발각질제거기_스탠_손잡이_양면/" --file thumb.png
 python3 shared/notify/discord.py 기획 막힘 "윙 로그인 버튼 눌렀는데 추가 인증이 떠서 멈춤"
 ```
 
