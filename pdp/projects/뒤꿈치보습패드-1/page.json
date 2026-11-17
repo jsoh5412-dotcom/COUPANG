@@ -3,11 +3,11 @@
  "sections": [
   {
    "type": "hero",
-   "img": "inputs/ai/v3/hero.png",
+   "img": "inputs/ai/v4/hero.png",
    "h1": "바셀린 바르고,",
    "big": "뒤꿈치 들고<br>화장실 가셨죠",
    "bigsize": 98,
-   "sub": "크림 바른 뒤꿈치에 끼우는 실리콘 2개",
+   "sub": "크림 바른 뒤꿈치에 끼우는 반투명 실리콘 2개",
    "seals": [
     [
      "구성",
@@ -16,12 +16,12 @@
     ],
     [
      "색상",
-     "2가지",
-     56
+     "화이트",
+     44
     ]
    ],
    "band": [
-    "살색 · 화이트",
+    "반투명 화이트",
     "물로 헹궈 다시 써요"
    ]
   },
@@ -57,20 +57,16 @@
    "type": "feature",
    "h": "크림과 이불 사이에<br><span class=\"hl\">실리콘 한 겹</span>",
    "size": 66,
-   "img": "inputs/photos/skin_worn.jpg",
+   "img": "inputs/photos/v4/worn2.jpg",
    "style": "height:auto",
    "p": "크림 바른 뒤꿈치에 끼워 덮어 두는 실리콘이에요.",
    "pale": true
   },
   {
    "type": "overview",
-   "img": "inputs/photos/skin_flat.jpg",
-   "style": "width:420px",
+   "img": "inputs/photos/v4/white_card.jpg",
+   "style": "width:430px",
    "items": [
-    [
-     "약 10 × 8cm",
-     "1개 크기"
-    ],
     [
      "2개",
      "양쪽 1세트"
@@ -80,35 +76,31 @@
      "재질"
     ],
     [
+     "반투명",
+     "화이트"
+    ],
+    [
      "작은 구멍",
      "군데군데"
     ]
    ]
   },
   {
-   "type": "pair",
+   "type": "feature",
    "point": "POINT 1",
-   "h": "쭉 늘어나서<br><span class=\"hl\">끼우기 쉬워요</span>",
-   "size": 70,
-   "cellh": 400,
-   "cuts": [
-    {
-     "img": "inputs/photos/v3/stretch.jpg",
-     "c": "이만큼 늘어나요"
-    },
-    {
-     "img": "inputs/photos/v3/holes_hand.jpg",
-     "c": "손에 올려 본 크기"
-    }
-   ]
+   "h": "반투명이라<br><span class=\"hl\">피부에 묻혀요</span>",
+   "size": 66,
+   "img": "inputs/photos/v4/worn1.jpg",
+   "style": "height:auto",
+   "p": "반투명한 화이트 실리콘이라 끼워도 은은해요."
   },
   {
    "type": "feature",
    "point": "POINT 2",
    "h": "답답한 수면양말 말고,<br><span class=\"hl\">뒤꿈치만 쏙</span>",
    "size": 60,
-   "img": "inputs/photos/white_worn.jpg",
-   "style": "height:auto",
+   "img": "inputs/ai/v4/sock.png",
+   "style": "height:1170px;object-fit:cover",
    "p": "앞이 트여 있어 발가락은 나와요.",
    "pale": true
   },
@@ -117,7 +109,7 @@
    "point": "POINT 3",
    "h": "오늘 쓰고 헹구고,<br><span class=\"hl\">내일 또 쏙</span>",
    "size": 70,
-   "img": "inputs/ai/v3/rinse.png",
+   "img": "inputs/ai/v4/rinse.png",
    "style": "height:1170px;object-fit:cover",
    "p": "물로 가볍게 헹궈 말린 뒤 다시 써요."
   },
@@ -125,7 +117,7 @@
    "type": "feature",
    "h": "랩은 버리고,<br><span class=\"hl\">실리콘은 씻어요</span>",
    "size": 70,
-   "img": "inputs/ai/v3/wrap.png",
+   "img": "inputs/ai/v4/wrap.png",
    "style": "height:1170px;object-fit:cover",
    "pale": true
   },
@@ -133,7 +125,7 @@
    "type": "feature",
    "h": "소파에서 드라마 볼 때<br><span class=\"hl\">뒤꿈치에 쏙</span>",
    "size": 70,
-   "img": "inputs/ai/v3/sofa.png",
+   "img": "inputs/ai/v4/sofa.png",
    "style": "height:1170px;object-fit:cover",
    "pale": false
   },
@@ -183,14 +175,12 @@
      "c": "뒤꿈치에 크림을 발라요"
     },
     {
-     "img": "inputs/photos/v3/hole_close.jpg",
-     "c": "늘여서 뒤꿈치에 맞춰 끼워요",
-     "style": "object-fit:contain;background:#fff"
+     "n": 2,
+     "c": "늘여서 뒤꿈치에 맞춰 끼워요"
     },
     {
-     "img": "inputs/photos/skin_shoe.jpg",
-     "c": "걸을 땐 양말이나 신발을 겹쳐 주세요",
-     "style": "object-fit:contain;background:#fff"
+     "n": 3,
+     "c": "걸을 땐 양말이나 신발을 겹쳐 주세요"
     }
    ]
   },
@@ -209,34 +199,18 @@
    "type": "feature",
    "h": "이번 주말 빨래에서<br><span class=\"hl\">이불 하나 빼세요</span>",
    "size": 62,
-   "img": "inputs/ai/v3/laundry.png",
+   "img": "inputs/ai/v4/laundry.png",
    "style": "height:1170px;object-fit:cover",
    "pale": true
   },
   {
-   "type": "pair",
-   "h": "살색과 화이트,<br><span class=\"hl\">양말 색에 맞춰 골라요</span>",
-   "size": 62,
-   "pale": true,
-   "cellh": 400,
-   "cuts": [
-    {
-     "img": "inputs/photos/v3/one.jpg",
-     "t": "살색"
-    },
-    {
-     "img": "inputs/photos/white_flat.jpg",
-     "t": "화이트"
-    }
-   ]
-  },
-  {
    "type": "feature",
-   "h": "하얀 양말엔<br><span class=\"hl\">화이트로 맞춰요</span>",
+   "h": "손에 올리면<br><span class=\"hl\">말랑, 쫀득</span>",
    "size": 70,
-   "img": "inputs/ai/v3/white.png",
+   "img": "inputs/ai/v4/test.png",
    "style": "height:1170px;object-fit:cover",
-   "pale": false
+   "pale": false,
+   "p": "말랑한 실리콘 2개가 한 세트예요."
   },
   {
    "type": "qa",
@@ -256,7 +230,7 @@
     ],
     [
      "발이 작거나 커도 맞나요?",
-     "약 10 × 8cm의 늘어나는 실리콘이에요. 발 크기에 따라 맞는 느낌이 달라요."
+     "잘 늘어나는 실리콘이에요. 공급처 안내대로 색과 제품에 따라 크기가 조금 다를 수 있고, 발 크기에 따라 맞는 느낌이 달라요."
     ]
    ]
   },
@@ -265,15 +239,11 @@
    "rows": [
     [
      "제품명",
-     "실리콘 발 뒷꿈치 패드"
+     "실리콘 발 패드 - 발뒤꿈치"
     ],
     [
      "색상",
-     "살색, 화이트"
-    ],
-    [
-     "크기",
-     "약 10 × 8cm"
+     "화이트 (반투명)"
     ],
     [
      "구성",
@@ -281,7 +251,7 @@
     ],
     [
      "재질",
-     "실리콘"
+     "실리콘 (공급처 표기)"
     ],
     [
      "제조국",
@@ -325,7 +295,7 @@
   },
   {
    "type": "finale",
-   "img": "inputs/ai/v3/finale.png",
+   "img": "inputs/ai/v4/finale.png",
    "h": "비닐랩은",
    "big": "부엌으로<br>돌려보내세요",
    "bigsize": 88
