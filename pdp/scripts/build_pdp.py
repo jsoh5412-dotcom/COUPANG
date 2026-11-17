@@ -125,8 +125,9 @@ def checklist(s):
 
 
 def colors(s):
-    two = ' style="grid-template-columns:1fr 1fr"' if s.get("two") else ""
-    figs = "".join(f'<figure><div class="box" style="background:#fff">{img(c["img"])}</div><figcaption>{c["t"]}</figcaption></figure>' for c in s["items"])
+    two = ' style="flex-wrap:wrap"' if s.get("three") else ""
+    fs = ' style="flex:0 0 calc(33.3% - 6px)"' if s.get("three") else ""
+    figs = "".join(f'<figure{fs}><div class="box" style="background:#fff">{img(c["img"])}</div><figcaption>{c["t"]}</figcaption></figure>' for c in s["items"])
     return f'<section class="pale"><div class="head"><h2 style="font-size:{s.get("size", 64)}px">{s["h"]}</h2></div><div class="colors"{two}>{figs}</div></section>'
 
 

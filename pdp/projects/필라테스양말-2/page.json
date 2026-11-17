@@ -1,78 +1,77 @@
 {
- "title": "필라테스양말-2 v3",
+ "title": "필라테스양말-2 v4",
  "sections": [
   {
    "type": "hero",
-   "img": "inputs/photos/pink_tiptoe.jpg",
-   "h1": "페디가 보이는",
-   "big": "필라테스 양말",
-   "bigsize": 112,
-   "sub": "발등 크로스밴드, 앞코가 트인 오픈토 양말",
+   "img": "inputs/ai/v4/hero.png",
+   "h1": "리본 양말인데",
+   "big": "발가락까지<br>덮여요",
+   "bigsize": 110,
+   "sub": "발등엔 X자 리본, 발가락 5칸이 막힌 양말",
    "seals": [
     [
-     "앞코",
-     "오픈",
+     "발끝",
+     "막힘",
      60
     ],
     [
      "발등",
-     "X자",
-     66
+     "리본",
+     60
     ]
    ],
    "band": [
-    "핑크 · 블랙 · 퍼플",
-    "FREE 사이즈"
-   ],
-   "imgstyle": "object-position:center 60%"
+    "블랙 · 그레이 · 베이지 · 핑크",
+    "FREE (225~250mm)"
+   ]
   },
   {
    "type": "empathy",
    "stack": true,
-   "h": "페디 받은 발을<br><span class=\"hl\">양말로 가리기 아까워요</span>",
-   "size": 56,
+   "h": "장바구니에 넣었다 뺀<br><span class=\"hl\">오픈토 리본 양말</span>",
+   "size": 58,
    "cuts": [
     {
      "img": "inputs/ai/v3/e_mirror.png",
      "t": "거울",
-     "c": "발끝이 왠지 허전해요"
+     "c": "리본은 예쁜데 발끝이 신경 쓰여요"
     },
     {
      "img": "inputs/ai/v3/e_ribbon.png",
      "t": "리본",
-     "c": "수업 중에 또 풀려요"
+     "c": "갖고 싶었던 그 모양"
     },
     {
      "img": "inputs/ai/v3/e_locker.png",
      "t": "탈의실",
-     "c": "양말 고민 5분"
+     "c": "페디가 벗겨진 날"
     },
     {
      "img": "inputs/ai/v3/e_phone.png",
      "t": "사진",
-     "c": "수업 사진 속 내 양말"
+     "c": "수업 사진에 크게 나온 발끝"
     }
    ]
   },
   {
    "type": "feature",
-   "h": "발레 슈즈처럼<br><span class=\"hl\">생겼지만 양말이에요</span>",
+   "h": "오픈토 리본 양말의<br><span class=\"hl\">앞을 막았어요</span>",
    "size": 64,
-   "img": "inputs/photos/black_big.jpg",
+   "img": "inputs/photos/v4/peach.jpg",
    "style": "height:auto",
    "pale": true,
-   "p": "발등을 X자 밴드가 지나가요. 묶지 않아요."
+   "p": "발등은 리본형, 발가락은 끝까지 막힌 막힘형이에요."
   },
   {
    "type": "overview",
    "items": [
     [
      "X자",
-     "발등 밴드"
+     "발등 리본"
     ],
     [
-     "오픈토",
-     "앞코"
+     "막힘",
+     "5칸 앞코"
     ],
     [
      "점무늬",
@@ -80,110 +79,126 @@
     ],
     [
      "FREE",
-     "사이즈"
+     "225~250mm"
     ]
-   ]
+   ],
+   "img": "inputs/ai/v4/flat.png",
+   "style": "width:720px"
   },
   {
    "type": "feature",
-   "h": "신기만 하면<br><span class=\"hl\">발등에 X</span>",
+   "h": "묶지 않아도<br><span class=\"hl\">발등엔 리본</span>",
    "size": 64,
-   "img": "inputs/photos/purple_front.jpg",
-   "style": "height:auto",
+   "img": "inputs/ai/v4/bench.png",
+   "style": "height:1170px;object-fit:cover",
    "pale": false,
-   "p": "양말처럼 쑥 신으면 X밴드가 발등에 자리 잡아요.",
+   "p": "리본 두 줄이 발등을 X자로 지나가요. 따로 묶지 않아요.",
    "point": "POINT 1"
   },
   {
    "type": "feature",
-   "h": "예쁘게 칠한<br><span class=\"hl\">발끝을 내놓으세요</span>",
+   "h": "페디 벗겨진 날에도<br><span class=\"hl\">리본 양말</span>",
    "size": 64,
-   "img": "inputs/photos/pink.jpg",
-   "style": "height:auto",
+   "img": "inputs/ai/v4/gray.png",
+   "style": "height:1170px;object-fit:cover",
    "pale": true,
-   "p": "다섯 발가락 앞이 트여 있어요. 처음엔 낯설 수 있어요.",
+   "p": "다섯 발가락 칸이 모두 끝까지 막혀 있어요.",
    "point": "POINT 2"
   },
   {
    "type": "feature",
-   "h": "사진 찍는 날은<br><span class=\"hl\">퍼플</span>",
+   "h": "바닥 점무늬로<br><span class=\"hl\">매트 위에서도</span>",
    "size": 64,
-   "img": "inputs/photos/purple.jpg",
+   "img": "inputs/ai/v4/sole.png",
    "style": "height:auto",
    "pale": false,
-   "p": "핑크, 블랙, 퍼플 중에 골라요.",
+   "p": "바닥 점무늬가 미끄러짐을 줄여 줘요. 그래도 바닥은 조심해 주세요.",
    "point": "POINT 3"
   },
   {
-   "type": "feature",
-   "h": "수업 중에 다시<br><span class=\"hl\">안 묶어요</span>",
-   "size": 64,
-   "img": "inputs/photos/black.jpg",
-   "style": "height:auto",
-   "pale": true,
-   "p": "묶는 리본이 없는 X밴드예요."
+   "type": "colors",
+   "h": "맨발처럼 보이는 베이지,<br><span class=\"hl\">또렷한 블랙</span>",
+   "size": 58,
+   "items": [
+    {
+     "img": "inputs/photos/v4/c_black.jpg",
+     "t": "블랙"
+    },
+    {
+     "img": "inputs/photos/v4/c_lgray.jpg",
+     "t": "그레이"
+    },
+    {
+     "img": "inputs/photos/v4/c_peach.jpg",
+     "t": "베이지"
+    },
+    {
+     "img": "inputs/photos/v4/c_pink.jpg",
+     "t": "핑크"
+    }
+   ],
+   "two": true
   },
   {
    "type": "feature",
-   "h": "리포머 발판 위<br><span class=\"hl\">도톨도톨 점</span>",
+   "h": "토요일 바레 수업,<br><span class=\"hl\">핑크 리본으로</span>",
    "size": 64,
-   "img": "inputs/photos/sole_purple.jpg",
+   "img": "inputs/ai/v4/pink.png",
    "style": "height:auto",
-   "pale": false,
-   "p": "바닥 점무늬가 미끄러짐을 줄여 줘요. 그래도 바닥을 조심해 주세요."
-  },
-  {
-   "type": "feature",
-   "h": "거울 속에서<br><span class=\"hl\">제일 먼저 보이는 X</span>",
-   "size": 64,
-   "img": "inputs/ai/v3/s_barre.png",
-   "style": "height:1170px;object-fit:cover",
    "pale": true
   },
   {
+   "type": "feature",
+   "h": "바레 수업 전,<br><span class=\"hl\">발끝까지 깔끔하게</span>",
+   "size": 64,
+   "img": "inputs/ai/v4/barre.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false
+  },
+  {
    "type": "compare",
-   "h": "오픈토, 리본형,<br><span class=\"hl\">그리고 X밴드형</span>",
-   "size": 58,
+   "h": "오픈토 리본, 막힘 토삭스,<br><span class=\"hl\">그리고 막힘 리본</span>",
+   "size": 54,
    "cols": [
-    "일반 양말",
-    "막힘형",
+    "오픈토 리본",
+    "막힘 토삭스",
     "이 제품"
    ],
    "rows": [
     [
      "앞코",
+     "뚫림",
      "막힘",
-     "막힘",
-     "오픈토"
+     "막힘"
     ],
     [
-     "발등 밴드",
-     "없음",
+     "발등",
+     "리본",
      "제품별",
-     "크로스밴드"
+     "X자 리본"
     ],
     [
-     "바닥 무늬",
-     "제품별",
-     "제품별",
-     "논슬립 무늬"
+     "바닥",
+     "점무늬 등",
+     "점무늬 등",
+     "점무늬"
     ],
     [
-     "소재",
-     "제품별",
-     "제품별",
-     "면"
+     "발가락",
+     "분리",
+     "분리",
+     "5칸 분리"
     ]
    ]
   },
   {
    "type": "howto",
-   "h": "처음 신는 분은<br><span class=\"hl\">엄지부터</span>",
-   "size": 62,
+   "h": "엄지부터 한 칸씩,<br><span class=\"hl\">리본은 마지막에</span>",
+   "size": 60,
    "steps": [
     {
      "n": 1,
-     "c": "엄지부터 한 칸씩 넣어요"
+     "c": "엄지부터 발가락을 한 칸씩 넣어요"
     },
     {
      "n": 2,
@@ -191,64 +206,56 @@
     },
     {
      "n": 3,
-     "c": "발등의 X자를 정리해요"
+     "c": "발등의 리본을 펴서 정리해요"
     }
    ]
   },
   {
-   "type": "feature",
-   "h": "핑크 신고<br><span class=\"hl\">리포머 위로</span>",
-   "size": 64,
-   "img": "inputs/photos/intro_pair.jpg",
-   "style": "height:auto",
-   "pale": true
-  },
-  {
-   "type": "feature",
-   "h": "운동복은 예쁜데<br><span class=\"hl\">발이 밋밋해요</span>",
-   "size": 64,
-   "img": "inputs/ai/v3/s_bench.png",
-   "style": "height:1170px;object-fit:cover",
-   "pale": false
-  },
-  {
    "type": "checklist",
-   "h": "검정 양말만<br>네 켤레인 분께",
+   "h": "오픈토가<br>망설여졌던 분께",
    "items": [
-    "페디 받고 수업 가는 분",
+    "리본 양말이 갖고 싶었던 분",
+    "페디 관리 없이 수업 다니는 분",
     "수업 사진을 자주 찍는 분",
-    "리본 묶기 귀찮은 분",
-    "막힌 양말이 답답했던 분",
-    "바레 수업도 다니는 분"
+    "발레·바레 수업도 다니는 분",
+    "레깅스 색에 맞춰 고르고 싶은 분"
    ]
   },
   {
    "type": "feature",
-   "h": "수업 사진 속<br><span class=\"hl\">내 양말만 평범해요</span>",
+   "h": "거울 앞 스트레칭,<br><span class=\"hl\">발등의 리본</span>",
    "size": 64,
-   "img": "inputs/ai/v3/s_reformer.png",
+   "img": "inputs/ai/v3/s_barre.png",
    "style": "height:1170px;object-fit:cover",
    "pale": true
+  },
+  {
+   "type": "feature",
+   "h": "검정 레깅스엔 핑크,<br><span class=\"hl\">핑크 레깅스엔 블랙</span>",
+   "size": 60,
+   "img": "inputs/ai/v3/s_reformer.png",
+   "style": "height:1170px;object-fit:cover",
+   "pale": false
   },
   {
    "type": "qa",
    "h": "자주 묻는 질문",
    "items": [
     [
-     "미끄러지지 않나요?",
-     "바닥 무늬가 미끄러짐을 줄여 주지만, 바닥에 따라 미끄러질 수 있어요."
+     "리본을 묶어야 하나요?",
+     "아니요. 리본이 발등에 고정돼 있어 묶지 않아요."
     ],
     [
-     "벗겨지지 않나요?",
-     "발등 밴드가 있어 걱정을 덜어요. 움직임에 따라 다를 수 있어요."
-    ],
-    [
-     "소재가 뭔가요?",
-     "공급처 표기는 면 원단이에요. 혼용률은 표기가 없어요."
+     "안 미끄러지나요?",
+     "바닥 점무늬가 미끄러짐을 줄여 주지만 완전히 막지는 않아요. 바닥을 조심해 주세요."
     ],
     [
      "사이즈는요?",
-     "FREE예요."
+     "FREE(225~250mm) 하나예요. 발 크기에 따라 맞는 느낌이 다를 수 있어요."
+    ],
+    [
+     "세탁은요?",
+     "세탁망에 넣어 약하게 세탁하고 그늘에 말려 주세요."
     ]
    ]
   },
@@ -257,15 +264,15 @@
    "rows": [
     [
      "제품명",
-     "필라테스 발가락 양말"
+     "리본 요가양말 막힘형"
     ],
     [
      "색상",
-     "핑크, 블랙, 퍼플"
+     "블랙, 그레이, 베이지, 핑크"
     ],
     [
      "사이즈",
-     "FREE"
+     "FREE (225~250mm)"
     ],
     [
      "구성",
@@ -273,7 +280,7 @@
     ],
     [
      "재질",
-     "면 (공급처 표기 고급 면원단)"
+     "면, 폴리에스테르, 스판, 고무 (공급처 표기)"
     ],
     [
      "제조국",
@@ -317,10 +324,10 @@
   },
   {
    "type": "finale",
-   "img": "inputs/ai/v3/studio.png",
-   "h": "페디 받은 날은",
-   "big": "이 양말로",
-   "bigsize": 112
+   "img": "inputs/ai/v4/finale.png",
+   "h": "페디 없이도",
+   "big": "리본 신고 수업 가요",
+   "bigsize": 82
   }
  ]
 }

@@ -3,11 +3,11 @@
  "sections": [
   {
    "type": "hero",
-   "img": "inputs/ai/v3/hero.png",
+   "img": "inputs/ai/v4/hero.png",
    "h1": "선생님이 발을 잡아도",
    "big": "민망하지 않게",
    "bigsize": 112,
-   "sub": "발가락 5칸, 끝까지 막힌 필라테스 양말",
+   "sub": "발가락 5칸이 막히고 발등이 트인 필라테스 양말",
    "seals": [
     [
      "발가락",
@@ -15,14 +15,14 @@
      74
     ],
     [
-     "앞코",
-     "막힘",
-     60
+     "색상",
+     "6가지",
+     56
     ]
    ],
    "band": [
-    "연핑크 · 블랙",
-    "FREE 사이즈"
+    "블랙 · 진그레이 · 연그레이 · 연보라 · 연핑크 · 진핑크",
+    "FREE"
    ]
   },
   {
@@ -57,7 +57,7 @@
    "type": "feature",
    "h": "발가락은 나누고,<br><span class=\"hl\">발톱은 가리고</span>",
    "size": 72,
-   "img": "inputs/ai/v3/flat.png",
+   "img": "inputs/ai/v4/test.png",
    "style": "height:auto",
    "p": "발가락이 5칸으로 나뉘고, 칸마다 앞이 막혀 있어요.",
    "pale": true
@@ -88,7 +88,7 @@
    "point": "POINT 1",
    "h": "매끈한 일반 양말 신고<br><span class=\"hl\">매트에서 움찔했다면</span>",
    "size": 60,
-   "img": "inputs/photos/pink_sole.jpg",
+   "img": "inputs/photos/v4/black.jpg",
    "style": "height:auto",
    "p": "바닥 점무늬가 미끄러짐을 줄여 줘요. 그래도 바닥은 조심해 주세요."
   },
@@ -101,15 +101,15 @@
    "cellh": 430,
    "cuts": [
     {
-     "img": "inputs/photos/v3/pink_worn.jpg",
-     "t": "연핑크",
+     "img": "inputs/photos/v4/pink_c.jpg",
+     "t": "진핑크",
      "c": "발끝까지 가려져요",
      "style": "object-fit:contain;background:#fff"
     },
     {
-     "img": "inputs/photos/v3/black_worn2.jpg",
-     "t": "블랙",
-     "c": "레깅스 색대로 골라요",
+     "img": "inputs/photos/v4/gray_c.jpg",
+     "t": "진그레이",
+     "c": "발등은 동그랗게 트여요",
      "style": "object-fit:contain;background:#fff"
     }
    ]
@@ -117,17 +117,17 @@
   {
    "type": "feature",
    "point": "POINT 3",
-   "h": "리본 묶는 시간은<br><span class=\"hl\">스트레칭에 쓰세요</span>",
+   "h": "발등은 열고,<br><span class=\"hl\">발톱은 덮고</span>",
    "size": 66,
-   "img": "inputs/ai/v3/bag.png",
-   "style": "height:auto",
-   "p": "끈이 없는 원통형 발목이에요. 양말처럼 쑥 올려 신어요."
+   "img": "inputs/ai/v4/bag.png",
+   "style": "height:1170px;object-fit:cover",
+   "p": "발등이 동그랗게 트인 로우컷이에요. 끈 없이 쑥 신어요."
   },
   {
    "type": "feature",
    "h": "늦게 도착한 날도<br><span class=\"hl\">쑥 신고 매트로</span>",
    "size": 66,
-   "img": "inputs/ai/v3/late.png",
+   "img": "inputs/ai/v4/late.png",
    "style": "height:1170px;object-fit:cover",
    "pale": true
   },
@@ -135,9 +135,40 @@
    "type": "feature",
    "h": "네일샵 못 간 달에도<br><span class=\"hl\">그대로 수업 가요</span>",
    "size": 62,
-   "img": "inputs/ai/v3/drawer.png",
+   "img": "inputs/ai/v4/drawer.png",
    "style": "height:1170px;object-fit:cover",
    "pale": false
+  },
+  {
+   "type": "colors",
+   "h": "요일마다<br><span class=\"hl\">다른 색으로</span>",
+   "items": [
+    {
+     "img": "inputs/photos/v4/c_black.jpg",
+     "t": "블랙"
+    },
+    {
+     "img": "inputs/photos/v4/c_dgray.jpg",
+     "t": "진그레이"
+    },
+    {
+     "img": "inputs/photos/v4/c_lgray.jpg",
+     "t": "연그레이"
+    },
+    {
+     "img": "inputs/photos/v4/c_lilac.jpg",
+     "t": "연보라"
+    },
+    {
+     "img": "inputs/photos/v4/c_lpink.jpg",
+     "t": "연핑크"
+    },
+    {
+     "img": "inputs/photos/v4/c_dpink.jpg",
+     "t": "진핑크"
+    }
+   ],
+   "three": true
   },
   {
    "type": "compare",
@@ -156,10 +187,10 @@
      "막힘"
     ],
     [
-     "발목",
+     "발등",
      "제품별",
      "리본·끈",
-     "끈 없음"
+     "동그랗게 트임"
     ],
     [
      "바닥",
@@ -198,7 +229,7 @@
    "type": "feature",
    "h": "발가락 끝까지 찍힌<br><span class=\"hl\">도톨도톨한 점</span>",
    "size": 62,
-   "img": "inputs/ai/v3/ball.png",
+   "img": "inputs/ai/v4/ball.png",
    "style": "height:1170px;object-fit:cover",
    "pale": true
   },
@@ -225,7 +256,7 @@
    "type": "feature",
    "h": "수업 사진에<br><span class=\"hl\">발끝까지 나오니까</span>",
    "size": 68,
-   "img": "inputs/ai/v3/mirror.png",
+   "img": "inputs/ai/v4/mirror.png",
    "style": "height:1170px;object-fit:cover",
    "pale": true
   },
@@ -233,10 +264,6 @@
    "type": "qa",
    "h": "자주 묻는 질문",
    "items": [
-    [
-     "바닥에 글자가 있나요?",
-     "바닥 점무늬 사이에 영문 글자 무늬가 있어요. 제품 사진에서 확인해 주세요."
-    ],
     [
      "안 미끄러지나요?",
      "점무늬가 미끄러짐을 줄여 주지만, 완전히 막는 건 아니에요. 바닥을 조심해 주세요."
@@ -248,6 +275,10 @@
     [
      "세탁은 어떻게 하나요?",
      "세탁망에 넣어 약하게 세탁하고 그늘에 말려 주세요."
+    ],
+    [
+     "색은 몇 가지인가요?",
+     "블랙, 진그레이, 연그레이, 연보라, 연핑크, 진핑크 6가지예요. 화면에 따라 색이 조금 달라 보일 수 있어요."
     ]
    ]
   },
@@ -256,19 +287,23 @@
    "rows": [
     [
      "제품명",
-     "요가양말 발가락형"
+     "요가양말 발가락막힘형"
     ],
     [
      "색상",
-     "연핑크, 블랙"
+     "블랙, 진그레이, 연그레이, 연보라, 연핑크, 진핑크"
     ],
     [
      "사이즈",
-     "FREE"
+     "FREE (225~250mm)"
     ],
     [
      "구성",
      "1켤레"
+    ],
+    [
+     "재질",
+     "면, 폴리에스테르, 스판, 고무 (공급처 표기)"
     ],
     [
      "제조국",
@@ -276,7 +311,7 @@
     ],
     [
      "사진 안내",
-     "사용 장면은 연출 이미지로, 모양과 색, 바닥 무늬 등이 실제 제품과 다를 수 있어요."
+     "사용 장면은 연출 이미지로, 모양과 색 등이 실제 제품과 다를 수 있어요."
     ]
    ]
   },
@@ -312,7 +347,7 @@
   },
   {
    "type": "finale",
-   "img": "inputs/ai/v3/finale.png",
+   "img": "inputs/ai/v4/finale.png",
    "h": "페디는 다음 달에,",
    "big": "수업은 내일",
    "bigsize": 110
